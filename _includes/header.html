@@ -10,7 +10,7 @@
             <img class="logo__image" src="{{ site.baseurl }}{{ site.data.settings.logo }}" alt="{{ site.data.settings.title }}">
           {% else %}
             <!-- {{ site.data.settings.title }} -->
-            <span id="cpqSpan">cpq</span><span id="developers">developers</span>
+            <span id="silkSpan">Silk</span><span id="quote">Quote</span>
           {% endif %}
           </a>
         </div>
@@ -37,16 +37,19 @@
               </li>
               {% else %}
               <li class="nav__item">
-                <a href="{{ item.url | relative_url }}" class="nav__link{% if page.url == item.url %} active-link{% endif %}">{{ item.title }}</a>
+                {% if item.title == 'View on AppExchange' %}
+                  {% if site.data.settings.appexchange_link %}
+                    <a href="{{ site.data.settings.appexchange_link }}" class="nav__link" target="_blank" rel="noopener">{{ item.title }}</a>
+                  {% else %}
+                    <span class="nav__link coming-soon" data-tooltip="Coming Soon">{{ item.title }}</span>
+                  {% endif %}
+                {% else %}
+                  <a href="{{ item.url | relative_url }}" class="nav__link{% if page.url == item.url %} active-link{% endif %}">{{ item.title }}</a>
+                {% endif %}
               </li>
               {% endif %}
             {% endfor %}
-              <li class="nav__item">
-                <!-- Calendly -->
-                <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-                <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-                <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/cpqdevelopers/15min'});return false;" class="nav__link{% if page.url == item.url %} active-link{% endif %}">📅 Book Time</a>
-              </li>
+
               <!-- <li class="nav__item">
                 <a href="tel:+16822469121" class="nav__link{% if page.url == item.url %} active-link{% endif %}">🔥 Call Now</a>
               </li> -->

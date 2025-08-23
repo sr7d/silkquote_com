@@ -236,13 +236,13 @@ table td {
   cursor: pointer;
   transition: all .25s;
   color: var(--white);
-  background: var(--dark);
+  background: #8a4af3;
 
-  &--primary {
-    &:hover {
-      background: var(--button-background-hover);
-    }
-  }
+  // &--primary {
+  //   &:hover {
+  //     background: var(--button-background-hover);
+  //   }
+  // }
 
   &--big {
     display: block;

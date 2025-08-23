@@ -1,41 +1,72 @@
-/* Color Scheme */
+/* SilkQuote Design System Color Scheme */
 :root {
-  --primary-color: #A82D5B;
-  --secondary-color: #F6F9FC;
-  --white: #fff;
+  /* Primary Colors */
+  --primary-color: #8b89f4;
+  --secondary-color: #87ceeb;
+  --accent-color: #87ceeb;
+  
+  /* Base Colors */
+  --white: #ffffff;
   --light-blue: #f3f7ff;
-  --gray: #414244;
-  --light-gray: #eee;
-  --dark-gray: #687385;
-  --darken-gray: #e3e3e3;
-  --blue-gray: ##131417;
-  --dark: #221E2A;
+  --sky-blue: #87ceeb;
+  --green: #55a400;
+  
+  /* Neutral Grays */
+  --text-primary: #2c2c2c;
+  --text-secondary: #495057;
+  --text-muted: #6c757d;
+  --border-light: #e1e5e9;
+  --border-medium: #c3c8cc;
+  --background-light: #f8f9fa;
+  --background-white: #ffffff;
+  
+  /* Legacy Dark Colors */
+  --dark: #a497f6;
   --dark-blue: #121315;
 
-  --image-gradient-color: linear-gradient(180deg, rgba(52, 97, 121, 0.85) 0%, rgba(20, 58, 78, 0.85) 100%); // To change the color of the gradient, add an RGB color code. For example - "65, 85, 230" and "195, 55, 100" (You can generate any color here - https://htmlcolorcodes.com).
-
-  --background-color: var(--secondary-color);
-  --background-alt-color: var(--blue-gray);
+  /* Semantic Color Mappings */
+  --background-color: var(--background-white);
+  --background-alt-color: var(--background-light);
   
-  --text-color: var(--dark);
-  --text-second-color: var(--dark-gray);
-  --text-alt-color: var(--blue-gray);
+  --text-color: var(--text-primary);
+  --text-second-color: var(--text-secondary);
+  --text-alt-color: var(--text-muted);
   
-  --heading-font-color: var(--dark);
+  --heading-font-color: var(--text-primary);
 
-  --link-color: var(--dark);
-  --link-color-hover: var(--primary-color);
+  --link-color: var(--text-primary);
+  // --link-color-hover: var(--primary-color);
 
   --button-color: var(--white);
-  --button-background-color: var(--dark);
-  --button-background-hover: var(--primary-color);
+  --button-background-color: var(--primary-color);
+  --button-background-hover: var(--secondary-color);
 
-  --border-color: var(--light-gray);
-  --border-second-color: var(--darken-gray);
-  --border-alt-color: var(--blue-gray);
+  --border-color: var(--border-light);
+  --border-second-color: var(--border-medium);
+  --border-alt-color: var(--border-light);
 
-  --th-color: var(--light-gray);
-  --tr-color: var(--light-gray);
+  /* Focus and Interaction States */
+  --focus-color: var(--secondary-color);
+  --focus-shadow: rgba(135, 206, 235, 0.1);
+  --hover-shadow: rgba(0, 0, 0, 0.08);
+  --active-shadow: rgba(0, 0, 0, 0.1);
 
-  --syntax-highlighting-background: #f3f3f3;
+  /* Component Specific */
+  --th-color: var(--background-light);
+  --tr-color: var(--background-light);
+  --syntax-highlighting-background: #f8f9fa;
+  
+  /* Transitions */
+  --transition-fast: all 0.15s ease-in-out;
+  --transition-medium: all 0.2s ease-in-out;
+  
+  /* Border Radius */
+  --border-radius: 6px;
+  --border-radius-large: 12px;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 2px 4px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --shadow-focus: 0 0 0 3px var(--focus-shadow), 0 2px 8px var(--active-shadow);
 }

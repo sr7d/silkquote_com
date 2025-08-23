@@ -1,6 +1,6 @@
-/* Contact */
+/* Contact - SilkQuote Design System */
 .form__group {
-  margin-bottom: 16px;
+  margin-bottom: 1.5rem;
 
   &:last-child {
     margin-bottom: 0;
@@ -9,26 +9,34 @@
 
 .form__input {
   width: 100%;
-  padding: 24px;
-  font-size: 16px;
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
   font-weight: 400;
-  border-radius: 12px;
-  border: none;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-light);
   outline: 0;
-  transition: .25s ease-in-out;
+  transition: var(--transition-fast);
   resize: vertical;
-  color: var(--heading-font-color);
-  background-color: var(--border-color);
+  color: var(--text-secondary);
+  background-color: var(--background-white);
+  box-shadow: var(--shadow-sm);
 
   &::placeholder {
-    color: var(--text-color);
+    color: var(--text-secondary);
+    opacity: 1;
   }
 
   &:hover {
-    background-color: var(--darken-gray);
+    border-color: var(--border-medium);
+    box-shadow: var(--shadow-md);
   }
 
   &:focus {
-    background-color: var(--darken-gray);
+    border-color: var(--secondary-color);
+    box-shadow: var(--shadow-focus);
+    background-color: var(--background-white);
   }
+}
+#form-text{
+  min-height: 200px;
 }

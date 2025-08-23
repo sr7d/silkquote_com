@@ -1,7 +1,7 @@
 <section class="hero">
   <div id="heroDiv" class="container">
     <div class="row">
-      <div class="col col-12">
+      <div class="col col-8 col-t-12">
         <div class="quote-bubble">
           <div class="hero__inner">
             <h1 class="hero__title">{{ site.data.settings.hero.hero__title }}</h1>
@@ -10,33 +10,36 @@
             <p class="hero__description">{{ site.data.settings.hero.hero__description }}</p>
           </div>
         </div>
+      </div>
+      <div class="col col-4 col-t-12">
+        <div class="hero__screenshot">
+          <img src="/images/screenshot.png" alt="SilkQuote Screenshot" class="screenshot-image">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col col-12">
         <div class="animation-container">
           <div class="column column-1">
-            <img src="/images/sales_channel.svg" alt="Sales" />
+            <img src="/images/price_books.svg" alt="Salesforce Data" />
             <ul>
               <li class="featuredULs"></li>
-              <li>Marketing</li>
-              <li>Sales</li>
-              <li>Renewals</li>
+              <li class="LIs">Pull Data From your Opportunities, Products, Accounts, and Contacts</li>
             </ul>
           </div>
           <div class="column column-2">
-            <img src="/images/bundle_config.svg" alt="CPQ / Revenue Cloud" class="animated-svg" />
+            <img src="/images/bundle_config.svg" alt="SilkQuote Processing" class="animated-svg" />
             <ul>
               <li class="featuredULs"></li>
               <!-- <li id="sfdc-cloud"><img src="/images/sfdc.png" alt="Salesforce"></li>            -->
-              <li class="productLIs">Configure</li>
-              <li class="productLIs">Price</li>
-              <li class="productLIs">Quote</li>
+              <li class="LIs">Dynamically Generate Quote Templates and Terms and Conditions</li>
             </ul>
           </div>
           <div class="column column-3">
-            <img src="/images/fulfillment_order.svg" alt="ERP" />
+            <img src="/images/customers_120.svg" alt="ERP" />
             <ul>
               <li class="featuredULs"></li>
-              <li>Onboarding</li>
-              <li>Provisioning</li>
-              <li>Finance</li>
+              <li class="LIs">View, Email, Save to Salesforce, or integrate with e-signature</li>
             </ul>
           </div>
           <div class="animatedicon"></div>
@@ -44,38 +47,71 @@
       </div>
     </div>
   </div>
-  {% include featured-section.html %}
 </section>
 
 <style>
   .quote-bubble {
-    background-color: #F6F9FC;
-    border-radius: 25px; /* Rounded corners */
-    padding: 20px; /* Padding inside the bubble */
-    box-shadow: 0 18px 20px rgba(0, 0, 0, 0.25), 0 12px 30px rgba(0, 0, 0, 0.25); /* More obvious shadows */
-    position: relative; /* For the pseudo-element */
-    margin: 20px 0; /* Margin around the bubble */
+    background-color: var(--background-white);
+    border-radius: var(--border-radius-large);
+    padding: 2rem;
+    box-shadow: var(--shadow-lg);
+    position: relative;
+    margin: 20px 0;
+    border: 1px solid var(--border-light);
+    transition: var(--transition-medium);
   }  
+  
+  .quote-bubble:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+  }
   
   .quote-bubble::before {
     content: '';
     position: absolute;
-    bottom: 100%; /* Position the triangle above the bubble */
-    left: 15%; /* Adjusted to move it more to the left */
-    margin-left: -20px; /* Center the triangle based on its size */
-    border-width: 20px; /* Increased size of the triangle */
+    bottom: 100%;
+    left: 15%;
+    margin-left: -12px;
+    border-width: 12px;
     border-style: solid;
-    border-color: transparent transparent #f9f9f9 transparent; /* Triangle pointing down */
+    border-color: transparent transparent var(--background-white) transparent;
   }  
   
   .quote-bubble h1, .quote-bubble p {
-    margin: 0; /* Remove default margins */
+    margin: 0;
+    color: var(--text-primary);
+  }
+
+  /* Mobile Optimizations */
+  @media (max-width: 768px) {
+    .quote-bubble {
+      padding: 1.5rem;
+      margin: 15px 0;
+    }
+    
+    .quote-bubble::before {
+      left: 20%;
+      border-width: 10px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .quote-bubble {
+      padding: 1.25rem;
+      margin: 10px 0;
+      border-radius: 8px;
+    }
+    
+    .quote-bubble::before {
+      left: 25%;
+      border-width: 8px;
+    }
   }
   
   .animation-container {
     margin-top: 40px;
     display: flex;
-    justify-content: center; /* Center horizontally */
+    justify-content: center;
     height: 350px;
     position: relative;
   }
@@ -88,51 +124,118 @@
   }
   
   .column img {
-    width: 150px; /* Increased size of SVG images */
-    height: auto; /* Maintain aspect ratio */
-    margin-bottom: 10px; /* Space between image and text */
+    width: 150px;
+    height: auto;
+    margin-bottom: 10px;
   }
   
   .column ul {
-    list-style-type: none; /* Hide bullet points */
-    padding: 0; /* Remove padding */
-    margin: 0; /* Remove margin */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    line-height: 1.3;
+  }
+  
+  .column li {
+    margin-bottom: 5px;
+    word-wrap: break-word;
+    hyphens: auto;
+    max-width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 16px;
+  }
+
+  /* Mobile Optimizations for Animation */
+  @media (max-width: 768px) {
+    .animation-container {
+      display: none;
+    }
+    
+    .column {
+      font-size: 16px;
+    }
+    
+    .column img {
+      width: 120px;
+    }
+    
+    .column li {
+      font-size: 14px;
+      max-width: 70%;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .animation-container {
+      height: 220px;
+      margin-top: 20px;
+      flex-direction: column;
+      align-items: center;
+    }
+    
+    .column {
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+    
+    .column img {
+      width: 80px;
+      margin-bottom: 8px;
+    }
+    
+    .column li {
+      font-size: 12px;
+      max-width: 90%;
+      line-height: 1.4;
+    }
+    
+    /* Hide animation on very small screens for performance */
+    .animatedicon {
+      display: none;
+    }
   }
   
   .animatedicon {
-    width: 50px;
-    height: 50px;
-    background-image: url('/images/new_opportunity.svg');
+    width: 60px;
+    height: 60px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     position: absolute;
     top: 10%;
     left: 0; /* Change this to control horizontal movement */
     opacity: 0;
-    animation: factory 3s ease-in-out infinite; /* Increased duration for better pause effect */
+    animation: factory 3.75s ease-in-out infinite; /* 25% slower with 8s interval between runs */
   }
   
   @keyframes factory {
     0% {
       left: 22%;
       opacity: 0;
-      transform: scale(1);
+      transform: scale(1.5);
+      background-image: url('/images/product.svg');
     }
     10% {
       opacity: 1;
-      transform: scale(1.1, 1);
+      transform: scale(1.5);
     }
     30% {
       left: 38%;
       opacity: 0;
-      transform: scale(1); /* Hold the size at peak position */
-      background-image: url('/images/new_opportunity.svg');
+      transform: scale(1.5); /* Hold the size at peak position */
+      background-image: url('/images/product.svg');
+    }
+    49%{
+      background-image: url('/images/product.svg');
     }
     50%{
-      background-image: url('/images/update_status.svg');
+      background-image: url('/images/pdf.svg');
     }
     60% {
       left: 56%; /* Adjust to desired exit position */
       opacity: 0;
-      transform: scale(0.9, 1);
+      transform: scale(1);
     }
     85% {
       opacity: 1;
@@ -140,31 +243,31 @@
     95% {
       left: 72%; /* Final exit position */
       opacity: 0;
-      transform: scale(1.1, 1);
+      transform: scale(1);
     }
     100% {
       left: 72%; /* Final exit position */
       opacity: 0; /* Fade out at the end */
       transform: scale(1); /* Return to original size for smooth exit */
-      background-image: url('/images/update_status.svg');
+      background-image: url('/images/pdf.svg');
     }
   }
   
   @keyframes bundleAnimation {
     0%, 30% {
-      transform: scale(1);
+      transform: scale(0.8);
     }
     35% {
-      transform: scale(1.2) rotate(10deg); /* Shake and grow effect */
+      transform: scale(1) rotate(10deg); /* Shake and grow effect */
     }
     40% {
-      transform: scale(1.2) rotate(-10deg); /* Shake and grow effect */
+      transform: scale(1) rotate(-10deg); /* Shake and grow effect */
     }
     45% {
-      transform: scale(1.2); /* Hold the size */
+      transform: scale(1); /* Hold the size */
     }
     50% {
-      transform: scale(1); /* Return to normal */
+      transform: scale(0.8); /* Return to normal */
     }
     60%, 100% {
       opacity: 1; /* Keep it visible */
@@ -172,23 +275,76 @@
   }
   
   .animated-svg {
-    animation: bundleAnimation 3s infinite; /* Use 'infinite' to loop the animation */
+    transform: scale(0.8);
+    animation: bundleAnimation 3.75s infinite; /* 25% slower with 8s interval between runs */
   }
   
   .featuredULs {
-    border-bottom: 2px solid #f9f9f9;
+    border-bottom: 2px solid #2c2c2c;
     margin-left: 25%;
     width: calc(50%);
     margin-bottom: 20px;
-    margin-top: -0px;
   }
-  .productLIs {
+  .LIs {
     padding-top: 0px;
-    font-size: 18px;
+    margin-top: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 1.5;
+    color: #2c2c2c;
   }
   #sfdc-cloud {
     width: 80px;
     display: block;
     margin: 0 auto;
-  }   
+  }
+  
+  .hero__screenshot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 20px;
+  }
+  
+  .screenshot-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: var(--border-radius-large);
+    box-shadow: var(--shadow-lg);
+    transition: var(--transition-medium);
+  }
+  
+  .screenshot-image:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  }
+  
+  @media (max-width: 768px) {
+    .hero__screenshot {
+      margin-top: 0rem;
+      margin-bottom: 1.5rem;
+      padding: 15px;
+    }
+    
+    .screenshot-image {
+      border-radius: 8px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .hero__screenshot {
+      margin-top: 0.25rem;
+      padding: 10px;
+    }
+    
+    .screenshot-image {
+      border-radius: 6px;
+      box-shadow: var(--shadow-md);
+    }
+    
+    .screenshot-image:hover {
+      transform: translateY(-2px);
+    }
+  }
 </style>

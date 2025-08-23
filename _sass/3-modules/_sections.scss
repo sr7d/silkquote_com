@@ -1,8 +1,8 @@
 /* Sections */
 .section__head {
-  padding-top: 40px;
+  margin-top: 2.5rem;
+  padding-top: 0px;
   margin-bottom: 40px;
-  border-top: 1px solid var(--border-alt-color);
 
   .section__title {
     margin-bottom: 0;
@@ -55,7 +55,6 @@
   flex-wrap: wrap;
   padding-top: 12px;
   margin-bottom: 32px;
-  border-top: 1px solid var(--border-alt-color);
 
   .section__title {
     margin-right: 20px;
