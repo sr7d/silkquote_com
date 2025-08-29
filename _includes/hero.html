@@ -221,7 +221,7 @@
     top: 10%;
     left: 0; /* Change this to control horizontal movement */
     opacity: 0;
-    animation: factory 3.75s ease-in-out infinite; /* 25% slower with 8s interval between runs */
+    animation: factory 5.75s ease-in-out infinite; /* 25% slower with 8s interval between runs */
   }
   
   @keyframes factory {
@@ -231,34 +231,47 @@
       transform: scale(1.5);
       background-image: url('/images/product.svg');
     }
-    10% {
+    8% {
       opacity: 1;
       transform: scale(1.5);
     }
-    30% {
+    24% {
       left: 38%;
       opacity: 0;
       transform: scale(1.5); /* Hold the size at peak position */
       background-image: url('/images/product.svg');
     }
-    49%{
+    39%{
       background-image: url('/images/product.svg');
     }
-    50%{
+    40%{
       background-image: url('/images/pdf.svg');
     }
-    60% {
+    48% {
       left: 56%; /* Adjust to desired exit position */
       opacity: 0;
       transform: scale(1);
     }
-    85% {
+    68% {
       opacity: 1;
     }
-    95% {
+    72% {
       left: 72%; /* Final exit position */
       opacity: 0;
       transform: scale(1);
+      background-image: url('/images/pdf.svg');
+    }
+    80% {
+      left: 72%; /* Hold position during wait */
+      opacity: 0;
+      transform: scale(1);
+      background-image: url('/images/pdf.svg');
+    }
+    90% {
+      left: 72%; /* Continue holding during wait period */
+      opacity: 0;
+      transform: scale(1);
+      background-image: url('/images/pdf.svg');
     }
     100% {
       left: 72%; /* Final exit position */
@@ -269,29 +282,42 @@
   }
   
   @keyframes bundleAnimation {
-    0%, 30% {
+    0%, 24% {
       transform: scale(0.8);
     }
-    35% {
+    28% {
       transform: scale(1) rotate(10deg); /* Shake and grow effect */
     }
-    40% {
+    32% {
       transform: scale(1) rotate(-10deg); /* Shake and grow effect */
     }
-    45% {
+    36% {
       transform: scale(1); /* Hold the size */
     }
-    50% {
+    40% {
       transform: scale(0.8); /* Return to normal */
     }
-    60%, 100% {
+    48%, 72% {
       opacity: 1; /* Keep it visible */
+      transform: scale(0.8);
+    }
+    80% {
+      opacity: 1; /* Hold during wait period */
+      transform: scale(0.8);
+    }
+    90% {
+      opacity: 1; /* Continue holding during wait period */
+      transform: scale(0.8);
+    }
+    100% {
+      opacity: 1; /* Keep it visible */
+      transform: scale(0.8);
     }
   }
   
   .animated-svg {
     transform: scale(0.8);
-    animation: bundleAnimation 3.75s infinite; /* 25% slower with 8s interval between runs */
+    animation: bundleAnimation 5.75s infinite; /* 25% slower with 8s interval between runs */
   }
   
   .featuredULs {
@@ -521,3 +547,4 @@
     }
   }
 </style>
+
