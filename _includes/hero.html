@@ -12,8 +12,23 @@
         </div>
       </div>
       <div class="col col-4 col-t-12">
-        <div class="hero__screenshot">
-          <img src="/images/screenshot.png" alt="SilkQuote Screenshot" class="screenshot-image">
+        <div class="hero__video">
+          <div class="video-container" id="hero-video-container">
+            <iframe 
+              src="https://player.vimeo.com/video/347119375?autoplay=0&muted=1&loop=0&background=1&controls=0" 
+              frameborder="0" 
+              allow="autoplay; fullscreen; picture-in-picture" 
+              allowfullscreen
+              title="SilkQuote Demo Video">
+            </iframe>
+            <div class="video-overlay" id="video-overlay">
+              <div class="play-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 5v14l11-7z" fill="currentColor"/>
+                </svg>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -299,7 +314,7 @@
     margin: 0 auto;
   }
   
-  .hero__screenshot {
+  .hero__video {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -307,44 +322,202 @@
     padding: 20px;
   }
   
-  .screenshot-image {
-    max-width: 100%;
-    height: auto;
+  .video-container {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
     border-radius: var(--border-radius-large);
+    overflow: hidden;
     box-shadow: var(--shadow-lg);
     transition: var(--transition-medium);
+    cursor: pointer;
   }
   
-  .screenshot-image:hover {
+  .video-container:hover {
     transform: translateY(-4px);
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
   }
   
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: var(--border-radius-large);
+  }
+  
+  .video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    border-radius: var(--border-radius-large);
+    z-index: 10;
+  }
+  
+  .video-overlay:hover {
+    background: rgba(0, 0, 0, 0.4);
+  }
+  
+  .play-icon {
+    width: 64px;
+    height: 64px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2c2c2c;
+    opacity: 1;
+    transform: scale(1);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .video-overlay:hover .play-icon {
+    transform: scale(1.1);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Video Lightbox */
+  .video-lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+  
+  .video-lightbox.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .video-lightbox-content {
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    height: 0;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio for proper video sizing */
+    border-radius: 12px;
+    overflow: hidden;
+    background: transparent;
+  }
+  
+  .video-lightbox iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    background: transparent;
+    display: block;
+  }
+  
+  .video-close {
+    position: absolute;
+    top: -50px;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid rgba(255, 255, 255, 1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+  }
+  
+  .video-close:hover {
+    background: rgba(255, 255, 255, 1);
+    border-color: rgba(255, 255, 255, 1);
+    transform: scale(1.1);
+  }
+  
   @media (max-width: 768px) {
-    .hero__screenshot {
+    .hero__video {
       margin-top: 0rem;
       margin-bottom: 1.5rem;
       padding: 15px;
     }
     
-    .screenshot-image {
+    .video-container {
       border-radius: 8px;
+    }
+    
+    .video-container iframe {
+      border-radius: 8px;
+    }
+    
+    .video-overlay {
+      border-radius: 8px;
+    }
+    
+    .video-lightbox-content {
+      width: 95%;
+      padding-bottom: 56.25%; /* Maintain 16:9 aspect ratio on mobile */
     }
   }
   
   @media (max-width: 576px) {
-    .hero__screenshot {
+    .hero__video {
       margin-top: 0.25rem;
       padding: 10px;
     }
     
-    .screenshot-image {
+    .video-container {
       border-radius: 6px;
       box-shadow: var(--shadow-md);
     }
     
-    .screenshot-image:hover {
+    .video-container iframe {
+      border-radius: 6px;
+    }
+    
+    .video-overlay {
+      border-radius: 6px;
+    }
+    
+    .video-container:hover {
       transform: translateY(-2px);
+    }
+    
+    .play-icon {
+      width: 56px;
+      height: 56px;
+    }
+    
+    .video-lightbox-content {
+      width: 98%;
+      padding-bottom: 56.25%; /* Maintain 16:9 aspect ratio on small screens */
+    }
+    
+    .video-close {
+      top: -40px;
+      width: 36px;
+      height: 36px;
     }
   }
 </style>

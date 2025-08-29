@@ -1,0 +1,24 @@
+---
+layout: post
+title: "Generate a Quote PDF from an Opportunity"
+description: "Create a professional, branded PDF and attach it to the Opportunity with one click"
+date: 2025-08-27 10:00:00 +0300
+author: admin
+image: /images/saveToSf.png
+image_caption: "One-click quote PDF generation"
+tags: [silkquote, salesforce, pdf-generation, quotes]
+featured: true
+---
+## Overview
+Turn any Opportunity into a finalized PDF quote attached to Files.
+
+## Steps
+1. Open the Opportunity.
+2. Click “Generate Quote Document”.
+3. Enter Quote Name, select Template and Paper Size.
+4. Optionally select Terms, Draft watermark, and Signature block.
+5. Click “Save PDF” and open the success message link.
+
+## Notes
+- The PDF is saved as a Content Document on the Opportunity.
+- If the action is missing, ask an admin to add it to the page layout.

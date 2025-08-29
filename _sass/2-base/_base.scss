@@ -4,6 +4,7 @@
 
 html {
   overflow-x: hidden;
+  height: 100%;
 
   &.search-is-visible {
     overflow: hidden;
@@ -20,6 +21,9 @@ body {
   background-color: var(--background-color);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
 
   @media (max-width: $mobile) {
     font-size: 16px;
@@ -27,10 +31,19 @@ body {
 }
 
 .global-wrap {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  
   &.is-active {
     overflow-x: hidden;
     overflow-y: scroll;
   }
+}
+
+.content {
+  flex: 1 0 auto;
 }
 
 h1,

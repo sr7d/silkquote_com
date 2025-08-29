@@ -25,13 +25,14 @@ hero:
 blog:
   blog__title: Resources & Guides
   blog__description: Learn how to maximize your quote generation process with SilkQuote
+  exclude_tags: [articles]
 
 #-------------------------------
 # Featured Tag Settings
 tag:
   enable: true
   tag__title: Articles
-  tag__name: silkquote
+  tag__name: articles
 
 #-------------------------------
 # Contact Settings

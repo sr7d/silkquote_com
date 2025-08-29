@@ -169,4 +169,87 @@ document.addEventListener("DOMContentLoaded", function() {
     });
   }
 
+  /* =======================
+  // Video Lightbox
+  ======================= */
+  const videoContainer = document.getElementById('hero-video-container');
+  const videoOverlay = document.getElementById('video-overlay');
+  
+  if (videoContainer && videoOverlay) {
+    // Create lightbox HTML
+    const lightboxHTML = `
+      <div class="video-lightbox" id="video-lightbox">
+        <div class="video-lightbox-content">
+          <iframe 
+            src="https://player.vimeo.com/video/347119375?autoplay=0&controls=1&background=0&muted=0" 
+            frameborder="0" 
+            allow="autoplay; fullscreen; picture-in-picture" 
+            allowfullscreen
+            title="SilkQuote Demo Video - Full Screen"
+            style="background: transparent;">
+          </iframe>
+          <div class="video-close" id="video-close">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    `;
+    
+    // Add lightbox to body
+    document.body.insertAdjacentHTML('beforeend', lightboxHTML);
+    
+    const lightbox = document.getElementById('video-lightbox');
+    const closeBtn = document.getElementById('video-close');
+    
+    // Open lightbox
+    videoOverlay.addEventListener('click', function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+      lightbox.classList.add('active');
+      document.body.style.overflow = 'hidden';
+      
+      // Start playing the expanded video with sound
+      const expandedIframe = lightbox.querySelector('iframe');
+      if (expandedIframe) {
+        // Update the iframe src to start playing and unmute
+        const currentSrc = expandedIframe.src;
+        const newSrc = currentSrc.replace('autoplay=0', 'autoplay=1').replace('muted=1', 'muted=0');
+        expandedIframe.src = newSrc;
+      }
+    });
+    
+    // Close lightbox
+    function closeLightbox() {
+      lightbox.classList.remove('active');
+      document.body.style.overflow = '';
+      
+      // Stop the expanded video and reset it
+      const expandedIframe = lightbox.querySelector('iframe');
+      if (expandedIframe) {
+        // Reset to paused state
+        const currentSrc = expandedIframe.src;
+        const newSrc = currentSrc.replace('autoplay=1', 'autoplay=0');
+        expandedIframe.src = newSrc;
+      }
+    }
+    
+    closeBtn.addEventListener('click', closeLightbox);
+    
+    // Close on backdrop click
+    lightbox.addEventListener('click', function(e) {
+      if (e.target === lightbox) {
+        closeLightbox();
+      }
+    });
+    
+    // Close on escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+        closeLightbox();
+      }
+    });
+  }
+
 });

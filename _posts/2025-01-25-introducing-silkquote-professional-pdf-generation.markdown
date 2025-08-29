@@ -6,7 +6,7 @@ date: 2025-01-25 10:00:00 +0300
 author: admin
 image: /images/introducing.png
 image_caption: 'Professional quote generation made simple'
-tags: [silkquote, salesforce, pdf-generation, quotes, branding]
+tags: [generator, configurator, introduction, articles]
 featured: true
 ---
 # The Problem We Solved

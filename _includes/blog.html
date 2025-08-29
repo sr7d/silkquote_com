@@ -13,8 +13,18 @@
 
   <div class="row grid">
     {% if site.posts.size > 0 %}
+      {% assign excluded_tags = site.data.settings.blog.exclude_tags %}
       {% for post in paginator.posts %}
-        {% include article.html %}
+        {% assign should_exclude = false %}
+        {% for tag in post.tags %}
+          {% if excluded_tags contains tag %}
+            {% assign should_exclude = true %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+        {% unless should_exclude %}
+          {% include article.html %}
+        {% endunless %}
       {% endfor %}
     {% endif %}
   </div>
