@@ -181,7 +181,7 @@ document.addEventListener("DOMContentLoaded", function() {
       <div class="video-lightbox" id="video-lightbox">
         <div class="video-lightbox-content">
           <iframe 
-            src="https://player.vimeo.com/video/347119375?autoplay=0&controls=1&background=0&muted=0" 
+            src="https://player.vimeo.com/video/1114259071?autoplay=0&controls=1&background=0&muted=0" 
             frameborder="0" 
             allow="autoplay; fullscreen; picture-in-picture" 
             allowfullscreen
