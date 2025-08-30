@@ -17,8 +17,8 @@ menu__settings:
 #-------------------------------
 # Hero Settings
 hero:
-  hero__title: Make PDF Quote Generation Simple with SilkQuote for Salesforce
-  hero__description: Turn Salesforce Opportunities into branded PDF quotes in seconds! Our no-code tool lets admins create dynamic templates, fields, and terms, to make every quote effortless.
+  hero__title: Simple, Elegant PDF Quote Generation for Salesforce
+  hero__description: Generate error-free, on-brand quote documents in seconds! Our no-code tool lets admins create dynamic customizable templates to make every quote effortless.
 
 #-------------------------------
 # Blog Settings
