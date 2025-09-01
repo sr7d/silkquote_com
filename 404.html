@@ -1,16 +1,127 @@
 ---
-layout: page
+layout: default
+title: "Page Not Found - 404"
+description: "The page you're looking for doesn't exist. Return to SilkQuote homepage."
 permalink: /404.html
-sitemap: false
 ---
 
 <div class="container">
   <div class="row">
     <div class="col col-12">
-      <div class="error">
-        <h2 class="error__title">404</h2>
-        <p class="error__text">The requested page could not be found.</p>
+      <div class="error-page">
+        <h1 class="error-title">404</h1>
+        <h2 class="error-subtitle">Page Not Found</h2>
+        <p class="error-description">
+          Sorry, the page you're looking for doesn't exist or has been moved.
+        </p>
+        <div class="error-actions">
+          <a href="/" class="btn btn--primary">Go Home</a>
+          <a href="/contact/" class="btn btn--secondary">Contact Us</a>
+        </div>
+        <div class="error-suggestions">
+          <h3>Popular Pages:</h3>
+          <ul>
+            <li><a href="/introducing-silkquote-professional-pdf-generation">Introducing SilkQuote</a></li>
+            <li><a href="/generate-a-quote-pdf-from-an-opportunity">Generate Quotes</a></li>
+            <li><a href="/create-a-new-template">Create Templates</a></li>
+            <li><a href="/contact/">Contact Us</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
 </div>
+
+<style>
+.error-page {
+  text-align: center;
+  padding: 80px 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.error-title {
+  font-size: 6rem;
+  font-weight: 800;
+  color: #e74c3c;
+  margin: 0;
+  line-height: 1;
+}
+
+.error-subtitle {
+  font-size: 2rem;
+  margin: 20px 0;
+  color: #2c3e50;
+}
+
+.error-description {
+  font-size: 1.2rem;
+  color: #7f8c8d;
+  margin-bottom: 40px;
+}
+
+.error-actions {
+  margin-bottom: 40px;
+}
+
+.error-actions .btn {
+  margin: 0 10px;
+  padding: 12px 24px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn--primary {
+  background: #3498db;
+  color: white;
+}
+
+.btn--primary:hover {
+  background: #2980b9;
+}
+
+.btn--secondary {
+  background: transparent;
+  color: #3498db;
+  border: 2px solid #3498db;
+}
+
+.btn--secondary:hover {
+  background: #3498db;
+  color: white;
+}
+
+.error-suggestions {
+  text-align: left;
+  background: #f8f9fa;
+  padding: 30px;
+  border-radius: 8px;
+  border-left: 4px solid #3498db;
+}
+
+.error-suggestions h3 {
+  margin-top: 0;
+  color: #2c3e50;
+}
+
+.error-suggestions ul {
+  list-style: none;
+  padding: 0;
+}
+
+.error-suggestions li {
+  margin: 10px 0;
+}
+
+.error-suggestions a {
+  color: #3498db;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.error-suggestions a:hover {
+  text-decoration: underline;
+}
+</style>

@@ -12,6 +12,23 @@ plugins:
   - jekyll-paginate
   - jekyll-sitemap
 
+# Sitemap configuration
+sitemap:
+  exclude: 
+    - /__drafts/
+    - /admin/
+    - /_site/
+    - /_includes/
+    - /_layouts/
+    - /_sass/
+    - /_data/
+    - /robots.txt
+    - /404.html
+    - /feed.xml
+    - /search.json
+  change_frequency: weekly
+  priority: 0.8
+
 paginate: 3
 paginate_path: "/page/:num"
 

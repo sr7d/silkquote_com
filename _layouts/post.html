@@ -70,6 +70,35 @@ layout: default
 <!-- begin post -->
 <div class="container animate">
 
+  <!-- Article Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "{{ page.title | escape }}",
+    "description": "{% if page.description %}{{ page.description | strip_html | escape }}{% else %}{{ page.excerpt | strip_html | escape }}{% endif %}",
+    "image": "{% if page.image %}{{ site.url }}{{ page.image }}{% endif %}",
+    "author": {
+      "@type": "Person",
+      "name": "{% if page.author %}{{ page.author }}{% else %}{{ site.data.settings.author.author__name }}{% endif %}"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "SilkQuote",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://silkquote.com/images/logo.png"
+      }
+    },
+    "datePublished": "{{ page.date | date_to_xmlschema }}",
+    "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "{{ page.url | absolute_url }}"
+    }
+  }
+  </script>
+
   <article class="post">
 
     <div class="post__content">
