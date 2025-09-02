@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+
+# Disallow drafts and admin areas
+Disallow: /__drafts/
+Disallow: /admin/
+Disallow: /_site/
+Disallow: /_includes/
+Disallow: /_layouts/
+Disallow: /_sass/
+Disallow: /_data/
+
+# Allow important pages
+Allow: /posts/
+Allow: /tags/
+Allow: /contact/
+
+# Sitemap location
+Sitemap: https://silkquote.com/sitemap.xml
+

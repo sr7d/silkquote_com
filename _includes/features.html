@@ -3,7 +3,7 @@
     <div class="section__info">
       <div class="section__head">
         <h3 class="section__title">How It Works</h3>
-        <p class="section__description">Our streamlined 3-step process transforms Salesforce opportunities into professional quotes in minutes:</p>
+        <p class="section__description">Our simple 3-step process takes you from template setup to sharing in minutes:</p>
       </div>
     </div>
 
@@ -13,12 +13,21 @@
         <div class="col col-6 col-t-12">
           <div class="feature-content">
             <h4 class="feature-title">1) Build Templates</h4>
-            <p class="feature-description">Build dynamic templates with conditional fields, custom sections, and flexible layouts. Configure pricing rules, product bundles, and business logic to create professional quotes that adapt to your business needs.</p>
+            <p class="feature-description">Admins configure flexible templates directly in Salesforce with dynamic fields, conditional sections, and standardized terms & conditions all without code.</p>
           </div>
         </div>
         <div class="col col-6 col-t-12">
-          <div class="feature-image page__content">
-            <img src="/images/configurator.png" alt="SilkQuote Configurator" />
+          <div class="feature-image page__content" style="text-align: center;">
+            <div class="gif-container" data-gif-src="/images/configurator.gif" data-static-src="/images/configurator.png">
+              <img src="/images/configurator.png" alt="SilkQuote Configurator" class="gif-thumbnail" />
+              <div class="gif-overlay">
+                <div class="magnify-icon">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -30,12 +39,21 @@
         <div class="col col-6 col-t-12">
           <div class="feature-content">
             <h4 class="feature-title">2) Generate Quotes</h4>
-            <p class="feature-description">Automatically generate professional PDF quotes from Salesforce opportunities. Preview quotes before saving, apply draft watermarks, and include signature blocks. Streamline your quote generation process with intelligent automation.</p>
+            <p class="feature-description">Reps generate polished PDFs with one click pulling in products, pricing, and customer information automatically, so every quote is accurate and on-brand.</p>
           </div>
         </div>
         <div class="col col-6 col-t-12">
-          <div class="feature-image page__content">
-            <img src="/images/generator.png" alt="SilkQuote Generator" />
+          <div class="feature-image page__content" style="text-align: center;">
+            <div class="gif-container" data-gif-src="/images/generator.gif" data-static-src="/images/generator.png">
+              <img src="/images/generator.png" alt="SilkQuote Generator" class="gif-thumbnail" />
+              <div class="gif-overlay">
+                <div class="magnify-icon">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -47,15 +65,275 @@
         <div class="col col-6 col-t-12">
           <div class="feature-content">
             <h4 class="feature-title">3) Share Documents</h4>
-            <p class="feature-description">Manage your quote templates with ease. Set paper sizes, configure logos, attach terms and conditions, and create reusable templates. Share quotes via email or generate shareable links for seamless collaboration.</p>
+            <p class="feature-description">Quotes can be previewed, saved to Salesforce, or shared via email, secure link, or integrated e-signature keeping the sales cycle moving fast.</p>
           </div>
         </div>
         <div class="col col-6 col-t-12">
-          <div class="feature-image page__content">
-            <img src="/images/document.png" alt="SilkQuote Document Management" />
+          <div class="feature-image page__content" style="text-align: center;">
+            <div class="gif-container" data-gif-src="/images/docshare.gif" data-static-src="/images/document.png">
+              <img src="/images/document.png" alt="SilkQuote Document Management" class="gif-thumbnail" />
+              <div class="gif-overlay">
+                <div class="magnify-icon">
+                  <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </section>
+
+<style>
+  .gif-container {
+    position: relative;
+    width: fit-content;
+    max-width: 100%;
+    border-radius: var(--border-radius-large);
+    overflow: hidden;
+    box-shadow: var(--shadow-lg);
+    transition: var(--transition-medium);
+    cursor: pointer;
+    display: inline-block;
+    margin: 0 auto;
+  }
+  
+  .gif-container:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  }
+  
+  .gif-thumbnail {
+    height: auto;
+    display: block;
+    border-radius: var(--border-radius-large);
+    width: auto;
+  }
+  
+  .gif-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    border-radius: var(--border-radius-large);
+    z-index: 10;
+  }
+  
+  .gif-overlay:hover {
+    background: rgba(0, 0, 0, 0.4);
+  }
+  
+  .magnify-icon {
+    width: 64px;
+    height: 64px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2c2c2c;
+    opacity: 1;
+    transform: scale(1);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .gif-overlay:hover .magnify-icon {
+    transform: scale(1.1);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* GIF Lightbox */
+  .gif-lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    z-index: 999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+  }
+  
+  .gif-lightbox.active {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .gif-lightbox-content {
+    position: relative;
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 12px;
+    overflow: hidden;
+    background: transparent;
+  }
+  
+  .gif-lightbox img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    background: transparent;
+    display: block;
+  }
+  
+  .gif-close {
+    position: absolute;
+    top: -50px;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.9);
+    border: 2px solid rgba(255, 255, 255, 1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+  }
+  
+  .gif-close:hover {
+    background: rgba(255, 255, 255, 1);
+    border-color: rgba(255, 255, 255, 1);
+    transform: scale(1.1);
+  }
+  
+  @media (max-width: 768px) {
+    .gif-container {
+      border-radius: 8px;
+    }
+    
+    .gif-thumbnail {
+      border-radius: 8px;
+    }
+    
+    .gif-overlay {
+      border-radius: 8px;
+    }
+    
+    .gif-lightbox-content {
+      max-width: 95%;
+      max-height: 95%;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .gif-container {
+      border-radius: 6px;
+      box-shadow: var(--shadow-md);
+    }
+    
+    .gif-thumbnail {
+      border-radius: 6px;
+    }
+    
+    .gif-overlay {
+      border-radius: 6px;
+    }
+    
+    .gif-container:hover {
+      transform: translateY(-2px);
+    }
+    
+    .magnify-icon {
+      width: 56px;
+      height: 56px;
+    }
+    
+    .gif-lightbox-content {
+      max-width: 98%;
+      max-height: 98%;
+    }
+    
+    .gif-close {
+      top: -40px;
+      width: 36px;
+      height: 36px;
+    }
+  }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const gifContainers = document.querySelectorAll('.gif-container');
+  
+  // Create lightbox element
+  const lightbox = document.createElement('div');
+  lightbox.className = 'gif-lightbox';
+  lightbox.innerHTML = `
+    <div class="gif-lightbox-content">
+      <img src="" alt="" />
+      <div class="gif-close">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 6l12 12M6 18L18 6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+      </div>
+    </div>
+  `;
+  document.body.appendChild(lightbox);
+  
+  const lightboxImg = lightbox.querySelector('img');
+  const closeBtn = lightbox.querySelector('.gif-close');
+  
+  // Add click handlers to GIF containers
+  gifContainers.forEach(container => {
+    container.addEventListener('click', function() {
+      const gifSrc = this.dataset.gifSrc;
+      const gifAlt = this.querySelector('img').alt;
+      
+      // Create a new image element to load the GIF
+      const gifImage = new Image();
+      gifImage.onload = function() {
+        lightboxImg.src = gifSrc;
+        lightboxImg.alt = gifAlt;
+        lightbox.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      };
+      
+      // Start loading the GIF
+      gifImage.src = gifSrc;
+    });
+  });
+  
+  // Close lightbox handlers
+  closeBtn.addEventListener('click', function() {
+    lightbox.classList.remove('active');
+    document.body.style.overflow = '';
+    setTimeout(() => {
+      lightboxImg.src = '';
+    }, 300);
+  });
+  
+  // Close on background click
+  lightbox.addEventListener('click', function(e) {
+    if (e.target === lightbox) {
+      closeBtn.click();
+    }
+  });
+  
+  // Close on escape key
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+      closeBtn.click();
+    }
+  });
+});
+</script>

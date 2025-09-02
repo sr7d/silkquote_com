@@ -1,6 +1,6 @@
 /* Hero - SilkQuote Design System */
 .hero {
-  padding: 50px 0 0;
+  padding: 50px 0 50px;
   color: var(--white);
   background: var(--white);
   position: relative;
@@ -25,18 +25,15 @@
   }
 
   @media (max-width: $desktop) {
-    padding: 30px 0 0;
-    margin-bottom: 80px;
+    padding: 30px 0 30px;
   }
 
   @media (max-width: $tablet) {
-    padding: 30px 0 0;
-    margin-bottom: 60px;
+    padding: 30px 0 30px;
   }
 
   @media (max-width: $mobile) {
-    padding: 20px 0 0;
-    margin-bottom: 40px;
+    padding: 20px 0 20px;
   }
 }
 

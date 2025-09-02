@@ -63,7 +63,9 @@
               <li class="LIs">Integrate with E-sign</li>
             </ul>
           </div>
-          <div class="animatedicon"></div>
+          <div class="animatedicon">
+            <img src="/images/product.svg" alt="Product Animation" class="animated-product-icon" />
+          </div>
         </div>
       </div>
     </div>
@@ -217,17 +219,40 @@
     }
   }
   
+  /* Safari-specific fixes for img element sizing */
+  @media not all and (min-resolution:.001dpcm) {
+    @supports (-webkit-appearance:none) {
+      .animated-product-icon {
+        width: 60px !important;
+        height: 60px !important;
+        max-width: 60px !important;
+        max-height: 60px !important;
+      }
+    }
+  }
+  
   .animatedicon {
     width: 60px;
     height: 60px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
     position: absolute;
     top: 10%;
     left: 0; /* Change this to control horizontal movement */
     opacity: 0;
     animation: factory 5.75s ease-in-out infinite; /* 25% slower with 8s interval between runs */
+    /* Force hardware acceleration for better rendering */
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    will-change: transform, opacity, left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .animated-product-icon {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    transition: none; /* Disable any default transitions */
   }
   
   @keyframes factory {
@@ -235,7 +260,6 @@
       left: 22%;
       opacity: 0;
       transform: scale(1.5);
-      background-image: url('/images/product.svg');
     }
     8% {
       opacity: 1;
@@ -245,13 +269,6 @@
       left: 38%;
       opacity: 0;
       transform: scale(1.5); /* Hold the size at peak position */
-      background-image: url('/images/product.svg');
-    }
-    39%{
-      background-image: url('/images/product.svg');
-    }
-    40%{
-      background-image: url('/images/pdf.svg');
     }
     48% {
       left: 56%; /* Adjust to desired exit position */
@@ -265,25 +282,21 @@
       left: 72%; /* Final exit position */
       opacity: 0;
       transform: scale(1);
-      background-image: url('/images/pdf.svg');
     }
     80% {
       left: 72%; /* Hold position during wait */
       opacity: 0;
       transform: scale(1);
-      background-image: url('/images/pdf.svg');
     }
     90% {
       left: 72%; /* Continue holding during wait period */
       opacity: 0;
       transform: scale(1);
-      background-image: url('/images/pdf.svg');
     }
     100% {
       left: 72%; /* Final exit position */
       opacity: 0; /* Fade out at the end */
       transform: scale(1); /* Return to original size for smooth exit */
-      background-image: url('/images/pdf.svg');
     }
   }
   
@@ -553,4 +566,34 @@
     }
   }
 </style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const animatedIcon = document.querySelector('.animated-product-icon');
+  if (!animatedIcon) return;
+  
+  // Animation duration is 5.75s (5750ms)
+  const animationDuration = 5750;
+  
+  function switchImages() {
+    // At 40% of animation (2300ms), switch to PDF icon
+    setTimeout(() => {
+      animatedIcon.src = '/images/pdf.svg';
+      animatedIcon.alt = 'PDF Document';
+    }, animationDuration * 0.40);
+    
+    // At 100% of animation (5750ms), switch back to product icon for next cycle
+    setTimeout(() => {
+      animatedIcon.src = '/images/product.svg';
+      animatedIcon.alt = 'Product Animation';
+    }, animationDuration);
+  }
+  
+  // Start the image switching cycle
+  switchImages();
+  
+  // Repeat the image switching every animation cycle
+  setInterval(switchImages, animationDuration);
+});
+</script>
 
