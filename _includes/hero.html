@@ -576,18 +576,22 @@ document.addEventListener('DOMContentLoaded', function() {
   const animationDuration = 5750;
   
   function switchImages() {
-    // At 40% of animation (2300ms), switch to PDF icon
+    // Switch to PDF icon at 48% when it becomes visible (2760ms)
     setTimeout(() => {
       animatedIcon.src = '/images/pdf.svg';
       animatedIcon.alt = 'PDF Document';
-    }, animationDuration * 0.40);
+    }, animationDuration * 0.48);
     
-    // At 100% of animation (5750ms), switch back to product icon for next cycle
+    // Switch back to product icon at 72% when PDF fades out (4140ms) - ready for next cycle
     setTimeout(() => {
       animatedIcon.src = '/images/product.svg';
       animatedIcon.alt = 'Product Animation';
-    }, animationDuration);
+    }, animationDuration * 0.72);
   }
+  
+  // Ensure we start with the product icon
+  animatedIcon.src = '/images/product.svg';
+  animatedIcon.alt = 'Product Animation';
   
   // Start the image switching cycle
   switchImages();
