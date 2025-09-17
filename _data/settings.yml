@@ -18,7 +18,10 @@ menu__settings:
 # Hero Settings
 hero:
   hero__title: Simple, Elegant PDF Quote Generation for Salesforce
-  hero__description: Generate error-free, on-brand quote documents in seconds! Our no-code tool lets admins create dynamic customizable templates to make every quote effortless.
+  hero__description: Transform your Salesforce opportunities into professional, branded PDF quotes instantly with dynamic, customizable templates.
+  hero__cta_text: Join the Waitlist
+  hero__cta_url: /contact/
+  hero__demo_text: View Demo
 
 #-------------------------------
 # Blog Settings

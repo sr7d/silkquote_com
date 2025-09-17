@@ -9,6 +9,12 @@
           <div class="hero__description__inner">
             <p class="hero__description">{{ site.data.settings.hero.hero__description }}</p>
           </div>
+          <div class="hero__cta__inner">
+            <div class="hero__buttons">
+              <a href="{{ site.data.settings.hero.hero__cta_url }}" class="hero__cta">{{ site.data.settings.hero.hero__cta_text }}</a>
+              <a href="#" class="hero__demo" id="demo-button">{{ site.data.settings.hero.hero__demo_text }}</a>
+            </div>
+          </div>
         </div>
       </div>
       <div class="col col-4 col-t-12">
@@ -102,6 +108,76 @@
     margin: 0;
     color: var(--text-primary);
   }
+  
+  /* Hero CTA Styles */
+  .hero__cta__inner {
+    margin-top: 1.6rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  .hero__buttons {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+  
+  .hero__cta {
+    display: inline-block;
+    background: #8a4af3;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(57, 53, 236, 0.3);
+    border: none;
+    cursor: pointer;
+  }
+  
+  .hero__cta:hover {
+    background: #8a4af3;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(57, 53, 236, 0.4);
+    color: white;
+    text-decoration: none;
+  }
+  
+  .hero__cta:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 10px rgba(57, 53, 236, 0.3);
+  }
+  
+  .hero__demo {
+    display: inline-block;
+    background: transparent;
+    color: #8a4af3;
+    padding: 10px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    border: 2px solid #8a4af3;
+    cursor: pointer;
+  }
+  
+  .hero__demo:hover {
+    background: #8a4af3;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(57, 53, 236, 0.4);
+    text-decoration: none;
+  }
+  
+  .hero__demo:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 10px rgba(57, 53, 236, 0.3);
+  }
+  
 
   /* Mobile Optimizations */
   @media (max-width: 768px) {
@@ -113,6 +189,28 @@
     .quote-bubble::before {
       left: 20%;
       border-width: 10px;
+    }
+    
+    .hero__cta__inner {
+      margin-top: 1rem;
+      justify-content: center;
+    }
+    
+    .hero__buttons {
+      flex-direction: column;
+      gap: 1rem;
+      width: 100%;
+    }
+    
+    .hero__cta, .hero__demo {
+      font-size: 13px;
+      padding: 10px 20px;
+      width: 100%;
+      text-align: center;
+    }
+    
+    .hero__demo {
+      padding: 8px 18px;
     }
   }
   
@@ -126,6 +224,23 @@
     .quote-bubble::before {
       left: 25%;
       border-width: 8px;
+    }
+    
+    .hero__cta__inner {
+      margin-top: 1rem;
+    }
+    
+    .hero__buttons {
+      gap: 0.75rem;
+    }
+    
+    .hero__cta, .hero__demo {
+      font-size: 12px;
+      padding: 9px 18px;
+    }
+    
+    .hero__demo {
+      padding: 7px 16px;
     }
   }
   
@@ -534,5 +649,20 @@
     }
   }
 </style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const demoButton = document.getElementById('demo-button');
+  const videoOverlay = document.getElementById('video-overlay');
+  
+  if (demoButton && videoOverlay) {
+    demoButton.addEventListener('click', function(e) {
+      e.preventDefault();
+      // Trigger the same click event as the video overlay
+      videoOverlay.click();
+    });
+  }
+});
+</script>
 
 
