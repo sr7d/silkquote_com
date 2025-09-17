@@ -16,5 +16,5 @@ Allow: /tags/
 Allow: /contact/
 
 # Sitemap location
-Sitemap: https://silkquote.com/sitemap.xml
+Sitemap: https://www.silkquote.com/sitemap.xml
 
