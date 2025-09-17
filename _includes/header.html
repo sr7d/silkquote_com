@@ -43,6 +43,8 @@
                   {% else %}
                     <span class="nav__link coming-soon" data-tooltip="Coming Soon">{{ item.title }}</span>
                   {% endif %}
+                {% elsif item.demo %}
+                  <a href="#" class="nav__link demo-trigger" id="menu-demo-button">{{ item.title }}</a>
                 {% else %}
                   <a href="{{ item.url | relative_url }}" class="nav__link{% if page.url == item.url %} active-link{% endif %}">{{ item.title }}</a>
                 {% endif %}

@@ -1,6 +1,6 @@
 /* Post + Page */
 .post-head {
-  margin-top: 20px;
+  margin-top: 120px;
   margin-bottom: 60px;
 
   &.post-head-video {
@@ -16,20 +16,26 @@
   }
 
   @media (max-width: $desktop) {
+    margin-top: 100px;
     margin-bottom: 40px;
   }
 
   @media (max-width: $mobile) {
+    margin-top: 90px;
     margin-bottom: 32px;
   }
 }
 
 .page-head {
   max-width: 740px;
-  margin: 20px auto 40px;
+  margin: 120px auto 40px;
+
+  @media (max-width: $desktop) {
+    margin: 100px auto 40px;
+  }
 
   @media (max-width: $mobile) {
-    margin-bottom: 32px;
+    margin: 90px auto 32px;
   }
 }
 

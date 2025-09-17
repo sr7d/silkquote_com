@@ -1,24 +1,17 @@
 <section class="hero">
   <div id="heroDiv" class="container">
     <div class="row">
-      <div class="col col-8 col-t-12">
-        <div class="quote-bubble">
+      <div class="col col-12">
+        <div class="hero__content">
           <div class="hero__inner">
             <h1 class="hero__title">{{ site.data.settings.hero.hero__title }}</h1>
           </div>
           <div class="hero__description__inner">
             <p class="hero__description">{{ site.data.settings.hero.hero__description }}</p>
           </div>
-          <div class="hero__cta__inner">
-            <div class="hero__buttons">
-              <a href="{{ site.data.settings.hero.hero__cta_url }}" class="hero__cta">{{ site.data.settings.hero.hero__cta_text }}</a>
-              <a href="#" class="hero__demo" id="demo-button">{{ site.data.settings.hero.hero__demo_text }}</a>
-            </div>
-          </div>
         </div>
-      </div>
-      <div class="col col-4 col-t-12">
-        <div class="hero__video">
+        <!-- Hidden video container for lightbox functionality -->
+        <div class="hero__video" style="display: none;">
           <div class="video-container" id="hero-video-container">
             <iframe 
               src="https://player.vimeo.com/video/1114259071/?autoplay=0&muted=1&loop=0&background=1&controls=0" 
@@ -40,406 +33,338 @@
     </div>
     <div class="row">
       <div class="col col-12">
-        <div class="animation-container">
-          <div class="column column-1">
-            <img src="/images/price_books.svg" alt="Salesforce Data" />
-            <ul>
-              <li class="featuredULs"></li>
-              <li class="LIs">Product Specifications</li>
-              <li class="LIs">Pricing Details</li>
-              <li class="LIs">Customer Data</li>
-            </ul>
+        <div class="feature-slideshow">
+          <div class="slideshow-controls">
+            <div class="slide-indicator active" data-slide="0">
+              <div class="indicator-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                  <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                  <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <span class="indicator-label">Build</span>
+              <div class="progress-bar">
+                <div class="progress-fill"></div>
+              </div>
+            </div>
+            
+            <div class="slide-indicator" data-slide="1">
+              <div class="indicator-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <span class="indicator-label">Generate</span>
+              <div class="progress-bar">
+                <div class="progress-fill"></div>
+              </div>
+            </div>
+            
+            <div class="slide-indicator" data-slide="2">
+              <div class="indicator-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M4 12V20A2 2 0 0 0 6 22H18A2 2 0 0 0 20 20V12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <polyline points="16,6 12,2 8,6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <line x1="12" y1="2" x2="12" y2="15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <span class="indicator-label">Share</span>
+              <div class="progress-bar">
+                <div class="progress-fill"></div>
+              </div>
+            </div>
           </div>
-          <div class="column column-2">
-            <img src="/images/bundle_config.svg" alt="SilkQuote Processing" class="animated-svg" />
-            <ul>
-              <li class="featuredULs"></li>
-              <!-- <li id="sfdc-cloud"><img src="/images/sfdc.png" alt="Salesforce"></li>            -->
-              <li class="LIs">Dynamic Templates</li>
-              <li class="LIs">Conditional Fields</li>
-              <li class="LIs">Addt. Terms & Conditions</li>
-            </ul>
+          
+          <div class="slideshow-content">
+            <div class="slide active" data-slide="0">
+              <div class="slide-image">
+                <img src="/images/configurator.gif" alt="Build Templates" />
+              </div>
+              <div class="slide-text">
+                <h3>Build</h3>
+                <p>Admins configure flexible templates directly in Salesforce with dynamic fields, conditional sections, and standardized terms & conditions all without code.</p>
+                <ul>
+                  <li>Configure directly in Salesforce</li>
+                  <li>Dynamic fields & conditional sections</li>
+                  <li>Standardized terms & conditions</li>
+                  <li>No-code configuration</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="slide" data-slide="1">
+              <div class="slide-image">
+                <img src="/images/generator.gif" alt="Generate Quotes" />
+              </div>
+              <div class="slide-text">
+                <h3>Generate</h3>
+                <p>Reps generate polished PDFs with one click pulling in products, pricing, and customer information automatically, so every quote is accurate and on-brand.</p>
+                <ul>
+                  <li>One-click PDF generation</li>
+                  <li>Automatic product & pricing data</li>
+                  <li>Customer information integration</li>
+                  <li>Accurate & on-brand quotes</li>
+                </ul>
+              </div>
+            </div>
+            
+            <div class="slide" data-slide="2">
+              <div class="slide-image">
+                <img src="/images/docshare.gif" alt="Share Quotes" />
+              </div>
+              <div class="slide-text">
+                <h3>Share</h3>
+                <p>Quotes can be previewed, saved to Salesforce, or shared via email, secure link, or integrated e-signature keeping the sales cycle moving fast.</p>
+                <ul>
+                  <li>Preview before sharing</li>
+                  <li>Save directly to Salesforce</li>
+                  <li>Email & secure link sharing</li>
+                  <li>E-signature integration</li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <div class="column column-3">
-            <img src="/images/customers_120.svg" alt="ERP" />
-            <ul>
-              <li class="featuredULs"></li>
-              <li class="LIs">Preview & Save</li>
-              <li class="LIs">Sharable Link or Email</li>
-              <li class="LIs">Integrate with E-sign</li>
-            </ul>
-          </div>
-          <div class="animatedicon"></div>
         </div>
       </div>
     </div>
+    
   </div>
 </section>
 
 <style>
-  .quote-bubble {
-    background-color: var(--background-white);
-    border-radius: var(--border-radius-large);
-    padding: 2rem;
-    box-shadow: var(--shadow-lg);
-    position: relative;
-    margin: 20px 0;
-    border: 1px solid var(--border-light);
-    transition: var(--transition-medium);
-  }  
-  
-  .quote-bubble:hover {
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
-    transform: translateY(-2px);
-  }
-  
-  .quote-bubble::before {
-    content: '';
-    position: absolute;
-    bottom: 100%;
-    left: 15%;
-    margin-left: -12px;
-    border-width: 12px;
-    border-style: solid;
-    border-color: transparent transparent var(--background-white) transparent;
-  }  
-  
-  .quote-bubble h1, .quote-bubble p {
+  .hero__content {
+    padding: 0;
     margin: 0;
-    color: var(--text-primary);
   }
   
-  /* Hero CTA Styles */
-  .hero__cta__inner {
-    margin-top: 1.6rem;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  
-  .hero__buttons {
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-  }
-  
-  .hero__cta {
-    display: inline-block;
-    background: #8a4af3;
-    color: white;
-    padding: 12px 24px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 14px;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(57, 53, 236, 0.3);
-    border: none;
-    cursor: pointer;
-  }
-  
-  .hero__cta:hover {
-    background: #8a4af3;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(57, 53, 236, 0.4);
-    color: white;
-    text-decoration: none;
-  }
-  
-  .hero__cta:active {
-    transform: translateY(0);
-    box-shadow: 0 2px 10px rgba(57, 53, 236, 0.3);
-  }
-  
-  .hero__demo {
-    display: inline-block;
-    background: transparent;
-    color: #8a4af3;
-    padding: 10px 22px;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 14px;
-    transition: all 0.3s ease;
-    border: 2px solid #8a4af3;
-    cursor: pointer;
-  }
-  
-  .hero__demo:hover {
-    background: #8a4af3;
-    color: white;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(57, 53, 236, 0.4);
-    text-decoration: none;
-  }
-  
-  .hero__demo:active {
-    transform: translateY(0);
-    box-shadow: 0 2px 10px rgba(57, 53, 236, 0.3);
-  }
   
 
+  
+  /* Feature Slideshow Styles */
+  .feature-slideshow {
+    margin-top: 20px;
+    padding: 20px 0;
+  }
+  
+  .slideshow-controls {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-bottom: 80px;
+    position: relative;
+  }
+  
+  .slide-indicator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s ease;
+    opacity: 0.6;
+  }
+  
+  .slide-indicator.active {
+    opacity: 1;
+  }
+  
+  .indicator-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--background-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 12px;
+    transition: all 0.3s ease;
+    color: #8a4af3;
+    position: relative;
+    z-index: 2;
+  }
+  
+  .slide-indicator.active .indicator-icon {
+    background: #8a4af3;
+    color: white;
+    transform: scale(1.1);
+    box-shadow: 0 6px 25px rgba(138, 74, 243, 0.3);
+  }
+  
+  .indicator-label {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--text-color);
+    margin-top: 8px;
+  }
+  
+  .progress-bar {
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background: rgba(138, 74, 243, 0.2);
+    border-radius: 2px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    overflow: hidden;
+  }
+  
+  .slide-indicator.active .progress-bar {
+    opacity: 1;
+  }
+  
+  .progress-fill {
+    height: 100%;
+    background: #8a4af3;
+    width: 0%;
+    border-radius: 2px;
+    transition: width 6s linear;
+  }
+  
+  .slide-indicator.active .progress-fill {
+    width: 100%;
+  }
+  
+  .slideshow-content {
+    position: relative;
+    min-height: 400px;
+  }
+  
+  .slide {
+    display: none;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+  }
+  
+  .slide.active {
+    display: grid;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .slide-image {
+    text-align: center;
+  }
+  
+  .slide-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    will-change: transform;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+  }
+  
+  .slide-text h3 {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--text-color);
+    margin-bottom: 20px;
+    line-height: 1.3;
+  }
+  
+  .slide-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: var(--text-color);
+    opacity: 0.8;
+    margin-bottom: 24px;
+  }
+  
+  .slide-text ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .slide-text li {
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--text-color);
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 24px;
+  }
+  
+  .slide-text li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #8a4af3;
+    font-weight: bold;
+  }
+  
   /* Mobile Optimizations */
   @media (max-width: 768px) {
-    .quote-bubble {
-      padding: 1.5rem;
-      margin: 15px 0;
+    .feature-slideshow {
+      margin-top: 20px;
+      padding: 30px 0;
     }
     
-    .quote-bubble::before {
-      left: 20%;
-      border-width: 10px;
+    .slideshow-controls {
+      gap: 40px;
+      margin-bottom: 60px;
     }
     
-    .hero__cta__inner {
-      margin-top: 1rem;
-      justify-content: center;
-    }
-    
-    .hero__buttons {
-      flex-direction: column;
-      gap: 1rem;
-      width: 100%;
-    }
-    
-    .hero__cta, .hero__demo {
-      font-size: 13px;
-      padding: 10px 20px;
-      width: 100%;
+    .slide {
+      grid-template-columns: 1fr;
+      gap: 30px;
       text-align: center;
     }
     
-    .hero__demo {
-      padding: 8px 18px;
-    }
-  }
-  
-  @media (max-width: 576px) {
-    .quote-bubble {
-      padding: 1.25rem;
-      margin: 10px 0;
-      border-radius: 8px;
+    .slide-text h3 {
+      font-size: 24px;
     }
     
-    .quote-bubble::before {
-      left: 25%;
-      border-width: 8px;
-    }
-    
-    .hero__cta__inner {
-      margin-top: 1rem;
-    }
-    
-    .hero__buttons {
-      gap: 0.75rem;
-    }
-    
-    .hero__cta, .hero__demo {
-      font-size: 12px;
-      padding: 9px 18px;
-    }
-    
-    .hero__demo {
-      padding: 7px 16px;
-    }
-  }
-  
-  .animation-container {
-    margin-top: 40px;
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    height: 350px;
-    position: relative;
-  }
-  
-  .column {
-    flex: 1;
-    text-align: center;
-    font-size: 18px;
-    position: relative;
-  }
-  
-  .column img {
-    width: 150px; /* Increased size of SVG images */
-    height: auto; /* Maintain aspect ratio */
-    margin-bottom: 10px; /* Space between image and text */
-  }
-  
-  .column ul {
-    list-style-type: none; /* Hide bullet points */
-    padding: 0; /* Remove padding */
-    margin: 0; /* Remove margin */
-  }
-  
-  .column li {
-    margin-bottom: 5px;
-    word-wrap: break-word;
-    hyphens: auto;
-    max-width: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    font-size: 16px;
-  }
-
-  /* Mobile Optimizations for Animation */
-  @media (max-width: 768px) {
-    .animation-container {
-      display: none;
-    }
-    
-    .column {
+    .slide-text p {
       font-size: 16px;
     }
     
-    .column img {
-      width: 120px;
+    .indicator-icon {
+      width: 50px;
+      height: 50px;
     }
     
-    .column li {
-      font-size: 14px;
-      max-width: 70%;
+    .progress-bar {
+      width: 60px;
     }
   }
   
   @media (max-width: 576px) {
-    .animation-container {
-      height: 220px;
-      margin-top: 20px;
-      flex-direction: column;
-      align-items: center;
+    .slideshow-controls {
+      gap: 20px;
+      flex-wrap: wrap;
     }
     
-    .column {
+    .slide-indicator {
+      flex: 1;
+      min-width: 80px;
+    }
+    
+    .indicator-label {
       font-size: 14px;
-      margin-bottom: 15px;
     }
     
-    .column img {
-      width: 80px;
-      margin-bottom: 8px;
+    .slide-text h3 {
+      font-size: 20px;
     }
     
-    .column li {
-      font-size: 12px;
-      max-width: 90%;
-      line-height: 1.4;
+    .slide-text p {
+      font-size: 15px;
     }
     
-    /* Hide animation on very small screens for performance */
-    .animatedicon {
-      display: none;
+    .slide-text li {
+      font-size: 14px;
     }
-  }
-  
-  /* Safari-specific fixes for img element sizing */
-  @media not all and (min-resolution:.001dpcm) {
-    @supports (-webkit-appearance:none) {
-      .animated-product-icon {
-        width: 60px !important;
-        height: 60px !important;
-        max-width: 60px !important;
-        max-height: 60px !important;
-      }
-    }
-  }
-  
-  .animatedicon {
-    width: 60px;
-    height: 60px;
-    background-image: url('/images/product.svg');
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    position: absolute;
-    top: 10%;
-    left: 0; /* Change this to control horizontal movement */
-    opacity: 0;
-    animation: factory 6s ease-in-out infinite; /* Increased duration for better pause effect */
-  }
-  
-  @keyframes factory {
-    0% {
-      left: 22%;
-      opacity: 0;
-      transform: scale(1.5);
-    }
-    10% {
-      opacity: 1;
-      transform: scale(1.5);
-    }
-    30% {
-      left: 38%;
-      opacity: 0;
-      transform: scale(1.5); /* Hold the size at peak position */
-      background-image: url('/images/product.svg');
-    }
-    50%{
-      background-image: url('/images/pdf.svg');
-    }
-    60% {
-      left: 56%; /* Adjust to desired exit position */
-      opacity: 0;
-      transform: scale(1);
-    }
-    85% {
-      opacity: 1;
-    }
-    95% {
-      left: 72%; /* Final exit position */
-      opacity: 0;
-      transform: scale(1);
-    }
-    100% {
-      left: 72%; /* Final exit position */
-      opacity: 0; /* Fade out at the end */
-      transform: scale(1); /* Return to original size for smooth exit */
-      background-image: url('/images/pdf.svg');
-    }
-  }
-  
-  @keyframes bundleAnimation {
-    0%, 30% {
-      transform: scale(1);
-    }
-    35% {
-      transform: scale(1.2) rotate(10deg); /* Shake and grow effect */
-    }
-    40% {
-      transform: scale(1.2) rotate(-10deg); /* Shake and grow effect */
-    }
-    45% {
-      transform: scale(1.2); /* Hold the size */
-    }
-    50% {
-      transform: scale(1); /* Return to normal */
-    }
-    60%, 100% {
-      opacity: 1; /* Keep it visible */
-    }
-  }
-  
-  .animated-svg {
-    animation: bundleAnimation 6s infinite; /* Use 'infinite' to loop the animation */
-  }
-  
-  .featuredULs {
-    border-bottom: 2px solid #2c2c2c;
-    margin-left: 25%;
-    width: calc(50%);
-    margin-bottom: 20px;
-  }
-  .LIs {
-    padding-top: 0px;
-    margin-top: 15px;
-    font-size: 16px;
-    font-weight: bold;
-    line-height: 1.5;
-    color: #2c2c2c;
-  }
-  #sfdc-cloud {
-    width: 80px;
-    display: block;
-    margin: 0 auto;
   }
   
   .hero__video {
@@ -652,15 +577,90 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  const demoButton = document.getElementById('demo-button');
   const videoOverlay = document.getElementById('video-overlay');
+  const menuDemoButton = document.getElementById('menu-demo-button');
   
-  if (demoButton && videoOverlay) {
-    demoButton.addEventListener('click', function(e) {
+  // Connect menu demo button to video functionality
+  if (menuDemoButton && videoOverlay) {
+    menuDemoButton.addEventListener('click', function(e) {
       e.preventDefault();
       // Trigger the same click event as the video overlay
       videoOverlay.click();
     });
+  }
+  
+  // Slideshow functionality
+  const slideIndicators = document.querySelectorAll('.slide-indicator');
+  const slides = document.querySelectorAll('.slide');
+  let currentSlide = 0;
+  let slideTimer = null;
+  const slideInterval = 6000; // 6 seconds per slide
+  
+  function showSlide(index) {
+    // Remove active class from all indicators and slides
+    slideIndicators.forEach(indicator => {
+      indicator.classList.remove('active');
+      const progressFill = indicator.querySelector('.progress-fill');
+      if (progressFill) {
+        progressFill.style.transition = 'none';
+        progressFill.style.width = '0%';
+      }
+    });
+    
+    slides.forEach(slide => slide.classList.remove('active'));
+    
+    // Add active class to current slide and indicator
+    slideIndicators[index].classList.add('active');
+    slides[index].classList.add('active');
+    
+    // Start progress animation
+    setTimeout(() => {
+      const progressFill = slideIndicators[index].querySelector('.progress-fill');
+      if (progressFill) {
+        progressFill.style.transition = 'width 6s linear';
+        progressFill.style.width = '100%';
+      }
+    }, 100);
+    
+    currentSlide = index;
+  }
+  
+  function nextSlide() {
+    const nextIndex = (currentSlide + 1) % slides.length;
+    showSlide(nextIndex);
+  }
+  
+  function startSlideTimer() {
+    slideTimer = setInterval(nextSlide, slideInterval);
+  }
+  
+  function stopSlideTimer() {
+    if (slideTimer) {
+      clearInterval(slideTimer);
+      slideTimer = null;
+    }
+  }
+  
+  // Add click handlers to indicators
+  slideIndicators.forEach((indicator, index) => {
+    indicator.addEventListener('click', () => {
+      stopSlideTimer();
+      showSlide(index);
+      startSlideTimer();
+    });
+  });
+  
+  // Initialize slideshow immediately
+  if (slideIndicators.length > 0 && slides.length > 0) {
+    showSlide(0);
+    startSlideTimer();
+    
+    // Pause on hover
+    const slideshow = document.querySelector('.feature-slideshow');
+    if (slideshow) {
+      slideshow.addEventListener('mouseenter', stopSlideTimer);
+      slideshow.addEventListener('mouseleave', startSlideTimer);
+    }
   }
 });
 </script>

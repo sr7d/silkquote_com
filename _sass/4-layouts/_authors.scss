@@ -3,7 +3,7 @@
 // Authors Page
 .authors {
   .authors__head {
-    margin: 20px 0 60px;
+    margin: 120px 0 60px;
   }
 
   .authors__title {
@@ -61,6 +61,10 @@
   }
 
   @media (max-width: $desktop) {
+    .authors__head {
+      margin: 100px 0 60px;
+    }
+
     .authors__name {
       font-size: 32px;
     }
@@ -69,7 +73,7 @@
   @media (max-width: $mobile) {
 
     .authors__head {
-      margin: 20px 0 40px;
+      margin: 90px 0 40px;
     }
 
     .authors__title {
@@ -89,7 +93,7 @@
 // Author Page
 .author {
   .author__content {
-    margin: 20px 0 60px;
+    margin: 120px 0 60px;
     text-align: center;
 
     p {
@@ -161,7 +165,17 @@
     }
   }
 
+  @media (max-width: $desktop) {
+    .author__content {
+      margin: 100px 0 60px;
+    }
+  }
+
   @media (max-width: $mobile) {
+    .author__content {
+      margin: 90px 0 60px;
+    }
+
     .author__name {
       font-size: 32px;
     }

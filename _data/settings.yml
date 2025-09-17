@@ -13,6 +13,9 @@ menu__settings:
       url: '/home/'        
     - title: 'Contact'
       url: '/contact/'
+    - title: '▶ Demo'
+      url: '#'
+      demo: true      
 
 #-------------------------------
 # Hero Settings
