@@ -63,9 +63,7 @@
               <li class="LIs">Integrate with E-sign</li>
             </ul>
           </div>
-          <div class="animatedicon">
-            <img src="/images/product.svg" alt="Product Animation" class="animated-product-icon" />
-          </div>
+          <div class="animatedicon"></div>
         </div>
       </div>
     </div>
@@ -134,7 +132,7 @@
   .animation-container {
     margin-top: 40px;
     display: flex;
-    justify-content: center;
+    justify-content: center; /* Center horizontally */
     height: 350px;
     position: relative;
   }
@@ -147,16 +145,15 @@
   }
   
   .column img {
-    width: 150px;
-    height: auto;
-    margin-bottom: 10px;
+    width: 150px; /* Increased size of SVG images */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 10px; /* Space between image and text */
   }
   
   .column ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    line-height: 1.3;
+    list-style-type: none; /* Hide bullet points */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
   }
   
   .column li {
@@ -234,38 +231,15 @@
   .animatedicon {
     width: 60px;
     height: 60px;
+    background-image: url('/images/product.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     position: absolute;
     top: 10%;
     left: 0; /* Change this to control horizontal movement */
     opacity: 0;
-    animation: factory 5.75s ease-in-out infinite; /* 25% slower with 8s interval between runs */
-    /* Force hardware acceleration for better rendering */
-    transform: translateZ(0);
-    -webkit-transform: translateZ(0);
-    will-change: transform, opacity, left;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* Prevent layout shifts and improve performance */
-    contain: layout style paint;
-    isolation: isolate;
-  }
-  
-  .animated-product-icon {
-    width: 60px;
-    height: 60px;
-    object-fit: contain;
-    transition: none; /* Disable any default transitions */
-    /* Prevent image flashing by ensuring consistent rendering */
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: crisp-edges;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-    /* Force consistent sizing to prevent layout shifts */
-    min-width: 60px;
-    min-height: 60px;
-    max-width: 60px;
-    max-height: 60px;
+    animation: factory 6s ease-in-out infinite; /* Increased duration for better pause effect */
   }
   
   @keyframes factory {
@@ -274,35 +248,29 @@
       opacity: 0;
       transform: scale(1.5);
     }
-    8% {
+    10% {
       opacity: 1;
       transform: scale(1.5);
     }
-    24% {
+    30% {
       left: 38%;
       opacity: 0;
       transform: scale(1.5); /* Hold the size at peak position */
+      background-image: url('/images/product.svg');
     }
-    48% {
+    50%{
+      background-image: url('/images/pdf.svg');
+    }
+    60% {
       left: 56%; /* Adjust to desired exit position */
       opacity: 0;
       transform: scale(1);
     }
-    68% {
+    85% {
       opacity: 1;
     }
-    72% {
+    95% {
       left: 72%; /* Final exit position */
-      opacity: 0;
-      transform: scale(1);
-    }
-    80% {
-      left: 72%; /* Hold position during wait */
-      opacity: 0;
-      transform: scale(1);
-    }
-    90% {
-      left: 72%; /* Continue holding during wait period */
       opacity: 0;
       transform: scale(1);
     }
@@ -310,46 +278,33 @@
       left: 72%; /* Final exit position */
       opacity: 0; /* Fade out at the end */
       transform: scale(1); /* Return to original size for smooth exit */
+      background-image: url('/images/pdf.svg');
     }
   }
   
   @keyframes bundleAnimation {
-    0%, 24% {
-      transform: scale(0.8);
+    0%, 30% {
+      transform: scale(1);
     }
-    28% {
-      transform: scale(1) rotate(10deg); /* Shake and grow effect */
-    }
-    32% {
-      transform: scale(1) rotate(-10deg); /* Shake and grow effect */
-    }
-    36% {
-      transform: scale(1); /* Hold the size */
+    35% {
+      transform: scale(1.2) rotate(10deg); /* Shake and grow effect */
     }
     40% {
-      transform: scale(0.8); /* Return to normal */
+      transform: scale(1.2) rotate(-10deg); /* Shake and grow effect */
     }
-    48%, 72% {
+    45% {
+      transform: scale(1.2); /* Hold the size */
+    }
+    50% {
+      transform: scale(1); /* Return to normal */
+    }
+    60%, 100% {
       opacity: 1; /* Keep it visible */
-      transform: scale(0.8);
-    }
-    80% {
-      opacity: 1; /* Hold during wait period */
-      transform: scale(0.8);
-    }
-    90% {
-      opacity: 1; /* Continue holding during wait period */
-      transform: scale(0.8);
-    }
-    100% {
-      opacity: 1; /* Keep it visible */
-      transform: scale(0.8);
     }
   }
   
   .animated-svg {
-    transform: scale(0.8);
-    animation: bundleAnimation 5.75s infinite; /* 25% slower with 8s interval between runs */
+    animation: bundleAnimation 6s infinite; /* Use 'infinite' to loop the animation */
   }
   
   .featuredULs {
@@ -580,81 +535,4 @@
   }
 </style>
 
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  const animatedIcon = document.querySelector('.animated-product-icon');
-  if (!animatedIcon) return;
-  
-  // Animation duration is 5.75s (5750ms)
-  const animationDuration = 5750;
-  
-  // Preload images to prevent loading delays that cause flashing
-  const productImg = new Image();
-  const pdfImg = new Image();
-  productImg.src = '/images/product.svg';
-  pdfImg.src = '/images/pdf.svg';
-  
-  // Track current image state to prevent unnecessary switches
-  let currentImage = 'product';
-  
-  function switchToImage(imageSrc, altText, imageType) {
-    if (currentImage !== imageType) {
-      // Use requestAnimationFrame for smoother transitions
-      requestAnimationFrame(() => {
-        animatedIcon.src = imageSrc;
-        animatedIcon.alt = altText;
-        currentImage = imageType;
-      });
-    }
-  }
-  
-  function switchImages() {
-    // More precise timing calculations with slight buffer to ensure sync
-    const switchToPdfTime = Math.floor(animationDuration * 0.475); // Slightly earlier than 48%
-    const switchToProductTime = Math.floor(animationDuration * 0.715); // Slightly earlier than 72%
-    
-    // Switch to PDF icon when it becomes visible in the animation
-    setTimeout(() => {
-      switchToImage('/images/pdf.svg', 'PDF Document', 'pdf');
-    }, switchToPdfTime);
-    
-    // Switch back to product icon when PDF phase ends
-    setTimeout(() => {
-      switchToImage('/images/product.svg', 'Product Animation', 'product');
-    }, switchToProductTime);
-  }
-  
-  // Ensure we start with the product icon
-  switchToImage('/images/product.svg', 'Product Animation', 'product');
-  
-  // Wait for images to preload before starting animation
-  Promise.all([
-    new Promise(resolve => {
-      if (productImg.complete) resolve();
-      else productImg.onload = resolve;
-    }),
-    new Promise(resolve => {
-      if (pdfImg.complete) resolve();
-      else pdfImg.onload = resolve;
-    })
-  ]).then(() => {
-    // Start the image switching cycle after preload
-    switchImages();
-    
-    // Repeat the image switching every animation cycle
-    setInterval(switchImages, animationDuration);
-  });
-  
-  // Additional safeguard: Listen for animation events if supported
-  const animatedIconContainer = document.querySelector('.animatedicon');
-  if (animatedIconContainer && animatedIconContainer.addEventListener) {
-    animatedIconContainer.addEventListener('animationiteration', () => {
-      // Reset to product icon at the start of each animation cycle
-      setTimeout(() => {
-        switchToImage('/images/product.svg', 'Product Animation', 'product');
-      }, 50); // Small delay to ensure timing
-    });
-  }
-});
-</script>
 
