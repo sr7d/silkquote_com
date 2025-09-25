@@ -13,7 +13,7 @@ menu__settings:
       url: '/home/'        
     - title: 'Contact'
       url: '/contact/'
-    - title: '▶ Demo'
+    - title: '▶ Watch Demo'
       url: '#'
       demo: true      
 
@@ -29,8 +29,8 @@ hero:
 #-------------------------------
 # Blog Settings
 blog:
-  blog__title: Resources & Guides
-  blog__description: Learn how to maximize your quote generation process with SilkQuote
+  blog__title: How it Works
+  blog__description: Learn to use SilkQuote in your quote generation process
   exclude_tags: [articles]
 
 #-------------------------------

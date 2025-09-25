@@ -13,7 +13,9 @@
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
   html.search-is-visible & {
-    display: none;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
     transition: all 0.3s ease;
   }
   
@@ -30,7 +32,7 @@
   }
 
   &.header--dark {
-    background: #00000050;
+    background: var(--text-color);
     color: var(--white);
 
     .hamburger div,
@@ -426,6 +428,30 @@
     display: flex;
     justify-content: end;
     margin-top: 4px;
+  }
+}
+
+/* Demo Button Animation - Purple neon glow effect */
+.play-icon-nav {
+  display: inline-block;
+  text-decoration: none !important;
+  animation: play-icon-neon-glow 1.5s ease-in-out infinite alternate;
+  
+  @media (max-width: $desktop) {
+    animation: none;
+  }
+}
+
+@keyframes play-icon-neon-glow {
+  0% {
+    text-shadow: none;
+  }
+  100% {
+    color: #fff;
+    text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 21px #fff;
   }
 }
 
