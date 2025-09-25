@@ -577,17 +577,7 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-  const videoOverlay = document.getElementById('video-overlay');
-  const menuDemoButton = document.getElementById('menu-demo-button');
-  
-  // Connect menu demo button to video functionality
-  if (menuDemoButton && videoOverlay) {
-    menuDemoButton.addEventListener('click', function(e) {
-      e.preventDefault();
-      // Trigger the same click event as the video overlay
-      videoOverlay.click();
-    });
-  }
+  // Video demo functionality is now handled globally in common.js
   
   // Slideshow functionality
   const slideIndicators = document.querySelectorAll('.slide-indicator');
