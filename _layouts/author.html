@@ -9,7 +9,7 @@ layout: default
     {% assign post_count = site.posts | where: 'author', page.username %}
 
     <div class="author__content">
-      <div class="author__image"><img class="lazy" data-src="{{ page.image }}" alt="{{ page.name }}"></div>
+      <!-- <div class="author__image"><img class="lazy" data-src="{{ page.image }}" alt="{{ page.name }}"></div> -->
       <h1 class="author__name">{{ page.name }}</h1>
       {% if post_count.size >= 1 %}
         <div class="author__posts__count">{{ post_count.size }} {% if post_count.size < 2 %}Post{% else %}Posts{% endif %}</div>

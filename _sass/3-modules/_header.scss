@@ -10,7 +10,7 @@
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(20px);
   border-radius: 50px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+
   transition: all 0.3s ease;
   html.search-is-visible & {
     opacity: 0;
@@ -435,10 +435,17 @@
 .play-icon-nav {
   display: inline-block;
   text-decoration: none !important;
-  animation: play-icon-neon-glow 1.5s ease-in-out infinite alternate;
+  animation: none; /* Default: no animation */
   
   @media (max-width: $desktop) {
     animation: none;
+  }
+}
+
+/* Enable animation only for dark header */
+.header--dark .play-icon-nav {
+  @media (min-width: #{$desktop + 1px}) {
+    animation: play-icon-neon-glow 1.5s ease-in-out infinite alternate;
   }
 }
 

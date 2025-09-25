@@ -251,11 +251,11 @@ table td {
   color: var(--white);
   background: #8a4af3;
 
-  // &--primary {
-  //   &:hover {
-  //     background: var(--button-background-hover);
-  //   }
-  // }
+  &--primary {
+    &:hover {
+transform: scale(1.05);
+    }
+  }
 
   &--big {
     display: block;
