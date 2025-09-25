@@ -10,6 +10,7 @@
   background-color: var(--background-color);
   overflow: auto;
   transition: all 0.35s cubic-bezier(0.7, 0.4, 0, 1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 
   &.is-visible {
     right: 0;
