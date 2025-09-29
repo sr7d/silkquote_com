@@ -206,27 +206,14 @@
     transform: translateX(-50%);
     width: 80px;
     height: 3px;
-    background: rgba(138, 74, 243, 0.2);
+    background: #8a4af3;
     border-radius: 2px;
     opacity: 0;
     transition: opacity 0.3s ease;
-    overflow: hidden;
   }
   
   .slide-indicator.active .progress-bar {
     opacity: 1;
-  }
-  
-  .progress-fill {
-    height: 100%;
-    background: #8a4af3;
-    width: 0%;
-    border-radius: 2px;
-    transition: width 6s linear;
-  }
-  
-  .slide-indicator.active .progress-fill {
-    width: 100%;
   }
   
   .slideshow-content {
@@ -579,22 +566,15 @@
 document.addEventListener('DOMContentLoaded', function() {
   // Video demo functionality is now handled globally in common.js
   
-  // Slideshow functionality
+  // Slideshow functionality - Click-only, no auto-rotation
   const slideIndicators = document.querySelectorAll('.slide-indicator');
   const slides = document.querySelectorAll('.slide');
   let currentSlide = 0;
-  let slideTimer = null;
-  const slideInterval = 6000; // 6 seconds per slide
   
   function showSlide(index) {
     // Remove active class from all indicators and slides
     slideIndicators.forEach(indicator => {
       indicator.classList.remove('active');
-      const progressFill = indicator.querySelector('.progress-fill');
-      if (progressFill) {
-        progressFill.style.transition = 'none';
-        progressFill.style.width = '0%';
-      }
     });
     
     slides.forEach(slide => slide.classList.remove('active'));
@@ -603,54 +583,19 @@ document.addEventListener('DOMContentLoaded', function() {
     slideIndicators[index].classList.add('active');
     slides[index].classList.add('active');
     
-    // Start progress animation
-    setTimeout(() => {
-      const progressFill = slideIndicators[index].querySelector('.progress-fill');
-      if (progressFill) {
-        progressFill.style.transition = 'width 6s linear';
-        progressFill.style.width = '100%';
-      }
-    }, 100);
-    
     currentSlide = index;
-  }
-  
-  function nextSlide() {
-    const nextIndex = (currentSlide + 1) % slides.length;
-    showSlide(nextIndex);
-  }
-  
-  function startSlideTimer() {
-    slideTimer = setInterval(nextSlide, slideInterval);
-  }
-  
-  function stopSlideTimer() {
-    if (slideTimer) {
-      clearInterval(slideTimer);
-      slideTimer = null;
-    }
   }
   
   // Add click handlers to indicators
   slideIndicators.forEach((indicator, index) => {
     indicator.addEventListener('click', () => {
-      stopSlideTimer();
       showSlide(index);
-      startSlideTimer();
     });
   });
   
-  // Initialize slideshow immediately
+  // Initialize slideshow with Build section (index 0) as default
   if (slideIndicators.length > 0 && slides.length > 0) {
     showSlide(0);
-    startSlideTimer();
-    
-    // Pause on hover
-    const slideshow = document.querySelector('.feature-slideshow');
-    if (slideshow) {
-      slideshow.addEventListener('mouseenter', stopSlideTimer);
-      slideshow.addEventListener('mouseleave', startSlideTimer);
-    }
   }
 });
 </script>
