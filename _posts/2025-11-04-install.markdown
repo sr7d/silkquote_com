@@ -1,0 +1,16 @@
+---
+layout: post
+title: "Post Install Instructions"
+description: "Follow these step-by-step instructions after installing the SilkQuote package"
+date: 2025-08-27 10:00:00 +0300
+author: admin
+image: /images/saveToSf.png
+image_caption: "One-click quote PDF generation"
+tags: [articles, install]
+featured: true
+---
+## Steps
+1. Assign permission set here: ___
+2. Add profiles to app availability here: ___
+3. Upload your logo to static rescources here: ___
+4. add Generate Quote Button to the lightning page or page layout
