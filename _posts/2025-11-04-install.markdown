@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Post Install Instructions"
-description: "Follow these step-by-step instructions after installing the SilkQuote package"
+description: "Complete these configuration steps after installing the SilkQuote package to start generating professional quote PDFs."
 date: 2025-08-27 10:00:00 +0300
 author: admin
 image: /images/saveToSf.png
@@ -9,8 +9,59 @@ image_caption: "One-click quote PDF generation"
 tags: [articles, install]
 featured: true
 ---
-## Steps
-1. Assign permission set here: ___
-2. Add profiles to app availability here: ___
-3. Upload your logo to static rescources here: ___
-4. add Generate Quote Button to the lightning page or page layout
+
+## Step 1: Navigate to the SilkQuote App
+
+Open the SilkQuote App from your Salesforce App Launcher.
+
+![SilkQuote App](/images/install1-min.png)
+
+## Step 2: Assign the Permission Set
+
+Grant users access to SilkQuote by assigning the permission set.
+
+![Permissions](/images/install2-min.png)
+
+![Permissions](/images/install3-min.png)
+
+## Step 3: Upload and Configure Your Company Logo
+
+Upload your company logo to Salesforce Static Resources and configure it in the Quote Template.
+
+1. Navigate to Setup > Static Resources (select the DEFAULT template or whichever template you wish to use)
+
+   ![Static Resources](/images/install4-min.png)
+
+2. Click **New** and upload your logo image file
+
+   ![Upload Logo](/images/install5-min.png)
+
+3. Open the newly created Static Resource record and click **View File**
+
+   ![View File](/images/install6-min.png)
+
+4. Copy the resource name from the URL (the text after `/resource/`)
+
+   ![Copy Resource Name](/images/install7-min.png)
+
+5. Paste this resource name into the **Logo** field in the Quote Template settings and click **Save**
+
+   ![Configure Logo](/images/install8-min.png)
+
+## Step 4: Add the Generate Quote Button
+
+Add the Generate Quote button to your Opportunity page layout so users can access the quote generation wizard.
+
+1. Navigate to the Opportunity page Lightning page layout of your choice
+
+   ![Page Layout](/images/install9-min.png)
+
+2. Add the **Generate Quote Document** button to the page
+
+   ![Add Button](/images/install10-min.png)
+
+## You're All Set!
+
+Congratulations! When users click the Generate Quote button, they will be presented with the Quote Generation Wizard.
+
+![Quote Generation Wizard](/images/install11-min.png)
