@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Post Install Instructions"
+title: "Post Installation Instructions"
 description: "Complete these configuration steps after installing the SilkQuote package to start generating professional quote PDFs."
 date: 2025-08-27 10:00:00 +0300
 author: admin
@@ -28,7 +28,7 @@ Grant users access to SilkQuote by assigning the permission set.
 
 Upload your company logo to Salesforce Static Resources and configure it in the Quote Template.
 
-1. Navigate to Setup > Static Resources (select the DEFAULT template or whichever template you wish to use)
+1. Click the + Icon to add your logo (from the DEFAULT template or whichever template you wish to use)
 
    ![Static Resources](/images/install4-min.png)
 
