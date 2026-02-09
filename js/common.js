@@ -198,7 +198,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const closeBtn = document.getElementById('video-close');
   
   document.addEventListener('click', function(e) {
-    if (e.target.closest('.demo-trigger')) {
+    if (e.target.closest('.demo-trigger') || e.target.closest('#video-overlay')) {
       e.preventDefault();
       lightbox.classList.add('active');
       document.body.style.overflow = 'hidden';

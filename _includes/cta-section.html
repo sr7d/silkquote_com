@@ -1,0 +1,16 @@
+<section class="cta-section">
+  <div class="container">
+    <div class="cta-section__content">
+      <h3 class="cta-section__title">See SilkQuote in Action</h3>
+      <p class="cta-section__text">Start generating professional Salesforce quotes in minutes.</p>
+      <div class="cta-section__buttons">
+        {% if site.data.settings.appexchange_link %}
+          <a href="{{ site.data.settings.appexchange_link }}" class="button button--primary" target="_blank" rel="noopener">Install from AppExchange</a>
+        {% else %}
+          <a href="/contact/" class="button button--primary">Test Drive it on AppExchange</a>
+        {% endif %}
+        <a href="/SampleQuote.pdf" download class="button button--primary">Download Sample Quote</a>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,248 @@
+/* Pricing Section */
+.pricing {
+  padding: 80px 0;
+  background-color: var(--background-alt-color);
+}
+
+.pricing__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+.pricing__card {
+  background-color: var(--background-white);
+  border: 2px solid var(--primary-color);
+  border-radius: var(--border-radius-large);
+  padding: 48px;
+  box-shadow: var(--shadow-lg);
+
+}
+
+.pricing__left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.pricing__label {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--primary-color);
+  margin-bottom: 12px;
+}
+
+.pricing__early-adopter-badge {
+  display: inline-block;
+  background-color: #16a34a;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 6px 16px;
+  border-radius: 20px;
+  margin-bottom: 12px;
+}
+
+.pricing__price {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+
+.pricing__amount--struck {
+  text-decoration: line-through;
+  opacity: 0.4;
+}
+
+.pricing__amount {
+  font-size: 56px;
+  font-weight: 800;
+  color: var(--heading-font-color);
+  line-height: 1.1;
+}
+
+.pricing__period {
+  font-size: 18px;
+  color: var(--text-alt-color);
+  font-weight: 500;
+}
+
+.pricing__billing {
+  font-size: 14px;
+  color: var(--text-alt-color);
+  margin-bottom: 28px;
+}
+
+.pricing__features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 28px;
+
+  li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-second-color);
+    margin-bottom: 12px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    svg {
+      flex-shrink: 0;
+      color: #16a34a;
+    }
+  }
+}
+
+.pricing__cta {
+  margin-bottom: 16px;
+
+  .button {
+    text-align: center;
+  }
+}
+
+.pricing__contact {
+  font-size: 14px;
+  color: var(--text-alt-color);
+  margin: 0;
+
+  a {
+    color: var(--primary-color);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+
+    &:hover {
+      text-decoration-color: var(--primary-color);
+    }
+  }
+}
+
+/* FAQ Accordion */
+.pricing__faq {
+  display: flex;
+  flex-direction: column;
+  align-self: stretch;
+}
+
+.pricing__faq-title {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--heading-font-color);
+  margin-bottom: 20px;
+}
+
+.faq-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--border-light);
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.faq-question {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 16px 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--heading-font-color);
+  text-align: left;
+  line-height: 1.4;
+}
+
+.faq-icon {
+  flex-shrink: 0;
+  margin-left: 12px;
+  transition: transform 0.25s ease;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.25s ease;
+
+  p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--text-alt-color);
+    margin: 0;
+    padding-bottom: 16px;
+  }
+}
+
+.faq-item.active .faq-answer {
+  max-height: 200px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .pricing {
+    padding: 60px 0;
+  }
+
+  .pricing__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pricing__card {
+    padding: 36px 28px;
+  }
+
+  .pricing__amount {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 576px) {
+  .pricing {
+    padding: 40px 0;
+  }
+
+  .pricing__card {
+    padding: 28px 20px;
+    gap: 24px;
+  }
+
+  .pricing__amount {
+    font-size: 40px;
+  }
+
+  .pricing__period {
+    font-size: 16px;
+  }
+
+  .pricing__features li {
+    font-size: 15px;
+  }
+
+}

@@ -9,7 +9,6 @@
           {% if site.data.settings.logo %}
             <img class="logo__image" src="{{ site.baseurl }}{{ site.data.settings.logo }}" alt="{{ site.data.settings.title }}">
           {% else %}
-            <!-- {{ site.data.settings.title }} -->
             <span id="silkSpan">Silk</span><span id="quote">Quote</span>
           {% endif %}
           </a>
@@ -37,7 +36,7 @@
               </li>
               {% else %}
               <li class="nav__item">
-                {% if item.title == 'View on AppExchange' %}
+                {% if item.title == 'AppExchange' %}
                   {% if site.data.settings.appexchange_link %}
                     <a href="{{ site.data.settings.appexchange_link }}" class="nav__link" target="_blank" rel="noopener">{{ item.title }}</a>
                   {% else %}
@@ -52,9 +51,6 @@
               {% endif %}
             {% endfor %}
 
-              <!-- <li class="nav__item">
-                <a href="tel:+16822469121" class="nav__link{% if page.url == item.url %} active-link{% endif %}">🔥 Call Now</a>
-              </li> -->
             </ul>
           </div>
 

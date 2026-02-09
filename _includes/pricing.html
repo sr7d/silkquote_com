@@ -1,0 +1,125 @@
+<section class="pricing" id="pricing">
+  <div class="container">
+    <div class="section__info">
+      <div class="section__head">
+        <h3 class="section__title">Unlimited Licenses. Unlimited Quotes.</h3>
+        <p class="section__description">One plan. Everything included. No per-user fees.</p>
+      </div>
+    </div>
+
+    <div class="pricing__grid">
+      <div class="pricing__card">
+        <div class="pricing__left">
+          <div class="pricing__early-adopter-badge">Free for Early Adopters</div>
+          <div class="pricing__price">
+            <span class="pricing__amount pricing__amount--struck">$99</span>
+            <span class="pricing__period">/ month per org</span>
+          </div>
+          <p class="pricing__billing">Billed annually — <strong>free while in early access</strong></p>
+
+          <ul class="pricing__features">
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Unlimited Users
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Unlimited Quote PDFs
+            </li>
+            <li>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17L4 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              Unlimited Quote Templates
+            </li>
+          </ul>
+
+          <div class="pricing__cta">
+            {% if site.data.settings.appexchange_link %}
+              <a href="{{ site.data.settings.appexchange_link }}" class="button button--primary" target="_blank" rel="noopener">Try for Free</a>
+            {% else %}
+              <a href="/contact/" class="button button--primary">Try it for Free</a>
+            {% endif %}
+          </div>
+
+          <p class="pricing__contact">Questions? <a href="/contact/">Contact us</a></p>
+        </div>
+      </div>
+
+      <div class="pricing__faq">
+        <div class="faq-accordion">
+          <div class="faq-item active">
+            <button type="button" class="faq-question" aria-expanded="true">
+              Is there a free trial?
+              <svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Yes! SilkQuote is free to install and try from the Salesforce AppExchange. No credit card required.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              Are there per-user fees?
+              <svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>No. SilkQuote is a flat $99/month per org with unlimited users, quotes, and templates.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              Do I need professional services to get started?
+              <svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>No. SilkQuote is fully self-service with documentation to guide you. Optional expert services are available if you need help with advanced customization.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              What Salesforce editions are supported?
+              <svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>SilkQuote works with Professional, Enterprise, Unlimited, Developer, and Performance Editions of Salesforce.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              Does this work with E-sign tools?
+              <svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>Yes! SilkQuote was designed to work with many common E-sign products (DocuSign, Adobe Sign, etc).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+(function() {
+  var questions = document.querySelectorAll('.faq-question');
+  questions.forEach(function(btn) {
+    btn.addEventListener('click', function(e) {
+      e.preventDefault();
+      var item = btn.parentElement;
+      var wasActive = item.classList.contains('active');
+
+      document.querySelectorAll('.faq-item').forEach(function(el) {
+        el.classList.remove('active');
+        el.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+      });
+
+      if (!wasActive) {
+        item.classList.add('active');
+        btn.setAttribute('aria-expanded', 'true');
+      } else {
+        var first = document.querySelector('.faq-item');
+        first.classList.add('active');
+        first.querySelector('.faq-question').setAttribute('aria-expanded', 'true');
+      }
+    });
+  });
+})();
+</script>

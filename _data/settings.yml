@@ -1,35 +1,41 @@
 #-------------------------------
 # Site Settings
 title: SilkQuote - Professional PDF Quote Generation for Salesforce
-description: Transform Salesforce Opportunities into professional, branded PDF quotes in seconds! Our no-code configurator empowers admins to build dynamic, rule-based quote templates and terms & conditions documents — ensuring every quote is on-brand and easy for sales to generate.
+description: Transform Salesforce Opportunities into professional, branded PDF quotes in seconds. Our no-code configurator empowers admins to build dynamic, rule-based quote templates and terms & conditions documents, ensuring every quote is on-brand and easy for sales to generate.
 logo: /images/logo.png
-appexchange_link: 
+appexchange_link:
 
 #-------------------------------
 # Navigation Settings
 menu__settings:
   menu__items:
-    - title: 'View on AppExchange'
-      url: '/home/'        
+    - title: 'AppExchange'
+      url: '/home/'
+    - title: 'Pricing'
+      url: '/#pricing'
+    - title: 'Documentation'
+      url: '/#documentation'
     - title: 'Contact'
       url: '/contact/'
-    - title: '▶ Watch Demo'
+    - title: 'Watch Demo'
       url: '#'
-      demo: true      
+      demo: true
 
 #-------------------------------
 # Hero Settings
 hero:
-  hero__title: Simple, Elegant PDF Quote Generation for Salesforce
-  hero__description: Transform your Salesforce opportunities into professional, branded PDF quotes instantly with dynamic, customizable templates.
-  hero__cta_text: Join the Waitlist
+  hero__title: Generate Accurate, Professional PDF Quotes Instantly
+  hero__description: Transform your <strong>Salesforce</strong> opportunities into PDF quotes with dynamic, customizable templates.
+  hero__cta_text: Test Drive on AppExchange
   hero__cta_url: /contact/
-  hero__demo_text: View Demo
+  hero__secondary_cta_text: Download Sample Quote
+  hero__secondary_cta_url: /SampleQuote.pdf
+  hero__demo_text: Watch Demo
 
 #-------------------------------
 # Blog Settings
 blog:
-  blog__title: How it Works
+  blog__title: Documentation
   blog__description: Learn to use SilkQuote in your quote generation process
   exclude_tags: [articles]
 

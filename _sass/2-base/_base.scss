@@ -5,6 +5,7 @@
 html {
   overflow-x: hidden;
   height: 100%;
+  scroll-behavior: smooth;
 
   &.search-is-visible {
     overflow: hidden;
@@ -251,9 +252,25 @@ table td {
   color: var(--white);
   background: #8a4af3;
 
+  &:hover {
+    color: var(--white);
+  }
+
   &--primary {
     &:hover {
-transform: scale(1.05);
+      transform: scale(1.05);
+    }
+  }
+
+  &--secondary {
+    background: transparent;
+    color: #8a4af3;
+    border: 2px solid #8a4af3;
+
+    &:hover {
+      background: #8a4af3;
+      color: var(--white);
+      transform: scale(1.05);
     }
   }
 
@@ -262,6 +279,11 @@ transform: scale(1.05);
     width: 100%;
   }
 }
+#documentation,
+#pricing {
+  scroll-margin-top: 100px;
+}
+
 .lazy {
   opacity: 0;
   transition: opacity 0.3s ease-in-out;

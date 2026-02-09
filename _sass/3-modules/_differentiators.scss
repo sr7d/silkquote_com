@@ -1,0 +1,183 @@
+/* Differentiators Section */
+.differentiators {
+  padding: 80px 0;
+  background-color: var(--background-white);
+}
+
+.differentiators__table-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.differentiators__table {
+  width: 100%;
+  min-width: 640px;
+  border-collapse: separate;
+  border-spacing: 0;
+  background-color: var(--background-white);
+
+  th, td {
+    padding: 16px 20px;
+    text-align: left;
+    font-size: 15px;
+    line-height: 1.5;
+    color: var(--text-second-color);
+    vertical-align: middle;
+    border: none;
+  }
+
+  thead th {
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--heading-font-color);
+    white-space: nowrap;
+  }
+
+  /* SilkQuote column highlight */
+  th:last-child,
+  td:last-child {
+    border-left: 2px solid var(--primary-color);
+    border-right: 2px solid var(--primary-color);
+  }
+
+  thead th:last-child {
+    border-top: 2px solid var(--primary-color);
+    border-top-right-radius: var(--border-radius-large);
+  }
+
+  tbody tr:last-child td:last-child {
+    border-bottom: 2px solid var(--primary-color);
+    border-bottom-right-radius: var(--border-radius-large);
+  }
+}
+
+.differentiators__th-advantage {
+  color: #8a4af3 !important;
+  font-weight: 800;
+}
+
+.differentiators__feature {
+  font-weight: 600;
+  color: var(--heading-font-color);
+  white-space: nowrap;
+}
+
+.differentiators__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  margin-right: 8px;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+.differentiators__icon--negative {
+  background-color: #fee2e2;
+  color: #dc2626;
+}
+
+.differentiators__icon--positive {
+  background-color: #dcfce7;
+  color: #16a34a;
+}
+
+.differentiators__cta {
+  text-align: center;
+  margin-top: 32px;
+}
+
+.differentiators__icon--neutral {
+  background-color: #fef3c7;
+  color: #d97706;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .differentiators {
+    padding: 60px 0;
+  }
+
+  .differentiators__table-wrap {
+    border: none;
+    box-shadow: none;
+    overflow-x: visible;
+  }
+
+  .differentiators__table {
+    min-width: 0;
+
+    thead {
+      display: none;
+    }
+
+    tbody tr {
+      display: block;
+      border: 1px solid var(--border-light);
+      border-radius: var(--border-radius-large);
+      padding: 20px;
+      margin-bottom: 16px;
+      box-shadow: var(--shadow-sm);
+      background-color: var(--background-white);
+    }
+
+    tbody td {
+      display: block;
+      padding: 6px 0;
+      border-bottom: none;
+      font-size: 14px;
+
+      &::before {
+        content: attr(data-label);
+        display: block;
+        font-size: 11px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        color: var(--text-alt-color);
+        margin-bottom: 2px;
+      }
+    }
+
+    tbody td.differentiators__feature {
+      font-size: 16px;
+      padding-bottom: 10px;
+      margin-bottom: 8px;
+      border-bottom: 1px solid var(--border-light);
+
+      &::before {
+        display: none;
+      }
+    }
+
+    /* Remove purple column outline on mobile */
+    th:last-child,
+    td:last-child,
+    tbody tr:last-child td:last-child {
+      border: none;
+      border-radius: 0;
+    }
+
+    tbody td[data-label="SilkQuote"]::before {
+      color: #8a4af3;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .differentiators {
+    padding: 40px 0;
+  }
+
+  .differentiators__table tbody tr {
+    padding: 16px;
+  }
+
+  .differentiators__table tbody td {
+    font-size: 13px;
+  }
+}
