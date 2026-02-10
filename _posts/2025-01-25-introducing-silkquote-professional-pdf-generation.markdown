@@ -66,7 +66,7 @@ Ready to transform your quote generation process? SilkQuote is available now on 
 1. **Quick Installation**: Native Lightning component installs in minutes
 2. **Intuitive Onboarding**: Most users create their first template in under 30 minutes
 3. **Comprehensive Support**: Full documentation and expert assistance
-4. **Free Trial**: Experience SilkQuote risk-free
+4. **Free Forever**: Full access with no credit card, no trial, no limits
 
 ## What's Next
 

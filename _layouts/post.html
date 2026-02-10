@@ -70,6 +70,28 @@ layout: default
 <!-- begin post -->
 <div class="container animate">
 
+  <!-- BreadcrumbList Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.silkquote.com"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "{{ page.title | escape }}",
+        "item": "{{ page.url | absolute_url }}"
+      }
+    ]
+  }
+  </script>
+
   <!-- Article Structured Data -->
   <script type="application/ld+json">
   {
@@ -87,7 +109,7 @@ layout: default
       "name": "SilkQuote",
       "logo": {
         "@type": "ImageObject",
-        "url": "https://silkquote.com/images/logo.png"
+        "url": "https://www.silkquote.com/images/logo.png"
       }
     },
     "datePublished": "{{ page.date | date_to_xmlschema }}",

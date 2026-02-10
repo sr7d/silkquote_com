@@ -1,0 +1,149 @@
+---
+layout: null
+permalink: /llms-full.txt
+sitemap: false
+---
+# SilkQuote — Complete Product Reference
+
+> Professional PDF quote generation for Salesforce. Free forever, no-code configurator for admins, one-click generation for reps.
+
+## Overview
+
+SilkQuote is a native Salesforce application (Lightning component) that transforms Opportunities into professional, branded PDF quotes. Built for Salesforce admins and sales teams, it replaces complex CPQ implementations with a simple, free-forever tool that works with Professional Edition and above.
+
+SilkQuote is installed from the Salesforce AppExchange and runs entirely within Salesforce — no external systems, no data exports, no per-user licensing fees.
+
+## How It Works
+
+SilkQuote follows a three-step process:
+
+1. **Build Templates** — Admins configure flexible templates directly in Salesforce with a drag-and-drop interface. Templates support dynamic fields, conditional sections, and standardized terms & conditions — all without code.
+
+2. **Generate Quotes** — Sales reps generate polished PDF quotes with one click. Products, pricing, and customer details are pulled in automatically from Opportunities, Accounts, Quotes, and custom objects with zero manual effort.
+
+3. **Share & Close** — Share quotes via email, secure link, or integrated e-signature. Preview before sending, save to Salesforce, and keep the sales cycle moving fast.
+
+## Features
+
+### Template Configuration
+- Drag-and-drop template builder (no code required)
+- Dynamic field mapping from Opportunities, Accounts, Quotes, and custom objects
+- Conditional sections that adapt based on data
+- Customizable field labels for customer-friendly terminology
+- Template selection rules and precedence management
+- Company logo and branding controls
+- Paper size configuration (Letter, A4, etc.)
+- Draft watermark support
+
+### Quote Generation
+- One-click PDF generation from Opportunities
+- Quick Action integration on Opportunity page
+- Real-time preview with live data
+- Preview without saving option
+- Automatic product, pricing, and customer detail population
+
+### Terms & Conditions
+- Attachable terms & conditions documents
+- Terms rules for conditional inclusion
+- Standardized legal language management
+
+### Automation & Integration
+- Invocable from Salesforce Flows
+- Compatible with DocuSign, Adobe Sign, and other e-signature tools
+- Email sharing and secure link distribution
+- Signature block inclusion
+
+### Security & Access
+- Permission set-based access control
+- Native Salesforce security model
+- No external data transfer
+
+## Pricing
+
+### Free Forever Plan — $0
+- Unlimited users
+- Unlimited quote PDFs
+- Unlimited templates
+- Full feature access
+- No credit card required
+- No trial period
+- No usage limits
+
+### Expert Support Services (optional)
+- **Quick Start Accelerator** — $1,575 flat fee: Production-ready setup so you're live in days, not weeks
+- **Advanced Customization** — $225/hour: Branded templates and Salesforce configuration tailored to how your business already works
+- **Automation & Integration** — $225/hour: Automated quote workflows connected to e-signature, accounting, and your existing systems
+
+## Supported Salesforce Editions
+
+- Professional
+- Enterprise
+- Unlimited
+- Developer
+- Performance
+
+## E-Signature Compatibility
+
+SilkQuote-generated PDFs work with:
+- DocuSign
+- Adobe Sign
+- Other common e-signature products
+
+SilkQuote generates standard PDF files that integrate with any e-signature workflow.
+
+## Who SilkQuote Is For
+
+SilkQuote is a good fit if you:
+- Need professional, branded PDF quotes from Salesforce
+- Follow a process like: Opportunity → Quote PDF → E-Signature → Order & Invoice
+- Want to be live in days, not months
+- Value simplicity, automation, and high user adoption
+
+SilkQuote is NOT a fit if you:
+- Need complex product configuration (bundles, constraints, guided selling)
+- Require advanced pricing engines
+- Are looking for a full CPQ suite with billing and subscription management
+
+## Comparison Summary
+
+**vs. Out-of-the-Box Salesforce Quotes:** SilkQuote provides professional branded PDFs, Flow automation, and customizable templates. Standard Salesforce quotes offer basic formatting that is hard to brand and no automation.
+
+**vs. Traditional CPQ (Salesforce CPQ, etc.):** SilkQuote is free, installs in days, works with Professional Edition, and any admin can manage it. Traditional CPQ costs significantly more, takes months to implement, typically requires Enterprise+, and needs specialist consultants.
+
+**vs. Conga Composer / S-Docs:** SilkQuote is purpose-built for quote generation with a visual configurator, while Conga and S-Docs are general-purpose document generation tools that require more setup for quoting use cases.
+
+## Frequently Asked Questions
+
+**Is SilkQuote really free?**
+Yes, 100%. Every feature, unlimited users, no expiration. SilkQuote is supported by expert services for teams who want hands-on setup and customization.
+
+**Can I set it up myself?**
+Absolutely. Most teams are sending quotes within an hour. Expert services are available for teams that want a polished, production-ready setup without the trial and error.
+
+**When do teams typically need expert help?**
+When you need custom templates, advanced automation, integration services, and ongoing consultative quote-to-cash support.
+
+**What Salesforce editions are supported?**
+Professional, Enterprise, Unlimited, Developer, and Performance editions.
+
+**Does it work with e-signature tools?**
+Yes. SilkQuote works with DocuSign, Adobe Sign, and other common e-signature products.
+
+## Documentation
+
+{% for post in site.posts %}{% unless post.tags contains 'articles' %}
+- [{{ post.title }}](https://www.silkquote.com{{ post.url }}): {{ post.description | default: post.title }}
+{% endunless %}{% endfor %}
+
+## Articles
+
+{% for post in site.posts %}{% if post.tags contains 'articles' %}
+- [{{ post.title }}](https://www.silkquote.com{{ post.url }}): {{ post.description | default: post.title }}
+{% endif %}{% endfor %}
+
+## Contact
+
+- Website: https://www.silkquote.com
+- Contact form: https://www.silkquote.com/contact/
+- Full LLM reference: https://www.silkquote.com/llms-full.txt
+- Concise LLM reference: https://www.silkquote.com/llms.txt

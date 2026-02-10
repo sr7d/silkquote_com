@@ -1,0 +1,158 @@
+<!-- Enhanced Organization Schema — all pages -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "SilkQuote",
+  "legalName": "SilkQuote",
+  "url": "https://www.silkquote.com",
+  "logo": "https://www.silkquote.com/images/logo.png",
+  "description": "Professional PDF quote generation for Salesforce",
+  "sameAs": [
+    "https://twitter.com/silkquote",
+    "https://linkedin.com/company/silkquote"
+  ],
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "url": "https://www.silkquote.com/contact/",
+    "contactType": "sales"
+  }
+}
+</script>
+
+{% if page.url == "/" %}
+<!-- SoftwareApplication Schema — homepage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "SilkQuote",
+  "url": "https://www.silkquote.com",
+  "description": "Professional PDF quote generation for Salesforce. No-code configurator for admins, one-click generation for reps.",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Salesforce (Cloud)",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "description": "Free Forever — unlimited users, unlimited quotes, unlimited templates, full feature access"
+  },
+  "featureList": [
+    "Drag-and-drop template builder",
+    "Dynamic field mapping from Salesforce objects",
+    "One-click PDF generation",
+    "Conditional sections and terms & conditions",
+    "Salesforce Flow automation",
+    "E-signature compatibility (DocuSign, Adobe Sign)",
+    "Real-time preview with live data",
+    "Permission-based access control"
+  ],
+  "softwareRequirements": "Salesforce Professional Edition or above"
+}
+</script>
+
+<!-- FAQPage Schema — homepage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is SilkQuote really free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, 100%. Every feature, unlimited users, no expiration. SilkQuote is supported by expert services for teams who want hands-on setup and customization."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I set it up myself?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely. Most teams are sending quotes within an hour. Expert services are available for teams that want a polished, production-ready setup without the trial and error."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "When do teams typically need expert help?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "When you need custom templates, advanced automation, integration services, and ongoing consultative quote-to-cash support."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What Salesforce editions are supported?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Professional, Enterprise, Unlimited, Developer, and Performance editions."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does it work with e-signature tools?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. SilkQuote works with DocuSign, Adobe Sign, and other common e-signature products."
+      }
+    }
+  ]
+}
+</script>
+
+<!-- HowTo Schema — homepage -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to Generate Professional PDF Quotes in Salesforce with SilkQuote",
+  "description": "From template setup to delivered quotes in three simple steps.",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "Build Templates",
+      "text": "Admins configure flexible templates directly in Salesforce with dynamic fields, conditional sections, and standardized terms & conditions — all without code.",
+      "image": "https://www.silkquote.com/images/configurator.png"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "Generate Quotes",
+      "text": "Reps generate polished PDFs with one click. Products, pricing, and customer details are pulled in automatically with zero manual effort.",
+      "image": "https://www.silkquote.com/images/generator.png"
+    },
+    {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "Share & Close",
+      "text": "Share quotes via email, secure link, or integrated e-signature. Preview, save to Salesforce, and keep the sales cycle moving fast.",
+      "image": "https://www.silkquote.com/images/docshare.png"
+    }
+  ]
+}
+</script>
+{% endif %}
+
+{% if page.url == "/contact/" %}
+<!-- ContactPage Schema — contact page -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Contact SilkQuote",
+  "description": "Get in touch with our team for demos, support, or partnership opportunities",
+  "url": "https://www.silkquote.com/contact/",
+  "mainEntity": {
+    "@type": "Organization",
+    "name": "SilkQuote",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "url": "https://www.silkquote.com/contact/",
+      "contactType": "sales"
+    }
+  }
+}
+</script>
+{% endif %}

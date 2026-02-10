@@ -1,0 +1,42 @@
+---
+layout: null
+permalink: /llms.txt
+sitemap: false
+---
+# SilkQuote
+
+> Professional PDF quote generation for Salesforce. Free forever, no-code configurator for admins, one-click generation for reps.
+
+SilkQuote is a native Salesforce application (Lightning component) that transforms Opportunities into professional, branded PDF quotes. It replaces complex CPQ implementations with a simple drag-and-drop template builder, dynamic field mapping, and Flow-compatible automation — all at zero cost.
+
+**Key facts:**
+- Free forever: unlimited users, quotes, and templates
+- Works with Salesforce Professional Edition and above
+- No-code template configurator for admins
+- One-click PDF generation for sales reps
+- Native Salesforce integration (Lightning Experience)
+- Compatible with DocuSign, Adobe Sign, and other e-signature tools
+- Invocable from Salesforce Flows for automation
+
+## Documentation
+
+{% for post in site.posts %}{% unless post.tags contains 'articles' %}
+- [{{ post.title }}](https://www.silkquote.com{{ post.url }}): {{ post.description | default: post.title }}
+{% endunless %}{% endfor %}
+
+## Articles
+
+{% for post in site.posts %}{% if post.tags contains 'articles' %}
+- [{{ post.title }}](https://www.silkquote.com{{ post.url }}): {{ post.description | default: post.title }}
+{% endif %}{% endfor %}
+
+## Links
+
+- [Homepage](https://www.silkquote.com): Product overview, features, pricing, and demo video
+- [Contact](https://www.silkquote.com/contact/): Get in touch for demos, support, or expert services
+- [Full LLM Reference](https://www.silkquote.com/llms-full.txt): Comprehensive product details for LLMs
+
+## Optional
+
+- [Pricing](https://www.silkquote.com/#pricing): Free Forever plan and Expert Support services
+- [Comparisons](https://www.silkquote.com/tags/?tag=comparisons): SilkQuote vs CPQ, Conga, S-Docs, and more

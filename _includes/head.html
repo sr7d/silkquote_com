@@ -28,19 +28,7 @@
   <meta property="og:image" content="{{ page.image | absolute_url }}">
 
   <!-- Structured Data for SEO -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "SilkQuote",
-    "url": "https://www.silkquote.com",
-    "description": "Professional PDF quote generation for Salesforce",
-    "sameAs": [
-      "https://twitter.com/silkquote",
-      "https://linkedin.com/company/silkquote"
-    ]
-  }
-  </script>
+  {% include schema.html %}
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com">

@@ -15,6 +15,10 @@ Allow: /posts/
 Allow: /tags/
 Allow: /contact/
 
+# Allow LLM reference files
+Allow: /llms.txt
+Allow: /llms-full.txt
+
 # Sitemap location
 Sitemap: https://www.silkquote.com/sitemap.xml
 
