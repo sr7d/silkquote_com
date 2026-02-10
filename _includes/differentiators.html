@@ -11,7 +11,7 @@
       <table class="differentiators__table">
         <thead>
           <tr>
-            <th class="differentiators__th-feature">Feature</th>
+            <th class="differentiators__th-feature"></th>
             <th class="differentiators__th-pain">Out of the Box Salesforce</th>
             <th class="differentiators__th-pain">Traditional CPQ</th>
             <th class="differentiators__th-advantage">SilkQuote</th>
@@ -88,8 +88,72 @@
       </table>
     </div>
 
+    <div class="differentiators__carousel-wrap">
+      <div class="differentiators__carousel" id="diff-carousel"></div>
+      <div class="differentiators__carousel-nav">
+        <button type="button" id="diff-prev" aria-label="Previous">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <span class="differentiators__carousel-count" id="diff-count"></span>
+        <button type="button" id="diff-next" aria-label="Next">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M9 18l6-6-6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </div>
+
     <div class="differentiators__cta">
       <a href="/tags/?tag=comparisons" class="button button--primary">Compare Others</a>
     </div>
   </div>
 </section>
+
+<script>
+(function() {
+  var carousel = document.getElementById('diff-carousel');
+  var rows = document.querySelectorAll('.differentiators__table tbody tr');
+  var slides = [];
+
+  rows.forEach(function(row, idx) {
+    var cells = row.querySelectorAll('td');
+    var card = document.createElement('div');
+    card.className = 'differentiators__slide';
+    if (idx !== 0) card.style.display = 'none';
+    var html = '<div class="differentiators__slide-title">' + cells[0].textContent + '</div>';
+    for (var i = 1; i < cells.length; i++) {
+      var label = cells[i].getAttribute('data-label') || '';
+      var cls = label === 'SilkQuote' ? ' differentiators__slide-label--silk' : '';
+      html += '<div class="differentiators__slide-row">';
+      html += '<span class="differentiators__slide-label' + cls + '">' + label + '</span>';
+      html += '<span class="differentiators__slide-value">' + cells[i].textContent + '</span>';
+      html += '</div>';
+    }
+    card.innerHTML = html;
+    carousel.appendChild(card);
+    slides.push(card);
+  });
+
+  var current = 0;
+  var total = slides.length;
+  var prev = document.getElementById('diff-prev');
+  var next = document.getElementById('diff-next');
+  var count = document.getElementById('diff-count');
+
+  function update() {
+    slides.forEach(function(s, i) {
+      s.style.display = i === current ? '' : 'none';
+    });
+    count.textContent = (current + 1) + ' / ' + total;
+    prev.disabled = current === 0;
+    next.disabled = current === total - 1;
+  }
+
+  prev.addEventListener('click', function() {
+    if (current > 0) { current--; update(); }
+  });
+  next.addEventListener('click', function() {
+    if (current < total - 1) { current++; update(); }
+  });
+
+  update();
+})();
+</script>

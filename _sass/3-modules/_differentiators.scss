@@ -26,6 +26,10 @@
     border: none;
   }
 
+  thead tr {
+    background-color: transparent;
+  }
+
   thead th {
     font-size: 14px;
     font-weight: 700;
@@ -33,6 +37,30 @@
     letter-spacing: 0.5px;
     color: var(--heading-font-color);
     white-space: nowrap;
+    background-color: transparent !important;
+  }
+
+  /* Feature column background */
+  th:first-child {
+    border-right: none;
+  }
+
+  td:first-child {
+    border-right: 2px solid var(--border-medium);
+  }
+
+  tbody tr:nth-child(odd) td:first-child {
+    background-color: var(--background-alt-color);
+  }
+
+  tbody tr:nth-child(even) td:first-child {
+    background-color: var(--background-white);
+  }
+
+  /* Out of the Box Salesforce column */
+  th:nth-child(2),
+  td:nth-child(2) {
+    border-right: 2px solid var(--border-medium);
   }
 
   /* SilkQuote column highlight */
@@ -83,7 +111,7 @@
 
 .differentiators__icon--positive {
   background-color: #dcfce7;
-  color: #16a34a;
+  color: #6b9e6b;
 }
 
 .differentiators__cta {
@@ -96,6 +124,106 @@
   color: #d97706;
 }
 
+/* Carousel - hidden on desktop */
+.differentiators__carousel-wrap {
+  display: none;
+}
+
+.differentiators__slide {
+  background-color: var(--background-white);
+  border: 1px solid var(--border-light);
+  border-radius: var(--border-radius-large);
+  padding: 24px;
+  box-shadow: var(--shadow-sm);
+}
+
+.differentiators__slide-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--heading-font-color);
+  padding-bottom: 12px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.differentiators__slide-row {
+  padding: 8px 0;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid var(--border-light);
+  }
+}
+
+.differentiators__slide-label {
+  display: block;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-alt-color);
+  margin-bottom: 2px;
+}
+
+.differentiators__slide-label[data-label="SilkQuote"] {
+  color: #8a4af3;
+}
+
+.differentiators__slide-row:last-child .differentiators__slide-label {
+  color: #8a4af3;
+}
+
+.differentiators__slide-value {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-second-color);
+}
+
+.differentiators__carousel-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 20px;
+
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--border-light);
+    background: var(--background-white);
+    color: var(--heading-font-color);
+    cursor: pointer;
+
+    &:hover {
+      border-color: var(--primary-color);
+      color: var(--primary-color);
+    }
+
+    &[disabled] {
+      opacity: 0.3;
+      cursor: default;
+
+      &:hover {
+        border-color: var(--border-light);
+        color: var(--heading-font-color);
+      }
+    }
+  }
+}
+
+.differentiators__carousel-count {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-alt-color);
+}
+
+.differentiators__slide-label--silk {
+  color: #8a4af3;
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .differentiators {
@@ -103,68 +231,11 @@
   }
 
   .differentiators__table-wrap {
-    border: none;
-    box-shadow: none;
-    overflow-x: visible;
+    display: none;
   }
 
-  .differentiators__table {
-    min-width: 0;
-
-    thead {
-      display: none;
-    }
-
-    tbody tr {
-      display: block;
-      border: 1px solid var(--border-light);
-      border-radius: var(--border-radius-large);
-      padding: 20px;
-      margin-bottom: 16px;
-      box-shadow: var(--shadow-sm);
-      background-color: var(--background-white);
-    }
-
-    tbody td {
-      display: block;
-      padding: 6px 0;
-      border-bottom: none;
-      font-size: 14px;
-
-      &::before {
-        content: attr(data-label);
-        display: block;
-        font-size: 11px;
-        font-weight: 700;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-        color: var(--text-alt-color);
-        margin-bottom: 2px;
-      }
-    }
-
-    tbody td.differentiators__feature {
-      font-size: 16px;
-      padding-bottom: 10px;
-      margin-bottom: 8px;
-      border-bottom: 1px solid var(--border-light);
-
-      &::before {
-        display: none;
-      }
-    }
-
-    /* Remove purple column outline on mobile */
-    th:last-child,
-    td:last-child,
-    tbody tr:last-child td:last-child {
-      border: none;
-      border-radius: 0;
-    }
-
-    tbody td[data-label="SilkQuote"]::before {
-      color: #8a4af3;
-    }
+  .differentiators__carousel-wrap {
+    display: block;
   }
 }
 
