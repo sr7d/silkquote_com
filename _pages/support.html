@@ -1,0 +1,86 @@
+---
+layout: default
+title: Support
+description: Report an issue or book time with a SilkQuote expert
+permalink: /support/
+---
+
+<div class="container animate">
+  <div class="support__grid">
+
+    <!-- Card 1 — Expert Support -->
+    <div class="support__card">
+      <div class="support__card-icon support__card-icon--calendar">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+      </div>
+      <h4 class="pricing__services-title">Expert Support</h4>
+      <p class="support__card-description">You can do it yourself, but you don't have to!</p>
+      <p class="support__card-description">Meet with a SilkQuote expert for 15-minutes.<br> After we get to know your specific needs, receive a quote.</p>
+
+      <ul class="pricing__services-list">
+        {% for service in site.data.services %}
+        <li>
+          <strong>{{ service.name }} <span class="pricing__services-price">{{ service.price }} <b>{{ service.unit }}</b></span></strong>
+          <span>{{ service.description }}</span>
+        </li>
+        {% endfor %}
+      </ul>
+      <div class="pricing__cta">
+        <button class="button button--primary"
+          data-cal-link="silkquote/support"
+          data-cal-namespace="support"
+          data-cal-config='{"layout":"week_view","useSlotsViewOnSmallScreen":"true"}'>
+          Get Expert Support
+        </button>
+      </div>
+    </div>
+
+    <!-- Card 2 — Report an Issue -->
+    <div class="support__card">
+      <div class="support__card-header">
+        <div class="support__card-icon support__card-icon--issue">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        </div>
+        <h2 class="support__card-title">Report an Issue</h2>
+        <p class="support__card-description">Something not working as expected? Submit a case and our team will follow up.</p>
+      </div>
+
+      <form class="form" action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00DHs000009kGXs" method="POST">
+        <input type="hidden" name="orgid" value="00DHs000009kGXs">
+        <input type="hidden" name="retURL" value="{{ site.url }}/support/">
+
+        <div class="form__group">
+          <label class="form__label screen-reader-text" for="support-name">Contact Name</label>
+          <input class="form__input" id="support-name" type="text" name="name" placeholder="Contact Name" required aria-label="Contact Name">
+        </div>
+
+        <div class="form__group">
+          <label class="form__label screen-reader-text" for="support-email">Email</label>
+          <input class="form__input" id="support-email" type="email" name="email" placeholder="Email" required aria-label="Email">
+        </div>
+
+        <div class="form__group">
+          <label class="form__label screen-reader-text" for="support-phone">Phone</label>
+          <input class="form__input" id="support-phone" type="tel" name="phone" placeholder="Phone (optional)" aria-label="Phone">
+        </div>
+
+        <div class="form__group">
+          <label class="form__label screen-reader-text" for="support-subject">Subject</label>
+          <input class="form__input" id="support-subject" type="text" name="subject" placeholder="Subject" required aria-label="Subject">
+        </div>
+
+        <div class="form__group">
+          <label class="form__label screen-reader-text" for="support-description">Description</label>
+          <textarea class="form__input" id="support-description" name="description" rows="5" placeholder="Describe the issue..." required aria-label="Description"></textarea>
+        </div>
+
+        <div class="form__group">
+          <button class="button button--primary" type="submit">Submit Case</button>
+        </div>
+      </form>
+    </div>
+
+  </div>
+</div>
+
+{% include cal-popup.html %}

@@ -5,11 +5,11 @@ sitemap: false
 ---
 # SilkQuote — Complete Product Reference
 
-> Professional PDF quote generation for Salesforce. Free forever, no-code configurator for admins, one-click generation for reps.
+> Professional PDF quote generation for Salesforce. Free, no-code configurator for admins, one-click generation for reps.
 
 ## Overview
 
-SilkQuote is a native Salesforce application (Lightning component) that transforms Opportunities into professional, branded PDF quotes. Built for Salesforce admins and sales teams, it replaces complex CPQ implementations with a simple, free-forever tool that works with Professional Edition and above.
+SilkQuote is a native Salesforce application (Lightning component) that transforms Opportunities into professional, branded PDF quotes. Built for Salesforce admins and sales teams, it replaces complex CPQ implementations with a simple, free tool that works with Professional Edition and above.
 
 SilkQuote is installed from the Salesforce AppExchange and runs entirely within Salesforce — no external systems, no data exports, no per-user licensing fees.
 
@@ -60,7 +60,7 @@ SilkQuote follows a three-step process:
 
 ## Pricing
 
-### Free Forever Plan — $0
+### Free Plan — $0
 - Unlimited users
 - Unlimited quote PDFs
 - Unlimited templates
@@ -70,9 +70,8 @@ SilkQuote follows a three-step process:
 - No usage limits
 
 ### Expert Support Services (optional)
-- **Quick Start Accelerator** — $1,575 flat fee: Production-ready setup so you're live in days, not weeks
-- **Advanced Customization** — $225/hour: Branded templates and Salesforce configuration tailored to how your business already works
-- **Automation & Integration** — $225/hour: Automated quote workflows connected to e-signature, accounting, and your existing systems
+{% for service in site.data.services %}- **{{ service.name }}** — {{ service.price }} {{ service.unit }}: {{ service.description }}
+{% endfor %}
 
 ## Supported Salesforce Editions
 

@@ -1,6 +1,7 @@
 <div class="article col col-4 col-d-6 col-t-12 animate grid__post">
   <div class="article__inner">
 
+    {% unless post.tags contains "articles" %}
     <div class="article__head">
       {% if post.video_embed %}
       <div class="video-icon">
@@ -19,6 +20,7 @@
       <div class="article__meta">
       </div>
     </div>
+    {% endunless %}
 
     <div class="article__content">
 

@@ -17,6 +17,7 @@
           <div class="article col col-3 col-d-6 col-m-12">
 
             <div class="article__inner">
+              {% unless post.tags contains "articles" %}
               <div class="article__head">
                 {% if post.video_embed %}
                 <div class="video-icon">
@@ -35,6 +36,7 @@
                 <div class="article__meta">
                 </div>
               </div>
+              {% endunless %}
 
               <div class="article__content">
                 <h2 class="article__title">

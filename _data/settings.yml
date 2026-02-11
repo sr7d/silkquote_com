@@ -17,6 +17,8 @@ menu__settings:
       url: '/#documentation'
     - title: 'Contact'
       url: '/contact/'
+    - title: 'Support'
+      url: '/support/'
     - title: 'Watch Demo'
       url: '#'
       demo: true
@@ -26,17 +28,13 @@ menu__settings:
 hero:
   hero__title: Generate Accurate, Professional PDF Quotes Instantly
   hero__description: Automatically transform your <strong>Salesforce</strong> opportunities into PDF quotes with dynamic, customizable templates.
-  hero__cta_text: Test Drive on AppExchange
-  hero__cta_url: /contact/
-  hero__secondary_cta_text: Download Sample Quote
-  hero__secondary_cta_url: /SampleQuote.pdf
   hero__demo_text: Watch Demo
 
 #-------------------------------
 # Blog Settings
 blog:
   blog__title: Documentation
-  blog__description: Learn to use SilkQuote in your quote generation process
+  blog__description: Learn to use SilkQuote in your quote generation process.
   exclude_tags: [articles]
 
 #-------------------------------

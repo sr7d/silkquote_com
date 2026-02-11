@@ -1,0 +1,98 @@
+/* Support Page */
+.support__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-top: 120px;
+  margin-bottom: 60px;
+}
+
+.support__card {
+  background-color: var(--background-white);
+  border: 1px solid var(--border-light);
+  border-radius: var(--border-radius-large);
+  box-shadow: var(--shadow-md);
+  padding: 40px 32px;
+  transition: var(--transition-medium);
+  display: flex;
+  flex-direction: column;
+
+  &:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
+  }
+
+  .pricing__cta {
+    margin-top: auto;
+    margin-bottom: 0;
+  }
+
+  .form {
+    margin-top: auto;
+  }
+}
+
+.support__card-header {
+  margin-bottom: 28px;
+}
+
+.support__card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+
+  &--calendar {
+    background-color: rgba(107, 158, 107, 0.12);
+    color: #6b9e6b;
+  }
+
+  &--issue {
+    background-color: rgba(185, 28, 28, 0.12);
+    color: #b91c1c;
+  }
+}
+
+.support__card-title {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--heading-font-color);
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+
+.support__card-description {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-second-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .support__grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .support__card {
+    padding: 28px 24px;
+  }
+
+}
+
+@media (max-width: 576px) {
+  .support__card {
+    padding: 24px 20px;
+  }
+
+  .support__card-title {
+    font-size: 20px;
+  }
+
+  .support__card-description {
+    font-size: 15px;
+  }
+}

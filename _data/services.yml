@@ -1,0 +1,14 @@
+- name: Quick Start Accelerator
+  price: "$1,575"
+  unit: flat fee
+  description: Production-ready setup so you're live in days, not weeks
+
+- name: Advanced Customization
+  price: "$175"
+  unit: hourly
+  description: Custom templates, automation, and integration tailored your business
+
+- name: Retainer
+  price: "Custom"
+  unit: monthly
+  description: Ongoing support for your teams Quote-To-Cash processes
