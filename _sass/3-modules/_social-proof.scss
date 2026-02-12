@@ -1,6 +1,6 @@
 /* Social Proof Section */
 .social-proof {
-  padding: 80px 0;
+  padding: 40px 0;
   background-color: var(--background-white);
 }
 
@@ -36,39 +36,52 @@
   color: var(--text-color);
 }
 
-.social-proof__metrics {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
+/* Feature Carousel */
+.social-proof__carousel {
+  position: relative;
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(to right, transparent, black 80px, black calc(100% - 80px), transparent);
+  mask-image: linear-gradient(to right, transparent, black 80px, black calc(100% - 80px), transparent);
 }
 
-.social-proof__metric {
-  text-align: center;
-  padding: 24px 16px;
+.social-proof__carousel-track {
+  display: flex;
+}
+
+.social-proof__feature-card {
+  flex: 0 0 25%;
+  padding: 0 8px;
+  box-sizing: border-box;
+}
+
+.social-proof__feature-inner {
   background-color: var(--background-alt-color);
   border-radius: var(--border-radius-large);
+  padding: 28px 24px;
+  height: 100%;
+  box-sizing: border-box;
 }
 
-.social-proof__metric-value {
-  display: block;
-  font-size: 28px;
-  font-weight: 800;
-  color: var(--primary-color);
-  margin-bottom: 6px;
-  line-height: 1.2;
+.social-proof__feature-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--heading-font-color);
+  margin: 0 0 8px;
+  line-height: 1.3;
 }
 
-.social-proof__metric-label {
-  display: block;
+.social-proof__feature-desc {
   font-size: 14px;
   color: var(--text-alt-color);
-  line-height: 1.4;
+  line-height: 1.6;
+  margin: 0;
 }
+
 
 /* Responsive */
 @media (max-width: 768px) {
   .social-proof {
-    padding: 60px 0;
+    padding: 30px 0;
   }
 
   .social-proof__badges {
@@ -80,15 +93,18 @@
     flex: 0 0 calc(50% - 12px);
   }
 
-  .social-proof__metrics {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
+  .social-proof__feature-card {
+    flex: 0 0 50%;
+  }
+
+  .social-proof__feature-inner {
+    padding: 24px 20px;
   }
 }
 
 @media (max-width: 576px) {
   .social-proof {
-    padding: 40px 0;
+    padding: 20px 0;
   }
 
   .social-proof__badges {
@@ -101,20 +117,15 @@
     flex: none;
   }
 
-  .social-proof__metrics {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 12px;
+  .social-proof__feature-inner {
+    padding: 20px 16px;
   }
 
-  .social-proof__metric {
-    padding: 16px 12px;
+  .social-proof__feature-title {
+    font-size: 15px;
   }
 
-  .social-proof__metric-value {
-    font-size: 24px;
-  }
-
-  .social-proof__metric-label {
+  .social-proof__feature-desc {
     font-size: 13px;
   }
 }

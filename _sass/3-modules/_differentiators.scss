@@ -1,6 +1,6 @@
 /* Differentiators Section */
 .differentiators {
-  padding: 80px 0;
+  padding: 40px 0;
   background-color: var(--background-white);
 }
 
@@ -227,7 +227,7 @@
 /* Responsive */
 @media (max-width: 768px) {
   .differentiators {
-    padding: 60px 0;
+    padding: 30px 0;
   }
 
   .differentiators__table-wrap {
@@ -241,7 +241,7 @@
 
 @media (max-width: 576px) {
   .differentiators {
-    padding: 40px 0;
+    padding: 20px 0;
   }
 
   .differentiators__table tbody tr {

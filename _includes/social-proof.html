@@ -38,23 +38,152 @@
       </div>
     </div>
 
-    <div class="social-proof__metrics">
-      <div class="social-proof__metric">
-        <span class="social-proof__metric-value">Fast</span>
-        <span class="social-proof__metric-label">Implementation</span>
+    <div class="social-proof__carousel">
+      <div class="social-proof__carousel-track" id="features-track">
+
+        <div class="social-proof__feature-card">
+          <div class="social-proof__feature-inner">
+            <h4 class="social-proof__feature-title">On Brand Design</h4>
+            <p class="social-proof__feature-desc">Upload a logo and set an accent color per template.</p>
+          </div>
+        </div>
+
+        <div class="social-proof__feature-card">
+          <div class="social-proof__feature-inner">
+            <h4 class="social-proof__feature-title">One-Click PDF Generation</h4>
+            <p class="social-proof__feature-desc">PDF quote from any Opportunity via Quick Action.</p>
+          </div>
+        </div>
+
+        <div class="social-proof__feature-card">
+          <div class="social-proof__feature-inner">
+            <h4 class="social-proof__feature-title">Drag-and-Drop Editor</h4>
+            <p class="social-proof__feature-desc">Reorder fields in each PDF section.</p>
+          </div>
+        </div>
+
+        <div class="social-proof__feature-card">
+          <div class="social-proof__feature-inner">
+            <h4 class="social-proof__feature-title">Conditional Field Display</h4>
+            <p class="social-proof__feature-desc">Show or hide fields and columns based on record values.</p>
+          </div>
+        </div>
+
+        <div class="social-proof__feature-card">
+          <div class="social-proof__feature-inner">
+            <h4 class="social-proof__feature-title">Line Item Grouping</h4>
+            <p class="social-proof__feature-desc">Group line items by any field with subtotals.</p>
+          </div>
+        </div>
+
+        <div class="social-proof__feature-card">
+          <div class="social-proof__feature-inner">
+            <h4 class="social-proof__feature-title">Smart Template Selection</h4>
+            <p class="social-proof__feature-desc">Filters by Opportunity field values automatically.</p>
+          </div>
+        </div>
+
+        <div class="social-proof__feature-card">
+          <div class="social-proof__feature-inner">
+            <h4 class="social-proof__feature-title">In-Browser Preview</h4>
+            <p class="social-proof__feature-desc">Review the PDF before saving or sending.</p>
+          </div>
+        </div>
+
+        <div class="social-proof__feature-card">
+          <div class="social-proof__feature-inner">
+            <h4 class="social-proof__feature-title">Conditional Terms</h4>
+            <p class="social-proof__feature-desc">Terms and Conditions with conditional availability</p>
+          </div>
+        </div>
+
+        <div class="social-proof__feature-card">
+          <div class="social-proof__feature-inner">
+            <h4 class="social-proof__feature-title">Approval Routing Compatible</h4>
+            <p class="social-proof__feature-desc">Build your approval processes around template selection.</p>
+          </div>
+        </div>
+
+        <div class="social-proof__feature-card">
+          <div class="social-proof__feature-inner">
+            <h4 class="social-proof__feature-title">Flow Invocable Action</h4>
+            <p class="social-proof__feature-desc">Trigger quote generation from any Flow.</p>
+          </div>
+        </div>
+
+        <div class="social-proof__feature-card">
+          <div class="social-proof__feature-inner">
+            <h4 class="social-proof__feature-title">Configuration Validator</h4>
+            <p class="social-proof__feature-desc">Scan templates, dynamic fields, and terms for problems.</p>
+          </div>
+        </div>
+
       </div>
-      <div class="social-proof__metric">
-        <span class="social-proof__metric-value">Free</span>
-        <span class="social-proof__metric-label">App</span>
-      </div>
-      <div class="social-proof__metric">
-        <span class="social-proof__metric-value">Zero</span>
-        <span class="social-proof__metric-label">Code Required</span>
-      </div>
-      <div class="social-proof__metric">
-        <span class="social-proof__metric-value">Automated</span>
-        <span class="social-proof__metric-label">Quote Generation</span>
-      </div>
+
     </div>
+
+    <script>
+    (function() {
+      var track = document.getElementById('features-track');
+      if (!track) return;
+
+      var originalHTML = track.innerHTML;
+      track.innerHTML = originalHTML + originalHTML;
+
+      var carousel = track.parentElement;
+      var scrollPos = 0;
+      var hovered = false;
+      var inView = false;
+      var rafId = null;
+      var maxSpeed = 0.5;
+      var currentSpeed = 0;
+      var easeDuration = 60; // frames to reach full speed (~1s at 60fps)
+
+      function getOriginalWidth() {
+        return track.scrollWidth / 2;
+      }
+
+      function step() {
+        if (!hovered && inView) {
+          currentSpeed = Math.min(currentSpeed + maxSpeed / easeDuration, maxSpeed);
+        } else {
+          currentSpeed = Math.max(currentSpeed - maxSpeed / easeDuration, 0);
+        }
+
+        if (currentSpeed > 0) {
+          scrollPos += currentSpeed;
+          if (scrollPos >= getOriginalWidth()) {
+            scrollPos -= getOriginalWidth();
+          }
+          track.style.transform = 'translateX(-' + scrollPos + 'px)';
+        }
+
+        rafId = requestAnimationFrame(step);
+      }
+
+      function start() {
+        if (!rafId) rafId = requestAnimationFrame(step);
+      }
+
+      var delayTimer = null;
+
+      var observer = new IntersectionObserver(function(entries) {
+        if (entries[0].isIntersecting) {
+          delayTimer = setTimeout(function() { inView = true; start(); }, 500);
+        } else {
+          clearTimeout(delayTimer);
+          inView = false;
+          start();
+        }
+      }, { threshold: 0.1 });
+
+      observer.observe(carousel);
+
+      carousel.addEventListener('mouseenter', function() { hovered = true; });
+      carousel.addEventListener('mouseleave', function() { hovered = false; });
+      carousel.addEventListener('touchstart', function() { hovered = true; }, { passive: true });
+      carousel.addEventListener('touchend', function() { hovered = false; });
+    })();
+    </script>
   </div>
 </section>

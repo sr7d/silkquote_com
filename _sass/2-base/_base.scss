@@ -279,7 +279,11 @@ table td {
     width: 100%;
   }
 }
-#documentation,
+#documentation {
+  padding-top: 40px;
+  scroll-margin-top: 100px;
+}
+
 #pricing {
   scroll-margin-top: 100px;
 }

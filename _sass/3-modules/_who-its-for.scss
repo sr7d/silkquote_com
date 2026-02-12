@@ -1,6 +1,6 @@
 /* Who It's For Section */
 .who-its-for {
-  padding: 80px 0;
+  padding: 40px 0;
   background-color: var(--white);
   position: relative;
   overflow: hidden;
@@ -94,7 +94,7 @@
 /* Responsive */
 @media (max-width: 768px) {
   .who-its-for {
-    padding: 60px 0;
+    padding: 30px 0;
   }
 
   .who-its-for__grid {
@@ -109,7 +109,7 @@
 
 @media (max-width: 576px) {
   .who-its-for {
-    padding: 40px 0;
+    padding: 20px 0;
   }
 
   .who-its-for__column {

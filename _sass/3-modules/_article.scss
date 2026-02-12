@@ -151,6 +151,17 @@
   }
 }
 
+/* Mobile: show 3 items, hide the rest until expanded */
+@media (max-width: $tablet) {
+  .grid .grid__post:nth-child(n+4) {
+    display: none;
+  }
+
+  .grid.grid--show-all .grid__post:nth-child(n+4) {
+    display: block;
+  }
+}
+
 .article__excerpt {
   display: -webkit-box;
   margin-bottom: 0;
