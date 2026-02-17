@@ -4,8 +4,8 @@
       <div class="social-proof__badge">
         <div class="social-proof__badge-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2"/>
           </svg>
         </div>
         <span class="social-proof__badge-text">100% Native Salesforce</span>
@@ -21,20 +21,11 @@
       <div class="social-proof__badge">
         <div class="social-proof__badge-icon">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2"/>
           </svg>
         </div>
         <span class="social-proof__badge-text">AppExchange Security Reviewed</span>
-      </div>
-      <div class="social-proof__badge">
-        <div class="social-proof__badge-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="3" y="11" width="18" height="11" rx="2" ry="2" stroke="currentColor" stroke-width="2"/>
-            <path d="M7 11V7C7 4.23858 9.23858 2 12 2C14.7614 2 17 4.23858 17 7V11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-          </svg>
-        </div>
-        <span class="social-proof__badge-text">SOC 2 Compliant Platform</span>
       </div>
     </div>
 
@@ -122,11 +113,22 @@
 
     </div>
 
+    <div class="social-proof__carousel-controls">
+      <button class="social-proof__carousel-btn" id="carousel-prev" aria-label="Previous">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <button class="social-proof__carousel-btn" id="carousel-next" aria-label="Next">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+    </div>
+
     <script>
     (function() {
       var track = document.getElementById('features-track');
       if (!track) return;
 
+      var cards = track.querySelectorAll('.social-proof__feature-card');
+      var cardCount = cards.length;
       var originalHTML = track.innerHTML;
       track.innerHTML = originalHTML + originalHTML;
 
@@ -137,24 +139,62 @@
       var rafId = null;
       var maxSpeed = 0.5;
       var currentSpeed = 0;
-      var easeDuration = 60; // frames to reach full speed (~1s at 60fps)
+      var easeDuration = 60;
+
+      var prevBtn = document.getElementById('carousel-prev');
+      var nextBtn = document.getElementById('carousel-next');
+      var nudgeRemaining = 0;
 
       function getOriginalWidth() {
         return track.scrollWidth / 2;
       }
 
+      function getCardWidth() {
+        var allCards = track.querySelectorAll('.social-proof__feature-card');
+        if (allCards.length === 0) return 0;
+        return allCards[0].offsetWidth;
+      }
+
+      function nudge(direction) {
+        nudgeRemaining += direction * getCardWidth();
+      }
+
+      if (prevBtn) {
+        prevBtn.addEventListener('click', function() { nudge(1); });
+      }
+      if (nextBtn) {
+        nextBtn.addEventListener('click', function() { nudge(-1); });
+      }
+
       function step() {
+        var speed = 0;
+
+        // Normal auto-scroll
         if (!hovered && inView) {
           currentSpeed = Math.min(currentSpeed + maxSpeed / easeDuration, maxSpeed);
         } else {
           currentSpeed = Math.max(currentSpeed - maxSpeed / easeDuration, 0);
         }
+        speed = currentSpeed;
 
-        if (currentSpeed > 0) {
-          scrollPos += currentSpeed;
-          if (scrollPos >= getOriginalWidth()) {
-            scrollPos -= getOriginalWidth();
+        // Nudge: ease through remaining distance
+        if (nudgeRemaining !== 0) {
+          var nudgeStep = nudgeRemaining * 0.12;
+          if (Math.abs(nudgeStep) < 0.5) nudgeStep = nudgeRemaining > 0 ? 0.5 : -0.5;
+          if (Math.abs(nudgeRemaining) < 1) {
+            nudgeStep = nudgeRemaining;
+            nudgeRemaining = 0;
+          } else {
+            nudgeRemaining -= nudgeStep;
           }
+          speed += nudgeStep;
+        }
+
+        if (speed !== 0) {
+          scrollPos += speed;
+          var origW = getOriginalWidth();
+          if (scrollPos >= origW) scrollPos -= origW;
+          if (scrollPos < 0) scrollPos += origW;
           track.style.transform = 'translateX(-' + scrollPos + 'px)';
         }
 
@@ -183,6 +223,7 @@
       carousel.addEventListener('mouseleave', function() { hovered = false; });
       carousel.addEventListener('touchstart', function() { hovered = true; }, { passive: true });
       carousel.addEventListener('touchend', function() { hovered = false; });
+
     })();
     </script>
   </div>
