@@ -44,6 +44,9 @@ collections:
   posts:
     output: true
     permalink: /:slug
+  articles:
+    output: true
+    permalink: /:slug
   authors:
     output: true
     permalink: /:name
@@ -62,6 +65,11 @@ defaults:
   - scope:
       path: ""
       type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "articles"
     values:
       layout: "post"
   - scope:

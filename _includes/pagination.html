@@ -1,20 +1,8 @@
 <!-- begin pagination -->
 <div class="container animate">
-  {% assign excluded_tags = site.data.settings.blog.exclude_tags %}
-  {% assign filteredCount = 0 %}
-  {% for post in site.posts %}
-    {% assign should_exclude = false %}
-    {% for tag in post.tags %}
-      {% if excluded_tags contains tag %}
-        {% assign should_exclude = true %}
-        {% break %}
-      {% endif %}
-    {% endfor %}
-    {% unless should_exclude %}
-      {% assign filteredCount = filteredCount | plus: 1 %}
-    {% endunless %}
-  {% endfor %}
-  {% if filteredCount > 6 %}
+  {% assign postCount = site.posts | size %}
+  {% assign postsCovered = site.paginate | plus:offset %}
+  {% if postsCovered < postCount %}
   <div class="pagination">
     <button class="load-more-posts button button--primary">Load More</button>
   </div>

@@ -1,8 +1,9 @@
 {% assign maxRelated = 4 %}
 {% assign minCommonTags = 1 %}
 {% assign maxRelatedCounter = 0 %}
+{% assign all_content = site.posts | concat: site.articles %}
 
-{% for post in site.posts %}
+{% for post in all_content %}
   {% assign sameTagCount = 0 %}
   {% assign commonTags = '' %}
   {% for tag in post.tags %}
@@ -38,7 +39,7 @@
           </div>
           <div class="row">
 
-          {% for post in site.posts %}
+          {% for post in all_content %}
             {% assign sameTagCount = 0 %}
             {% assign commonTags = '' %}
 

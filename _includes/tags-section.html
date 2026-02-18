@@ -12,7 +12,9 @@
       </div>
     </div>
     <div class="row">
-      {% for post in site.tags.[recommended_tag] limit:4 %}
+      {% assign all_content = site.posts | concat: site.articles %}
+      {% assign tagged_posts = all_content | where_exp: "post", "post.tags contains recommended_tag" %}
+      {% for post in tagged_posts limit:4 %}
         {% if post.title != null %}
           <div class="article col col-3 col-d-6 col-m-12">
 
