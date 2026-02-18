@@ -572,9 +572,7 @@
   }
 
   @media (max-width: $mobile) {
-    .row .col:last-child {
-      margin-bottom: 0;
-    }
+    margin-bottom: 40px;
 
     .article__title {
       font-size: 22px;
