@@ -8,19 +8,19 @@ permalink: /support/
 <div class="container animate">
   <div class="support__grid">
 
-    <!-- Card 1 — Expert Support -->
+    <!-- Card 1 — Premium Support -->
     <div class="support__card">
       <div class="support__card-icon support__card-icon--calendar">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
       </div>
-      <h4 class="pricing__services-title">Expert Support</h4>
-      <p class="support__card-description">You can do it yourself, but you don't have to!</p>
-      <p class="support__card-description">Meet with a SilkQuote expert for 15-minutes.<br> After we get to know your specific needs, receive a quote.</p>
+      <h4 class="pricing__services-title">Premium Support</h4>
+      <!-- <p class="support__card-description">You can do it yourself, but you don't have to!</p> -->
+      <p class="support__card-description">Meet with a SilkQuote expert for 15-minutes. Afterwards receive a custom quote.</p>
 
       <ul class="pricing__services-list">
         {% for service in site.data.services %}
         <li>
-          <strong>{{ service.name }} <span class="pricing__services-price">{{ service.price }} <b>{{ service.unit }}</b></span></strong>
+          <strong>{{ service.name }} <span class="pricing__services-price"><b>{{ service.prefix }}</b> {{ service.price }} <b>{{ service.unit }}</b></span></strong>
           <span>{{ service.description }}</span>
         </li>
         {% endfor %}
@@ -30,7 +30,7 @@ permalink: /support/
           data-cal-link="silkquote/support"
           data-cal-namespace="support"
           data-cal-config='{"layout":"week_view","useSlotsViewOnSmallScreen":"true"}'>
-          Get Expert Support
+          Get Premium Support
         </button>
       </div>
     </div>

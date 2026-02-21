@@ -3,7 +3,7 @@
     <div class="section__info">
       <div class="section__head">
         <h3 class="section__title">Pricing</h3>
-        <p class="section__description">Immediate ROI. Expert support when you need it.</p>
+        <p class="section__description">Immediate ROI. Premium Support when you need it.</p>
       </div>
     </div>
 
@@ -39,7 +39,7 @@
 
           <div class="pricing__cta">
             {% if site.data.settings.appexchange_link %}
-              <a href="{{ site.data.settings.appexchange_link }}" class="button button--primary" target="_blank" rel="noopener">Install Free from AppExchange</a>
+              <a href="{{ site.data.settings.appexchange_link }}" class="button button--primary" target="_blank" rel="noopener">Install on AppExchange</a>
             {% else %}
               <a href="/contact/" class="button button--primary">Install from AppExchange</a>
             {% endif %}
@@ -49,13 +49,13 @@
 
       <div class="pricing__services-card">
         <div class="pricing__services-label">Go Live Faster</div>
-        <h4 class="pricing__services-title">Expert Support</h4>
+        <h4 class="pricing__services-title">Premium Support</h4>
         <p class="pricing__services-description">You can do it yourself, but you don't have to.</p>
 
         <ul class="pricing__services-list">
           {% for service in site.data.services %}
           <li>
-            <strong>{{ service.name }} <span class="pricing__services-price">{{ service.price }} <b>{{ service.unit }}</b></span></strong>
+            <strong>{{ service.name }} <span class="pricing__services-price"><b>{{ service.prefix }}</b> {{ service.price }} <b>{{ service.unit }}</b></span></strong>
             <span>{{ service.description }}</span>
           </li>
           {% endfor %}
@@ -65,7 +65,7 @@
             data-cal-link="silkquote/support"
             data-cal-namespace="support"
             data-cal-config='{"layout":"week_view","useSlotsViewOnSmallScreen":"true"}'>
-            Get Expert Support
+            Get Premium Support
           </button>
         </div>
       </div>

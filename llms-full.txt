@@ -69,7 +69,7 @@ SilkQuote follows a three-step process:
 - No trial period
 - No usage limits
 
-### Expert Support Services (optional)
+### Premium Support Services (optional)
 {% for service in site.data.services %}- **{{ service.name }}** — {{ service.price }} {{ service.unit }}: {{ service.description }}
 {% endfor %}
 

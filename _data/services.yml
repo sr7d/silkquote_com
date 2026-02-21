@@ -1,14 +1,29 @@
-- name: Quick Start Accelerator
-  price: "$1,575"
-  unit: flat fee
-  description: Production-ready setup so you're live in days, not weeks
+- name: Guided Go-Live
+  prefix: "from"
+  price: "$2,500"
+  unit: 
+  description: Production-ready setup done for you in days
 
-- name: Advanced Customization
-  price: "$175"
-  unit: hourly
-  description: Custom templates, automation, and integration tailored your business
+- name: Custom Template Creation
+  prefix: "from"
+  price: "$3000"
+  unit: 
+  description: Bespoke templates designed to your specifications
 
-- name: Retainer
-  price: "Custom"
-  unit: monthly
-  description: Ongoing support for your teams Quote-To-Cash processes
+- name: Automation Setup
+  prefix: "from"
+  price: "$3500"
+  unit: 
+  description: Automated quotes, opportunities, orders, and more
+
+- name: Approval Process Design
+  prefix: "from"
+  price: "$3500"
+  unit: 
+  description: Approval workflows for faster deal execution
+
+- name: E-Signature Integration
+  prefix: "from"
+  price: "$1250"
+  unit: 
+  description: Enable secure legally binding signatures

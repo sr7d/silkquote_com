@@ -38,5 +38,5 @@ SilkQuote is a native Salesforce application (Lightning component) that transfor
 
 ## Optional
 
-- [Pricing](https://www.silkquote.com/#pricing): Free plan and Expert Support services
+- [Pricing](https://www.silkquote.com/#pricing): Free plan and Premium Support services
 - [Comparisons](https://www.silkquote.com/tags/?tag=comparisons): SilkQuote vs CPQ, Conga, S-Docs, and more
