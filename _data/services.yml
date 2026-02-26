@@ -6,24 +6,24 @@
 
 - name: Custom Template Creation
   prefix: "from"
-  price: "$3000"
+  price: "$3,000"
   unit: 
   description: Bespoke templates designed to your specifications
 
 - name: Automation Setup
   prefix: "from"
-  price: "$3500"
+  price: "$3,500"
   unit: 
   description: Automated quotes, opportunities, orders, and more
 
 - name: Approval Process Design
   prefix: "from"
-  price: "$3500"
+  price: "$3,500"
   unit: 
   description: Approval workflows for faster deal execution
 
 - name: E-Signature Integration
   prefix: "from"
-  price: "$1250"
+  price: "$1,250"
   unit: 
   description: Enable secure legally binding signatures

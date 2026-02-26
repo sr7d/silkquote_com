@@ -432,35 +432,11 @@
   }
 }
 
-/* Demo Button Animation - Purple neon glow effect */
+/* Demo Button Play Icon */
 .play-icon-nav {
   display: inline-block;
   text-decoration: none !important;
-  animation: none; /* Default: no animation */
-  
-  @media (max-width: $desktop) {
-    animation: none;
-  }
-}
-
-/* Enable animation only for dark header */
-.header--dark .play-icon-nav {
-  @media (min-width: #{$desktop + 1px}) {
-    animation: play-icon-neon-glow 1.5s ease-in-out infinite alternate;
-  }
-}
-
-@keyframes play-icon-neon-glow {
-  0% {
-    text-shadow: none;
-  }
-  100% {
-    color: #8a4af3;
-    text-shadow:
-      0 0 7px #8a4af3,
-      0 0 10px #8a4af3,
-      0 0 21px #8a4af3;
-  }
+  color: #ffffff;
 }
 
 /* Coming Soon Tooltip */

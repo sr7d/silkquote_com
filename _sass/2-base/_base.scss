@@ -250,7 +250,7 @@ table td {
   cursor: pointer;
   transition: all .25s;
   color: var(--white);
-  background: #8a4af3;
+  background: #2c2c2c;
 
   &:hover {
     color: var(--white);
@@ -264,11 +264,11 @@ table td {
 
   &--secondary {
     background: transparent;
-    color: #8a4af3;
-    border: 2px solid #8a4af3;
+    color: #2c2c2c;
+    border: 2px solid #2c2c2c;
 
     &:hover {
-      background: #8a4af3;
+      background: #2c2c2c;
       color: var(--white);
       transform: scale(1.05);
     }

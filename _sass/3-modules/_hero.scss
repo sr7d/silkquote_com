@@ -2,27 +2,7 @@
 .hero {
   padding: 200px 0 80px;
   color: var(--white);
-  background: var(--white);
-  position: relative;
-  overflow: hidden;
-
-  /* Subtle overlay for depth */
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(57, 53, 236, 0.1);
-    z-index: 0;
-  }
-
-  /* Ensure content appears above overlay */
-  > .container {
-    position: relative;
-    z-index: 1;
-  }
+  background: transparent;
 
   @media (max-width: $desktop) {
     padding: 180px 0 60px;

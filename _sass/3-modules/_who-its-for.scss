@@ -1,26 +1,7 @@
 /* Who It's For Section */
 .who-its-for {
-  padding-top: 40px;
-  padding-bottom: 60px;
-  background-color: var(--white);
-  position: relative;
-  overflow: hidden;
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(57, 53, 236, 0.1);
-    z-index: 0;
-  }
-
-  > .container {
-    position: relative;
-    z-index: 1;
-  }
+  padding: 80px 0;
+  background-color: transparent;
 }
 
 .who-its-for__grid {
@@ -32,11 +13,11 @@
 .who-its-for__column {
   border-radius: var(--border-radius-large);
   padding: 32px;
-  background-color: var(--background-white);
+  background-color: #ffffff;
 }
 
 .who-its-for__column--fit {
-  border: 2px solid #6b9e6b;
+  border: 2px solid #2c2c2c;
 }
 
 .who-its-for__column--not-fit {
@@ -52,14 +33,11 @@
 }
 
 .who-its-for__list {
-  list-style: none;
-  padding: 0;
+  list-style: disc;
+  padding-left: 20px;
   margin: 0;
 
   li {
-    display: flex;
-    align-items: flex-start;
-    gap: 12px;
     font-size: 16px;
     line-height: 1.6;
     color: var(--text-second-color);
@@ -92,10 +70,22 @@
   color: #dc2626;
 }
 
+.who-its-for__screenshot {
+  margin-top: 24px;
+
+  img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-md);
+  }
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .who-its-for {
-    padding: 30px 0;
+    padding: 60px 0;
   }
 
   .who-its-for__grid {
@@ -110,7 +100,7 @@
 
 @media (max-width: 576px) {
   .who-its-for {
-    padding: 20px 0;
+    padding: 40px 0;
   }
 
   .who-its-for__column {

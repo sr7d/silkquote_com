@@ -1,13 +1,14 @@
 /* Differentiators Section */
 .differentiators {
-  padding-top: 40px;
-  padding-bottom: 60px;
-  background-color: var(--background-white);
+  padding: 80px 0;
+  background-color: transparent;
 }
 
 .differentiators__table-wrap {
+  overflow: hidden;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
+  border-radius: var(--border-radius-large);
 }
 
 .differentiators__table {
@@ -51,7 +52,7 @@
   }
 
   tbody tr:nth-child(odd) td:first-child {
-    background-color: var(--background-alt-color);
+    background-color: transparent;
   }
 
   tbody tr:nth-child(even) td:first-child {
@@ -83,8 +84,7 @@
 }
 
 .differentiators__th-advantage {
-  color: #8a4af3 !important;
-  font-weight: 800;
+  color: #3935E3 !important;
 }
 
 .differentiators__feature {
@@ -166,11 +166,11 @@
 }
 
 .differentiators__slide-label[data-label="SilkQuote"] {
-  color: #8a4af3;
+  color: #2c2c2c;
 }
 
 .differentiators__slide-row:last-child .differentiators__slide-label {
-  color: #8a4af3;
+  color: #2c2c2c;
 }
 
 .differentiators__slide-value {
@@ -222,13 +222,13 @@
 }
 
 .differentiators__slide-label--silk {
-  color: #8a4af3;
+  color: #2c2c2c;
 }
 
 /* Responsive */
 @media (max-width: 768px) {
   .differentiators {
-    padding: 30px 0;
+    padding: 60px 0;
   }
 
   .differentiators__table-wrap {
@@ -242,7 +242,7 @@
 
 @media (max-width: 576px) {
   .differentiators {
-    padding: 20px 0;
+    padding: 40px 0;
   }
 
   .differentiators__table tbody tr {
