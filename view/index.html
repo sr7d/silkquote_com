@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quote — SilkQuote</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --sq-purple: #8b89f4;
+      --sq-text: #2c2c2c;
+      --sq-text-muted: #6c757d;
+      --sq-border: #e1e5e9;
+      --sq-bg: #f8f9fa;
+      --accent: #8b89f4;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Mulish', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      color: var(--sq-text);
+      background: #fff;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .page-wrap {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      height: 100dvh;
+    }
+
+    /* ── Header ─────────────────────────────────────────────────────────── */
+
+    .sq-header {
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 0 28px;
+      height: 64px;
+      background: #fff;
+      border-bottom: 3px solid var(--accent);
+      position: relative;
+      z-index: 10;
+    }
+
+    .sq-header__brand {
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .sq-header__logo {
+      max-height: 38px;
+      max-width: 180px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .sq-wordmark {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      font-size: 21px;
+      line-height: 1;
+      letter-spacing: -0.3px;
+    }
+
+    .sq-wordmark__silk  { font-weight: 700; color: var(--accent); }
+    .sq-wordmark__quote { font-weight: 400; color: var(--accent); }
+
+    .sq-header__title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--sq-text);
+      text-align: right;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      max-width: 55%;
+      letter-spacing: -0.1px;
+    }
+
+    /* ── Viewer ─────────────────────────────────────────────────────────── */
+
+    .sq-viewer {
+      flex: 1;
+      overflow: hidden;
+      position: relative;
+      background: var(--sq-bg);
+    }
+
+    .sq-viewer iframe {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    /* ── Fallback / Error overlays ──────────────────────────────────────── */
+
+    .sq-overlay {
+      display: none;
+      position: absolute;
+      inset: 0;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 18px;
+      padding: 32px;
+      text-align: center;
+      background: var(--sq-bg);
+    }
+
+    .sq-overlay.visible {
+      display: flex;
+    }
+
+    .sq-overlay__icon {
+      color: #c3c8cc;
+    }
+
+    .sq-overlay__heading {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--sq-text);
+    }
+
+    .sq-overlay__sub {
+      font-size: 15px;
+      color: var(--sq-text-muted);
+      max-width: 320px;
+      line-height: 1.6;
+    }
+
+    /* ── Button ─────────────────────────────────────────────────────────── */
+
+    .sq-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 13px 28px;
+      border-radius: 50px;
+      font-family: inherit;
+      font-size: 15px;
+      font-weight: 800;
+      text-decoration: none;
+      color: #fff;
+      background: var(--accent);
+      border: none;
+      cursor: pointer;
+      transition: opacity 0.2s ease, transform 0.15s ease;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.18);
+      letter-spacing: 0.1px;
+    }
+
+    .sq-btn:hover {
+      opacity: 0.88;
+      transform: translateY(-1px);
+    }
+
+    .sq-btn:active {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    /* ── Footer ─────────────────────────────────────────────────────────── */
+
+    .sq-footer {
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 44px;
+      border-top: 1px solid var(--sq-border);
+      background: #fff;
+      font-size: 13px;
+      color: var(--sq-text-muted);
+      gap: 3px;
+    }
+
+    .sq-footer a {
+      color: var(--sq-purple);
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .sq-footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* ── Responsive ─────────────────────────────────────────────────────── */
+
+    @media (max-width: 600px) {
+      .sq-header {
+        padding: 0 16px;
+        height: 56px;
+        gap: 12px;
+      }
+
+      .sq-header__logo  { max-height: 30px; max-width: 130px; }
+      .sq-wordmark      { font-size: 19px; }
+      .sq-header__title { font-size: 14px; max-width: 50%; }
+
+      .sq-overlay__heading { font-size: 16px; }
+      .sq-btn { font-size: 15px; padding: 12px 24px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrap">
+
+    <header class="sq-header" id="sqHeader">
+      <div class="sq-header__brand" id="sqBrand"></div>
+      <div class="sq-header__title" id="sqTitle"></div>
+    </header>
+
+    <main class="sq-viewer" id="sqViewer">
+
+      <iframe id="sqFrame" title="Quote document" allowfullscreen></iframe>
+
+      <!-- Mobile / load-timeout fallback -->
+      <div class="sq-overlay" id="sqFallback" role="status" aria-live="polite">
+        <svg class="sq-overlay__icon" width="56" height="56" viewBox="0 0 24 24"
+             fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+          <polyline points="14 2 14 8 20 8"/>
+          <line x1="9" y1="13" x2="15" y2="13"/>
+          <line x1="9" y1="17" x2="13" y2="17"/>
+        </svg>
+        <p class="sq-overlay__heading">PDF preview not available in this browser</p>
+        <p class="sq-overlay__sub">Open the quote directly to review and approve.</p>
+        <a id="sqFallbackBtn" href="#" target="_blank" rel="noopener noreferrer" class="sq-btn">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none"
+               stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+            <polyline points="15 3 21 3 21 9"/>
+            <line x1="10" y1="14" x2="21" y2="3"/>
+          </svg>
+          Open PDF
+        </a>
+      </div>
+
+      <!-- Missing / invalid URL error -->
+      <div class="sq-overlay" id="sqError" role="alert">
+        <svg class="sq-overlay__icon" width="52" height="52" viewBox="0 0 24 24"
+             fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true">
+          <circle cx="12" cy="12" r="10"/>
+          <line x1="12" y1="8" x2="12" y2="13"/>
+          <circle cx="12" cy="17" r="0.5" fill="currentColor" stroke="none"/>
+        </svg>
+        <p class="sq-overlay__heading">This quote link is invalid or has expired.</p>
+        <p class="sq-overlay__sub">Please contact your sales rep for an updated link.</p>
+      </div>
+
+    </main>
+
+    <footer class="sq-footer">
+      Sent with&nbsp;<a href="https://silkquote.com" target="_blank" rel="noopener noreferrer">SilkQuote</a>&nbsp;for Salesforce
+    </footer>
+
+  </div>
+
+  <script>
+    (function () {
+      'use strict';
+
+      /* ── Parse hash fragment ─────────────────────────────────────────── */
+      function parseHash() {
+        var raw = location.hash.slice(1);
+        var params = {};
+        if (!raw) return params;
+        raw.split('&').forEach(function (part) {
+          var idx = part.indexOf('=');
+          if (idx === -1) return;
+          var k = part.slice(0, idx);
+          var v = part.slice(idx + 1);
+          try {
+            params[decodeURIComponent(k)] = decodeURIComponent(v);
+          } catch (e) { /* skip malformed token */ }
+        });
+        return params;
+      }
+
+      var p       = parseHash();
+      var pdfUrl  = (p.url  || '').trim();
+      var title   = (p.title || '').trim();
+      var rawColor = (p.color || '').replace(/^#/, '');
+      var logoUrl  = (p.logo  || '').trim();
+
+      /* ── Validate & apply accent color ───────────────────────────────── */
+      var accent = /^[0-9a-fA-F]{3}(?:[0-9a-fA-F]{3})?$/.test(rawColor)
+        ? '#' + rawColor
+        : '#8b89f4';
+
+      document.documentElement.style.setProperty('--accent', accent);
+
+      /* ── Document title ──────────────────────────────────────────────── */
+      document.title = title ? title + ' \u2014 SilkQuote' : 'Quote \u2014 SilkQuote';
+
+      /* ── Header brand ────────────────────────────────────────────────── */
+      var brand = document.getElementById('sqBrand');
+
+      if (logoUrl) {
+        var img = document.createElement('img');
+        img.className = 'sq-header__logo';
+        img.alt = 'Company logo';
+        img.src = logoUrl;
+        img.onerror = function () { this.style.display = 'none'; };
+        brand.appendChild(img);
+      } else {
+        var mark = document.createElement('a');
+        mark.href = 'https://silkquote.com';
+        mark.target = '_blank';
+        mark.rel = 'noopener noreferrer';
+        mark.className = 'sq-wordmark';
+        mark.setAttribute('aria-label', 'SilkQuote');
+        mark.innerHTML =
+          '<span class="sq-wordmark__silk" style="color:' + accent + '">Silk</span>' +
+          '<span class="sq-wordmark__quote" style="color:' + accent + '">Quote</span>';
+        brand.appendChild(mark);
+      }
+
+      /* ── Header title ────────────────────────────────────────────────── */
+      document.getElementById('sqTitle').textContent = title;
+
+      /* ── Error state (no URL) ────────────────────────────────────────── */
+      if (!pdfUrl) {
+        document.getElementById('sqFrame').style.display = 'none';
+        document.getElementById('sqError').classList.add('visible');
+        return;
+      }
+
+      /* ── PDF iframe with timeout fallback ────────────────────────────── */
+      var frame       = document.getElementById('sqFrame');
+      var fallback    = document.getElementById('sqFallback');
+      var fallbackBtn = document.getElementById('sqFallbackBtn');
+      var didLoad     = false;
+      var timer;
+
+      fallbackBtn.href = pdfUrl;
+
+      function showFallback() {
+        if (didLoad) return;
+        didLoad = true;
+        clearTimeout(timer);
+        frame.style.display = 'none';
+        fallback.classList.add('visible');
+      }
+
+      frame.addEventListener('load', function () {
+        didLoad = true;
+        clearTimeout(timer);
+      });
+
+      frame.addEventListener('error', showFallback);
+
+      /* 4-second timeout — catches iOS Safari which never fires load on PDFs */
+      timer = setTimeout(showFallback, 4000);
+
+      /* Set src after wiring listeners */
+      frame.src = pdfUrl;
+
+    }());
+  </script>
+</body>
+</html>

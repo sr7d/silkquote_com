@@ -27,7 +27,7 @@ menu__settings:
 # Hero Settings
 hero:
   hero__title: Generate Accurate, Professional PDF Quotes Instantly
-  hero__description: Automatically transform your <strong>Salesforce</strong> opportunities into PDF quotes with dynamic, customizable templates.
+  hero__description: Transform your <strong>Salesforce</strong> opportunities into professional PDF quotes with flexible layouts, conditional logic, and no learning curve.
   hero__demo_text: Watch Demo
 
 #-------------------------------
