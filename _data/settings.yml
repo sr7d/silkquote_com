@@ -1,7 +1,7 @@
 #-------------------------------
 # Site Settings
-title: SilkQuote - Professional PDF Quote Generation for Salesforce
-description: Transform Salesforce Opportunities into professional, branded PDF quotes in seconds. Our no-code configurator empowers admins to build dynamic, rule-based quote templates and terms & conditions documents, ensuring every quote is on-brand and easy for sales to generate.
+title: SilkQuote - Generate & Send Dynamic Quotes With Ease
+description: Transform your Salesforce opportunities into professional PDF quotes with flexible layouts, conditional logic, and easy setup.
 logo: /images/logo.png
 appexchange_link: https://appexchange.salesforce.com/appxListingDetail?listingId=b15e931b-f12f-43cd-9f92-813e7d87591e
 
@@ -26,8 +26,8 @@ menu__settings:
 #-------------------------------
 # Hero Settings
 hero:
-  hero__title: Generate Accurate, Professional PDF Quotes Instantly
-  hero__description: Transform your <strong>Salesforce</strong> opportunities into professional PDF quotes with flexible layouts, conditional logic, and no learning curve.
+  hero__title: Generate & Send Dynamic Quotes With Ease
+  hero__description: Transform your <strong>Salesforce</strong> opportunities into professional PDF quotes with flexible layouts, conditional logic, and easy setup.
   hero__demo_text: Watch Demo
 
 #-------------------------------
