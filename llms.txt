@@ -5,9 +5,9 @@ sitemap: false
 ---
 # SilkQuote
 
-> Professional PDF quote generation for Salesforce. Free, no-code configurator for admins, one-click generation for reps.
+> Templatize, generate, and share dynamic quotes customers can review and accept. Free, native Salesforce quoting.
 
-SilkQuote is a native Salesforce application (Lightning component) that transforms Opportunities into professional, branded PDF quotes. It replaces complex CPQ implementations with a simple drag-and-drop template builder, dynamic field mapping, and Flow-compatible automation — all at zero cost.
+SilkQuote is a native Salesforce application that speeds up negotiations, reduces approval times, and makes quoting easier. Admins build reusable templates with conditional fields and custom terms. Reps generate professional PDFs in one click. Prospects review, comment on, and accept quotes via a hosted link. All inside Salesforce, at zero cost.
 
 **Key facts:**
 - Free: unlimited users, quotes, and templates

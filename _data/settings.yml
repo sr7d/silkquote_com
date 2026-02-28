@@ -1,7 +1,7 @@
 #-------------------------------
 # Site Settings
-title: SilkQuote - Generate & Send Dynamic Quotes With Ease
-description: Transform your Salesforce opportunities into professional PDF quotes with flexible layouts, conditional logic, and easy setup.
+title: SilkQuote - Speed Up Every Quote, Negotiation, and Close
+description: Easily templatize, generate, and share dynamic quotes that customers can review and accept. Built for Salesforce.
 logo: /images/logo.png
 appexchange_link: https://appexchange.salesforce.com/appxListingDetail?listingId=b15e931b-f12f-43cd-9f92-813e7d87591e
 
@@ -26,8 +26,8 @@ menu__settings:
 #-------------------------------
 # Hero Settings
 hero:
-  hero__title: Generate & Send Dynamic Quotes With Ease
-  hero__description: Transform your <strong>Salesforce</strong> opportunities into professional PDF quotes with flexible layouts, conditional logic, and easy setup.
+  hero__title: Speed Up Every Quote, Negotiation, and Close
+  hero__description: Easily templatize, generate, and share dynamic quotes that customers can review and accept in <strong>Salesforce</strong>.
   hero__demo_text: Watch Demo
 
 #-------------------------------

@@ -5,23 +5,23 @@ sitemap: false
 ---
 # SilkQuote — Complete Product Reference
 
-> Professional PDF quote generation for Salesforce. Free, no-code configurator for admins, one-click generation for reps.
+> Templatize, generate, and share dynamic quotes customers can review and accept. Free, native Salesforce quoting.
 
 ## Overview
 
-SilkQuote is a native Salesforce application (Lightning component) that transforms Opportunities into professional, branded PDF quotes. Built for Salesforce admins and sales teams, it replaces complex CPQ implementations with a simple, free tool that works with Professional Edition and above.
+SilkQuote is a native Salesforce application that speeds up negotiations, reduces approval times, and makes quoting easier. Admins build reusable templates with conditional fields and custom terms. Reps generate professional PDFs in one click. Prospects review, comment on, and accept quotes via a hosted link. All inside Salesforce, at zero cost.
 
-SilkQuote is installed from the Salesforce AppExchange and runs entirely within Salesforce — no external systems, no data exports, no per-user licensing fees.
+SilkQuote is installed from the Salesforce AppExchange and runs entirely within Salesforce. No external systems, no data exports, no per-user licensing fees.
 
 ## How It Works
 
 SilkQuote follows a three-step process:
 
-1. **Build Templates** — Admins configure flexible templates directly in Salesforce with a drag-and-drop interface. Templates support dynamic fields, conditional sections, and standardized terms & conditions — all without code.
+1. **Templatize** — Admins build reusable, branded templates with conditional fields, custom layouts, and terms and conditions. All without code.
 
-2. **Generate Quotes** — Sales reps generate polished PDF quotes with one click. Products, pricing, and customer details are pulled in automatically from Opportunities, Accounts, Quotes, and custom objects with zero manual effort.
+2. **Generate** — Reps generate a dynamic, professional quote PDF in one click or via automation. Product, pricing, and customer details are pulled automatically from Salesforce.
 
-3. **Share & Close** — Share quotes via email, secure link, or integrated e-signature. Preview before sending, save to Salesforce, and keep the sales cycle moving fast.
+3. **Share and Accept** — Share a hosted quote link customers can review, comment on, and accept. Track when prospects view the quote and keep negotiations moving.
 
 ## Features
 
@@ -93,10 +93,9 @@ SilkQuote generates standard PDF files that integrate with any e-signature workf
 ## Who SilkQuote Is For
 
 SilkQuote is a good fit if you:
-- Need professional, branded PDF quotes from Salesforce
-- Follow a process like: Opportunity → Quote PDF → E-Signature → Order & Invoice
-- Want to be live in days, not months
-- Value simplicity, automation, and high user adoption
+- Use Salesforce and send quotes to prospects
+- Want quote acceptance to update Salesforce records or trigger automation
+- Want professional quote PDFs without CPQ complexity
 
 SilkQuote is NOT a fit if you:
 - Need complex product configuration (bundles, constraints, guided selling)
