@@ -26,10 +26,10 @@
           <p class="pricing__card-description">SilkQuote gives Salesforce admins a full-featured quoting tool with flexible formatting, conditional logic, and custom layouts. Free, with no limits.</p>
 
           <div class="pricing__cta">
-            {% if site.data.settings.appexchange_link %}
-              <a href="{{ site.data.settings.appexchange_link }}" class="button button--primary" target="_blank" rel="noopener">Install on AppExchange</a>
+            {% if site.data.settings.install_url %}
+              <a href="{{ site.data.settings.install_url }}" class="button button--primary" target="_blank" rel="noopener">Install</a>
             {% else %}
-              <span class="button button--primary coming-soon" data-tooltip="Coming Soon">Install on AppExchange</span>
+              <span class="button button--primary coming-soon" data-tooltip="Coming Soon">Install</span>
             {% endif %}
           </div>
         </div>

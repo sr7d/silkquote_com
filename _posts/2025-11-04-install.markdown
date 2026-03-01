@@ -1,6 +1,6 @@
 ---
-layout: post
-title: "Post Installation Instructions"
+layout: install
+title: "Install SilkQuote"
 description: "Complete these configuration steps after installing the SilkQuote package to start generating professional quote PDFs."
 date: 2025-08-27 10:00:00 +0300
 author: admin
@@ -10,13 +10,13 @@ tags: [install]
 featured: true
 ---
 
-## Step 1: Navigate to the SilkQuote App
+### Step 1: Navigate to the SilkQuote App
 
 Open the SilkQuote App from your Salesforce App Launcher.
 
 ![SilkQuote App](/images/install1-min.png)
 
-## Step 2: Assign the Permission Set
+### Step 2: Assign the Permission Set
 
 Grant users access to SilkQuote by assigning the permission set.
 
@@ -24,7 +24,7 @@ Grant users access to SilkQuote by assigning the permission set.
 
 ![Permissions](/images/install3-min.png)
 
-## Step 3: Upload and Configure Your Company Logo
+### Step 3: Upload and Configure Your Company Logo
 
 Upload your company logo to Salesforce Static Resources and configure it in the Quote Template.
 
@@ -48,7 +48,7 @@ Upload your company logo to Salesforce Static Resources and configure it in the 
 
    ![Configure Logo](/images/install8-min.png)
 
-## Step 4: Add the Generate Quote Button
+### Step 4: Add the Generate Quote Button
 
 Add the Generate Quote button to your Opportunity page layout so users can access the quote generation wizard.
 
@@ -60,7 +60,7 @@ Add the Generate Quote button to your Opportunity page layout so users can acces
 
    ![Add Button](/images/install10-min.png)
 
-## You're All Set!
+### You're All Set!
 
 Congratulations! When users click the Generate Quote button, they will be presented with the Quote Generation Wizard.
 

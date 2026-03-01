@@ -36,14 +36,8 @@
               </li>
               {% else %}
               <li class="nav__item">
-                {% if item.title == 'AppExchange' %}
-                  {% if site.data.settings.appexchange_link %}
-                    <a href="{{ site.data.settings.appexchange_link }}" class="nav__link" target="_blank" rel="noopener">{{ item.title }}</a>
-                  {% else %}
-                    <span class="nav__link coming-soon" data-tooltip="Coming Soon">{{ item.title }}</span>
-                  {% endif %}
-                {% elsif item.demo %}
-                  <a href="#" class="nav__link demo-trigger" id="menu-demo-button"><span class="play-icon-nav">▶</span> Watch Demo</a>
+                {% if item.demo %}
+                  <a href="#" class="nav__link demo-trigger" id="menu-demo-button"><span class="play-icon-nav">▶</span> Demo</a>
                 {% else %}
                   <a href="{{ item.url | relative_url }}" class="nav__link{% if page.url == item.url %} active-link{% endif %}">{{ item.title }}</a>
                 {% endif %}

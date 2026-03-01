@@ -45,6 +45,13 @@ body {
 
 .content {
   flex: 1 0 auto;
+  background:
+    linear-gradient(to bottom, #eeeaff 0%, transparent 240px),
+    linear-gradient(to bottom, transparent calc(100% - 240px), #f2eeff 100%);
+}
+
+.page-hero-bg {
+  background: linear-gradient(to bottom, #eeeaff 0%, #fafafa 100%);
 }
 
 h1,

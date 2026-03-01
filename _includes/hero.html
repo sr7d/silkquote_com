@@ -10,10 +10,10 @@
             <p class="hero__description">{{ site.data.settings.hero.hero__description }}</p>
           </div>
           <div class="hero__cta">
-            {% if site.data.settings.appexchange_link %}
-              <a href="{{ site.data.settings.appexchange_link }}" class="button button--primary" target="_blank" rel="noopener">Install on AppExchange</a>
+            {% if site.data.settings.install_url %}
+              <a href="{{ site.data.settings.install_url }}" class="button button--primary" target="_blank" rel="noopener">Install</a>
             {% else %}
-              <span class="button button--primary coming-soon" data-tooltip="Coming Soon">Install on AppExchange</span>
+              <span class="button button--primary coming-soon" data-tooltip="Coming Soon">Install</span>
             {% endif %}
             <a href="/SampleQuote.pdf" download class="button button--secondary">Download Sample Quote</a>
           </div>
