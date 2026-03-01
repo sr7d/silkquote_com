@@ -82,6 +82,7 @@
 /* Carousel Controls */
 .social-proof__carousel-controls {
   display: flex;
+  align-items: center;
   justify-content: center;
   gap: 16px;
 }
@@ -103,6 +104,18 @@
   &:active {
     background-color: var(--primary-color);
     color: #fff;
+  }
+}
+
+.social-proof__all-features {
+  margin-left: auto;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--primary-color);
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
   }
 }
 

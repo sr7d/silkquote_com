@@ -36,14 +36,14 @@
       </div>
 
       <div class="pricing__services-card">
-        <div class="pricing__services-label">Go Live Faster</div>
-        <h4 class="pricing__services-title">Premium Support</h4>
-        <p class="pricing__services-description">You can do it yourself, but you don't have to.</p>
+        <div class="pricing__services-label">Done for you</div>
+        <h4 class="pricing__services-title">Stop Building Quotes by Hand.</h4>
+        <p class="pricing__services-description">Your team has better things to do than configure quote templates.</p>
 
         <ul class="pricing__services-list">
           {% for service in site.data.services %}
           <li>
-            <strong>{{ service.name }} <span class="pricing__services-price"><b>{{ service.prefix }}</b> {{ service.price }} <b>{{ service.unit }}</b></span></strong>
+            <strong>{{ service.name }}</strong>
             <span>{{ service.description }}</span>
           </li>
           {% endfor %}
@@ -103,6 +103,15 @@
             </button>
             <div class="faq-answer">
               <p>Yes. SilkQuote works with DocuSign, Adobe Sign, and other common e-signature products.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
+              Is SilkQuote a CPQ replacement?
+              <svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>No — and that's the point. SilkQuote is what you use before your quoting complexity justifies CPQ. Most teams don't need a pricing engine. They need clean, branded quotes that go out fast and get accepted. If you eventually outgrow SilkQuote, that's a good problem to have.</p>
             </div>
           </div>
         </div>

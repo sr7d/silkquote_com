@@ -1,6 +1,6 @@
 #-------------------------------
 # Site Settings
-title: SilkQuote - Speed Up Every Quote, Negotiation, and Close
+title: SilkQuote - Native Salesforce Quoting. No CPQ. No Cost.
 description: Easily templatize, generate, and share dynamic quotes that customers can review and accept. Built for Salesforce.
 logo: /images/logo.png
 appexchange_link: https://appexchange.salesforce.com/appxListingDetail?listingId=b15e931b-f12f-43cd-9f92-813e7d87591e
@@ -26,7 +26,7 @@ menu__settings:
 #-------------------------------
 # Hero Settings
 hero:
-  hero__title: Speed Up Every Quote, Negotiation, and Close
+  hero__title: Native Salesforce Quoting. No CPQ. No Cost.
   hero__description: Easily templatize, generate, and share dynamic quotes that customers can review and accept in <strong>Salesforce</strong>.
   hero__demo_text: Watch Demo
 

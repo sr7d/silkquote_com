@@ -196,4 +196,6 @@ With CPQ at end-of-sale and Revenue Cloud representing an even larger commitment
 
 SilkQuote installs from the Salesforce AppExchange in minutes. The first template can be configured and generating live PDFs the same day. No implementation project, no consulting engagement, and no per-user licensing to negotiate.
 
+**Need help setting up templates, automation, or approvals?** [Get Premium Support](/support/) — we handle the setup so your team can focus on closing.
+
 *Ready to close the gap between Standard Quotes and CPQ? [Install SilkQuote from the AppExchange](/install/) and generate a professional quote in minutes. For questions or a guided walkthrough, [get in touch](/contact/).*

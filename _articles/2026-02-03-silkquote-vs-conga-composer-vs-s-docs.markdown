@@ -175,4 +175,6 @@ SilkQuote, Conga Composer, and S-Docs each serve a legitimate role in Salesforce
 
 The best tool matches the organization's actual requirements, not the longest feature list. For many Salesforce teams, the requirement is straightforward: generate professional quotes quickly and consistently. SilkQuote is built for that purpose.
 
+**Need help setting up templates, automation, or approvals?** [Get Premium Support](/support/) — we handle the setup so your team can focus on closing.
+
 *Ready to generate professional PDF quotes from Salesforce in minutes? [Install SilkQuote from the AppExchange](/install/) or [reach out to the team](/contact/) to learn more.*

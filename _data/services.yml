@@ -1,29 +1,14 @@
-- name: Guided Go-Live
-  prefix: "from"
-  price: "$2,500"
-  unit: 
-  description: Production-ready setup done for you in days
+- name: Deals that close without chasing approvers
+  description: Multi-tier flows that route, remind, and resolve.
 
-- name: Custom Template Creation
-  prefix: "from"
-  price: "$3,000"
-  unit: 
-  description: Bespoke templates designed to your specifications
+- name: Quotes that generate themselves
+  description: Triggered by won opportunities, no manual steps.
 
-- name: Automation Setup
-  prefix: "from"
-  price: "$3,500"
-  unit: 
-  description: Automated quotes, opportunities, orders, and more
+- name: Quotes that look like your brand, not a spreadsheet
+  description: Bespoke layouts, conditional sections, and more.
 
-- name: Approval Process Design
-  prefix: "from"
-  price: "$3,500"
-  unit: 
-  description: Approval workflows for faster deal execution
+- name: Sign from any device, the moment the quote lands
+  description: DocuSign, Adobe Sign, and more.
 
-- name: E-Signature Integration
-  prefix: "from"
-  price: "$1,250"
-  unit: 
-  description: Enable secure legally binding signatures
+- name: From broken process to closed deals
+  description: We handle everything.

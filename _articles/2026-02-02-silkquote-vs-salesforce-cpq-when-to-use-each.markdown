@@ -134,4 +134,6 @@ SilkQuote fills that gap. It is not a scaled-down CPQ. It is a purpose-built app
 
 Salesforce CPQ remains the right answer for enterprises with configuration and pricing complexity. It is a mature, powerful platform that solves real problems at scale. The key is honest assessment: does the organization's quoting challenge live in the configuration layer or the document layer? The answer determines which tool belongs in the stack.
 
+**Need help setting up templates, automation, or approvals?** [Get Premium Support](/support/) — we handle the setup so your team can focus on closing.
+
 *Ready to see what SilkQuote can do? [Install SilkQuote from the AppExchange](/install/) and generate a professional quote PDF in minutes. For questions about fit or implementation, [reach out to the SilkQuote team](/contact/).*

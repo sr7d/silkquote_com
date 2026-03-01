@@ -1,0 +1,61 @@
+---
+layout: page
+title: Features
+description: Everything included in SilkQuote, free, with no limits.
+permalink: /features/
+---
+
+<div class="features-list">
+
+  <div class="features-list__group">
+    <h2>Quote Generation</h2>
+    <ul>
+      <li><strong>One-Click PDF Generation</strong>: PDF quote from any Opportunity via Quick Action.</li>
+      <li><strong>Flow Invocable Action</strong>: Trigger quote generation from any Salesforce Flow.</li>
+      <li><strong>In-Browser Preview</strong>: Review the PDF before saving or sending.</li>
+      <li><strong>Live Quote Preview</strong>: See the current quote in a live panel directly from the Opportunity.</li>
+      <li><strong>Stale Quote Indicator</strong>: Flag PDFs that are out of date with the current Opportunity data.</li>
+      <li><strong>Quote Version History</strong>: Retain all past quote versions per Opportunity.</li>
+    </ul>
+  </div>
+
+  <div class="features-list__group">
+    <h2>Template Design</h2>
+    <ul>
+      <li><strong>On Brand Design</strong>: Upload a logo and set an accent color per template.</li>
+      <li><strong>Drag-and-Drop Editor</strong>: Reorder fields in each PDF section.</li>
+      <li><strong>Conditional Field Display</strong>: Show or hide fields and columns based on record values.</li>
+      <li><strong>Conditional Terms</strong>: Terms and Conditions with conditional availability.</li>
+      <li><strong>Smart Template Selection</strong>: Filters by Opportunity field values automatically.</li>
+      <li><strong>Line Item Grouping</strong>: Group line items by any field with subtotals.</li>
+    </ul>
+  </div>
+
+  <div class="features-list__group">
+    <h2>Sharing &amp; Acceptance</h2>
+    <ul>
+      <li><strong>Email Quote Links</strong>: Send prospects a direct link to their quote from the Opportunity.</li>
+      <li><strong>Prospect Acceptance</strong>: Prospects accept or decline quotes directly, no account needed.</li>
+      <li><strong>Email Open Tracking</strong>: Know when a prospect opens your quote email.</li>
+      <li><strong>Activity Tracking</strong>: Log every quote action: sent, viewed, accepted, declined.</li>
+    </ul>
+  </div>
+
+  <div class="features-list__group">
+    <h2>Admin &amp; Reporting</h2>
+    <ul>
+      <li><strong>Approval Routing Compatible</strong>: Build your approval processes around template selection.</li>
+      <li><strong>Configuration Validator</strong>: Scan templates, dynamic fields, and terms for problems.</li>
+      <li><strong>Dashboard &amp; Reporting</strong>: Analyze opportunities, templates, and activity to spot success patterns.</li>
+    </ul>
+  </div>
+
+</div>
+
+<div class="features-list__cta">
+  {% if site.data.settings.appexchange_link %}
+    <a href="{{ site.data.settings.appexchange_link }}" class="button button--primary" target="_blank" rel="noopener">Install on AppExchange, Free</a>
+  {% else %}
+    <a href="/contact/" class="button button--primary">Install on AppExchange, Free</a>
+  {% endif %}
+</div>

@@ -34,22 +34,8 @@
 
         <div class="social-proof__feature-card">
           <div class="social-proof__feature-inner">
-            <h4 class="social-proof__feature-title">On Brand Design</h4>
-            <p class="social-proof__feature-desc">Upload a logo and set an accent color per template.</p>
-          </div>
-        </div>
-
-        <div class="social-proof__feature-card">
-          <div class="social-proof__feature-inner">
             <h4 class="social-proof__feature-title">One-Click PDF Generation</h4>
             <p class="social-proof__feature-desc">PDF quote from any Opportunity via Quick Action.</p>
-          </div>
-        </div>
-
-        <div class="social-proof__feature-card">
-          <div class="social-proof__feature-inner">
-            <h4 class="social-proof__feature-title">Drag-and-Drop Editor</h4>
-            <p class="social-proof__feature-desc">Reorder fields in each PDF section.</p>
           </div>
         </div>
 
@@ -62,57 +48,8 @@
 
         <div class="social-proof__feature-card">
           <div class="social-proof__feature-inner">
-            <h4 class="social-proof__feature-title">Line Item Grouping</h4>
-            <p class="social-proof__feature-desc">Group line items by any field with subtotals.</p>
-          </div>
-        </div>
-
-        <div class="social-proof__feature-card">
-          <div class="social-proof__feature-inner">
             <h4 class="social-proof__feature-title">Smart Template Selection</h4>
             <p class="social-proof__feature-desc">Filters by Opportunity field values automatically.</p>
-          </div>
-        </div>
-
-        <div class="social-proof__feature-card">
-          <div class="social-proof__feature-inner">
-            <h4 class="social-proof__feature-title">In-Browser Preview</h4>
-            <p class="social-proof__feature-desc">Review the PDF before saving or sending.</p>
-          </div>
-        </div>
-
-        <div class="social-proof__feature-card">
-          <div class="social-proof__feature-inner">
-            <h4 class="social-proof__feature-title">Conditional Terms</h4>
-            <p class="social-proof__feature-desc">Terms and Conditions with conditional availability</p>
-          </div>
-        </div>
-
-        <div class="social-proof__feature-card">
-          <div class="social-proof__feature-inner">
-            <h4 class="social-proof__feature-title">Approval Routing Compatible</h4>
-            <p class="social-proof__feature-desc">Build your approval processes around template selection.</p>
-          </div>
-        </div>
-
-        <div class="social-proof__feature-card">
-          <div class="social-proof__feature-inner">
-            <h4 class="social-proof__feature-title">Flow Invocable Action</h4>
-            <p class="social-proof__feature-desc">Trigger quote generation from any Flow.</p>
-          </div>
-        </div>
-
-        <div class="social-proof__feature-card">
-          <div class="social-proof__feature-inner">
-            <h4 class="social-proof__feature-title">Configuration Validator</h4>
-            <p class="social-proof__feature-desc">Scan templates, dynamic fields, and terms for problems.</p>
-          </div>
-        </div>
-
-        <div class="social-proof__feature-card">
-          <div class="social-proof__feature-inner">
-            <h4 class="social-proof__feature-title">Email Quote Links</h4>
-            <p class="social-proof__feature-desc">Send prospects a direct link to their quote from the Opportunity.</p>
           </div>
         </div>
 
@@ -125,13 +62,6 @@
 
         <div class="social-proof__feature-card">
           <div class="social-proof__feature-inner">
-            <h4 class="social-proof__feature-title">Live Quote Preview</h4>
-            <p class="social-proof__feature-desc">See the current quote in a live panel directly from the Opportunity.</p>
-          </div>
-        </div>
-
-        <div class="social-proof__feature-card">
-          <div class="social-proof__feature-inner">
             <h4 class="social-proof__feature-title">Email Open Tracking</h4>
             <p class="social-proof__feature-desc">Know when a prospect opens your quote email.</p>
           </div>
@@ -139,29 +69,8 @@
 
         <div class="social-proof__feature-card">
           <div class="social-proof__feature-inner">
-            <h4 class="social-proof__feature-title">Activity Tracking</h4>
-            <p class="social-proof__feature-desc">Log every quote action: sent, viewed, accepted, declined.</p>
-          </div>
-        </div>
-
-        <div class="social-proof__feature-card">
-          <div class="social-proof__feature-inner">
-            <h4 class="social-proof__feature-title">Dashboard &amp; Reporting</h4>
-            <p class="social-proof__feature-desc">Analyze opportunities, templates, and activity to spot success patterns.</p>
-          </div>
-        </div>
-
-        <div class="social-proof__feature-card">
-          <div class="social-proof__feature-inner">
-            <h4 class="social-proof__feature-title">Quote Version History</h4>
-            <p class="social-proof__feature-desc">Retain all past quote versions per Opportunity.</p>
-          </div>
-        </div>
-
-        <div class="social-proof__feature-card">
-          <div class="social-proof__feature-inner">
-            <h4 class="social-proof__feature-title">Stale Quote Indicator</h4>
-            <p class="social-proof__feature-desc">Flag PDFs that are out of date with the current Opportunity data.</p>
+            <h4 class="social-proof__feature-title">Flow Invocable Action</h4>
+            <p class="social-proof__feature-desc">Trigger quote generation from any Flow.</p>
           </div>
         </div>
 
@@ -176,6 +85,7 @@
       <button class="social-proof__carousel-btn" id="carousel-next" aria-label="Next">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
       </button>
+      <a href="/features/" class="social-proof__all-features">See all features &rarr;</a>
     </div>
 
     <script>
@@ -225,7 +135,6 @@
       function step() {
         var speed = 0;
 
-        // Normal auto-scroll
         if (!hovered && inView) {
           currentSpeed = Math.min(currentSpeed + maxSpeed / easeDuration, maxSpeed);
         } else {
@@ -233,7 +142,6 @@
         }
         speed = currentSpeed;
 
-        // Nudge: ease through remaining distance
         if (nudgeRemaining !== 0) {
           var nudgeStep = nudgeRemaining * 0.12;
           if (Math.abs(nudgeStep) < 0.5) nudgeStep = nudgeRemaining > 0 ? 0.5 : -0.5;
