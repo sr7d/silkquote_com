@@ -1,7 +1,7 @@
 {% assign maxRelated = 4 %}
 {% assign minCommonTags = 1 %}
 {% assign maxRelatedCounter = 0 %}
-{% assign all_content = site.posts | concat: site.articles %}
+{% assign all_content = site.posts %}{% if site.templates %}{% assign all_content = all_content | concat: site.templates %}{% endif %}
 
 {% for post in all_content %}
   {% assign sameTagCount = 0 %}
@@ -58,7 +58,7 @@
             <div class="article col col-3 col-d-6 col-m-12">
 
               <div class="article__inner">
-                {% unless post.tags contains "articles" %}
+                {% unless post.tags contains "templates" %}
                 <div class="article__head">
                   {% if post.video_embed %}
                   <div class="video-icon">

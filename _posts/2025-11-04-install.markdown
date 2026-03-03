@@ -9,6 +9,10 @@ image_caption: "One-click quote PDF generation"
 tags: [install]
 featured: true
 ---
+## Installation Instructions
+
+Great! Now that you have installed the managed package, follow the steps below to set up your org.
+If you have an issues feel free to reach out to Support!
 
 ### Step 1: Navigate to the SilkQuote App
 
@@ -28,7 +32,7 @@ Grant users access to SilkQuote by assigning the permission set.
 
 Upload your company logo to Salesforce Static Resources and configure it in the Quote Template.
 
-1. Click the + Icon to add your logo (from the DEFAULT template or whichever template you wish to use)
+1. Click the **+** icon to add your logo (from the DEFAULT template, or whichever template you want to use)
 
    ![Static Resources](/images/install4-min.png)
 
@@ -60,8 +64,75 @@ Add the Generate Quote button to your Opportunity page layout so users can acces
 
    ![Add Button](/images/install10-min.png)
 
+3. Add the **Email Quote Document** button to the page
+
+   ![Add Button](/images/install10-min.png)
+
+4. Add the **SilkQuote Live Panel** to the page
+
+   ![Add SilkQuote Live Panel](/images/install10-min.png)
+
+5. Save your changes
+
+<div class="install-callout install-callout--info">
+  <svg class="install-callout__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+  <div class="install-callout__body">
+    <p class="install-callout__title">Optional — Advanced Setup</p>
+    <p class="install-callout__text">Steps 5–8 enable live quote hosting so customers can accept or request changes directly from a link. This requires Salesforce Sites configuration and is more involved than the core setup — proceed only if you need this feature.</p>
+  </div>
+</div>
+
+### Step 5: Create a Site
+
+Go to Setup and create a site.
+
+1. Name and activate the site
+
+   ![Create Site](/images/siteCreate.png)
+
+2. Copy the site URL for later use
+
+### Step 6: Configure the Site
+
+Open the site you created and configure it.
+
+1. Click the site name and select edit
+
+2. Update the active site home page to be: Quote Review Page
+
+   ![Configure Site](/images/siteHomePage.png)
+
+3. Save
+
+### Step 7: Edit Public Access Settings
+
+Open the site's public access settings.
+
+   ![Public Access](/images/guestProfileClassAndPageAccess.png)
+
+1. Enable silkquote_QuoteReviewController
+
+2. Enable silkquote_QuoteReviewPage
+
+3. Edit Opportunity Access
+
+![Public Access](/images/guestProfileOppFieldAccess.png)
+
+4. Grant Edit Access to:
+- Quote Document URL
+- Quote Response At
+- Quote Response Token
+- Quote Status
+
+
+### Step 8: Update Quote Templates
+
+For each template you want to support customer acceptance or change requests:
+
+1. Paste the site URL you copied earlier into the **Quote Review Site URL** field and save
+
+   ![Page Layout](/images/updateTemplateSite.png)
+
 ### You're All Set!
 
 Congratulations! When users click the Generate Quote button, they will be presented with the Quote Generation Wizard.
-
-![Quote Generation Wizard](/images/install11-min.png)

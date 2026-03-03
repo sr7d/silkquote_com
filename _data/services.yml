@@ -2,7 +2,7 @@
   description: Multi-tier flows that route, remind, and resolve.
 
 - name: Quotes that generate themselves
-  description: Triggered by won opportunities, no manual steps.
+  description: Trigger quote generation from flow or code.
 
 - name: Quotes that look like your brand, not a spreadsheet
   description: Bespoke layouts, conditional sections, and more.
