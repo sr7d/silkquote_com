@@ -62,15 +62,13 @@ Add the Generate Quote button to your Opportunity page layout so users can acces
 
 2. Add the **Generate Quote Document** button to the page
 
-   ![Add Button](/images/install10-min.png)
-
 3. Add the **Email Quote Document** button to the page
-
+   
    ![Add Button](/images/install10-min.png)
 
 4. Add the **SilkQuote Live Panel** to the page
 
-   ![Add SilkQuote Live Panel](/images/install10-min.png)
+   ![Add SilkQuote Live Panel](/images/livepanel.png)
 
 5. Save your changes
 
