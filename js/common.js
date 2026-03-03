@@ -58,13 +58,6 @@ document.addEventListener("DOMContentLoaded", function() {
     headerOverlay.classList.remove("is-visible");
   }
 
-  function headerOverlay() {
-    search.classList.remove("is-visible");
-    html.classList.remove("search-is-visible");
-    globalWrap.classList.remove("is-active");
-    headerOverlay.classList.remove("is-visible");
-  }
-
   searchBox.addEventListener("keydown", function(event) {
     if (event.target == this || event.keyCode == 27) {
       search.classList.remove('is-visible');

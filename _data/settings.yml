@@ -27,14 +27,11 @@ menu__settings:
 hero:
   hero__title: Native Salesforce Quoting That Closes the Loop
   hero__description: Easily templatize, generate, and share dynamic quotes that customers can review and accept in <strong>Salesforce</strong>.
-  hero__demo_text: Demo
-
 #-------------------------------
 # Blog Settings
 blog:
   blog__title: Documentation
   blog__description: Learn to use SilkQuote in your quote generation process.
-  exclude_tags: [articles]
 
 #-------------------------------
 # Featured Tag Settings
@@ -42,11 +39,6 @@ tag:
   enable: true
   tag__title: Templates
   tag__name: templates
-
-#-------------------------------
-# Contact Settings
-contact:
-  endpoint: https://formspree.io/f/xpzgylpq
 
 #-------------------------------
 # Google Analytics
