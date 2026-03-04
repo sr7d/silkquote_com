@@ -33,6 +33,8 @@ menu__items:
     title: 'Support'    
   - url: '/contact/'
     title: 'Contact'
+  - url: '/features/'
+    title: 'All Features'    
 
 home__items: 
   - url: '/#differentiators'
