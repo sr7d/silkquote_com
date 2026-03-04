@@ -1,8 +1,10 @@
 ---
 layout: post
+slug: generate-quote-pdf
 title: "Generate a Quote PDF from an Opportunity"
-description: "Create a professional, branded PDF and attach it to the Opportunity with one click"
+description: "Generate a professional, branded PDF quote from any Salesforce Opportunity with one click using SilkQuote — auto-saved and ready to share without leaving CRM."
 date: 2025-01-25 10:00:00 +0300
+last_modified_at: 2026-03-03 00:00:00 +0000
 author: admin
 image: /images/genFromOpp.png
 image_caption: "One-click quote PDF generation"

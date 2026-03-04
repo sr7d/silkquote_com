@@ -1,8 +1,9 @@
 ---
 layout: post
 title: "Create Terms Rules"
-description: "Offer optional or required Terms based on Opportunity data"
+description: "Create Terms Rules in SilkQuote to conditionally include or require specific Terms and Conditions in Salesforce PDF quotes based on Opportunity data."
 date: 2025-01-25 11:10:00 +0300
+last_modified_at: 2026-03-03 00:00:00 +0000
 author: admin
 image: /images/createTerms.png
 image_caption: "Terms rules and precedence"

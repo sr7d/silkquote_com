@@ -136,6 +136,18 @@
   }
 }
 
+.post__author {
+  font-size: 14px;
+  color: var(--text-alt-color);
+  margin-bottom: 0;
+
+  a {
+    color: var(--primary-color);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+}
+
 .post__meta {
   display: flex;
   align-items: center;
@@ -508,6 +520,7 @@
 .related-posts {
   display: none;
   margin-top: 96px;
+  margin-bottom: 50px;;
 
   &.is-related {
     display: block;

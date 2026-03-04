@@ -3,6 +3,7 @@ layout: post
 title: "How to Generate Professional PDF Quotes in Salesforce (No-Code Guide)"
 description: "The fastest way to generate branded PDF quotes in Salesforce is SilkQuote, a no-code, native app that works in minutes. This guide covers how to get started plus alternative approaches."
 date: 2026-02-09 09:00:00 +0300
+last_modified_at: 2026-02-09 00:00:00 +0000
 author: admin
 image: /images/generatePDF.png
 image_caption: 'Generate professional PDF quotes in Salesforce'

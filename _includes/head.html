@@ -7,8 +7,13 @@
   <meta name='description' content='{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.data.settings.description }}{% endif %}'>
 
   <!-- SEO Meta Tags -->
+  {% if paginator and paginator.page > 1 %}
+  <meta name="robots" content="noindex, follow">
+  <meta name="googlebot" content="noindex, follow">
+  {% else %}
   <meta name="robots" content="index, follow">
   <meta name="googlebot" content="index, follow">
+  {% endif %}
   <meta name="author" content="{{ site.data.settings.author.author__name }}">
   <meta name="keywords" content="{% if page.tags %}{{ page.tags | join: ', ' }}{% else %}Salesforce, CPQ, Quote Generation, PDF, Business Automation{% endif %}">
   

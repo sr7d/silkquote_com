@@ -3,6 +3,7 @@ layout: post
 title: "Integrating E-Signatures with Salesforce Quotes: DocuSign, Adobe, and More"
 description: "How to integrate e-signature solutions like DocuSign and Adobe Sign with Salesforce quotes for faster deal closure and streamlined workflows."
 date: 2026-02-05 10:00:00 +0300
+last_modified_at: 2026-02-05 00:00:00 +0000
 author: admin
 image: /images/introducing.png
 image_caption: 'E-signature integration with Salesforce quotes'

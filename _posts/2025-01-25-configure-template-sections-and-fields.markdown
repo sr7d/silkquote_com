@@ -1,8 +1,10 @@
 ---
 layout: post
+slug: configure-template-fields
 title: "Configure Template Sections & Fields"
-description: "Control which fields render in Company, Customer, Quote, Description, Item Columns, and Totals"
+description: "Configure which Salesforce fields appear in each section of your PDF quote template — Company, Customer, Quote, Line Items, Descriptions, and Totals."
 date: 2025-01-25 11:05:00 +0300
+last_modified_at: 2026-03-03 00:00:00 +0000
 author: admin
 image: /images/configureSection.png
 image_caption: "Section field mapping"

@@ -3,6 +3,7 @@ layout: post
 title: "Salesforce CPQ vs Standard Quotes: Key Differences Explained"
 description: "Understand the key differences between Salesforce CPQ, Revenue Cloud, and standard Salesforce Quotes, including features, pricing, complexity, and when each makes sense."
 date: 2026-02-01 10:00:00 +0300
+last_modified_at: 2026-02-01 00:00:00 +0000
 author: admin
 image: /images/StandardQuotes.png
 image_caption: 'Salesforce CPQ vs Standard Quotes comparison'

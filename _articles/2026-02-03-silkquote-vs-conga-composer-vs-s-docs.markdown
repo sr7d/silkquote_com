@@ -3,6 +3,7 @@ layout: post
 title: "SilkQuote vs Conga Composer vs S-Docs: Salesforce Document Generation Compared"
 description: "Compare SilkQuote, Conga Composer, and S-Docs for Salesforce document generation. See which tool fits best for quote PDFs, proposals, and templates."
 date: 2026-02-03 10:00:00 +0300
+last_modified_at: 2026-02-03 00:00:00 +0000
 author: admin
 image: /images/introducing.png
 image_caption: 'SilkQuote vs Conga Composer vs S-Docs comparison'

@@ -1,8 +1,9 @@
 ---
 layout: post
 title: "Set Paper Size for Your Quote"
-description: "Optimize for print or regional standards with Letter, Legal, or A4"
+description: "Set the paper size for your SilkQuote PDF quote — choose Letter, Legal, or A4 to match print standards and regional requirements for Salesforce quotes."
 date: 2025-01-25 10:15:00 +0300
+last_modified_at: 2026-03-03 00:00:00 +0000
 author: admin
 image: /images/paperSize.png
 image_caption: "Paper size and margins"

@@ -1,8 +1,9 @@
 ---
 layout: post
 title: "Set or Change the Template Logo"
-description: "Display the correct logo for each template"
+description: "Set or change the logo in your SilkQuote PDF quote template — upload a branded logo per template to ensure every Salesforce quote looks professional."
 date: 2025-01-25 11:00:00 +0300
+last_modified_at: 2026-03-03 00:00:00 +0000
 author: admin
 image: /images/updateLogo.png
 image_caption: "Branding"

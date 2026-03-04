@@ -3,6 +3,7 @@ layout: post
 title: "Top 10 Salesforce CPQ Alternatives for SMBs in 2026"
 description: "Discover the best Salesforce CPQ alternatives for small and mid-size businesses, including free options like SilkQuote that deliver professional quotes without the complexity."
 date: 2026-02-09 10:00:00 +0300
+last_modified_at: 2026-02-09 00:00:00 +0000
 author: admin
 image: /images/cpqAlternatives1.png
 image_caption: 'Top Salesforce CPQ alternatives for SMBs'

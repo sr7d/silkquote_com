@@ -3,6 +3,7 @@ layout: post
 title: "Introducing SilkQuote: Professional PDF Quote Generation for Salesforce"
 description: "Transform your Salesforce quotes into professional, branded PDF documents with our intuitive drag-and-drop interface"
 date: 2025-01-25 10:00:00 +0300
+last_modified_at: 2025-01-25 00:00:00 +0000
 author: admin
 image: /images/introducing.png
 image_caption: 'Professional quote generation made simple'

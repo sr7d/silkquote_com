@@ -3,6 +3,7 @@ layout: post
 title: "SilkQuote vs Salesforce CPQ: When to Use Each Solution"
 description: "Compare SilkQuote and Salesforce CPQ to understand when each solution fits best. A practical guide for Salesforce admins choosing the right quoting tool."
 date: 2026-02-02 10:00:00 +0300
+last_modified_at: 2026-02-02 00:00:00 +0000
 author: admin
 image: /images/introducing.png
 image_caption: 'SilkQuote vs Salesforce CPQ comparison'

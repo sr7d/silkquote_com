@@ -3,6 +3,7 @@ layout: post
 title: "Automating Your Salesforce Quoting Process: Tools and Workflows"
 description: "Learn how to automate the Salesforce quoting process with tools, flows, and best practices that save time and reduce errors for sales teams."
 date: 2026-02-06 10:00:00 +0300
+last_modified_at: 2026-02-06 00:00:00 +0000
 author: admin
 image: /images/introducing.png
 image_caption: 'Automating Salesforce quoting workflows'

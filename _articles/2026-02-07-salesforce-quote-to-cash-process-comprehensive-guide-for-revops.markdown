@@ -3,6 +3,7 @@ layout: post
 title: "Salesforce Quote-to-Cash Process: Comprehensive Guide for RevOps"
 description: "A complete guide to the Salesforce quote-to-cash process for revenue operations teams, covering quoting, approvals, contracts, and billing optimization."
 date: 2026-02-07 10:00:00 +0300
+last_modified_at: 2026-02-07 00:00:00 +0000
 author: admin
 image: /images/introducing.png
 image_caption: 'Salesforce quote-to-cash process guide'

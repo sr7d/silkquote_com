@@ -1,8 +1,9 @@
 ---
 layout: post
 title: "Preview a Quote without Saving"
-description: "Generate a temporary PDF preview in a new tab before you save"
+description: "Preview a Salesforce PDF quote without saving it using SilkQuote — instantly generate a temporary PDF to review formatting and content before committing."
 date: 2025-01-25 10:05:00 +0300
+last_modified_at: 2026-03-03 00:00:00 +0000
 author: admin
 image: /images/generatorPreview.png
 image_caption: "Fast PDF preview"

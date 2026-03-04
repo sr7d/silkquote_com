@@ -1,8 +1,10 @@
 ---
 layout: post
+slug: generate-quote-quick-action
 title: "Add the Generate Quote Quick Action to Opportunity"
-description: "Expose one-click quote generation on the Opportunity page"
+description: "Add the Generate Quote Quick Action to your Salesforce Opportunity page layout and enable reps to create professional PDF quotes in one click."
 date: 2025-01-25 10:35:00 +0300
+last_modified_at: 2026-03-03 00:00:00 +0000
 author: admin
 image: /images/generateQuoteDocument.png
 image_caption: "Lightning actions"

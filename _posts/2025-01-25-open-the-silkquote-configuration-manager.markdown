@@ -1,8 +1,10 @@
 ---
 layout: post
+slug: configuration-manager
 title: "Open the SilkQuote Configuration Manager"
-description: "Manage templates, sections, logos, and terms in one place"
+description: "Open the SilkQuote Configuration Manager in Salesforce to manage all quote templates, sections, field settings, logos, and Terms in one central place."
 date: 2025-01-25 10:45:00 +0300
+last_modified_at: 2026-03-03 00:00:00 +0000
 author: admin
 image: /images/openConfigurator.png
 image_caption: "Configuration Manager"

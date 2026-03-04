@@ -3,6 +3,7 @@ layout: post
 title: "Salesforce Quoting Best Practices: Design and Efficiency Tips"
 description: "Master Salesforce quote design with proven best practices for professional templates, efficient workflows, and higher close rates."
 date: 2026-02-08 10:00:00 +0300
+last_modified_at: 2026-02-08 00:00:00 +0000
 author: admin
 image: /images/QuoteExample.png
 image_caption: 'Salesforce quoting best practices'

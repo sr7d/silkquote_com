@@ -3,6 +3,7 @@ layout: post
 title: "Salesforce Flow Tutorial: Automate Quote PDF Generation (Step-by-Step)"
 description: "Step-by-step Salesforce Flow tutorial for automating quote PDF generation, including setup, configuration, and alternatives for admins."
 date: 2026-02-04 10:00:00 +0300
+last_modified_at: 2026-02-04 00:00:00 +0000
 author: admin
 image: /images/introducing.png
 image_caption: 'Salesforce Flow quote PDF automation tutorial'

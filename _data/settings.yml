@@ -23,6 +23,32 @@ menu__settings:
       demo: true
 
 #-------------------------------
+# Footer Settings
+
+# Footer Navigation
+menu__items: 
+  - url: '/install/'
+    title: 'Install'
+  - url: '/support/'
+    title: 'Support'    
+  - url: '/contact/'
+    title: 'Contact'
+
+home__items: 
+  - url: '/#differentiators'
+    title: 'Differentiators'
+  - url: '/#features'
+    title: 'Features'
+  - url: '/#steps'
+    title: 'Steps'
+  - url: '/#pricing'
+    title: 'Pricing'        
+  - url: '/#documentation'
+    title: 'Documentation'
+  - url: '/#recommended'
+    title: 'Templates'                                                        
+
+#-------------------------------
 # Hero Settings
 hero:
   hero__title: Native Salesforce Quoting That Closes the Loop
@@ -39,6 +65,13 @@ tag:
   enable: true
   tag__title: Templates
   tag__name: templates
+
+#-------------------------------
+# Author Settings
+author:
+  author__name: Skylar Rhodes
+  author__bio: SilkQuote helps sales teams create professional, branded quotes directly within Salesforce. With flexible templates and customizable layouts, teams can generate, preview, and share accurate quotes directly with the customer.<br>It works standalone or alongside existing CPQ tools, giving teams control, reducing manual work, and helping close deals faster!
+  author__avatar: /images/avatar.png
 
 #-------------------------------
 # Google Analytics
