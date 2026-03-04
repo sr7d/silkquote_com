@@ -4,8 +4,8 @@ title: SilkQuote - Native Salesforce Quoting That Closes the Loop
 description: Easily templatize, generate, and share dynamic quotes that customers can review and accept. Built for Salesforce.
 logo: /images/logo.png
 install_url: /install
-production_install_url: https://login.salesforce.com/packaging/installPackage.apexp?p0=04tVt000001eccHIAQ
-sandbox_install_url: https://test.salesforce.com/packaging/installPackage.apexp?p0=04tVt000001eccHIAQ
+production_install_url: https://login.salesforce.com/packaging/installPackage.apexp?p0=04tVt000001ed6vIAA
+sandbox_install_url: https://test.salesforce.com/packaging/installPackage.apexp?p0=04tVt000001ed6vIAA
 appexchange_url: 
 
 #-------------------------------
