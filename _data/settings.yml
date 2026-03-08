@@ -53,8 +53,8 @@ home__items:
 #-------------------------------
 # Hero Settings
 hero:
-  hero__title: Native Salesforce Quoting That Closes the Loop
-  hero__description: Easily templatize, generate, and share dynamic quotes that customers can review and accept in <strong>Salesforce</strong>.
+  hero__title: A Quoting System Designed To Run On Salesforce.
+  hero__description: Easily templatize, generate, and share dynamic quotes that customers can review and accept directly in <strong>Salesforce</strong>.
 #-------------------------------
 # Blog Settings
 blog:
