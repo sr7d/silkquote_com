@@ -96,6 +96,13 @@
   color: var(--text-alt-color);
 }
 
+.widget-author__signature {
+  margin-top: 12px;
+  font-style: italic;
+  font-size: 16px;
+  color: var(--white);
+}
+
 // Widget social
 .social {
   .social__list {

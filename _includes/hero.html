@@ -5,7 +5,7 @@
         <div class="hero__content">
           <div class="hero__inner">
             <h1 class="hero__title">{{ site.data.settings.hero.hero__title }}</h1>
-          </div>
+          </div>        
           <div class="hero__description__inner">
             <p class="hero__description">{{ site.data.settings.hero.hero__description }}</p>
           </div>
@@ -17,7 +17,6 @@
             {% endif %}
             <a href="/SampleQuote.pdf" download class="button button--secondary">Download Sample</a>
           </div>
-
         </div>
       </div>
     </div>
@@ -43,6 +42,11 @@
         </div>
       </div>
     </div>
+  <!-- {% if site.data.settings.hero.painpoint %}
+    <div class="hero__painpoint-wrapper">
+      <p class="hero__painpoint">{{ site.data.settings.hero.painpoint }}</p>
+    </div>
+  {% endif %}   -->
   </div>
 </section>
 
@@ -50,6 +54,20 @@
   .hero__content {
     padding: 0;
     margin: 0;
+  }
+
+  .hero__painpoint-wrapper {
+    text-align: center;
+    margin-bottom: 0px;
+    margin-top:  0px;
+  }
+
+  .hero__painpoint {
+    color: #cc2200;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 24px;
+    margin: 0;
+    letter-spacing: 0.09cap;
   }
 
   .hero__video {

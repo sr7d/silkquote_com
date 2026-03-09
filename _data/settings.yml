@@ -1,7 +1,7 @@
 #-------------------------------
 # Site Settings
 title: SilkQuote - Native Salesforce Quoting That Closes the Loop
-description: Easily templatize, generate, and share dynamic quotes that customers can review and accept. Built for Salesforce.
+description: Easily templatize, generate, and share professional quotes that customers can review and accept. Built for Salesforce.
 logo: /images/logo.png
 install_url: /install
 production_install_url: https://login.salesforce.com/packaging/installPackage.apexp?p0=04tVt000001etzhIAA
@@ -53,8 +53,9 @@ home__items:
 #-------------------------------
 # Hero Settings
 hero:
-  hero__title: A Quoting System Designed To Run On Salesforce.
-  hero__description: Easily templatize, generate, and share dynamic quotes that customers can review and accept directly in <strong>Salesforce</strong>.
+  hero__title: Better. Salesforce. Quotes.
+  hero__description: Easily templatize, generate, and share professional quotes that customers can review and accept directly in <strong>Salesforce</strong>.
+  painpoint: STOP sending quotes that undermine trust and professionalism!
 #-------------------------------
 # Blog Settings
 blog:
@@ -72,8 +73,9 @@ tag:
 # Author Settings
 author:
   author__name: Skylar Rhodes
-  author__bio: SilkQuote helps sales teams create professional, branded quotes directly within Salesforce. With flexible templates and customizable layouts, teams can generate, preview, and share accurate quotes directly with the customer.<br>It works standalone or alongside existing CPQ tools, giving teams control, reducing manual work, and helping close deals faster!
+  author__bio: After almost a decade in Quote-to-Cash, I decided to build a tool to marry the needs of Admins, Reps, and Prospects. The result is an intuive quoting system that any admin can manage, reps actually use, and that provides customer experience your prospects deserve.
   author__avatar: /images/avatar.png
+  author__signature: Skylar Rhodes, Creator of SilkQuote
 
 #-------------------------------
 # Google Analytics
