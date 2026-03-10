@@ -1,7 +1,7 @@
 #-------------------------------
 # Site Settings
-title: SilkQuote - Better. Salesforce. Quotes.
-description: Easily templatize, generate, and share professional quotes that customers can review and accept. Built for Salesforce.
+title: SilkQuote - Close Deals With Interactive Salesforce Quotes
+description: Generate quotes from approved templates, host them online, collaborate with prospects, and capture acceptance directly from Salesforce.
 logo: /images/logo.png
 install_url: /install
 production_install_url: https://login.salesforce.com/packaging/installPackage.apexp?p0=04tVt000001etzhIAA
@@ -53,8 +53,8 @@ home__items:
 #-------------------------------
 # Hero Settings
 hero:
-  hero__title: Better. Salesforce. Quotes.
-  hero__description: Easily <strong>templatize</strong>, <strong>generate</strong>, and <strong>share</strong> professional quote documents that customers can review, comment, and accept directly in Salesforce.
+  hero__title: Close Deals 2x Faster With Interactive Salesforce Quotes
+  hero__description: For sales teams — generate, host, and collaborate on quotes that prospects can accept directly in <strong>Salesforce</strong>.
   painpoint: STOP sending quotes that undermine trust and professionalism!
 #-------------------------------
 # Blog Settings

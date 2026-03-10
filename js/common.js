@@ -165,13 +165,14 @@ document.addEventListener("DOMContentLoaded", function() {
   /* =======================
   // Video Lightbox
   ======================= */
+  const DEMO_VIDEO_SRC = 'https://player.vimeo.com/video/1114259071?autoplay=1&controls=1&background=0&muted=0';
   const lightboxHTML = `
     <div class="video-lightbox" id="video-lightbox">
       <div class="video-lightbox-content">
-        <iframe 
-          src="https://player.vimeo.com/video/1114259071?autoplay=0&controls=1&background=0&muted=0" 
-          frameborder="0" 
-          allow="autoplay; fullscreen; picture-in-picture" 
+        <iframe
+          id="demo-video-iframe"
+          frameborder="0"
+          allow="autoplay; fullscreen; picture-in-picture"
           allowfullscreen
           title="SilkQuote Demo Video - Full Screen"
           style="background: transparent;">
@@ -184,33 +185,36 @@ document.addEventListener("DOMContentLoaded", function() {
       </div>
     </div>
   `;
-  
+
   document.body.insertAdjacentHTML('beforeend', lightboxHTML);
-  
+
   const lightbox = document.getElementById('video-lightbox');
+  const demoIframe = document.getElementById('demo-video-iframe');
   const closeBtn = document.getElementById('video-close');
-  
+
   document.addEventListener('click', function(e) {
     if (e.target.closest('.demo-trigger') || e.target.closest('#video-overlay')) {
       e.preventDefault();
+      demoIframe.src = DEMO_VIDEO_SRC;
       lightbox.classList.add('active');
       document.body.style.overflow = 'hidden';
     }
   });
-  
+
   function closeLightbox() {
+    demoIframe.src = '';
     lightbox.classList.remove('active');
     document.body.style.overflow = '';
   }
-  
+
   closeBtn.addEventListener('click', closeLightbox);
-  
+
   lightbox.addEventListener('click', function(e) {
     if (e.target === lightbox) {
       closeLightbox();
     }
   });
-  
+
   document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape' && lightbox.classList.contains('active')) {
       closeLightbox();

@@ -1,136 +1,259 @@
 ---
 layout: install
-title: "Install SilkQuote"
-description: "Complete these configuration steps after installing the SilkQuote package to start generating professional quote PDFs."
+title: "How to Install and Configure SilkQuote for Salesforce"
+description: "Step-by-step guide to installing and configuring SilkQuote on Salesforce — set up Salesforce Sites, permissions, Lightning pages, and generate professional quote PDFs directly from Opportunity records."
 date: 2025-08-27 10:00:00 +0300
 author: admin
 image: /images/install.png
 image_caption: "One-click quote PDF generation"
-tags: [install]
+tags: [install, salesforce, setup, configuration, quote-pdf, salesforce-appexchange]
 featured: true
 ---
-## Installation Instructions
 
-Great! Now that you have installed the managed package, follow the steps below to set up your org.
-If you have an issues feel free to reach out to Support!
+Follow these steps to install SilkQuote and complete the initial Salesforce configuration. This guide covers package installation, Salesforce Sites setup, template configuration, permission assignment, Lightning page setup, and generating your first quote PDF.
 
-### Step 1: Navigate to the SilkQuote App
+## 1. Install the SilkQuote Salesforce Package
 
-Open the SilkQuote App from your Salesforce App Launcher.
+1. Open the installation link provided for SilkQuote.
+2. On the installation page select:
+   - **Install for Admins Only**
+3. Wait for the installation to complete.
+4. Click **Done**.
 
-![SilkQuote App](/images/install1-min.png)
+## 2. Configure Salesforce Sites for External Quote Access
 
-### Step 2: Assign the Permission Set
+This step allows customers and prospects to interact with quotes on your website (review, accept, decline, and communicate).
 
-Grant users access to SilkQuote by assigning the permission set.
+## 2.1 Navigate to Sites
 
-![Permissions](/images/install2-min.png)
+1. Go to **Setup**.
+2. Search for **Sites**.
+3. Open the **Sites** configuration page.
 
-![Permissions](/images/install3-min.png)
+## 2.2 Create a New Site
 
-### Step 3: Upload and Configure Your Company Logo
+1. Click **New Site**.
+2. Enter a **Site Name**.
+   - Example: `Silk Quote`
+3. Use the **default URLs** provided if working in a developer org.
+4. Copy the **generated Site URL**.
+5. In **Active Site Home Page**:
+   - Enter `Quote`
+   - Select **Quote Review Page**
+6. Click **Save**.
 
-Upload your company logo to Salesforce Static Resources and configure it in the Quote Template.
+## 2.3 Activate the Site
 
-1. Click the **+** icon to add your logo (from the DEFAULT template, or whichever template you want to use)
+1. Return to the **Sites page**.
+2. Locate the site you created.
+3. Click **Activate**.
 
-   ![Static Resources](/images/install4-min.png)
+### Site Limits
 
-2. Click **New** and upload your logo image file
+- **Developer Org:** 1 site allowed  
+- **Enterprise Edition and above:** Up to 25 sites
 
-   ![Upload Logo](/images/install5-min.png)
+## 3. Connect the SilkQuote App to Your Salesforce Site
 
-3. Open the newly created Static Resource record and click **View File**
+## 3.1 Open the SilkQuote App
 
-   ![View File](/images/install6-min.png)
+1. Open the **App Launcher**.
+2. Search for **SilkQuote**.
+3. Select the **SilkQuote app**.
+4. Close any default onboarding prompts if they appear.
 
-4. Copy the resource name from the URL (the text after `/resource/`)
+## 3.2 Configure the Default Template
 
-   ![Copy Resource Name](/images/install7-min.png)
+1. Locate the **Default Template** included with the package.
+2. Click **Edit**.
+3. Find the field **Quote Review Site URL**.
+4. Paste the **Site URL** copied earlier.
+5. Click **Save**.
 
-5. Paste this resource name into the **Logo** field in the Quote Template settings and click **Save**
+### Template Notes
 
-   ![Configure Logo](/images/install8-min.png)
+The default template can be:
 
-### Step 4: Add the Generate Quote Button
+- Customized
+- Duplicated
+- Removed
+- Updated with company branding (logo, colors, layout)
 
-Add the Generate Quote button to your Opportunity page layout so users can access the quote generation wizard.
+## 4. Assign SilkQuote Permissions to Users
 
-1. Navigate to the Opportunity page Lightning page layout of your choice
+Click **Assign Permissions** within the SilkQuote configuration.
 
-   ![Page Layout](/images/install9-min.png)
+Three permission groups must be configured.
 
-2. Add the **Generate Quote Document** button to the page
+## 4.1 Admin Permissions
 
-3. Add the **Email Quote Document** button to the page
-   
-   ![Add Button](/images/install10-min.png)
+Admins can:
 
-4. Add the **SilkQuote Live Panel** to the page
+- Configure templates
+- Change system settings
+- Generate and send quotes
 
-   ![Add SilkQuote Live Panel](/images/livepanel.png)
+### Steps
 
-5. Save your changes
+1. Click **Assign Permissions → Admin**.
+2. Select users with the **System Administrator** role.
+3. Assign permissions.
 
-<div class="install-callout install-callout--info">
-  <svg class="install-callout__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
-  <div class="install-callout__body">
-    <p class="install-callout__title">Optional — Advanced Setup</p>
-    <p class="install-callout__text">Steps 5–8 enable live quote hosting so customers can accept or request changes directly from a link. This requires Salesforce Sites configuration and is more involved than the core setup — proceed only if you need this feature.</p>
-  </div>
-</div>
+Example:
 
-### Step 5: Create a Site
+- System Administrator
+- Additional administrative users
 
-Go to Setup and create a site.
+## 4.2 SilkQuote User Permissions
 
-1. Name and activate the site
+These users are typically **sales representatives**.
 
-   ![Create Site](/images/siteCreate.png)
+They can:
 
-2. Copy the site URL for later use
+- Generate quotes
+- Send quotes
 
-### Step 6: Configure the Site
+They cannot:
 
-Open the site you created and configure it.
+- Modify templates
+- Change application settings
 
-1. Click the site name and select edit
+### Steps
 
-2. Update the active site home page to be: Quote Review Page
+1. Click **Assign Permissions → SilkQuote User**.
+2. Select the appropriate sales users.
 
-   ![Configure Site](/images/siteHomePage.png)
+Example users:
 
-3. Save
+- Integration User
+- Security User
 
-### Step 7: Edit Public Access Settings
+## 4.3 SilkQuote Site User Permissions
 
-Open the site's public access settings.
+This permission allows **guest users accessing quotes through the website** to interact with quotes.
 
-   ![Public Access](/images/guestProfileClassAndPageAccess.png)
+### Steps
 
-1. Enable silkquote_QuoteReviewController
+1. Click **Assign Permissions → SilkQuote Site User**.
+2. Select the **Guest User created for the site**.
+3. Assign the permission.
 
-2. Enable silkquote_QuoteReviewPage
+This enables prospects to:
 
-3. Edit Opportunity Access
+- View quotes
+- Accept or decline quotes
+- Interact with the quote experience
 
-![Public Access](/images/guestProfileOppFieldAccess.png)
+## 5. Add the SilkQuote Live Panel to the Opportunity Lightning Page
 
-4. Grant Edit Access to:
-- Quote Document URL
-- Quote Response At
-- Quote Response Token
-- Quote Status
+## 5.1 Open an Opportunity
 
+1. Navigate to an **Opportunity record**.
 
-### Step 8: Update Quote Templates
+## 5.2 Edit the Lightning Page
 
-For each template you want to support customer acceptance or change requests:
+1. Click **Edit Page** to open the **Lightning App Builder**.
 
-1. Paste the site URL you copied earlier into the **Quote Review Site URL** field and save
+## 5.3 Add the SilkQuote Live Panel
 
-   ![Page Layout](/images/updateTemplateSite.png)
+1. Locate the **SilkQuote Live Panel** component.
+2. Drag it to the **one-third sidebar section** of the page.
 
-### You're All Set!
+Recommended placement:
 
-Congratulations! When users click the Generate Quote button, they will be presented with the Quote Generation Wizard.
+- Right sidebar (one-third layout)
+
+You may place it elsewhere if preferred.
+
+## 6. Add Quote Actions to the Opportunity Page Header
+
+## 6.1 Enable Dynamic Actions
+
+1. In the **header section**, locate **Actions**.
+2. Change the action type to **Dynamic Actions**.
+
+This allows conditional display of actions.
+
+## 6.2 Add Quote Actions
+
+Add the following actions:
+
+- **Generate Quote Document**
+- **Email Quote Document**
+- **External Comment**
+
+Skip conditional filters for now if not needed.
+
+## 7. Set the Page as Default
+
+1. Save the Lightning page.
+2. Click **Activate**.
+3. Set it as the **App Default Lightning Page** for the **SilkQuote app**.
+
+Note:  
+You can also apply this configuration to other apps or Lightning pages used by your sales team.
+
+## 8. Generate and Send Your First Quote PDF
+
+## 8.1 Open an Opportunity
+
+Return to an **Opportunity record**.
+
+You should now see:
+
+- The **SilkQuote Live Panel**
+- Action buttons:
+  - Generate Quote Document
+  - Email Quote Document
+  - External Comment
+
+## 8.2 Add Products
+
+1. Add **products** to the opportunity.
+2. Developer orgs usually contain **dummy sample products**.
+3. Set **quantities** for each product so they appear correctly in the quote.
+
+## 8.3 Generate a Quote
+
+1. Click **Generate Quote Document**.
+2. Confirm the generated document looks correct.
+
+Set the following:
+
+- **Quote Name:** Example `Order Form`
+- **Template:** Default template
+
+3. Open the generated quote in a **new tab** to confirm the preview works.
+4. Click **Save Quote**.
+
+## 8.4 Verify SilkQuote Live Panel Status
+
+After saving the quote, observe the **status indicator** in the SilkQuote Live Panel.
+
+Status colors indicate the quote state:
+
+- **Red** → No quote generated yet
+- **Yellow** → Quote is processing or loading
+- **Green** → Quote ready to view or send
+
+## 8.5 Review or Send the Quote
+
+Once the panel turns **green**:
+
+1. Expand the **Live Panel** to view the quote.
+2. Click **Email Quote Document** to send the quote to the prospect.
+
+## SilkQuote Setup Complete — You're Ready to Go
+
+At this point SilkQuote is fully operational on Salesforce:
+
+- Package installed
+- Salesforce Site configured
+- Quote template connected to the site
+- Permissions assigned
+- Opportunity page configured
+- Live panel integrated
+- Quote generation tested
+- Email sending ready
+
+Sales reps can now generate, review, and send interactive quotes directly from Opportunity records.

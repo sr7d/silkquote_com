@@ -11,21 +11,8 @@ layout: default
       <!-- Left: video + prerequisites -->
       <div class="install-hero__left">
         <div class="install-video-wrap">
-          <div class="install-video-placeholder"></div>
-          <iframe
-            class="lazy"
-            data-src="https://player.vimeo.com/video/1114259071/?autoplay=1&muted=1&loop=0&background=1&controls=0"
-            frameborder="0"
-            allow="autoplay; fullscreen; picture-in-picture"
-            allowfullscreen>
-          </iframe>
-          <div class="video-overlay" id="video-overlay">
-            <div class="play-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M8 5v14l11-7z" fill="currentColor"/>
-              </svg>
-            </div>
-          </div>
+          <img src="/images/install.png" alt="SilkQuote install guide preview" class="install-video-thumb">
+          <div class="video-overlay" id="install-video-overlay"></div>
         </div>
       </div>
 
@@ -154,35 +141,17 @@ layout: default
     margin-bottom: 1.5rem;
   }
 
-  .install-video-placeholder {
-    position: absolute;
-    inset: 0;
-    background: #2a2938;
-    z-index: 2;
-    animation: video-fade-out 1.2s ease 1.8s both;
-  }
-
-  .install-video-wrap iframe {
+  .install-video-thumb {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    object-fit: cover;
     z-index: 1;
-    animation: video-fade-in 1.2s ease 1.8s both;
   }
 
-  @keyframes video-fade-in {
-    from { opacity: 0; }
-    to   { opacity: 1; }
-  }
-
-  @keyframes video-fade-out {
-    from { opacity: 1; }
-    to   { opacity: 0; }
-  }
-
-.install-video-wrap .video-overlay {
+  .install-video-wrap .video-overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -193,25 +162,6 @@ layout: default
     align-items: center;
     justify-content: center;
     z-index: 10;
-  }
-
-  .install-video-wrap .play-icon {
-    width: 56px;
-    height: 56px;
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #2c2c2c;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
-  }
-
-  .install-video-wrap .video-overlay:hover .play-icon {
-    transform: scale(1.1);
-    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
   }
 
   .install-prereqs__heading {
@@ -437,3 +387,40 @@ layout: default
     }
   }
 </style>
+
+<script>
+(function() {
+  var VIDEO_SRC = 'https://player.vimeo.com/video/1142553474?autoplay=1&controls=1&background=0&muted=0';
+  var lightboxHTML = '<div class="video-lightbox" id="install-video-lightbox"><div class="video-lightbox-content"><iframe id="install-video-iframe" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="SilkQuote Install Video" style="background:transparent;"></iframe><div class="video-close" id="install-video-close"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div></div>';
+  document.body.insertAdjacentHTML('beforeend', lightboxHTML);
+
+  var lightbox = document.getElementById('install-video-lightbox');
+  var iframe = document.getElementById('install-video-iframe');
+  var closeBtn = document.getElementById('install-video-close');
+
+  function openLightbox() {
+    iframe.src = VIDEO_SRC;
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox() {
+    iframe.src = '';
+    lightbox.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  document.addEventListener('click', function(e) {
+    if (e.target.closest('#install-video-overlay')) {
+      e.preventDefault();
+      openLightbox();
+    }
+  });
+  closeBtn.addEventListener('click', closeLightbox);
+  lightbox.addEventListener('click', function(e) {
+    if (e.target === lightbox) closeLightbox();
+  });
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && lightbox.classList.contains('active')) closeLightbox();
+  });
+})();
+</script>
