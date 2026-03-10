@@ -6,7 +6,7 @@ date: 2026-02-01 10:00:00 +0300
 author: admin
 image: /images/StandardQuotes.png
 image_caption: 'Salesforce CPQ vs Standard Quotes comparison'
-tags: [articles, comparisons]
+tags: [comparisons]
 ---
 
 Salesforce offers two very different paths for generating quotes: the built-in Standard Quotes feature and the enterprise-grade Salesforce CPQ (Configure, Price, Quote) product. Both live inside the Salesforce ecosystem, but they serve different audiences, solve different problems, and carry very different price tags.

@@ -6,4 +6,5 @@ bio: Skylar Rhodes is a Salesforce Revenue Systems Architect, SilkQuote Creator 
 image: ''
 url: /about/
 linkedin: https://www.linkedin.com/in/skylarrhodes/
+robots: noindex
 ---

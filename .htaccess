@@ -1,6 +1,13 @@
 # Force HTTPS and WWW redirect
 RewriteEngine On
 
+# Redirect old pagination URLs
+Redirect 301 /page/2/ /
+Redirect 301 /page/3/ /
+Redirect 301 /page/4/ /
+Redirect 301 /page/5/ /
+Redirect 301 /page/6/ /
+
 # 301 Redirects for shortened slugs
 Redirect 301 /add-the-generate-quote-quick-action-to-opportunity/ /generate-quote-quick-action/
 Redirect 301 /open-the-silkquote-configuration-manager/ /configuration-manager/
