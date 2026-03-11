@@ -21,7 +21,8 @@ layout: default
 
         <div class="install-form-card">
           <h2 class="install-form-card__heading">Install the SilkQuote App</h2>
-          <p>Please enter your email below so we may keep you up to date as new features and bug fixes release.</p>
+          <p id="install-lead-desc">Please enter your email below so we may keep you up to date as new features and bug fixes release.</p>
+          <p id="install-lead-desc-appexchange" style="display:none">Thanks for checking us out on the AppExchange! <br>Please feel free to reach out to <a href="/support/">support</a> if you need any assistance getting started.<br> Also, be sure to view the install video or instructions below.</p>
           <iframe name="sf-submit-target" style="display:none" aria-hidden="true"></iframe>
           <form id="install-lead-form" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00Da500001Nhn69" method="POST" class="install-lead-form" target="sf-submit-target">
             <input type="hidden" name="oid" value="00Da500001Nhn69">
@@ -67,10 +68,26 @@ layout: default
             var successMsg = document.getElementById('install-success');
             var iframe = document.querySelector('[name="sf-submit-target"]');
 
+            var isAppExchange = new URLSearchParams(window.location.search).has('appexchange');
+            if (isAppExchange) {
+              document.getElementById('install-lead-desc').style.display = 'none';
+              document.getElementById('install-lead-desc-appexchange').style.display = '';
+              document.querySelector('.install-lead-form__field').style.display = 'none';
+              emailInput.removeAttribute('required');
+            }
+
             form.addEventListener('submit', function(e) {
+              e.preventDefault();
+
+              if (isAppExchange) {
+                var env = document.querySelector('input[name="install_env"]:checked').value;
+                var installUrl = env === 'sandbox' ? sandboxUrl : prodUrl;
+                if (installUrl) { window.open(installUrl, '_blank'); }
+                return;
+              }
+
               var domain = emailInput.value.split('@')[1];
               if (domain && PERSONAL_DOMAINS.indexOf(domain.toLowerCase()) !== -1) {
-                e.preventDefault();
                 emailError.textContent = 'Please use your business email address.';
                 emailInput.focus();
                 return;
@@ -83,6 +100,7 @@ layout: default
                 window.open(installUrl, '_blank');
               }
 
+              form.submit();
               iframe.addEventListener('load', function onLoad() {
                 iframe.removeEventListener('load', onLoad);
                 emailInput.value = '';
@@ -306,6 +324,16 @@ layout: default
     font-size: 0.9rem;
     margin: 0;
     color: #4ade80;
+  }
+
+  #install-lead-desc-appexchange a {
+    font-weight: 600;
+    border-bottom: 1px solid var(--border-alt-color);
+  }
+
+  #install-lead-desc-appexchange a:hover {
+    color: var(--link-color);
+    border-bottom-color: var(--link-color-hover);
   }
 
   /* Post-install instructions */
