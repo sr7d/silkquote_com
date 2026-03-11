@@ -36,19 +36,23 @@ menu__items:
   - url: '/features/'
     title: 'All Features'    
 
-home__items: 
-  - url: '/#differentiators'
-    title: 'Differentiators'
-  - url: '/#features'
-    title: 'Features'
-  - url: '/#steps'
-    title: 'Steps'
-  - url: '/#pricing'
-    title: 'Pricing'        
-  - url: '/#documentation'
-    title: 'Documentation'
-  - url: '/#recommended'
-    title: 'Templates'                                                        
+home__items:
+  - url: '/salesforce-quote-generator/'
+    title: 'Salesforce Quote Generator'
+  - url: '/salesforce-quote-templates/'
+    title: 'Salesforce Quote Templates'
+  - url: '/salesforce-quote-template-builder/'
+    title: 'Salesforce Quote Template Builder'
+  - url: '/salesforce-pdf-quote-generation/'
+    title: 'Salesforce PDF Quote Generation'
+  - url: '/salesforce-quoting-tool/'
+    title: 'Salesforce Quoting Tool'
+  - url: '/salesforce-cpq-alternative/'
+    title: 'Salesforce CPQ Alternative'
+  - url: '/salesforce-automated-quote-generation/'
+    title: 'Automated Quote Generation'
+  - url: '/salesforce-quote-automation-workflows/'
+    title: 'Quote Automation Workflows'
 
 #-------------------------------
 # Hero Settings

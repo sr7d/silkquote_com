@@ -14,7 +14,7 @@
       <div class="search-recent">
         <h3 class="search-suggestion__title">Recent content</h3>
         <div class="search-recent__inner">
-          {% assign all_content = site.posts %}{% if site.templates %}{% assign all_content = all_content | concat: site.templates %}{% endif %}{% assign all_content = all_content | sort: "date" | reverse %}
+          {% assign all_content = site.posts %}{% if site.articles %}{% assign all_content = all_content | concat: site.articles %}{% endif %}{% if site.templates %}{% assign all_content = all_content | concat: site.templates %}{% endif %}{% assign all_content = all_content | sort: "date" | reverse %}
           {% for post in all_content limit:4 %}
           <div class="search-recent__item">
             {% if post.image %}

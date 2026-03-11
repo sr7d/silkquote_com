@@ -2,7 +2,8 @@
 layout: null
 ---
 [
-  {% for post in site.posts %}
+  {% assign all_posts = site.posts | concat: site.articles %}
+  {% for post in all_posts %}
     {
       "title"    : "{{ post.title | escape }}",
       "category" : "{{ post.category }}",

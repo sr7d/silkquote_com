@@ -1,7 +1,7 @@
 {% assign maxRelated = 4 %}
 {% assign minCommonTags = 1 %}
 {% assign maxRelatedCounter = 0 %}
-{% assign all_content = site.posts %}{% if site.templates %}{% assign all_content = all_content | concat: site.templates %}{% endif %}
+{% assign all_content = site.posts %}{% if site.articles %}{% assign all_content = all_content | concat: site.articles %}{% endif %}{% if site.templates %}{% assign all_content = all_content | concat: site.templates %}{% endif %}
 
 {% for post in all_content %}
   {% assign sameTagCount = 0 %}
