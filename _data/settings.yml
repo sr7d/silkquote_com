@@ -1,6 +1,6 @@
 #-------------------------------
 # Site Settings
-title: SilkQuote - Close Deals 2x Faster With Interactive Salesforce Quotes
+title: SilkQuote - Interactive Salesforce Quoting & PDF Quotes
 description: Generate quotes from approved templates, host them online, collaborate with prospects, and capture acceptance directly from Salesforce.
 logo: /images/logo.png
 install_url: /install
@@ -27,7 +27,7 @@ menu__settings:
 
 # Footer Navigation
 menu__items: 
-  - url: '/install/'
+  - url: '/install'
     title: 'Install'
   - url: '/support/'
     title: 'Support'    
