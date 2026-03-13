@@ -8,6 +8,7 @@ author: admin
 image: /images/configuratorPreview.png
 image_caption: "Accurate template preview"
 tags: [configurator, template-preview]
+permalink: /preview-a-template-with-real-data/
 featured: false
 ---
 ## Overview

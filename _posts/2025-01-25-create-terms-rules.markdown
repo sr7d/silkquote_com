@@ -8,6 +8,7 @@ author: admin
 image: /images/createTerms.png
 image_caption: "Terms rules and precedence"
 tags: [configurator, terms-rules]
+permalink: /create-terms-rules/
 featured: false
 ---
 ## Overview

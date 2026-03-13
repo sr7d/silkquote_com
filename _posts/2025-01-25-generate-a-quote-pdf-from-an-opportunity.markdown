@@ -1,6 +1,7 @@
 ---
 layout: post
 slug: generate-quote-pdf
+permalink: /generate-quote-pdf/
 title: "Generate a Quote PDF from an Opportunity"
 description: "Generate a professional, branded PDF quote from any Salesforce Opportunity with one click using SilkQuote — auto-saved and ready to share without leaving CRM."
 date: 2025-01-25 10:00:00 +0300

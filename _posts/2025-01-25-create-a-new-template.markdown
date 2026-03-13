@@ -8,6 +8,7 @@ author: admin
 image: /images/newTemplate.png
 image_caption: "Template creation"
 tags: [configurator, template-creation]
+permalink: /create-a-new-template/
 featured: false
 ---
 ## Overview

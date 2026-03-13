@@ -8,6 +8,7 @@ author: admin
 image: /images/applyTerms.png
 image_caption: "Terms & Conditions"
 tags: [generator, terms]
+permalink: /attach-terms-and-conditions/
 featured: false
 ---
 ## Overview

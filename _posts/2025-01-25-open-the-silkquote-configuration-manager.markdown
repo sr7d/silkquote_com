@@ -1,6 +1,7 @@
 ---
 layout: post
 slug: configuration-manager
+permalink: /configuration-manager/
 title: "Open the SilkQuote Configuration Manager"
 description: "Open the SilkQuote Configuration Manager in Salesforce to manage all quote templates, sections, field settings, logos, and Terms in one central place."
 date: 2025-01-25 10:45:00 +0300

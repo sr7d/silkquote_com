@@ -8,6 +8,7 @@ author: admin
 image: /images/editDeleteTemplate.png
 image_caption: "Template maintenance"
 tags: [configurator, template-management]
+permalink: /edit-or-delete-a-template/
 featured: false
 ---
 ## Overview

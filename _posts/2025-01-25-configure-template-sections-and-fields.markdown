@@ -1,6 +1,7 @@
 ---
 layout: post
 slug: configure-template-fields
+permalink: /configure-template-fields/
 title: "Configure Template Sections & Fields"
 description: "Configure which Salesforce fields appear in each section of your PDF quote template — Company, Customer, Quote, Line Items, Descriptions, and Totals."
 date: 2025-01-25 11:05:00 +0300

@@ -1,6 +1,7 @@
 ---
 layout: post
 slug: generate-quote-quick-action
+permalink: /generate-quote-quick-action/
 title: "Add the Generate Quote Quick Action to Opportunity"
 description: "Add the Generate Quote Quick Action to your Salesforce Opportunity page layout and enable reps to create professional PDF quotes in one click."
 date: 2025-01-25 10:35:00 +0300

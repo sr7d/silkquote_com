@@ -8,6 +8,7 @@ author: admin
 image: /images/updateLogo.png
 image_caption: "Branding"
 tags: [configurator, logo-configuration]
+permalink: /set-or-change-the-template-logo/
 featured: false
 ---
 ## Overview

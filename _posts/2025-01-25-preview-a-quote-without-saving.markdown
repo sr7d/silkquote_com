@@ -8,6 +8,7 @@ author: admin
 image: /images/generatorPreview.png
 image_caption: "Fast PDF preview"
 tags: [generator, preview]
+permalink: /preview-a-quote-without-saving/
 featured: false
 ---
 ## Overview

@@ -1,6 +1,7 @@
 ---
 layout: post
 slug: permission-set
+permalink: /permission-set/
 title: "Grant Access with the Permission Set"
 description: "Grant SilkQuote access by assigning the included Salesforce Permission Set. Control which users can generate quotes and manage template configurations."
 date: 2025-01-25 10:40:00 +0300

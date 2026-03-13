@@ -8,6 +8,7 @@ author: admin
 image: /images/draftWatermark.png
 image_caption: "DRAFT watermark"
 tags: [generator, draft-watermark]
+permalink: /apply-a-draft-watermark/
 featured: false
 ---
 ## Overview
