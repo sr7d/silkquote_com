@@ -8,6 +8,7 @@ image: /images/install.png
 image_caption: "One-click quote PDF generation"
 tags: [install, salesforce, setup, configuration, quote-pdf, salesforce-appexchange]
 featured: true
+permalink: /install/
 ---
 
 Follow these steps to install SilkQuote and complete the initial Salesforce configuration. This guide covers package installation, Salesforce Sites setup, template configuration, permission assignment, Lightning page setup, and generating your first quote PDF.

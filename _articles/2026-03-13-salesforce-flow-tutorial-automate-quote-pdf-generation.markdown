@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Salesforce Flow Tutorial: Automate Quote PDF Generation | SilkQuote"
+title: "Salesforce Flow: Automate Quote PDF Generation | SilkQuote"
 description: "Step-by-step Salesforce Flow tutorial for automating quote PDF generation with SilkQuote — configure record-triggered Flows to generate quotes automatically on Opportunity stage changes."
 date: 2026-03-13 09:00:00 +0000
 last_modified_at: 2026-03-13 00:00:00 +0000

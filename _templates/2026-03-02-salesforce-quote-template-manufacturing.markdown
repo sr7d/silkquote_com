@@ -25,7 +25,7 @@ Stop pasting spreadsheet quotes into emails. SilkQuote generates branded, buyer-
 
 ## How It Works
 
-1. **Install and set up the SilkQuote app** — [follow the setup guide →](/install/)
+1. **Install and set up the SilkQuote app** — [follow the setup guide →](/install)
 2. **Create the Apex Class and Visualforce Page** — copy the code below and paste each file into your Salesforce org via Setup
 3. **Create a SilkQuote Template record** — in the SilkQuote app, create a new template and set the Visualforce Page name to `SilkQuote_Manufacturing`
 
@@ -38,7 +38,7 @@ Before you install, confirm you have:
 - **Salesforce edition** — Professional, Enterprise, or Unlimited
 - **System Administrator profile** — required for package installation
 
-[Install SilkQuote — free, installs in minutes →](/install/)
+[Install SilkQuote — free, installs in minutes →](/install)
 
 <details class="code-accordion">
 <summary class="code-accordion__summary"><span class="code-accordion__label">Apex Class</span> ManufacturingPDFController.cls<button class="code-accordion__copy" onclick="event.stopPropagation();copyAccordionCode(this)" aria-label="Copy code"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg><span>Copy</span></button></summary>
