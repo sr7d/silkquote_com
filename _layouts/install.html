@@ -11,8 +11,21 @@ layout: default
       <!-- Left: video + prerequisites -->
       <div class="install-hero__left">
         <div class="install-video-wrap">
-          <img src="/images/install.png" alt="SilkQuote install guide preview" class="install-video-thumb">
-          <div class="video-overlay" id="install-video-overlay"></div>
+          <iframe
+            src="https://player.vimeo.com/video/1142553474/?autoplay=0&muted=1&loop=0&background=1&controls=0"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen
+            title="SilkQuote Install Video"
+            class="install-video-thumb">
+          </iframe>
+          <div class="video-overlay" id="install-video-overlay">
+            <div class="play-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M8 5v14l11-7z" fill="currentColor"/>
+              </svg>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -175,11 +188,35 @@ layout: default
     left: 0;
     width: 100%;
     height: 100%;
-    background: transparent;
+    background: rgba(0, 0, 0, 0.2);
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all 0.3s ease;
     z-index: 10;
+  }
+
+  .install-video-wrap .video-overlay:hover {
+    background: rgba(0, 0, 0, 0.4);
+  }
+
+  .install-video-wrap .play-icon {
+    width: 64px;
+    height: 64px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2c2c2c;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  .install-video-wrap .video-overlay:hover .play-icon {
+    transform: scale(1.1);
+    box-shadow: 0 6px 24px rgba(0, 0, 0, 0.3);
   }
 
   .install-prereqs__heading {
