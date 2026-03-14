@@ -26,7 +26,7 @@ Salesforce CPQ was built for complex selling scenarios: configurable products, t
 
 But a large portion of Salesforce customers do not have that complexity. They have a product catalog, an Opportunity with line items, and a need to send a professional PDF quote to the customer. That describes most SMBs and many mid-market sales teams. For those organizations, CPQ is the wrong tool. It takes months to implement, requires specialist expertise to maintain, and costs significantly more than the problem warrants.
 
-SilkQuote is a direct alternative for teams in this position. It handles the document generation and sharing components of CPQ (the parts most teams actually use) without any of the complexity or licensing cost. This page explains where CPQ overshoots, what SilkQuote covers, and how to evaluate which tool fits your current situation.
+SilkQuote is a direct alternative for teams in this position. It handles the document generation and sharing components of CPQ (the parts most teams actually use) without any of the complexity or licensing cost. This page explains where CPQ overshoots, what SilkQuote covers, and how to evaluate which tool fits your current situation. For a full breakdown of [what CPQ means and when it is the right tool](/cpq-meaning/), see the CPQ meaning guide.
 
 ## Why Teams Search for a Salesforce CPQ Alternative
 

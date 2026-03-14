@@ -6,8 +6,9 @@ logo: /images/logo.png
 install_url: /install
 production_install_url: https://login.salesforce.com/packaging/installPackage.apexp?p0=04tVt000001f3XdIAI
 sandbox_install_url: https://test.salesforce.com/packaging/installPackage.apexp?p0=04tVt000001f3XdIAI
-appexchange_url:
+appexchange_url: https://appexchange.salesforce.com/appxListingDetail?listingId=b15e931b-f12f-43cd-9f92-813e7d87591e
 linkedin_url: https://www.linkedin.com/company/silkquote
+youtube_url: https://www.youtube.com/@silkquote
 
 #-------------------------------
 # Navigation Settings
@@ -54,6 +55,10 @@ home__items:
     title: 'Automated Quote Generation'
   - url: '/salesforce-quote-automation-workflows/'
     title: 'Quote Automation Workflows'
+  - url: '/cpq-meaning/'
+    title: 'CPQ Meaning'
+  - url: '/automated-quotes/'
+    title: 'Automated Quotes'
 
 #-------------------------------
 # Hero Settings

@@ -20,7 +20,7 @@ faq:
     answer: "Yes. A Salesforce Flow can chain together multiple actions: call SilkQuote's invocable action to generate the PDF, then use Salesforce's Send Email action to email the prospect the quote link. This creates a fully automated quote-and-deliver workflow triggered by a single stage change."
 ---
 
-Manual quote generation works for teams with low quote volume or highly variable deal structures where each quote requires rep judgment. For teams with higher volume, predictable deal structures, or processes where speed to quote matters, automation changes the equation entirely.
+Manual quote generation works for teams with low quote volume or highly variable deal structures where each quote requires rep judgment. For teams with higher volume, predictable deal structures, or processes where speed to quote matters, [automated quotes](/automated-quotes/) change the equation entirely.
 
 SilkQuote's Flow invocable action makes automated quote generation available to any Salesforce admin who can build a Flow. When a rep moves an Opportunity to the Proposal stage, the Flow detects the change, calls SilkQuote, and generates the appropriate PDF. The rep never needs to click the Generate Quote button. The document attaches to the Opportunity and is ready to review or share.
 

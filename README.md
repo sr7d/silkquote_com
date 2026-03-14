@@ -53,7 +53,7 @@ For SilkQuote support and information:
 
 - 📧 Email: support@silkquote.com
 - 💼 LinkedIn: [SilkQuote](https://www.linkedin.com/company/silkquote)
-
+- Youtube: [SilkQuote](https://www.youtube.com/@silkquote)
 - 🌐 Website: [silkquote.com](https://silkquote.com)
 
 ## Technical Details
