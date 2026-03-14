@@ -137,14 +137,41 @@
 }
 
 .post__author {
-  font-size: 14px;
-  color: var(--text-alt-color);
+  display: flex;
+  align-items: center;
+  gap: 10px;
   margin-bottom: 0;
+
+  p {
+    margin: 0;
+    font-size: 14px;
+    color: var(--text-alt-color);
+  }
 
   a {
     color: var(--primary-color);
     text-decoration: underline;
     text-underline-offset: 3px;
+  }
+}
+
+.post__author-avatar {
+  position: relative;
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .6);
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    user-select: none;
   }
 }
 

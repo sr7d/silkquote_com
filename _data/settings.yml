@@ -6,7 +6,8 @@ logo: /images/logo.png
 install_url: /install
 production_install_url: https://login.salesforce.com/packaging/installPackage.apexp?p0=04tVt000001f3XdIAI
 sandbox_install_url: https://test.salesforce.com/packaging/installPackage.apexp?p0=04tVt000001f3XdIAI
-appexchange_url: 
+appexchange_url:
+linkedin_url: https://www.linkedin.com/company/silkquote
 
 #-------------------------------
 # Navigation Settings
@@ -57,8 +58,8 @@ home__items:
 #-------------------------------
 # Hero Settings
 hero:
-  hero__title: Close Deals 2x Faster With Interactive Salesforce Quotes
-  hero__description: For sales teams — generate, host, and collaborate on quotes that prospects can accept directly in <strong>Salesforce</strong>.
+  hero__title: Get acceptance 2x faster with interactive Salesforce quotes
+  hero__description: Sales teams can generate, host, and collaborate on quotes that prospects accept directly in <strong>Salesforce</strong>.
   painpoint: STOP sending quotes that undermine trust and professionalism!
 #-------------------------------
 # Blog Settings

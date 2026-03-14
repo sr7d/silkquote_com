@@ -49,6 +49,11 @@
                 <a href="{{ item.url | relative_url }}" class="widget-nav__link">{{ item.title }}</a>
               </li>
               {% endfor %}
+              {% if site.data.settings.linkedin_url %}
+              <li class="widget-nav__item">
+                <a href="{{ site.data.settings.linkedin_url }}" class="widget-nav__link" target="_blank" rel="noopener">LinkedIn</a>
+              </li>
+              {% endif %}
             </ul>
           </div>
         </div>
