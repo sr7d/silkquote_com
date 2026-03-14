@@ -77,7 +77,7 @@ tag:
 # Author Settings
 author:
   author__name: Skylar Rhodes
-  author__bio: After almost a decade in Quote-to-Cash, I decided to build a tool to marry the needs of Admins, Reps, and Prospects. The result is an intuive quoting system that any admin can manage, reps actually use, and that provides customer experience your prospects deserve.
+  author__bio: After almost a decade in Quote-to-Cash, I decided to build a tool to marry the needs of Admins, Reps, and Prospects.<br> I wanted something that is both standalone and compatible with other CPQ tools. It needed to serve both small businesses and enterprises in both technology and business process. In the beginning, SilkQuote was just a hyperfunctional PDF quote generator. But I quickly realized that generating the document doesn't complete the entire quoting journey.<br> After a year of development and testing, SilkQuote became a full quoting system.<br> The result is an intuitive quoting system that any admin can manage, reps actually use, and that provides the customer experience your prospects deserve.
   author__avatar: /images/avatar2.jpeg
   author__signature: Skylar Rhodes, Creator of SilkQuote
 
