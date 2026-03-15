@@ -13,8 +13,7 @@
     s.src = 'https://www.googletagmanager.com/gtag/js?id={{ site.data.settings.google-analytics }}';
     document.head.appendChild(s);
   }
-  ['scroll','mousemove','touchstart','click'].forEach(function(e) {
-    window.addEventListener(e, _loadGTM, {once: true, passive: true});
+  ['touchstart','click','keydown'].forEach(function(e) {
+    document.addEventListener(e, _loadGTM, {once: true, passive: true});
   });
-  setTimeout(_loadGTM, 4000);
 </script>
