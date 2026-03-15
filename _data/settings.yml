@@ -36,7 +36,9 @@ menu__items:
   - url: '/contact/'
     title: 'Contact'
   - url: '/features/'
-    title: 'All Features'    
+    title: 'All Features'
+  - url: '/quotation-generator/'
+    title: 'Quotation Generator'
 
 home__items:
   - url: '/salesforce-quote-generator/'
