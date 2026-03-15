@@ -43,7 +43,7 @@
   <link rel="preload" href="/fonts/mulish-italic.woff2" as="font" type="font/woff2" crossorigin>
 
   <!-- Hero LCP image preload (homepage) -->
-  {% if page.url == "/" %}<link rel="preload" as="image" href="/images/hero-poster.webp" imagesrcset="/images/hero-poster-sm.webp 480w, /images/hero-poster.webp 1280w" imagesizes="(max-width: 640px) 480px, 1280px" type="image/webp">{% endif %}
+  {% if page.url == "/" %}<link rel="preload" as="image" href="/images/hero-poster.webp" imagesrcset="/images/hero-poster-sm.webp 480w, /images/hero-poster-md.webp 800w, /images/hero-poster-1024.webp 1024w, /images/hero-poster.webp 1280w" imagesizes="(max-width: 640px) calc(100vw - 30px), (max-width: 1024px) 800px, 1280px" type="image/webp">{% endif %}
 
   <!-- Critical above-fold CSS (inlined) -->
   <style>{% include critical.css %}</style>

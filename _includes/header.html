@@ -7,7 +7,10 @@
         <div class="logo">
           <a class="logo__link" href="{{ site.baseurl }}/">
           {% if site.data.settings.logo %}
-            <img class="logo__image" src="{{ site.baseurl }}{{ site.data.settings.logo }}" alt="{{ site.data.settings.title }}">
+            <picture>
+              <source srcset="{{ site.baseurl }}/images/logo.webp" type="image/webp">
+              <img class="logo__image" src="{{ site.baseurl }}{{ site.data.settings.logo }}" alt="{{ site.data.settings.title }}" width="154" height="35">
+            </picture>
           {% else %}
             <span id="silkSpan">Silk</span><span id="quote">Quote</span>
           {% endif %}
