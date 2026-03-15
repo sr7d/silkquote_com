@@ -9,6 +9,7 @@ image: /images/configureSection.png
 image_caption: "Configuring a Salesforce quote template in SilkQuote"
 tags: [articles]
 permalink: /salesforce-quote-template/
+seo_title: "Salesforce Quote Template: Build & Customize"
 faq:
   - question: "What is a Salesforce quote template?"
     answer: "A Salesforce quote template defines the layout, sections, and field mappings used to generate a PDF quote from Opportunity data. It controls which fields appear, in what order, and how they are presented — from company information and line items to totals and Terms and Conditions."

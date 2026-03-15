@@ -9,6 +9,7 @@ image: /images/generatePDF.png
 image_caption: "Salesforce CPQ pricing and alternatives"
 tags: [articles]
 permalink: /salesforce-cpq-pricing/
+seo_title: "Salesforce CPQ Pricing: Costs & Alternatives"
 faq:
   - question: "How much does Salesforce CPQ cost?"
     answer: "Salesforce CPQ (now part of Revenue Cloud) is typically licensed at around $75 per user per month for the CPQ tier. The Revenue Cloud Advanced (formerly CPQ+) tier, which adds billing and subscription management, costs approximately $150 per user per month. These are list prices — actual costs depend on your Salesforce contract and negotiation."

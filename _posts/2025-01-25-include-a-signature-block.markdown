@@ -8,6 +8,7 @@ author: admin
 image: /images/signature.png
 image_caption: "Signature and date lines"
 tags: [generator, signature-block]
+permalink: /include-a-signature-block/
 featured: false
 ---
 ## Overview

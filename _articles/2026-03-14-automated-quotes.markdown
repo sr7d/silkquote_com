@@ -7,6 +7,7 @@ last_modified_at: 2026-03-14 00:00:00 +0000
 author: admin
 tags: [articles]
 permalink: /automated-quotes/
+seo_title: "Automated Quotes: Eliminate Manual Quoting"
 faq:
   - question: "What are automated quotes?"
     answer: "Automated quotes are quote documents generated programmatically from CRM or deal data, without manual copying, formatting, or file assembly. The system reads product, pricing, and customer information from the source record and produces a formatted document automatically."

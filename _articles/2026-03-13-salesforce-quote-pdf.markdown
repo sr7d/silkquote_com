@@ -9,6 +9,7 @@ image: /images/genFromOpp.png
 image_caption: "Salesforce quote PDF generation and sharing"
 tags: [articles]
 permalink: /salesforce-quote-pdf/
+seo_title: "Salesforce Quote PDF: Generate & Share"
 faq:
   - question: "How do I generate a PDF from a Salesforce quote?"
     answer: "With SilkQuote, you generate a quote PDF directly from the Opportunity record by clicking the Generate Quote Document Quick Action. The PDF is created from your configured template, populated with live Salesforce data, and saved to the Opportunity as a Content Document in one step."

@@ -3,7 +3,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>{% if page.title %}{% unless page.title contains "SilkQuote" %}{{ page.title }} | SilkQuote{% else %}{{ page.title }}{% endunless %}{% else %}{{ site.data.settings.title }}{% endif %}</title>
+  <title>{% if page.seo_title %}{{ page.seo_title }} | SilkQuote{% elsif page.title %}{% unless page.title contains "SilkQuote" %}{{ page.title }} | SilkQuote{% else %}{{ page.title }}{% endunless %}{% else %}{{ site.data.settings.title }}{% endif %}</title>
   <meta name='description' content='{% if page.description %}{{ page.description | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.data.settings.description }}{% endif %}'>
 
   <!-- SEO Meta Tags -->

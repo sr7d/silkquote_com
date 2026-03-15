@@ -7,6 +7,7 @@ last_modified_at: 2026-03-14 00:00:00 +0000
 author: admin
 tags: [articles]
 permalink: /mou-quotes/
+seo_title: "MOU Quotes: Create a Quotation for an MOU"
 faq:
   - question: "What is an MOU quote?"
     answer: "An MOU quote is a formal pricing document attached to or referenced by a Memorandum of Understanding. It documents the agreed or proposed pricing, scope, and commercial terms at the pre-contract stage of a deal, before a binding agreement is executed."

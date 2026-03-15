@@ -9,6 +9,7 @@ image: /images/newTemplate.png
 image_caption: "Salesforce proposal generator tools compared"
 tags: [articles]
 permalink: /salesforce-proposal-generator/
+seo_title: "Salesforce Proposal Generator: Tools & Options"
 faq:
   - question: "What is a Salesforce proposal generator?"
     answer: "A Salesforce proposal generator is a tool that automatically creates a formatted, branded sales proposal or quote PDF using data already stored in your Salesforce Opportunity, Account, Contact, and Product records. It eliminates manual document creation by pulling live CRM data into a professional template."

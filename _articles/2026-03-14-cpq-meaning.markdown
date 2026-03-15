@@ -7,6 +7,7 @@ last_modified_at: 2026-03-14 00:00:00 +0000
 author: admin
 tags: [articles]
 permalink: /cpq-meaning/
+seo_title: "CPQ Meaning: What Is Configure, Price, Quote?"
 faq:
   - question: "What does CPQ stand for?"
     answer: "CPQ stands for Configure, Price, Quote. It refers to a category of software that helps sales teams assemble product configurations, apply pricing rules, and generate formal quote documents. Salesforce Revenue Cloud Advanced (formerly Salesforce CPQ) is the most widely known CPQ platform in the Salesforce ecosystem."
