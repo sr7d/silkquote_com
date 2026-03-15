@@ -1,0 +1,795 @@
+---
+layout: default
+title: "Free Quotation Generator"
+seo_title: "Free Quotation Generator — Create & Download Quote PDFs Online"
+description: "Free online quotation generator. Fill in your company details, add line items, and download a professional PDF quote instantly — no sign-up required."
+permalink: /quotation-generator/
+---
+
+<style>
+  /* ── Page wrapper ───────────────────────────────────────────────── */
+  .qg-page {
+    background: linear-gradient(to bottom, #eeeaff 0%, #fafafa 100%);
+    padding: 160px 0 80px;
+  }
+
+  /* ── Toolbar ────────────────────────────────────────────────────── */
+  .qg-toolbar {
+    margin-bottom: 32px;
+  }
+  .qg-toolbar h1 {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+  }
+  .qg-toolbar p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  .qg-toolbar-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .qg-toolbar-actions .button {
+    font-size: 1rem;
+    padding: 14px 28px;
+  }
+
+  /* ── Quote card ─────────────────────────────────────────────────── */
+  .qg-doc {
+    background: var(--background-white);
+    border: 1px solid var(--border-light);
+    border-radius: var(--border-radius-large);
+    box-shadow: var(--shadow-lg);
+    padding: 48px 52px;
+    margin-bottom: 0;
+  }
+
+  /* ── Doc header row ─────────────────────────────────────────────── */
+  .qg-doc-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 36px;
+    gap: 24px;
+  }
+  .qg-company-block { flex: 1; }
+  .qg-company-name {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+    min-width: 160px;
+  }
+  .qg-company-details {
+    color: var(--text-secondary);
+    line-height: 1.75;
+  }
+
+  .qg-title-block { text-align: right; flex-shrink: 0; }
+  .qg-quote-word {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 6px;
+    color: var(--text-primary);
+    text-transform: uppercase;
+    margin-bottom: 14px;
+  }
+  .qg-meta {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    line-height: 2;
+  }
+  .qg-meta span { color: var(--text-primary); font-weight: 500; }
+
+  /* ── Divider ────────────────────────────────────────────────────── */
+  .qg-divider {
+    border: none;
+    border-top: 2px solid var(--border-light);
+    margin: 0 0 28px;
+  }
+
+  /* ── Bill-to row ────────────────────────────────────────────────── */
+  .qg-address-row {
+    display: flex;
+    gap: 48px;
+    margin-bottom: 36px;
+  }
+  .qg-address-block { flex: 1; }
+  .qg-address-block h4 {
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+  }
+  .qg-address-block .qg-field { line-height: 1.8; }
+
+  /* ── Line items table ───────────────────────────────────────────── */
+  .qg-items-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .qg-items-table thead th {
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    border-bottom: 2px solid var(--border-light);
+    padding: 8px 10px;
+    text-align: left;
+  }
+  .qg-items-table thead th:nth-child(2),
+  .qg-items-table thead th:nth-child(3),
+  .qg-items-table thead th:nth-child(4) { text-align: right; }
+  .qg-items-table thead th:last-child { text-align: center; width: 32px; }
+
+  .qg-items-table tbody tr { border-bottom: 1px solid var(--background-alt-color); }
+  .qg-items-table tbody td { padding: 10px; vertical-align: top; color: var(--text-primary); }
+  .qg-items-table tbody td:nth-child(2),
+  .qg-items-table tbody td:nth-child(3),
+  .qg-items-table tbody td:nth-child(4) { text-align: right; }
+  .qg-items-table tbody td:last-child { text-align: center; }
+
+  .qg-row-total { font-weight: 500; min-width: 80px; }
+
+  .qg-del-btn {
+    background: none;
+    border: none;
+    color: var(--border-medium);
+    font-size: 1rem;
+    cursor: pointer;
+    line-height: 1;
+    padding: 2px 4px;
+    border-radius: var(--border-radius);
+    transition: var(--transition-fast);
+  }
+  .qg-del-btn:hover { color: #ef4444; background: #fef2f2; }
+
+  /* ── Add row ────────────────────────────────────────────────────── */
+  .qg-add-row-wrap { margin: 10px 0 0; }
+  .qg-add-row-btn {
+    background: none;
+    border: none;
+    color: var(--link-color);
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 6px 0;
+    transition: var(--transition-fast);
+  }
+  .qg-add-row-btn:hover { text-decoration: underline; }
+
+  /* ── Totals ─────────────────────────────────────────────────────── */
+  .qg-totals-wrap {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 16px;
+    margin-bottom: 36px;
+  }
+  .qg-totals-table {
+    width: 260px;
+    border-collapse: collapse;
+  }
+  .qg-totals-table td {
+    padding: 5px 10px;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+  }
+  .qg-totals-table td:last-child { text-align: right; color: var(--text-primary); }
+  .qg-totals-table tr.qg-total-row td {
+    border-top: 2px solid var(--border-light);
+    padding-top: 10px;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+  }
+
+  /* ── Terms & Notes ──────────────────────────────────────────────── */
+  .qg-footer-sections {
+    border-top: 1px solid var(--border-light);
+    padding-top: 24px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+  }
+  .qg-footer-section h4 {
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+  }
+  .qg-footer-section .qg-field {
+    min-height: 60px;
+    line-height: 1.7;
+    color: var(--text-secondary);
+  }
+
+  /* ── contenteditable fields ─────────────────────────────────────── */
+  .qg-doc [contenteditable] {
+    outline: none;
+    cursor: text;
+  }
+  .qg-doc [contenteditable]:not(.qg-no-underline) {
+    border-bottom: 1px dashed var(--border-medium);
+    padding-bottom: 1px;
+  }
+  .qg-doc [contenteditable]:focus {
+    border-bottom-color: var(--focus-color);
+    border-bottom-style: solid;
+  }
+  .qg-doc [contenteditable]:empty::before {
+    content: attr(data-ph);
+    color: var(--border-medium);
+    pointer-events: none;
+    font-style: normal;
+  }
+
+  /* ── Upsell card ────────────────────────────────────────────────── */
+  .qg-upsell {
+    margin-top: 40px;
+    background: var(--background-light);
+    border: 1px solid var(--border-light);
+    border-left: 4px solid var(--border-second-color);
+    border-radius: var(--border-radius);
+    padding: 28px 32px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .qg-upsell-body { flex: 1; }
+  .qg-upsell-body h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+  }
+  .qg-upsell-body p {
+    font-size: 0.925rem;
+    color: var(--text-secondary);
+    line-height: 1.65;
+    margin-bottom: 16px;
+  }
+  .qg-upsell-body p:last-of-type { margin-bottom: 20px; }
+  .qg-upsell-body .button {
+    font-size: 0.9rem;
+    padding: 14px 26px;
+  }
+
+  /* ── Mobile ─────────────────────────────────────────────────────── */
+  @media (max-width: 768px) {
+    .qg-page { padding: 140px 0 60px; }
+  }
+  @media (max-width: 640px) {
+    .qg-page { padding: 120px 0 48px; }
+    .qg-doc { padding: 28px 20px; }
+    .qg-doc-header { flex-direction: column; gap: 16px; }
+    .qg-title-block { text-align: left; }
+    .qg-address-row { flex-direction: column; gap: 20px; }
+    .qg-footer-sections { grid-template-columns: 1fr; }
+    .qg-upsell { flex-direction: column; gap: 12px; padding: 20px; }
+    .qg-toolbar h1 { font-size: 1.75rem; }
+    .qg-toolbar-actions .button { width: 100%; justify-content: center; }
+  }
+
+  /* ── Guide content ─────────────────────────────────────────────── */
+  .qg-guide {
+    margin-top: 64px;
+  }
+  .qg-guide-intro {
+    max-width: 720px;
+    margin-bottom: 56px;
+  }
+  .qg-guide-intro h2 {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 12px;
+    letter-spacing: -0.3px;
+  }
+  .qg-guide-intro p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 0;
+  }
+
+  .qg-section {
+    margin-bottom: 56px;
+  }
+  .qg-section h2 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 16px;
+    letter-spacing: -0.3px;
+  }
+  .qg-section h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+  }
+  .qg-section p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 16px;
+  }
+
+  /* Steps */
+  .qg-steps {
+    counter-reset: step;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  .qg-steps li {
+    counter-increment: step;
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    background: var(--background-white);
+    border: 1px solid var(--border-light);
+    border-radius: var(--border-radius);
+    padding: 18px 20px;
+  }
+  .qg-steps li::before {
+    content: counter(step);
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    background: var(--primary-color);
+    color: var(--white);
+    border-radius: 50%;
+    font-size: 0.8rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1px;
+  }
+  .qg-steps li div { flex: 1; }
+  .qg-steps li strong { display: block; color: var(--text-primary); margin-bottom: 4px; font-size: 0.975rem; }
+  .qg-steps li span { color: var(--text-secondary); font-size: 0.9rem; line-height: 1.55; }
+
+  /* Comparison table — check/cross colors */
+  .qg-check { color: var(--primary-color); font-weight: 700; }
+  .qg-cross  { color: var(--border-medium); }
+
+  /* FAQ — reuse site's .faq-section pattern from _post.scss */
+  .qg-section .faq-section {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+  }
+
+  /* ── Print ──────────────────────────────────────────────────────── */
+  @media print {
+    @page { margin: 1.5cm; }
+    .header, .footer, .qg-toolbar, .qg-guide, .qg-upsell, .no-print { display: none !important; }
+    .qg-page { background: #fff; padding: 0; }
+    .qg-doc {
+      box-shadow: none;
+      border: none;
+      border-radius: 0;
+      padding: 0;
+    }
+    .qg-doc [contenteditable] { border-bottom: none !important; }
+    .qg-del-btn { display: none; }
+    .qg-totals-wrap, .qg-footer-sections { page-break-inside: avoid; }
+  }
+</style>
+
+<div class="qg-page">
+  <div class="container">
+
+    <!-- Toolbar -->
+    <div class="qg-toolbar no-print">
+      <h1>Free Quotation Generator</h1>
+      <p>Fill in the fields below, add your line items, then save as a PDF — no account needed.</p>
+      <div class="qg-toolbar-actions">
+        <button class="button button--primary" onclick="window.print()">⬇ Download / Print PDF</button>
+        <button class="button button--secondary" onclick="qgClear()">✕ Clear &amp; Start Over</button>
+      </div>
+    </div>
+
+    <!-- Quote document -->
+    <div class="qg-doc">
+
+      <div class="qg-doc-header">
+        <div class="qg-company-block">
+          <div class="qg-company-name qg-field" contenteditable data-ph="Your Company Name"></div>
+          <div class="qg-company-details">
+            <div class="qg-field" contenteditable data-ph="Street Address"></div>
+            <div class="qg-field" contenteditable data-ph="City, State  ZIP"></div>
+            <div class="qg-field" contenteditable data-ph="Phone"></div>
+            <div class="qg-field" contenteditable data-ph="email@yourcompany.com"></div>
+          </div>
+        </div>
+        <div class="qg-title-block">
+          <div class="qg-quote-word">Quote</div>
+          <div class="qg-meta">
+            Quote #&nbsp;&nbsp;<span class="qg-field qg-no-underline" contenteditable id="qg-number"></span><br/>
+            Date&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="qg-field qg-no-underline" contenteditable id="qg-date"></span><br/>
+            Valid Until&nbsp;<span class="qg-field qg-no-underline" contenteditable id="qg-valid" data-ph="MM/DD/YYYY"></span>
+          </div>
+        </div>
+      </div>
+
+      <hr class="qg-divider" />
+
+      <div class="qg-address-row">
+        <div class="qg-address-block">
+          <h4>Bill To</h4>
+          <div class="qg-field" contenteditable data-ph="Client / Company Name"></div>
+          <div class="qg-field" contenteditable data-ph="Contact Name"></div>
+          <div class="qg-field" contenteditable data-ph="Street Address"></div>
+          <div class="qg-field" contenteditable data-ph="City, State  ZIP"></div>
+          <div class="qg-field" contenteditable data-ph="email@client.com"></div>
+        </div>
+        <div class="qg-address-block">
+          <h4>Prepared By</h4>
+          <div class="qg-field" contenteditable data-ph="Your Name"></div>
+          <div class="qg-field" contenteditable data-ph="Your Title"></div>
+        </div>
+      </div>
+
+      <table class="qg-items-table">
+        <thead>
+          <tr>
+            <th>Description</th>
+            <th style="width:70px">Qty</th>
+            <th style="width:110px">Unit Price</th>
+            <th style="width:110px">Total</th>
+            <th class="no-print" style="width:32px"></th>
+          </tr>
+        </thead>
+        <tbody id="qg-rows"><!-- rows injected by JS --></tbody>
+      </table>
+
+      <div class="qg-add-row-wrap no-print">
+        <button class="qg-add-row-btn" onclick="qgAddRow()">＋ Add Line Item</button>
+      </div>
+
+      <div class="qg-totals-wrap">
+        <table class="qg-totals-table">
+          <tr>
+            <td>Subtotal</td>
+            <td id="qg-subtotal">$0.00</td>
+          </tr>
+          <tr>
+            <td>Tax&nbsp;(<span contenteditable id="qg-tax-rate" spellcheck="false"
+                 oninput="qgRecalc()" style="min-width:24px;display:inline-block">0</span>%)</td>
+            <td id="qg-tax-amount">$0.00</td>
+          </tr>
+          <tr>
+            <td>Discount</td>
+            <td>–$<span contenteditable id="qg-discount" spellcheck="false"
+                  oninput="qgRecalc()" style="min-width:40px;display:inline-block">0.00</span></td>
+          </tr>
+          <tr class="qg-total-row">
+            <td>Total</td>
+            <td id="qg-grand">$0.00</td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="qg-footer-sections">
+        <div class="qg-footer-section">
+          <h4>Terms &amp; Conditions</h4>
+          <div class="qg-field" contenteditable data-ph="e.g. Payment due within 30 days of invoice date."></div>
+        </div>
+        <div class="qg-footer-section">
+          <h4>Notes</h4>
+          <div class="qg-field" contenteditable data-ph="Any additional notes or comments for the client."></div>
+        </div>
+      </div>
+
+    </div><!-- /qg-doc -->
+
+    <!-- Guide content -->
+    <div class="qg-guide no-print">
+
+      <div class="qg-guide-intro">
+        <h2>What is a quotation generator?</h2>
+        <p>A quotation generator is an online tool that lets you create professional price quotes — also called sales quotations or price proposals — without any software to install. You enter your company and client details, add line items with quantities and prices, and the tool calculates totals automatically. The result is a clean, printable PDF quote you can send to customers in minutes.</p>
+      </div>
+
+      <div class="qg-section">
+        <h2>How to create a quotation in 5 steps</h2>
+        <ol class="qg-steps">
+          <li>
+            <div>
+              <strong>Add your company details</strong>
+              <span>Enter your company name, address, phone, and email in the top-left of the quote. This becomes your letterhead.</span>
+            </div>
+          </li>
+          <li>
+            <div>
+              <strong>Fill in the client's billing information</strong>
+              <span>Add the client or company name, contact person, and their address in the "Bill To" section.</span>
+            </div>
+          </li>
+          <li>
+            <div>
+              <strong>Add your line items</strong>
+              <span>Click "＋ Add Line Item" for each product or service. Enter a description, quantity, and unit price — the row total calculates automatically.</span>
+            </div>
+          </li>
+          <li>
+            <div>
+              <strong>Set tax, discount, and valid-until date</strong>
+              <span>Enter a tax rate (%) and any discount amount. Set a valid-until date so your customer knows when the price expires.</span>
+            </div>
+          </li>
+          <li>
+            <div>
+              <strong>Download as PDF</strong>
+              <span>Click "⬇ Download / Print PDF" and choose "Save as PDF" in your browser's print dialog. The navigation and toolbar are automatically hidden from the printout.</span>
+            </div>
+          </li>
+        </ol>
+      </div>
+
+      <div class="qg-section">
+        <h2>Quotation generator comparison</h2>
+        <p>Not every quoting method fits every team. Here's how the main options compare:</p>
+        <div class="differentiators__table-wrap">
+          <table class="differentiators__table">
+            <thead>
+              <tr>
+                <th class="differentiators__th-feature"></th>
+                <th class="differentiators__th-pain">This Free Tool</th>
+                <th class="differentiators__th-pain">Word / Google Docs</th>
+                <th class="differentiators__th-pain">Quoting Software</th>
+                <th class="differentiators__th-advantage">SilkQuote</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="differentiators__feature">Setup required</td>
+                <td data-label="This Free Tool">None</td>
+                <td data-label="Word / Google Docs">Download template</td>
+                <td data-label="Quoting Software">Account + config</td>
+                <td data-label="SilkQuote">Install from AppExchange</td>
+              </tr>
+              <tr>
+                <td class="differentiators__feature">Auto-fills CRM data</td>
+                <td data-label="This Free Tool" class="qg-cross">✕</td>
+                <td data-label="Word / Google Docs" class="qg-cross">✕</td>
+                <td data-label="Quoting Software" class="qg-cross">✕</td>
+                <td data-label="SilkQuote" class="qg-check">Pulls from Salesforce</td>
+              </tr>
+              <tr>
+                <td class="differentiators__feature">Branded PDF</td>
+                <td data-label="This Free Tool">Company name only</td>
+                <td data-label="Word / Google Docs" class="qg-check">✓</td>
+                <td data-label="Quoting Software" class="qg-check">✓</td>
+                <td data-label="SilkQuote" class="qg-check">Custom templates</td>
+              </tr>
+              <tr>
+                <td class="differentiators__feature">Customer acceptance</td>
+                <td data-label="This Free Tool" class="qg-cross">✕</td>
+                <td data-label="Word / Google Docs" class="qg-cross">✕</td>
+                <td data-label="Quoting Software">Varies</td>
+                <td data-label="SilkQuote" class="qg-check">In-Salesforce</td>
+              </tr>
+              <tr>
+                <td class="differentiators__feature">Cost</td>
+                <td data-label="This Free Tool">Free</td>
+                <td data-label="Word / Google Docs">Free</td>
+                <td data-label="Quoting Software">$20–$80/mo</td>
+                <td data-label="SilkQuote">Free</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="qg-section">
+        <h2>Frequently asked questions</h2>
+        <div class="faq-section">
+          <h5>How do I create a quotation online for free?</h5>
+          <p>Use the generator at the top of this page. Fill in your company name and contact details, enter the client's billing address, then add line items with quantities and prices. Click "Download / Print PDF" when done — no account or sign-up required.</p>
+
+          <h5>What is the difference between a quote and an invoice?</h5>
+          <p>A quotation is a price offer sent <em>before</em> a sale — it tells the customer what something will cost and is typically valid for a set period. An invoice is sent <em>after</em> the work is done or goods are delivered, requesting payment for an agreed amount.</p>
+
+          <h5>Can I add my company logo to the quote?</h5>
+          <p>The free online tool uses text-based company details rather than an uploaded logo. For fully branded quotes with your logo and custom colors, SilkQuote lets you build reusable PDF templates with complete brand control inside Salesforce.</p>
+
+          <h5>How do I download the quote as a PDF?</h5>
+          <p>Click the "⬇ Download / Print PDF" button, then choose "Save as PDF" in your browser's print dialog (Chrome, Edge, Firefox, and Safari all support this). The site header, footer, and toolbar are hidden automatically so only the quote document prints.</p>
+
+          <h5>What should a professional quotation include?</h5>
+          <p>A professional quotation should include: your company name and contact information, the client's name and address, a unique quote number and date, a valid-until date, an itemized list of products or services with quantities and unit prices, a subtotal, any applicable tax and discounts, a grand total, and your payment terms or notes.</p>
+
+          <h5>How is this different from Salesforce CPQ or SilkQuote?</h5>
+          <p>This free tool is for anyone who needs a quick, one-off quote with no software. Salesforce CPQ and SilkQuote are built for sales teams using Salesforce CRM — they auto-fill quote data from your CRM records, enforce approval workflows, and let customers accept quotes online. SilkQuote is free, and Salesforce offers a free plan for up to 2 users.</p>
+        </div>
+      </div>
+
+    </div><!-- /qg-guide -->
+
+    <!-- Upsell -->
+    <div class="qg-upsell no-print">
+      <div class="qg-upsell-body">
+        <h3>Quoting from Salesforce? Skip the typing entirely.</h3>
+        <p>SilkQuote pulls your Salesforce account info, products, and pricing into a branded PDF quote automatically — no copy-pasting, no data entry. Share a hosted quote your customer can review and accept right in Salesforce.</p>
+        <p>SilkQuote is <strong>free</strong>. Salesforce offers a free plan for up to 2 users. No credit card required.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;">
+          <a href="https://www.salesforce.com/form/signup/free-crm/" class="button button--secondary" target="_blank" rel="noopener">Get Salesforce Free</a>
+          <a href="/install" class="button button--primary">Get SilkQuote Free →</a>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /container -->
+</div><!-- /qg-page -->
+
+<script>
+  function qgFmt(n) {
+    return '$' + Math.max(0, n).toFixed(2).replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  }
+  function qgParse(text) {
+    var n = parseFloat((text || '').replace(/[^0-9.\-]/g, ''));
+    return isNaN(n) ? 0 : n;
+  }
+  function qgToday() {
+    var d = new Date();
+    return (d.getMonth()+1).toString().padStart(2,'0') + '/' +
+           d.getDate().toString().padStart(2,'0') + '/' + d.getFullYear();
+  }
+  function qgNum() { return 'QT-' + (Math.floor(Math.random() * 9000) + 1000); }
+
+  function qgRecalc() {
+    var sub = 0;
+    document.querySelectorAll('#qg-rows tr').forEach(function(tr) {
+      var qty   = qgParse(tr.querySelector('.qg-qty') ? tr.querySelector('.qg-qty').textContent : '');
+      var price = qgParse(tr.querySelector('.qg-price') ? tr.querySelector('.qg-price').textContent : '');
+      var total = qty * price;
+      var el = tr.querySelector('.qg-row-total');
+      if (el) el.textContent = qgFmt(total);
+      sub += total;
+    });
+    var taxRate  = qgParse(document.getElementById('qg-tax-rate').textContent);
+    var discount = qgParse(document.getElementById('qg-discount').textContent);
+    var tax      = sub * (taxRate / 100);
+    var grand    = Math.max(0, sub + tax - discount);
+    document.getElementById('qg-subtotal').textContent   = qgFmt(sub);
+    document.getElementById('qg-tax-amount').textContent = qgFmt(tax);
+    document.getElementById('qg-grand').textContent      = qgFmt(grand);
+  }
+
+  function qgMakeRow(desc, qty, price) {
+    var tr = document.createElement('tr');
+    tr.innerHTML =
+      '<td class="qg-field" contenteditable data-ph="Item description">' + (desc || '') + '</td>' +
+      '<td class="qg-qty qg-field" contenteditable spellcheck="false" data-ph="1" oninput="qgRecalc()">' + (qty || '') + '</td>' +
+      '<td class="qg-price qg-field" contenteditable spellcheck="false" data-ph="0.00" oninput="qgRecalc()">' + (price || '') + '</td>' +
+      '<td class="qg-row-total">$0.00</td>' +
+      '<td class="no-print"><button class="qg-del-btn" onclick="qgRemoveRow(this)" title="Remove">\xd7</button></td>';
+    return tr;
+  }
+
+  function qgAddRow(desc, qty, price) {
+    document.getElementById('qg-rows').appendChild(qgMakeRow(desc, qty, price));
+    qgRecalc();
+  }
+
+  function qgRemoveRow(btn) {
+    btn.closest('tr').remove();
+    qgRecalc();
+  }
+
+  function qgClear() {
+    if (!confirm('Clear everything and start a new quote?')) return;
+    document.querySelectorAll('.qg-doc [contenteditable]').forEach(function(el) { el.textContent = ''; });
+    document.getElementById('qg-number').textContent   = qgNum();
+    document.getElementById('qg-date').textContent     = qgToday();
+    document.getElementById('qg-tax-rate').textContent = '0';
+    document.getElementById('qg-discount').textContent = '0.00';
+    document.getElementById('qg-rows').innerHTML = '';
+    qgAddRow(); qgAddRow(); qgAddRow();
+    qgRecalc();
+  }
+
+  document.getElementById('qg-number').textContent = qgNum();
+  document.getElementById('qg-date').textContent   = qgToday();
+  qgAddRow(); qgAddRow(); qgAddRow();
+  qgRecalc();
+
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "Free Quotation Generator",
+      "url": "https://silkquote.com/quotation-generator/",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "Free online quotation generator. Fill in your company details, add line items, and download a professional PDF quote instantly — no sign-up required.",
+      "featureList": [
+        "Editable company and client details",
+        "Add unlimited line items with quantity and unit price",
+        "Automatic subtotal, tax, and discount calculation",
+        "Terms and notes fields",
+        "Download or print as PDF"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How do I create a quotation online for free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use the generator at the top of this page. Fill in your company name and contact details, enter the client's billing address, then add line items with quantities and prices. Click 'Download / Print PDF' when done — no account or sign-up required."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between a quote and an invoice?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A quotation (or quote) is a price offer sent before a sale — it tells the customer what something will cost and is typically valid for a set period. An invoice is sent after the work is done or goods are delivered, requesting payment for an agreed amount."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I add my company logo to the quote?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The free online tool uses text-based company details rather than an uploaded logo. For fully branded quotes with your logo and custom colors, SilkQuote lets you build reusable PDF templates with complete brand control inside Salesforce."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I download the quote as a PDF?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Click the 'Download / Print PDF' button, then in the print dialog choose 'Save as PDF' as the destination. Available in Chrome, Edge, Firefox, and Safari. The site header, footer, and toolbar are hidden automatically so only the quote document prints."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What should a professional quotation include?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A professional quotation should include: your company name and contact information, the client's name and address, a unique quote number and date, a valid-until date, an itemized list of products or services with quantities and unit prices, a subtotal, any applicable tax and discounts, a grand total, and your payment terms or notes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How is this different from Salesforce CPQ or SilkQuote?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This free tool is for anyone who needs a quick, one-off quote with no software. Salesforce CPQ and SilkQuote are built for sales teams using Salesforce CRM — they auto-fill quote data from your CRM records, enforce approval workflows, and let customers accept quotes online. SilkQuote is free, and Salesforce offers a free plan for up to 2 users."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
