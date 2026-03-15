@@ -30,7 +30,7 @@
                 {% if page.tags.size >= 1 %}
                 {% for tag in page.tags %}
                   {% if forloop.index == 1 %}
-                    <a href="{{ site.baseurl }}/tags/?tag={{ tag | downcase | url_encode }}" class="section__link related-tag"><div>See all <span>{{ tag }}</span></div> <i class="ion ion-ios-arrow-round-forward"></i></a>
+                    <a href="{{ site.baseurl }}/tags/?tag={{ tag | downcase | url_encode }}" class="section__link related-tag"><div>See all <span>{{ tag }}</span></div> <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="vertical-align:middle"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
                   {% endif %}
                 {% endfor %}
               {% endif %}
