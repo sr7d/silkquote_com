@@ -11,19 +11,17 @@ layout: default
       <!-- Left: video + prerequisites -->
       <div class="install-hero__left">
         <div class="install-video-wrap">
-          <iframe
-            src="https://player.vimeo.com/video/1142553474/?autoplay=0&muted=1&loop=0&background=1&controls=0"
-            frameborder="0"
-            allow="autoplay; fullscreen; picture-in-picture"
-            allowfullscreen
-            title="SilkQuote Install Video"
-            class="install-video-thumb">
-          </iframe>
-          <div class="video-overlay" id="install-video-overlay">
-            <div class="play-icon">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M8 5v14l11-7z" fill="currentColor"/>
-              </svg>
+          <div class="vimeo-facade" data-vimeo-id="1142553474" style="position:absolute;top:0;left:0;width:100%;height:100%;cursor:pointer;">
+            <picture>
+              <source srcset="/images/install-poster.webp" type="image/webp">
+              <img src="/images/install-poster.jpg" alt="SilkQuote Install Video" style="width:100%;height:100%;object-fit:cover;" loading="eager">
+            </picture>
+            <div class="video-overlay" id="install-video-overlay">
+              <div class="play-icon">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M8 5v14l11-7z" fill="currentColor"/>
+                </svg>
+              </div>
             </div>
           </div>
         </div>
@@ -454,38 +452,15 @@ layout: default
 </style>
 
 <script>
-(function() {
-  var VIDEO_SRC = 'https://player.vimeo.com/video/1142553474?autoplay=1&controls=1&background=0&muted=0';
-  var lightboxHTML = '<div class="video-lightbox" id="install-video-lightbox"><div class="video-lightbox-content"><iframe id="install-video-iframe" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen title="SilkQuote Install Video" style="background:transparent;"></iframe><div class="video-close" id="install-video-close"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18 6L6 18M6 6L18 18" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></div></div></div>';
-  document.body.insertAdjacentHTML('beforeend', lightboxHTML);
-
-  var lightbox = document.getElementById('install-video-lightbox');
-  var iframe = document.getElementById('install-video-iframe');
-  var closeBtn = document.getElementById('install-video-close');
-
-  function openLightbox() {
-    iframe.src = VIDEO_SRC;
-    lightbox.classList.add('active');
-    document.body.style.overflow = 'hidden';
-  }
-  function closeLightbox() {
-    iframe.src = '';
-    lightbox.classList.remove('active');
-    document.body.style.overflow = '';
-  }
-
-  document.addEventListener('click', function(e) {
-    if (e.target.closest('#install-video-overlay')) {
-      e.preventDefault();
-      openLightbox();
-    }
+  document.querySelector('.install-video-wrap .vimeo-facade').addEventListener('click', function(e) {
+    e.stopPropagation();
+    var iframe = document.createElement('iframe');
+    iframe.src = 'https://player.vimeo.com/video/' + this.dataset.vimeoId + '/?autoplay=1&muted=0&loop=0&controls=1';
+    iframe.setAttribute('frameborder', '0');
+    iframe.setAttribute('allow', 'autoplay; fullscreen; picture-in-picture');
+    iframe.setAttribute('allowfullscreen', '');
+    iframe.setAttribute('title', 'SilkQuote Install Video');
+    iframe.style.cssText = 'position:absolute;top:0;left:0;width:100%;height:100%;border-radius:inherit;';
+    this.parentNode.replaceChild(iframe, this);
   });
-  closeBtn.addEventListener('click', closeLightbox);
-  lightbox.addEventListener('click', function(e) {
-    if (e.target === lightbox) closeLightbox();
-  });
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape' && lightbox.classList.contains('active')) closeLightbox();
-  });
-})();
 </script>

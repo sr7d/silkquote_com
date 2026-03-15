@@ -193,7 +193,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const closeBtn = document.getElementById('video-close');
 
   document.addEventListener('click', function(e) {
-    if (e.target.closest('.demo-trigger') || e.target.closest('#video-overlay')) {
+    if (e.target.closest('.demo-trigger')) {
       e.preventDefault();
       demoIframe.src = DEMO_VIDEO_SRC;
       lightbox.classList.add('active');
