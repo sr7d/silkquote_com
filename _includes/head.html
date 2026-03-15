@@ -17,6 +17,9 @@
   <meta name="author" content="{{ site.data.settings.author.author__name }}">
   <meta name="keywords" content="{% if page.tags %}{{ page.tags | join: ', ' }}{% else %}Salesforce, CPQ, Quote Generation, PDF, Business Automation{% endif %}">
   
+  <!-- Preload LCP image -->
+  {% if page.image %}<link rel="preload" as="image" href="{{ page.image | replace: '.png', '.webp' | absolute_url }}" type="image/webp">{% endif %}
+
   <!-- Canonical URL -->
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
   <link rel="alternate" type="application/rss+xml" title="{{ site.data.settings.title | escape }}" href="{{ "/feed.xml" | relative_url }}">
@@ -35,22 +38,15 @@
   <!-- Structured Data for SEO -->
   {% include schema.html %}
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap"></noscript>
+  <!-- Fonts (self-hosted) -->
+  <link rel="preload" href="/fonts/mulish-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/mulish-italic.woff2" as="font" type="font/woff2" crossorigin>
 
   <!-- Ionicons -->
   <link rel="preload" href="https://unpkg.com/ionicons@4.5.0/dist/css/ionicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://unpkg.com/ionicons@4.5.0/dist/css/ionicons.min.css"></noscript>
 
-  <style>
-  {% capture include_to_scssify %}
-    {% include main.scss %}
-  {% endcapture %}
-  {{ include_to_scssify | scssify }}
-  </style>
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
 </head>
 
