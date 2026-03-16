@@ -5,11 +5,10 @@
   left: 50%;
   transform: translateX(-50%);
   z-index: 1000;
-  width: calc(100% - 40px);
-  max-width: 1200px;
-  background: rgba(255, 255, 255, 0.2);
-  -webkit-backdrop-filter: blur(20px);
-  backdrop-filter: blur(20px);
+  width: calc(100% - 64px);
+  max-width: 1332px;
+  background: var(--text-color);
+  color: var(--white);
   border-radius: 50px;
   transition: all 0.3s ease;
 
@@ -19,76 +18,71 @@
     pointer-events: none;
     transition: all 0.3s ease;
   }
-  
+
   @media (max-width: $tablet) {
     top: 15px;
-    width: calc(100% - 30px);
+    width: calc(100% - 40px);
     border-radius: 40px;
   }
-  
+
   @media (max-width: $mobile) {
     top: 10px;
     width: calc(100% - 20px);
     border-radius: 30px;
   }
 
-  &.header--dark {
-    background: var(--text-color);
+  .hamburger div,
+  .hamburger div:after,
+  .hamburger div:before {
+    background-color: var(--white);
+  }
+
+  .hamburger.is-open div {
+    background: transparent;
+  }
+
+  .logo__link,
+  .nav-button {
     color: var(--white);
+  }
 
-    .hamburger div,
-    .hamburger div:after,
-    .hamburger div:before {
-      background-color: var(--white);
-    }
+  .logo__image {
+    filter: brightness(0) invert(1);
+  }
 
-    .hamburger.is-open div {
-      background: transparent;
-    }
+  #silkSpan,
+  #quote {
+    color: var(--white);
+  }
 
-    .logo__link ,
-    .nav-button {
+  .nav__list {
+    .nav__link {
       color: var(--white);
-    }
 
-    .logo__image {
-      filter: brightness(0) invert(1);
-    }
+      &.active-link {
+        text-decoration-color: var(--white);
+      }
 
-    #silkSpan,
-    #quote {
-      color: var(--white);
+      &:hover {
+        text-decoration-color: var(--white);
+      }
     }
+  }
 
+  @media (max-width: $desktop) {
     .nav__list {
       .nav__link {
-        color: var(--white);
-
-        &.active-link {
-          text-decoration-color: var(--white);
-        }
-
+        text-underline-offset: 3px;
         &:hover {
-          text-decoration-color: var(--white);
+          text-decoration-color: var(--link-color);
+        }
+        &.active-link {
+          text-decoration-color: var(--link-color);
         }
       }
     }
-
-    @media (max-width: $desktop) {
-      .nav__list {
-        .nav__link {
-          text-underline-offset: 3px;
-          &:hover {
-            text-decoration-color: var(--link-color);
-          }
-          &.active-link {
-            text-decoration-color: var(--link-color);
-          }
-        }
-      }
-      .nav-button {
-        color: var(--link-color);
-      }
+    .nav-button {
+      color: var(--link-color);
     }
   }
 

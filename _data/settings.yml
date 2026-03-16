@@ -39,6 +39,8 @@ menu__items:
     title: 'All Features'
   - url: '/quotation-generator/'
     title: 'Quotation Generator'
+  - url: '/mou-quotes/'
+    title: MOU Quotes  
 
 home__items:
   - url: '/salesforce-quote-generator/'

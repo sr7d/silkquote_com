@@ -1,0 +1,1221 @@
+---
+layout: default
+title: "Free MOU Template Builder"
+seo_title: "MOU Quotes: Free Template, Examples & How to Create a Memorandum of Understanding"
+description: "A Memorandum of Understanding (MOU) is a non-binding agreement that documents shared intent between two parties before a formal contract is signed. Free MOU template builder: fill in and download as PDF."
+permalink: /mou-quotes/
+image: /images/mou.png
+faq:
+  - question: "What is an MOU?"
+    answer: "An MOU (Memorandum of Understanding) is a written document that formalizes a shared understanding between two or more parties before a formal contract is signed. It describes the purpose of the relationship, each party's responsibilities, and the scope of cooperation, without creating legally enforceable obligations."
+  - question: "Is an MOU legally binding?"
+    answer: "In most cases, no. An MOU is a statement of intent, not a contract. However, specific provisions within an MOU, such as a confidentiality clause, can be made binding if the language explicitly says so. The document as a whole is typically non-binding unless it meets the legal requirements for a contract."
+  - question: "What is the difference between an MOU and a contract?"
+    answer: "A contract is legally enforceable: if one party fails to perform, the other can seek legal remedy. An MOU documents intent and a cooperative framework without that enforceability. Contracts are used once scope, pricing, and obligations are confirmed. MOUs are used earlier, when the parties want to formalize their shared direction while details are still being worked out."
+  - question: "What is the difference between an MOU and an MOA?"
+    answer: "An MOA (Memorandum of Agreement) is generally more specific and can be binding. Where an MOU documents intent, an MOA often documents an actual agreement on specific terms. MOAs are common in government and grant contexts. The line between MOU and MOA varies by jurisdiction."
+  - question: "What should an MOU include?"
+    answer: "A well-structured MOU includes: the full legal names, addresses, and representative contact information for both parties; a purpose section covering background, scope, and exclusions; each party's roles and responsibilities; financial terms (or a statement that no funds are exchanged); terms covering duration, termination, and notice period; and legal provisions covering confidentiality, dispute resolution, governing law, and a non-binding disclaimer."
+  - question: "How do I write an MOU?"
+    answer: "Use the free MOU template builder at the top of this page. Fill in your organization's details, the other party's information, and each section (purpose, scope, responsibilities, timeline, confidentiality, termination, governing law). Click 'Download / Print PDF' to save the document. No account or software is required."
+  - question: "What is an MOU quote?"
+    answer: "An MOU quote is a formal pricing document attached to or referenced by a Memorandum of Understanding. It documents the agreed or proposed pricing, scope, and commercial terms at the pre-contract stage of a deal, before a binding agreement is executed. MOU quotes are typically marked as indicative, meaning the pricing is agreed in principle but subject to final contract execution."
+  - question: "Is a quotation attached to an MOU legally binding?"
+    answer: "This depends on the language in both documents. Most MOUs are non-binding, and a quotation referenced in an MOU is typically indicative unless both parties explicitly agree in writing that the pricing terms are binding. Always have legal counsel review the MOU and associated quotation if there is any question about binding intent."
+  - question: "Can SilkQuote generate MOU quotations from Salesforce?"
+    answer: "Yes. SilkQuote generates branded PDF quotations from Salesforce Opportunity data. For MOU-stage deals, you can create an Opportunity with the proposed scope and pricing as line items, add MOU-specific terms sections in the quote template, and generate a formal PDF in seconds."
+---
+
+<style>
+  /* ── Page wrapper ───────────────────────────────────────────────── */
+  .mou-page {
+    background: linear-gradient(to bottom, #eeeaff 0%, #fafafa 100%);
+    padding: 160px 0 80px;
+  }
+
+  /* ── Toolbar ────────────────────────────────────────────────────── */
+  .mou-toolbar {
+    margin-bottom: 32px;
+  }
+  .mou-toolbar h1 {
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+  }
+  .mou-toolbar p {
+    color: var(--text-secondary);
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  .mou-toolbar-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .mou-toolbar-actions .button {
+    font-size: 1rem;
+    padding: 14px 28px;
+  }
+
+  /* ── Document card ──────────────────────────────────────────────── */
+  .mou-doc {
+    background: var(--background-white);
+    border: 1px solid var(--border-light);
+    border-radius: var(--border-radius-large);
+    box-shadow: var(--shadow-lg);
+    padding: 52px 56px;
+    margin-bottom: 0;
+    font-size: 0.9375rem;
+    line-height: 1.7;
+    color: var(--text-primary);
+  }
+
+  /* ── Document title ─────────────────────────────────────────────── */
+  .mou-doc-title {
+    text-align: center;
+    margin-bottom: 6px;
+  }
+  .mou-doc-title h2 {
+    font-size: 1.25rem;
+    font-weight: 800;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: var(--text-primary);
+    margin: 0;
+  }
+  .mou-doc-subtitle {
+    text-align: center;
+    font-size: 0.8125rem;
+    color: var(--text-muted);
+    margin-bottom: 28px;
+  }
+
+  /* ── Meta row ───────────────────────────────────────────────────── */
+  .mou-meta-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    margin-bottom: 32px;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    text-align: center;
+  }
+  .mou-meta-row > div { padding: 4px 8px; }
+  .mou-meta-row span { display: block; color: var(--text-primary); font-weight: 500; margin-top: 2px; }
+
+  /* ── Divider ────────────────────────────────────────────────────── */
+  .mou-divider {
+    border: none;
+    border-top: 2px solid var(--border-light);
+    margin: 0 0 28px;
+    height: 0;
+  }
+  .mou-divider::before { display: none; }
+
+  /* ── Parties block ──────────────────────────────────────────────── */
+  .mou-parties-intro {
+    margin-bottom: 20px;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+  }
+  .mou-parties-row {
+    display: grid;
+    grid-template-columns: 1fr 48px 1fr;
+    gap: 0 16px;
+    align-items: start;
+    margin-bottom: 28px;
+  }
+  .mou-party-header {
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+  }
+  .mou-party-field { margin-bottom: 6px; }
+  .mou-party-field [contenteditable] {
+    display: block;
+    width: 100%;
+    min-height: 1.2em;
+    padding: 1px 0 2px;
+    color: var(--text-primary);
+    font-size: 0.9rem;
+    line-height: 1.4;
+    border-bottom: 1px dashed var(--border-medium);
+    outline: none;
+    cursor: text;
+  }
+  .mou-party-field [contenteditable]:focus {
+    border-bottom-color: var(--focus-color);
+    border-bottom-style: solid;
+  }
+  .mou-party-field-label {
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 1px;
+    margin-top: 5px;
+  }
+  .mou-party-separator {
+    align-self: center;
+    text-align: center;
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    font-style: italic;
+  }
+
+  /* ── Section blocks ─────────────────────────────────────────────── */
+  .mou-section-block {
+    margin-bottom: 28px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--border-light);
+  }
+  .mou-section-block:last-of-type { border-bottom: none; margin-bottom: 0; }
+  .mou-section-number {
+    display: inline-block;
+    color: var(--text-muted);
+    font-size: 0.65rem;
+    font-weight: 700;
+    margin-right: 4px;
+    vertical-align: middle;
+  }
+  .mou-section-field {
+    min-height: 48px;
+    line-height: 1.75;
+    color: var(--text-primary);
+    font-size: 0.9375rem;
+  }
+
+  /* ── Sub-sections ───────────────────────────────────────────────── */
+  .mou-subsections { overflow: visible; }
+  .mou-subsection { margin-top: 18px; }
+  .mou-subsection-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 0 5px;
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+  }
+  .mou-doc [contenteditable].mou-subsection-field {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 6px 0 8px;
+    min-height: 48px;
+    line-height: 1.75;
+    font-size: 0.9375rem;
+    color: var(--text-primary);
+    outline: none;
+    cursor: text;
+    border: none;
+    border-bottom: 1px dashed var(--border-light);
+  }
+  .mou-doc [contenteditable].mou-subsection-field:focus {
+    background: transparent;
+    border-bottom-color: var(--focus-color);
+    border-bottom-style: solid;
+  }
+
+  /* ── Responsibilities grid ──────────────────────────────────────── */
+  .mou-resp-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 32px;
+    margin-top: 8px;
+  }
+  .mou-resp-col { }
+  .mou-resp-col:last-child { }
+
+  /* ── Signature block ────────────────────────────────────────────── */
+  .mou-sig-intro {
+    margin-top: 8px;
+    margin-bottom: 24px;
+    color: var(--text-secondary);
+    font-size: 0.875rem;
+  }
+  .mou-sig-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 48px;
+    margin-top: 12px;
+  }
+  .mou-sig-block {}
+  .mou-sig-line {
+    border-top: 1px solid var(--border-medium);
+    margin-bottom: 6px;
+    margin-top: 40px;
+  }
+  .mou-sig-name {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--text-primary);
+    margin-bottom: 2px;
+  }
+  .mou-sig-title {
+    font-size: 0.8125rem;
+    color: var(--text-secondary);
+    margin-bottom: 2px;
+  }
+  .mou-sig-org {
+    font-size: 0.8125rem;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
+  }
+  .mou-sig-date {
+    font-size: 0.8125rem;
+    color: var(--text-secondary);
+  }
+
+  /* ── contenteditable fields ─────────────────────────────────────── */
+  .mou-doc [contenteditable] {
+    outline: none;
+    cursor: text;
+  }
+  .mou-doc [contenteditable]:not(.mou-no-underline) {
+    border-bottom: 1px dashed var(--border-medium);
+    padding-bottom: 1px;
+  }
+  .mou-doc [contenteditable]:not(.mou-no-underline):focus {
+    border-bottom-color: var(--focus-color);
+    border-bottom-style: solid;
+  }
+  /* Party fields override the generic rule above */
+  .mou-doc .mou-party-field [contenteditable] {
+    border-bottom: 1px dashed var(--border-medium);
+    padding: 1px 0 2px;
+  }
+  .mou-doc .mou-party-field [contenteditable]:focus {
+    border-bottom-color: var(--focus-color);
+    border-bottom-style: solid;
+  }
+  .mou-doc [contenteditable].mou-section-field {
+    border-bottom: 1px dashed var(--border-light);
+    border-radius: 0;
+    padding: 6px 0 8px;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .mou-doc [contenteditable].mou-section-field:focus {
+    border-bottom-color: var(--focus-color);
+    border-bottom-style: solid;
+    outline: none;
+  }
+  .mou-doc [contenteditable]:empty::before { display: none; }
+
+  /* ── Guide content ──────────────────────────────────────────────── */
+  .mou-guide {
+    margin-top: 64px;
+  }
+  .mou-guide-section {
+    margin-bottom: 56px;
+  }
+  .mou-guide-section h2 {
+    margin-bottom: 16px;
+  }
+  .mou-guide-section h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-top: 24px;
+    margin-bottom: 8px;
+  }
+
+  /* ── Sample clause blocks ───────────────────────────────────────── */
+  .mou-clause {
+    background: var(--background-light);
+    border-left: 3px solid var(--border-second-color);
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+    padding: 16px 20px;
+    margin: 16px 0;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    line-height: 1.75;
+  }
+  .mou-clause-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+  }
+
+  /* ── Section label ──────────────────────────────────────────────── */
+  .mou-section-label {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 0 0 8px;
+    margin-bottom: 4px;
+    border-bottom: 1px solid var(--border-light);
+  }
+  .mou-section-label-text {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    flex-shrink: 0;
+  }
+  .mou-insert-btn {
+    background: var(--background-light);
+    border: 1px solid var(--border-light);
+    border-radius: 4px;
+    color: var(--text-muted);
+    font-size: 0.65rem;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 3px 10px;
+    transition: var(--transition-fast);
+    white-space: nowrap;
+    flex-shrink: 0;
+    letter-spacing: 0;
+    text-transform: none;
+    opacity: 0.65;
+  }
+  .mou-insert-btn:hover {
+    background: var(--link-color);
+    border-color: var(--link-color);
+    color: #fff;
+    opacity: 1;
+  }
+
+  /* ── Empty state (edit mode: no visual change, only affects print) ── */
+
+  /* ── Comparison table ───────────────────────────────────────────── */
+  .mou-compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.875rem;
+    margin: 16px 0;
+    border-bottom: 2px solid var(--border-light);
+  }
+  .mou-compare-table th {
+    background: var(--background-light);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    padding: 10px 14px;
+    text-align: left;
+    border-bottom: 2px solid var(--border-light);
+  }
+  .mou-compare-table td {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--border-light);
+    vertical-align: top;
+    color: var(--text-primary);
+  }
+  .mou-compare-table tr:last-child td { border-bottom: none; }
+  .mou-compare-table td:first-child {
+    font-weight: 600;
+    color: var(--text-muted);
+    white-space: nowrap;
+  }
+
+  /* ── Upsell card ────────────────────────────────────────────────── */
+  .mou-upsell {
+    margin-top: 40px;
+    background: var(--background-light);
+    border: 1px solid var(--border-light);
+    border-left: 4px solid var(--border-second-color);
+    border-radius: var(--border-radius);
+    padding: 28px 32px;
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .mou-upsell-body { flex: 1; }
+  .mou-upsell-body h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 8px;
+  }
+  .mou-upsell-body p {
+    font-size: 0.925rem;
+    color: var(--text-secondary);
+    line-height: 1.65;
+    margin-bottom: 16px;
+  }
+  .mou-upsell-body p:last-of-type { margin-bottom: 20px; }
+  .mou-upsell-body .button {
+    font-size: 0.9rem;
+    padding: 14px 26px;
+  }
+
+  /* ── Mobile ─────────────────────────────────────────────────────── */
+  @media (max-width: 768px) {
+    .mou-page { padding: 140px 0 60px; }
+  }
+  @media (max-width: 640px) {
+    .mou-page { padding: 120px 0 48px; }
+    .mou-doc { padding: 28px 20px; }
+    .mou-parties-row { grid-template-columns: 1fr; }
+    .mou-party-separator { display: none; }
+    .mou-resp-grid { grid-template-columns: 1fr; }
+    .mou-sig-row { grid-template-columns: 1fr; gap: 32px; }
+    .mou-toolbar h1 { font-size: 1.75rem; }
+    .mou-toolbar-actions .button { width: 100%; justify-content: center; }
+    .mou-upsell { flex-direction: column; gap: 12px; padding: 20px; }
+    .mou-meta-row { grid-template-columns: repeat(2, 1fr); }
+  }
+
+  /* ── Hero image thumbnail ───────────────────────────────────────── */
+  .mou-hero-image .gif-thumbnail { max-width: 160px; height: auto; }
+  .gif-lightbox-content { max-width: min(90vw, 600px); max-height: 90vh; overflow: visible; }
+  .gif-lightbox img { width: auto; height: auto; max-width: 100%; max-height: 90vh; }
+  @media (max-width: 1024px) {
+    .mou-hero-image { margin: 24px auto 0; display: block; }
+  }
+
+  /* ── Print ──────────────────────────────────────────────────────── */
+  @media print {
+    @page { margin: 1.5cm; }
+    .header, .footer, .mou-toolbar, .mou-guide, .mou-upsell, .no-print { display: none !important; }
+    .mou-is-empty { display: none !important; }
+    .mou-section-block.mou-is-empty { display: none !important; }
+    .mou-party-field.mou-is-empty { display: none !important; }
+    .mou-page { background: #fff; padding: 0; }
+    .mou-doc {
+      box-shadow: none;
+      border: none;
+      border-radius: 0;
+      padding: 0;
+    }
+    .mou-doc [contenteditable] { border: none !important; }
+    .mou-doc [contenteditable].mou-section-field { border: none !important; padding: 4px 0; }
+    .mou-doc [contenteditable].mou-subsection-field { border: none !important; padding: 4px 0; }
+    .mou-section-label { border: none !important; padding: 0 !important; margin-bottom: 6px !important; }
+    .mou-subsection { margin-top: 12px !important; }
+    .mou-subsection-label { padding: 0 0 2px !important; }
+    .mou-section-block { border-bottom: none !important; padding-bottom: 16px !important; }
+    .mou-resp-grid { gap: 24px !important; }
+    .mou-parties-row { grid-template-columns: 2fr 1fr 2fr !important; }
+  }
+</style>
+
+<div class="mou-page">
+  <div class="container">
+
+    <!-- Toolbar -->
+    <div class="mou-toolbar no-print">
+      <div class="row">
+        <div class="col {% if page.image %}col-7 col-d-12{% else %}col-12{% endif %}">
+          <h1>Free MOU Template Builder</h1>
+          <p>Fill in Party A and Party B details, then complete each section. Use "Insert suggested text" to pre-fill a section with standard language you can edit. Empty sections are hidden in the PDF. Your Party A details are saved in your browser for next time.</p>
+          <div class="mou-toolbar-actions">
+            <button class="button button--primary" onclick="mouPrint()">&#x2B07; Download / Print PDF</button>
+            <button class="button button--secondary" onclick="mouClear()">&#x2715; Clear &amp; Start Over</button>
+          </div>
+        </div>
+        {% if page.image %}
+        <div class="col col-5 col-d-12">
+          <div class="gif-container mou-hero-image" data-gif-src="{{ page.image | relative_url }}">
+            <picture>
+              <source srcset="{{ page.image | replace: '.png', '.webp' | relative_url }}" type="image/webp">
+              <img class="gif-thumbnail" src="{{ page.image | relative_url }}" alt="{{ page.title }}" loading="lazy" width="643" height="829">
+            </picture>
+            <div class="gif-overlay">
+              <div class="magnify-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="2"/>
+                  <path d="M21 21l-4.35-4.35" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M8 11h6M11 8v6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+
+    <!-- MOU Document -->
+    <div class="mou-doc" id="mou-doc">
+
+      <div class="mou-doc-title">
+        <h2>Memorandum of Understanding</h2>
+      </div>
+      <div class="mou-doc-subtitle">Non-Binding &middot; Statement of Intent</div>
+
+      <div class="mou-meta-row">
+        <div>MOU #<span class="mou-no-underline" contenteditable id="mou-number" spellcheck="false"></span></div>
+        <div>Date<span class="mou-no-underline" contenteditable id="mou-date" spellcheck="false"></span></div>
+        <div>Effective Date<span class="mou-no-underline" contenteditable id="mou-effective" spellcheck="false"></span></div>
+        <div>Expires<span class="mou-no-underline" contenteditable id="mou-expires" spellcheck="false"></span></div>
+      </div>
+
+      <hr class="mou-divider" />
+
+      <p class="mou-parties-intro">This Memorandum of Understanding is entered into between the following parties:</p>
+
+      <div class="mou-parties-row">
+        <div>
+          <div class="mou-party-header">Party A</div>
+          <div class="mou-party-field">
+            <div class="mou-party-field-label">Full Legal Name (Organization)</div>
+            <div contenteditable id="mou-pa-name" data-ph="Organization name" spellcheck="false"></div>
+          </div>
+          <div class="mou-party-field">
+            <div class="mou-party-field-label">Address</div>
+            <div contenteditable id="mou-pa-addr" data-ph="Street, City, State ZIP" spellcheck="false"></div>
+          </div>
+          <div class="mou-party-field">
+            <div class="mou-party-field-label">Authorized Representative</div>
+            <div contenteditable id="mou-pa-rep" data-ph="Full name" spellcheck="false"></div>
+          </div>
+          <div class="mou-party-field">
+            <div class="mou-party-field-label">Title / Role</div>
+            <div contenteditable id="mou-pa-title" data-ph="Title" spellcheck="false"></div>
+          </div>
+          <div class="mou-party-field">
+            <div class="mou-party-field-label">Email</div>
+            <div contenteditable id="mou-pa-email" data-ph="email@example.com" spellcheck="false"></div>
+          </div>
+          <div class="mou-party-field">
+            <div class="mou-party-field-label">Phone</div>
+            <div contenteditable id="mou-pa-phone" data-ph="+1 (555) 000-0000" spellcheck="false"></div>
+          </div>
+        </div>
+
+        <div class="mou-party-separator">and</div>
+
+        <div>
+          <div class="mou-party-header">Party B</div>
+          <div class="mou-party-field">
+            <div class="mou-party-field-label">Full Legal Name (Organization)</div>
+            <div contenteditable id="mou-pb-name" data-ph="Organization name" spellcheck="false"></div>
+          </div>
+          <div class="mou-party-field">
+            <div class="mou-party-field-label">Address</div>
+            <div contenteditable id="mou-pb-addr" data-ph="Street, City, State ZIP" spellcheck="false"></div>
+          </div>
+          <div class="mou-party-field">
+            <div class="mou-party-field-label">Authorized Representative</div>
+            <div contenteditable id="mou-pb-rep" data-ph="Full name" spellcheck="false"></div>
+          </div>
+          <div class="mou-party-field">
+            <div class="mou-party-field-label">Title / Role</div>
+            <div contenteditable id="mou-pb-title" data-ph="Title" spellcheck="false"></div>
+          </div>
+          <div class="mou-party-field">
+            <div class="mou-party-field-label">Email</div>
+            <div contenteditable id="mou-pb-email" data-ph="email@example.com" spellcheck="false"></div>
+          </div>
+          <div class="mou-party-field">
+            <div class="mou-party-field-label">Phone</div>
+            <div contenteditable id="mou-pb-phone" data-ph="+1 (555) 000-0000" spellcheck="false"></div>
+          </div>
+        </div>
+      </div>
+
+      <hr class="mou-divider" />
+
+      <!-- Section 1: Purpose -->
+      <div class="mou-section-block">
+        <div class="mou-section-label"><span class="mou-section-label-text"><span class="mou-section-number">1</span> Purpose</span></div>
+        <div class="mou-subsections">
+          <div class="mou-subsection">
+            <div class="mou-subsection-label"><span>Background</span><button class="mou-insert-btn no-print" onclick="mouInsert('mou-background')">Insert suggested text</button></div>
+            <div class="mou-subsection-field" contenteditable id="mou-background" data-ph="Briefly describe the context and history behind this MOU. Why are these parties entering into this agreement?"></div>
+          </div>
+          <div class="mou-subsection">
+            <div class="mou-subsection-label"><span>Purpose</span><button class="mou-insert-btn no-print" onclick="mouInsert('mou-purpose')">Insert suggested text</button></div>
+            <div class="mou-subsection-field" contenteditable id="mou-purpose" data-ph="State the primary purpose of this MOU and what the parties intend to accomplish together."></div>
+          </div>
+          <div class="mou-subsection">
+            <div class="mou-subsection-label"><span>Scope</span><button class="mou-insert-btn no-print" onclick="mouInsert('mou-scope')">Insert suggested text</button></div>
+            <div class="mou-subsection-field" contenteditable id="mou-scope" data-ph="Describe the activities, deliverables, or areas of cooperation covered by this MOU."></div>
+          </div>
+          <div class="mou-subsection">
+            <div class="mou-subsection-label"><span>Exclusions</span><button class="mou-insert-btn no-print" onclick="mouInsert('mou-exclusions')">Insert suggested text</button></div>
+            <div class="mou-subsection-field" contenteditable id="mou-exclusions" data-ph="List anything explicitly outside the scope of this MOU to prevent ambiguity."></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 2: Responsibilities -->
+      <div class="mou-section-block">
+        <div class="mou-section-label"><span class="mou-section-label-text"><span class="mou-section-number">2</span> Responsibilities</span></div>
+        <div class="mou-resp-grid">
+          <div class="mou-resp-col">
+            <div class="mou-subsection-label"><span id="mou-pa-resp-label">Party A Responsibilities</span><button class="mou-insert-btn no-print" onclick="mouInsert('mou-pa-resp')">Insert suggested text</button></div>
+            <div class="mou-subsection-field" contenteditable id="mou-pa-resp" data-ph="List the specific responsibilities, contributions, or commitments of Party A."></div>
+          </div>
+          <div class="mou-resp-col">
+            <div class="mou-subsection-label"><span id="mou-pb-resp-label">Party B Responsibilities</span><button class="mou-insert-btn no-print" onclick="mouInsert('mou-pb-resp')">Insert suggested text</button></div>
+            <div class="mou-subsection-field" contenteditable id="mou-pb-resp" data-ph="List the specific responsibilities, contributions, or commitments of Party B."></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 3: Financial Terms -->
+      <div class="mou-section-block">
+        <div class="mou-section-label"><span class="mou-section-label-text"><span class="mou-section-number">3</span> Financial Terms</span><button class="mou-insert-btn no-print" onclick="mouInsert('mou-financial')">Insert suggested text</button></div>
+        <div class="mou-section-field" contenteditable id="mou-financial" data-ph="Describe any funding commitments, payment obligations, or confirm that no funds will be exchanged under this MOU."></div>
+      </div>
+
+      <!-- Section 4: Terms -->
+      <div class="mou-section-block">
+        <div class="mou-section-label"><span class="mou-section-label-text"><span class="mou-section-number">4</span> Terms</span></div>
+        <div class="mou-subsections">
+          <div class="mou-subsection">
+            <div class="mou-subsection-label"><span>Duration</span><button class="mou-insert-btn no-print" onclick="mouInsert('mou-duration')">Insert suggested text</button></div>
+            <div class="mou-subsection-field" contenteditable id="mou-duration" data-ph="State the effective date and duration of this MOU, including any renewal terms."></div>
+          </div>
+          <div class="mou-subsection">
+            <div class="mou-subsection-label"><span>Termination</span><button class="mou-insert-btn no-print" onclick="mouInsert('mou-termination')">Insert suggested text</button></div>
+            <div class="mou-subsection-field" contenteditable id="mou-termination" data-ph="Describe the conditions under which either party may end this MOU."></div>
+          </div>
+          <div class="mou-subsection">
+            <div class="mou-subsection-label"><span>Notice Period</span><button class="mou-insert-btn no-print" onclick="mouInsert('mou-notice')">Insert suggested text</button></div>
+            <div class="mou-subsection-field" contenteditable id="mou-notice" data-ph="Specify how much advance notice is required to terminate or modify this MOU, and the method of delivery."></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Section 5: Legal -->
+      <div class="mou-section-block">
+        <div class="mou-section-label"><span class="mou-section-label-text"><span class="mou-section-number">5</span> Legal</span></div>
+        <div class="mou-subsections">
+          <div class="mou-subsection">
+            <div class="mou-subsection-label"><span>Confidentiality</span><button class="mou-insert-btn no-print" onclick="mouInsert('mou-confidentiality')">Insert suggested text</button></div>
+            <div class="mou-subsection-field" contenteditable id="mou-confidentiality" data-ph="Describe how each party must handle non-public information shared under this MOU and how long the obligation lasts."></div>
+          </div>
+          <div class="mou-subsection">
+            <div class="mou-subsection-label"><span>Dispute Resolution</span><button class="mou-insert-btn no-print" onclick="mouInsert('mou-dispute')">Insert suggested text</button></div>
+            <div class="mou-subsection-field" contenteditable id="mou-dispute" data-ph="Describe how the parties will resolve any disputes arising from or related to this MOU."></div>
+          </div>
+          <div class="mou-subsection">
+            <div class="mou-subsection-label"><span>Governing Law</span><button class="mou-insert-btn no-print" onclick="mouInsert('mou-govlaw')">Insert suggested text</button></div>
+            <div class="mou-subsection-field" contenteditable id="mou-govlaw" data-ph="This MOU shall be governed by the laws of [State/Country], without regard to its conflict of law provisions."></div>
+          </div>
+          <div class="mou-subsection">
+            <div class="mou-subsection-label"><span>Non-Binding Disclaimer</span><button class="mou-insert-btn no-print" onclick="mouInsert('mou-nonbinding')">Insert suggested text</button></div>
+            <div class="mou-subsection-field" contenteditable id="mou-nonbinding" data-ph="This MOU is not legally binding and does not create any contractual obligations between the parties."></div>
+          </div>
+        </div>
+      </div>
+
+      <p class="mou-sig-intro">IN WITNESS WHEREOF, the parties have indicated their agreement to this Memorandum of Understanding as of the date first written above.</p>
+
+      <div class="mou-sig-row">
+        <div class="mou-sig-block">
+          <div class="mou-sig-line"></div>
+          <div class="mou-sig-name" id="mou-sig-a-name">Party A Signatory</div>
+          <div class="mou-sig-title" id="mou-sig-a-title"></div>
+          <div class="mou-sig-org" id="mou-sig-a-org"></div>
+          <div class="mou-sig-date">Date: _______________</div>
+        </div>
+        <div class="mou-sig-block">
+          <div class="mou-sig-line"></div>
+          <div class="mou-sig-name" id="mou-sig-b-name">Party B Signatory</div>
+          <div class="mou-sig-title" id="mou-sig-b-title"></div>
+          <div class="mou-sig-org" id="mou-sig-b-org"></div>
+          <div class="mou-sig-date">Date: _______________</div>
+        </div>
+      </div>
+
+    </div><!-- /mou-doc -->
+
+    <!-- Guide content -->
+    <div class="mou-guide no-print">
+
+      <!-- Section 1: What is an MOU -->
+      <div class="mou-guide-section">
+        <h2>What is a Memorandum of Understanding (MOU)?</h2>
+        <p>A Memorandum of Understanding (MOU) is a non-binding written agreement between two or more parties that documents a shared understanding of intent, responsibilities, and terms before a formal contract is signed. It establishes a framework for cooperation without creating enforceable legal obligations.</p>
+        <p>MOUs are commonly used when parties want to formalize a working relationship or document agreed principles before committing to a full contract. Common use cases include:</p>
+        <ul>
+          <li>Enterprise software and services deals where implementation timelines are long and contracting takes time</li>
+          <li>Partnership agreements between organizations with ongoing or evolving commercial relationships</li>
+          <li>Government and institutional procurement where formal contracting processes are lengthy</li>
+          <li>Multi-phase projects where early phases need to begin before final contract terms are agreed</li>
+          <li>Academic and research collaborations formalizing shared goals and resource commitments</li>
+        </ul>
+        <h3>MOU vs contract: what is the difference?</h3>
+        <p>The key distinction is binding force. A contract creates legally enforceable obligations: both parties are legally required to perform, and failure to do so is actionable. An MOU documents intent and mutual understanding without that enforceability. It says "we agree this is the plan" rather than "we are legally bound to execute it." Some MOUs include clauses that make specific provisions binding (such as confidentiality or exclusivity), so the line can blur depending on the language used.</p>
+      </div>
+
+      <!-- Section 3: What to Include -->
+      <div class="mou-guide-section">
+        <h2>What to include in an MOU</h2>
+        <p>A well-structured MOU covers six areas. The template builder above includes all of them as editable fields.</p>
+
+        <h3>1. Parties</h3>
+        <p>Identify each party by full legal name, address, the name and title of the authorized representative, and contact information (email and phone). If the parties use short-form names throughout the document, define those names here.</p>
+
+        <h3>2. Purpose</h3>
+        <p>Provide background context on why the MOU exists, state the primary purpose, define the scope of cooperation, and list anything explicitly excluded. Separating background, purpose, scope, and exclusions makes the document cleaner and reduces ambiguity later.</p>
+
+        <h3>3. Responsibilities</h3>
+        <p>Allocate specific responsibilities to each party in parallel columns. This section prevents disputes by making clear which party is responsible for what. Be specific: generic language like "will cooperate" is less useful than "will provide X by Y date."</p>
+
+        <h3>4. Financial Terms</h3>
+        <p>If money is changing hands, describe the funding commitments or payment obligations clearly. If no funds will be exchanged, state that explicitly. Leaving this section blank is the most common source of confusion in MOU-related disputes.</p>
+
+        <h3>5. Terms</h3>
+        <p>Specify the effective date and duration, the conditions under which either party can terminate the MOU, and how much advance notice is required. MOUs without expiration dates tend to become stale; a defined term forces both parties to revisit and renew intentionally.</p>
+
+        <h3>6. Legal</h3>
+        <p>Cover confidentiality (how sensitive information must be handled and for how long), dispute resolution (good-faith negotiation or mediation before litigation), governing law, and a non-binding disclaimer. The disclaimer is especially important: it confirms the document is a statement of intent and does not create enforceable obligations unless specific provisions say otherwise.</p>
+      </div>
+
+      <!-- Section 4: Sample Language -->
+      <div class="mou-guide-section">
+        <h2>MOU sample language and examples</h2>
+        <p>Use these sample clauses as starting points. Edit the bracketed fields to match your situation.</p>
+
+        <h3>Purpose clause</h3>
+        <div class="mou-clause">
+          <div class="mou-clause-label">Sample</div>
+          The parties enter into this Memorandum of Understanding to document their shared intent to collaborate on the development and deployment of [Project Name]. The purpose of this MOU is to establish a framework for cooperation, define each party's responsibilities, and provide a shared reference point while final contractual arrangements are being prepared.
+        </div>
+
+        <h3>Scope of cooperation</h3>
+        <div class="mou-clause">
+          <div class="mou-clause-label">Sample</div>
+          This MOU covers the following activities: (a) joint planning and scoping of [initiative]; (b) sharing of relevant data, materials, and expertise as reasonably requested by either party; (c) coordination of communications to affected stakeholders. This MOU does not cover the procurement of goods or services, nor does it create any obligation to execute a formal agreement.
+        </div>
+
+        <h3>Confidentiality clause</h3>
+        <div class="mou-clause">
+          <div class="mou-clause-label">Sample</div>
+          Each party agrees to hold in strict confidence any non-public information disclosed by the other party in connection with the activities described in this MOU ("Confidential Information"). Each party shall use Confidential Information solely for the purposes of this MOU and shall not disclose it to third parties without prior written consent. This obligation shall survive termination of this MOU for a period of three (3) years.
+        </div>
+
+        <h3>Termination clause</h3>
+        <div class="mou-clause">
+          <div class="mou-clause-label">Sample</div>
+          Either party may terminate this MOU at any time upon thirty (30) days' prior written notice to the other party. Termination shall not affect any obligations, liabilities, or rights that accrued prior to the effective date of termination. Upon termination, each party shall promptly return or destroy the other party's Confidential Information upon request.
+        </div>
+
+        <h3>Non-binding disclaimer</h3>
+        <div class="mou-clause">
+          <div class="mou-clause-label">Sample</div>
+          This MOU is a statement of intent only. It is not a legally binding agreement and does not create any contractual rights or obligations between the parties. Nothing in this MOU shall be construed as a commitment to fund, procure, or deliver any goods, services, or financial resources. Either party may withdraw from this MOU at any time without liability.
+        </div>
+      </div>
+
+      <!-- Section 5: MOU Quote -->
+      <div class="mou-guide-section">
+        <h2>How to create a quotation for an MOU</h2>
+        <p>Many MOUs involve a commercial component: one party is pricing services or products for another before both are ready to sign a formal contract. An MOU quote is a formal pricing document that accompanies or is referenced by the MOU, documenting agreed or proposed pricing at the pre-contract stage.</p>
+
+        <h3>How an MOU quote differs from a standard sales quote</h3>
+        <p>A standard sales quotation is produced late in the deal cycle to confirm pricing and request customer acceptance. An MOU quote is produced earlier and typically carries a different status:</p>
+        <table style="width:100%;border-collapse:collapse;font-size:0.875rem;margin:12px 0 20px">
+          <thead>
+            <tr>
+              <th style="text-align:left;padding:8px 10px;border-bottom:2px solid var(--border-light);font-size:0.68rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted)">Dimension</th>
+              <th style="text-align:left;padding:8px 10px;border-bottom:2px solid var(--border-light);font-size:0.68rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted)">Standard Sales Quote</th>
+              <th style="text-align:left;padding:8px 10px;border-bottom:2px solid var(--border-light);font-size:0.68rem;font-weight:700;letter-spacing:1px;text-transform:uppercase;color:var(--text-muted)">MOU Quote</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td style="padding:8px 10px;border-bottom:1px solid var(--border-light)">Deal stage</td><td style="padding:8px 10px;border-bottom:1px solid var(--border-light)">Close to commitment</td><td style="padding:8px 10px;border-bottom:1px solid var(--border-light)">Pre-contract, intent stage</td></tr>
+            <tr><td style="padding:8px 10px;border-bottom:1px solid var(--border-light)">Pricing status</td><td style="padding:8px 10px;border-bottom:1px solid var(--border-light)">Finalized and agreed</td><td style="padding:8px 10px;border-bottom:1px solid var(--border-light)">Agreed in principle, subject to contract</td></tr>
+            <tr><td style="padding:8px 10px;border-bottom:1px solid var(--border-light)">Binding nature</td><td style="padding:8px 10px;border-bottom:1px solid var(--border-light)">Typically binding on acceptance</td><td style="padding:8px 10px;border-bottom:1px solid var(--border-light)">Typically indicative</td></tr>
+            <tr><td style="padding:8px 10px;border-bottom:1px solid var(--border-light)">Recipient action</td><td style="padding:8px 10px;border-bottom:1px solid var(--border-light)">Accept or decline</td><td style="padding:8px 10px;border-bottom:1px solid var(--border-light)">Review and countersign MOU</td></tr>
+            <tr><td style="padding:8px 10px">Version history</td><td style="padding:8px 10px">Usually one final version</td><td style="padding:8px 10px">May have multiple iterations</td></tr>
+          </tbody>
+        </table>
+        <p>For one-off MOU quotes, use the <a href="/quotation-generator/">free quotation generator</a> to create a professional PDF quote with line items, tax, and payment terms in minutes. For Salesforce users managing MOU-stage deals in CRM, SilkQuote generates branded PDF quotations from Opportunity data automatically, with support for custom template sections like indicative pricing disclaimers and assumption blocks.</p>
+      </div>
+
+      <!-- Section 6: MOU vs MOA vs LOI vs Contract -->
+      <div class="mou-guide-section">
+        <h2>MOU vs MOA vs LOI vs NDA vs contract</h2>
+        <p>These document types are often confused. Here is how they differ:</p>
+        <div style="overflow-x:auto">
+          <table class="mou-compare-table">
+            <thead>
+              <tr>
+                <th>Attribute</th>
+                <th>MOU</th>
+                <th>MOA</th>
+                <th>Letter of Intent</th>
+                <th>NDA</th>
+                <th>Contract</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Binding?</td>
+                <td>Generally no</td>
+                <td>Can be binding</td>
+                <td>Generally no</td>
+                <td>Yes</td>
+                <td>Yes</td>
+              </tr>
+              <tr>
+                <td>Purpose</td>
+                <td>Documents shared intent and cooperation framework</td>
+                <td>Formalizes a specific agreement or commitment between parties</td>
+                <td>Expresses intent to enter a deal; outlines key terms</td>
+                <td>Protects confidential information exchanged between parties</td>
+                <td>Creates enforceable obligations for defined deliverables</td>
+              </tr>
+              <tr>
+                <td>Typical use</td>
+                <td>Partnerships, pre-contract stage, govt programs</td>
+                <td>Grant agreements, interagency programs</td>
+                <td>M&amp;A, commercial deals, real estate</td>
+                <td>Any information-sharing relationship</td>
+                <td>Service delivery, procurement, employment</td>
+              </tr>
+              <tr>
+                <td>Signed by</td>
+                <td>Authorized representatives of each party</td>
+                <td>Authorized representatives</td>
+                <td>Typically senior deal principals</td>
+                <td>Authorized representatives</td>
+                <td>Authorized representatives</td>
+              </tr>
+              <tr>
+                <td>Leads to</td>
+                <td>Formal contract or MOA</td>
+                <td>Program execution or formal contract</td>
+                <td>Definitive agreement or contract</td>
+                <td>Stands alone or precedes a broader agreement</td>
+                <td>Performance, delivery, payment</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="margin-top:16px;font-size:0.875rem;color:var(--text-secondary)">Note: the legal status of any document depends on its specific language and the jurisdiction. When in doubt, have legal counsel review the document to confirm whether it creates binding obligations.</p>
+      </div>
+
+      <!-- Section 7: FAQ -->
+      <div class="mou-guide-section">
+        <h2>Frequently asked questions</h2>
+        {% include faq.html %}
+      </div>
+
+    </div><!-- /mou-guide -->
+
+    <!-- Upsell -->
+    <div class="mou-upsell no-print">
+      <div class="mou-upsell-body">
+        <h3>Quoting an MOU deal from Salesforce? Skip the typing entirely.</h3>
+        <p>SilkQuote pulls your Salesforce account info, products, and pricing into a branded PDF quote automatically, with no copy-pasting or data entry. Add MOU-specific sections like indicative pricing disclaimers and assumption blocks to your template, then generate a polished document in one click.</p>
+        <p>SilkQuote is <strong>free</strong>. Salesforce offers a free plan for up to 2 users. No credit card required.</p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;">
+          <a href="https://www.salesforce.com/form/signup/free-crm/" class="button button--secondary" target="_blank" rel="noopener">Get Salesforce Free</a>
+          <a href="/install" class="button button--primary">Get SilkQuote Free &rarr;</a>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /container -->
+</div><!-- /mou-page -->
+
+<!-- Salesforce Web-to-Lead (silent, hidden) -->
+<iframe name="mou-sf-target" style="display:none" aria-hidden="true"></iframe>
+<form id="mou-lead-form" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00Da500001Nhn69" method="POST" target="mou-sf-target" style="display:none">
+  <input type="hidden" name="oid" value="00Da500001Nhn69">
+  <input type="hidden" name="retURL" value="https://silkquote.com/">
+  <input type="hidden" name="lead_source" value="silkquote.com/mou-quotes">
+  <input type="hidden" name="first_name" id="mou-sf-first-name">
+  <input type="hidden" name="last_name" id="mou-sf-last-name">
+  <input type="hidden" name="email" id="mou-sf-email">
+  <input type="hidden" name="company" id="mou-sf-company">
+  <input type="hidden" name="street" id="mou-sf-street">
+  <input type="hidden" name="phone" id="mou-sf-phone">
+  <input type="hidden" name="title" id="mou-sf-title">
+</form>
+
+<script>
+  function mouToday() {
+    var d = new Date();
+    return (d.getMonth()+1).toString().padStart(2,'0') + '/' +
+           d.getDate().toString().padStart(2,'0') + '/' + d.getFullYear();
+  }
+  function mouNum() { return 'MOU-' + (Math.floor(Math.random() * 9000) + 1000); }
+
+  var MOU_PERSIST = ['mou-pa-name','mou-pa-addr','mou-pa-rep','mou-pa-title','mou-pa-email','mou-pa-phone'];
+
+  function mouSyncSigs() {
+    var na = (document.getElementById('mou-pa-rep').textContent || '').trim();
+    var ta = (document.getElementById('mou-pa-title').textContent || '').trim();
+    var oa = (document.getElementById('mou-pa-name').textContent || '').trim();
+    var nb = (document.getElementById('mou-pb-rep').textContent || '').trim();
+    var tb = (document.getElementById('mou-pb-title').textContent || '').trim();
+    var ob = (document.getElementById('mou-pb-name').textContent || '').trim();
+
+    document.getElementById('mou-sig-a-name').textContent  = na || 'Party A Signatory';
+    document.getElementById('mou-sig-a-title').textContent = ta;
+    document.getElementById('mou-sig-a-org').textContent   = oa;
+    document.getElementById('mou-sig-b-name').textContent  = nb || 'Party B Signatory';
+    document.getElementById('mou-sig-b-title').textContent = tb;
+    document.getElementById('mou-sig-b-org').textContent   = ob;
+
+    var la = document.getElementById('mou-pa-resp-label');
+    var lb = document.getElementById('mou-pb-resp-label');
+    if (la) la.textContent = (oa || 'Party A') + ' Responsibilities';
+    if (lb) lb.textContent = (ob || 'Party B') + ' Responsibilities';
+  }
+
+  function mouUpdateEmpty(el) {
+    var isEmpty = !el.textContent.trim();
+    var pf = el.closest('.mou-party-field');
+    if (pf) pf.classList.toggle('mou-is-empty', isEmpty);
+    var block = el.closest('.mou-subsection') || el.closest('.mou-resp-col');
+    if (!block) {
+      var sb = el.closest('.mou-section-block');
+      if (sb) sb.classList.toggle('mou-is-empty', isEmpty);
+      return;
+    }
+    block.classList.toggle('mou-is-empty', isEmpty);
+    var sb = block.closest('.mou-section-block');
+    if (sb) {
+      var children = sb.querySelectorAll('.mou-subsection, .mou-resp-col');
+      var allEmpty = children.length > 0 && Array.prototype.every.call(children, function(c) {
+        return c.classList.contains('mou-is-empty');
+      });
+      sb.classList.toggle('mou-is-empty', allEmpty);
+    }
+  }
+
+  function mouCheckAllEmpty() {
+    document.querySelectorAll('#mou-doc [contenteditable].mou-subsection-field, #mou-doc [contenteditable].mou-section-field').forEach(mouUpdateEmpty);
+    document.querySelectorAll('#mou-doc .mou-party-field [contenteditable]').forEach(mouUpdateEmpty);
+  }
+
+  document.getElementById('mou-doc').addEventListener('input', function(e) {
+    if (e.target.id && MOU_PERSIST.indexOf(e.target.id) !== -1) {
+      try { localStorage.setItem('mou_' + e.target.id, e.target.textContent); } catch(ex) {}
+    }
+    var sigFields = ['mou-pa-rep','mou-pa-title','mou-pa-name','mou-pb-rep','mou-pb-title','mou-pb-name'];
+    if (e.target.id && sigFields.indexOf(e.target.id) !== -1) {
+      mouSyncSigs();
+    }
+    if (e.target.classList.contains('mou-subsection-field') || e.target.classList.contains('mou-section-field') || e.target.closest('.mou-party-field')) {
+      mouUpdateEmpty(e.target);
+    }
+  });
+
+  function mouClear() {
+    if (!confirm('Clear everything and start a new MOU?')) return;
+    document.querySelectorAll('.mou-doc [contenteditable]').forEach(function(el) { el.textContent = ''; });
+    document.getElementById('mou-number').textContent    = mouNum();
+    document.getElementById('mou-date').textContent      = mouToday();
+    document.getElementById('mou-effective').textContent = mouToday();
+    document.getElementById('mou-expires').textContent   = mouNextYear();
+    MOU_PERSIST.forEach(function(id) { try { localStorage.removeItem('mou_' + id); } catch(ex) {} });
+    mouSyncSigs();
+    mouCheckAllEmpty();
+  }
+
+  function mouNextYear() {
+    var d = new Date();
+    d.setFullYear(d.getFullYear() + 1);
+    return (d.getMonth()+1).toString().padStart(2,'0') + '/' +
+           d.getDate().toString().padStart(2,'0') + '/' + d.getFullYear();
+  }
+  document.getElementById('mou-number').textContent    = mouNum();
+  document.getElementById('mou-date').textContent      = mouToday();
+  document.getElementById('mou-effective').textContent = mouToday();
+  document.getElementById('mou-expires').textContent   = mouNextYear();
+  MOU_PERSIST.forEach(function(id) {
+    try {
+      var val = localStorage.getItem('mou_' + id);
+      var el  = document.getElementById(id);
+      if (val && el) el.textContent = val;
+    } catch(ex) {}
+  });
+  mouSyncSigs();
+  mouCheckAllEmpty();
+
+  var MOU_SUGGESTIONS = {
+    'mou-background':
+      'The parties have identified a mutual interest in collaborating on [Project / Initiative Name]. This MOU is intended to document the shared understanding of both parties and establish a foundation for cooperation while formal contractual arrangements are being prepared.',
+    'mou-purpose':
+      'The purpose of this MOU is to establish a framework for cooperation between [Party A] and [Party B], define each party\'s roles and responsibilities, and provide a shared reference point for the activities described herein.',
+    'mou-scope':
+      'This MOU covers the following activities: (a) joint planning and scoping of [initiative]; (b) sharing of relevant data, materials, and expertise as reasonably requested by either party; (c) coordination of communications to affected stakeholders.',
+    'mou-exclusions':
+      'This MOU does not cover the procurement of goods or services, nor does it create any obligation to execute a formal agreement. Any activities not expressly described in the Scope section above are excluded.',
+    'mou-pa-resp':
+      '1. Provide [description of resources or contribution]\n2. Assign a designated point of contact for all MOU-related communications\n3. Review and respond to requests within [X] business days\n4. Share relevant data, materials, or expertise as needed to support the activities described in this MOU',
+    'mou-pb-resp':
+      '1. Provide [description of resources or contribution]\n2. Assign a designated point of contact for all MOU-related communications\n3. Review and respond to requests within [X] business days\n4. Share relevant data, materials, or expertise as needed to support the activities described in this MOU',
+    'mou-financial':
+      'No funds shall be exchanged between the parties under this MOU. Each party shall bear its own costs and expenses incurred in connection with the activities described herein, unless otherwise agreed in writing.',
+    'mou-duration':
+      'This MOU shall become effective on [MM/DD/YYYY] and shall remain in effect until [MM/DD/YYYY], unless terminated earlier in accordance with the Termination section. The parties may renew this MOU by written agreement prior to its expiration.',
+    'mou-termination':
+      'Either party may terminate this MOU at any time upon thirty (30) days\' prior written notice to the other party. Termination shall not affect any obligations, liabilities, or rights that accrued prior to the effective date of termination.',
+    'mou-notice':
+      'All notices under this MOU shall be in writing and delivered by email with acknowledgment of receipt, or by certified mail to the address of the authorized representative listed in this MOU. Notice is effective upon confirmed receipt.',
+    'mou-confidentiality':
+      'Each party agrees to hold in strict confidence any non-public information disclosed by the other party in connection with the activities described in this MOU. Each party shall use such information solely for the purposes of this MOU and shall not disclose it to third parties without prior written consent. This obligation shall survive termination of this MOU for a period of three (3) years.',
+    'mou-dispute':
+      'The parties shall attempt to resolve any dispute arising from or related to this MOU through good-faith negotiation. If the dispute cannot be resolved within thirty (30) days, the parties agree to submit the matter to mediation before pursuing any other legal remedy.',
+    'mou-govlaw':
+      'This MOU shall be governed by the laws of [State/Country], without regard to its conflict of law provisions.',
+    'mou-nonbinding':
+      'This MOU is a statement of intent only. It is not a legally binding agreement and does not create any contractual rights or obligations between the parties. Nothing in this MOU shall be construed as a commitment to fund, procure, or deliver any goods, services, or financial resources. Either party may withdraw from this MOU at any time without liability.'
+  };
+
+  function mouInsert(id) {
+    var el = document.getElementById(id);
+    var text = MOU_SUGGESTIONS[id];
+    if (!el || !text) return;
+    if (el.textContent.trim() && !confirm('Replace existing content with suggested text?')) return;
+    el.innerHTML = text
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/\n/g, '<br>');
+    el.dispatchEvent(new Event('input', { bubbles: true }));
+  }
+
+  var mouLeadSent = false;
+  function mouSubmitLead() {
+    if (mouLeadSent) return;
+    var company = (document.getElementById('mou-pa-name').textContent || '').trim();
+    var email   = (document.getElementById('mou-pa-email').textContent || '').trim();
+    if (!company && !email) return;
+    mouLeadSent = true;
+    var repName = (document.getElementById('mou-pa-rep').textContent || '').trim().split(/\s+/);
+    document.getElementById('mou-sf-first-name').value = repName[0] || '';
+    document.getElementById('mou-sf-last-name').value  = repName.slice(1).join(' ') || '';
+    document.getElementById('mou-sf-email').value   = email;
+    document.getElementById('mou-sf-company').value = company;
+    document.getElementById('mou-sf-street').value  = (document.getElementById('mou-pa-addr').textContent || '').trim();
+    document.getElementById('mou-sf-phone').value   = (document.getElementById('mou-pa-phone').textContent || '').trim();
+    document.getElementById('mou-sf-title').value   = (document.getElementById('mou-pa-title').textContent || '').trim();
+    document.getElementById('mou-lead-form').submit();
+  }
+
+  function mouPrint() {
+    mouSubmitLead();
+    window.print();
+  }
+
+  var mouOrigTitle = document.title;
+  window.addEventListener('beforeprint', function() {
+    var num = document.getElementById('mou-number').textContent.trim();
+    document.title = num ? 'MOU ' + num : 'Memorandum of Understanding';
+  });
+  window.addEventListener('afterprint', function() { document.title = mouOrigTitle; });
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebApplication",
+      "name": "Free MOU Template Builder",
+      "url": "https://silkquote.com/mou-quotes/",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Any",
+      "browserRequirements": "Requires JavaScript",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "Free browser-based MOU template builder. Fill in party details and all standard MOU sections, then download as a PDF. No sign-up required.",
+      "featureList": [
+        "Editable Party A and Party B fields: organization, address, representative, title, email, phone",
+        "Six standard MOU sections: purpose (background, scope, exclusions), responsibilities, financial terms, terms (duration, termination, notice), legal (confidentiality, dispute resolution, governing law, non-binding disclaimer)",
+        "Auto-populated signature block",
+        "Saves Party A details in browser for reuse",
+        "Download or print as PDF"
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is an MOU?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An MOU (Memorandum of Understanding) is a written document that formalizes a shared understanding between two or more parties before a formal contract is signed. It describes the purpose of the relationship, each party's responsibilities, and the scope of cooperation, without creating legally enforceable obligations."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is an MOU legally binding?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In most cases, no. An MOU is a statement of intent, not a contract. However, specific provisions within an MOU, such as a confidentiality clause, can be made binding if the language explicitly says so. The document as a whole is typically non-binding unless it meets the legal requirements for a contract."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between an MOU and a contract?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A contract is legally enforceable: if one party fails to perform, the other can seek legal remedy. An MOU documents intent and a cooperative framework without that enforceability. Contracts are used once scope, pricing, and obligations are confirmed. MOUs are used earlier, when the parties want to formalize their shared direction while details are still being worked out."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the difference between an MOU and an MOA?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An MOA (Memorandum of Agreement) is generally more specific and can be binding. Where an MOU documents intent, an MOA often documents an actual agreement on specific terms. MOAs are common in government and grant contexts. The line between MOU and MOA varies by jurisdiction."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What should an MOU include?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A well-structured MOU includes: the full legal names, addresses, and representative contact information for both parties; a purpose section covering background, scope, and exclusions; each party's roles and responsibilities; financial terms (or a statement that no funds are exchanged); terms covering duration, termination, and notice period; and legal provisions covering confidentiality, dispute resolution, governing law, and a non-binding disclaimer."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do I write an MOU?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Use the free MOU template builder at the top of this page. Fill in your organization's details, the other party's information, and each section (purpose, scope, responsibilities, timeline, confidentiality, termination, governing law). Click 'Download / Print PDF' to save the document. No account or software is required."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is an MOU quote?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "An MOU quote is a formal pricing document attached to or referenced by a Memorandum of Understanding. It documents the agreed or proposed pricing, scope, and commercial terms at the pre-contract stage of a deal, before a binding agreement is executed. MOU quotes are typically marked as indicative, meaning the pricing is agreed in principle but subject to final contract execution."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is a quotation attached to an MOU legally binding?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "This depends on the language in both documents. Most MOUs are non-binding, and a quotation referenced in an MOU is typically indicative unless both parties explicitly agree in writing that the pricing terms are binding. Always have legal counsel review the MOU and associated quotation if there is any question about binding intent."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can SilkQuote generate MOU quotations from Salesforce?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. SilkQuote generates branded PDF quotations from Salesforce Opportunity data. For MOU-stage deals, you can create an Opportunity with the proposed scope and pricing as line items, add MOU-specific terms sections in the quote template, and generate a formal PDF in seconds."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
