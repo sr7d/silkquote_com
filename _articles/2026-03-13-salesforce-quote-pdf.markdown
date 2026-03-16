@@ -23,7 +23,7 @@ faq:
     answer: "A SilkQuote quote PDF can include any field from the Opportunity, Account, Contact, and Opportunity Product objects. Standard content includes company name and address, contact name and title, quote date and validity period, product line items with pricing, totals, a description or scope block, and Terms and Conditions."
 ---
 
-A Salesforce quote PDF is the final deliverable of your quoting process — the document that represents your company to a prospect at the moment they are deciding whether to buy. Yet for many Salesforce users, generating that document is still a manual, error-prone process involving copy-paste and desktop design tools. It does not have to be.
+A Salesforce quote PDF is the final deliverable of your quoting process: the document that represents your company to a prospect at the moment they are deciding whether to buy. Yet for many Salesforce users, generating that document is still a manual, error-prone process involving copy-paste and desktop design tools. It does not have to be.
 
 This guide covers what a Salesforce quote PDF should contain, how to generate one automatically using SilkQuote, and how to customize and share it effectively.
 
@@ -41,10 +41,10 @@ The prospect's company name, contact name, title, and address. Personalizing the
 Quote validity date, rep name, and any reference numbers. This is the metadata that helps the prospect file and act on the document.
 
 ### Line Items Table
-A clean table of the products or services being quoted — product name, description, quantity, unit price, and extended total. This is the section prospects look at most closely. Clear column formatting and consistent number alignment matter.
+A clean table of the products or services being quoted, covering product name, description, quantity, unit price, and extended total. This is the section prospects look at most closely. Clear column formatting and consistent number alignment matter.
 
 ### Pricing Summary / Totals
-Subtotal, any applicable discount, tax (if shown), and grand total. The totals block should be visually distinct from the line items — typically right-aligned with the grand total in bold.
+Subtotal, any applicable discount, tax (if shown), and grand total. The totals block should be visually distinct from the line items, typically right-aligned with the grand total in bold.
 
 ### Terms and Conditions
 Standard T&Cs or a reference to them. For deals of any significance, the prospect's legal team will ask for these. Having them in the document eliminates a follow-up email.
@@ -56,11 +56,11 @@ A signature area with lines for name, title, date, and signature. Including this
 
 Salesforce has a Quotes object that can generate PDFs, but its template editor is limited in ways that matter in practice:
 
-- **Layout is fixed** — you cannot freely reorder sections or change column widths
-- **Branding is minimal** — only a logo can be added; colors and fonts are not configurable
-- **No conditional content** — a field either appears or it does not, regardless of Opportunity data
-- **No Terms and Conditions management** — must be added manually or pasted into a text field
-- **Output feels generic** — most reps and customers can tell it came from an out-of-the-box system
+- **Layout is fixed**: you cannot freely reorder sections or change column widths
+- **Branding is minimal**: only a logo can be added; colors and fonts are not configurable
+- **No conditional content**: a field either appears or it does not, regardless of Opportunity data
+- **No Terms and Conditions management**: must be added manually or pasted into a text field
+- **Output feels generic**: most reps and customers can tell it came from an out-of-the-box system
 
 For internal tracking, the native PDF is fine. For anything that represents your company to a prospect, it typically falls short.
 
@@ -69,16 +69,16 @@ For internal tracking, the native PDF is fine. For anything that represents your
 SilkQuote generates branded, professional PDFs from Opportunity records with a single action. The process:
 
 1. **Open the Opportunity** in Salesforce Lightning.
-2. **Click Generate Quote Document** — the Quick Action in the highlights panel or action bar.
+2. **Click Generate Quote Document** (the Quick Action in the highlights panel or action bar).
 3. **Fill in the generation dialog**:
-   - Quote Name — the label used for the file in Salesforce (include the date or version)
-   - Template — select which configured template to use
-   - Paper Size — Letter, A4, or Legal
+   - Quote Name: the label used for the file in Salesforce (include the date or version)
+   - Template: select which configured template to use
+   - Paper Size: Letter, A4, or Legal
 4. **Optional settings**:
-   - Terms and Conditions — attach pre-configured T&Cs
-   - Draft Watermark — stamps DRAFT on every page
-   - Signature Block — appends a signature section
-5. **Click Save PDF** — the PDF is generated and saved to the Opportunity Files in seconds.
+   - Terms and Conditions: attach pre-configured T&Cs
+   - Draft Watermark: stamps DRAFT on every page
+   - Signature Block: appends a signature section
+5. **Click Save PDF**. The PDF is generated and saved to the Opportunity Files in seconds.
 
 The rep never leaves Salesforce. The PDF is immediately available in the Files related list. See [Generate a Quote PDF from an Opportunity](/generate-quote-pdf/) for the full walkthrough.
 
@@ -98,15 +98,15 @@ See [Salesforce Quote Template: How to Build and Customize Yours](/salesforce-qu
 ### Branding
 
 Each template supports:
-- **Logo** — uploaded as a Salesforce Static Resource, assigned per template
-- **Accent color** — applied to section headers and table borders
-- **Paper size default** — set per template but overridable at generation time
+- **Logo**: uploaded as a Salesforce Static Resource, assigned per template
+- **Accent color**: applied to section headers and table borders
+- **Paper size default**: set per template but overridable at generation time
 
 If you manage multiple brands or subsidiaries, you can create a separate template per brand, each with its own logo and accent color.
 
 ### Conditional Content
 
-SilkQuote supports field-level conditions — a field only renders in the PDF when an Opportunity field meets a specified condition. Common uses:
+SilkQuote supports field-level conditions: a field only renders in the PDF when an Opportunity field meets a specified condition. Common uses:
 
 - Show a Discount row only when a discount is applied
 - Show a multi-year pricing footnote only when `Contract_Length__c > 12`
@@ -118,14 +118,14 @@ This keeps the PDF clean and relevant regardless of deal variation.
 
 Once the PDF is saved to the Opportunity:
 
-- **Download and email** — Open the file from the Files related list, download, and attach to an email.
-- **Chatter or internal sharing** — Share a link internally via Salesforce Chatter for review and approval.
+- **Download and email**: Open the file from the Files related list, download, and attach to an email.
+- **Chatter or internal sharing**: Share a link internally via Salesforce Chatter for review and approval.
 
 Using descriptive quote names (e.g., "Acme Corp - April 2026 Proposal") makes the Files list readable as multiple versions accumulate across a deal's lifecycle.
 
 ## Managing Quote PDF Versions
 
-Every time you click Save PDF in SilkQuote, a new Content Document is created on the Opportunity. This is intentional — it preserves the full history of what was sent and when, which matters for deal documentation and legal reasons.
+Every time you click Save PDF in SilkQuote, a new Content Document is created on the Opportunity. This is intentional: it preserves the full history of what was sent and when, which matters for deal documentation and legal reasons.
 
 Best practices:
 - Include the date or version number in every Quote Name

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Salesforce Flow: Automate Quote PDF Generation | SilkQuote"
-description: "Step-by-step Salesforce Flow tutorial for automating quote PDF generation with SilkQuote — configure record-triggered Flows to generate quotes automatically on Opportunity stage changes."
+description: "Step-by-step Salesforce Flow tutorial for automating quote PDF generation with SilkQuote. Configure record-triggered Flows to generate quotes automatically on Opportunity stage changes."
 date: 2026-03-13 09:00:00 +0000
 last_modified_at: 2026-03-13 00:00:00 +0000
 author: admin
@@ -19,9 +19,9 @@ faq:
   - question: "How do I find the SilkQuote template ID to use in the Flow?"
     answer: "In SilkQuote's Configuration Manager, each template displays its Salesforce record ID. Copy this ID and paste it into the Flow's invocable action input. You can also use a Get Records element in the Flow to dynamically retrieve the template based on a name or custom field."
   - question: "Can the Flow choose different templates for different types of deals?"
-    answer: "Yes. Use a Decision element in the Flow to evaluate Opportunity fields — deal size, account type, product family, or any custom field. Assign the appropriate template ID for each path, then call the invocable action with the dynamically selected template."
+    answer: "Yes. Use a Decision element in the Flow to evaluate Opportunity fields (deal size, account type, product family, or any custom field). Assign the appropriate template ID for each path, then call the invocable action with the dynamically selected template."
 ---
-Salesforce Flow is the most powerful automation tool available without writing code. Combined with SilkQuote, Flow lets you trigger professional quote PDF generation automatically — no rep action required. When an Opportunity reaches the proposal stage, a Flow fires, SilkQuote generates the PDF, and the document is attached to the record before the rep picks up the phone.
+Salesforce Flow is the most powerful automation tool available without writing code. Combined with SilkQuote, Flow lets you trigger professional quote PDF generation automatically, with no rep action required. When an Opportunity reaches the proposal stage, a Flow fires, SilkQuote generates the PDF, and the document is attached to the record before the rep picks up the phone.
 
 This tutorial walks through building a record-triggered Flow from scratch to automate quote generation with SilkQuote.
 
@@ -75,7 +75,7 @@ Click the **+** button below the Start element to add a new element.
 
 **Configure the action inputs:**
 
-- **Opportunity ID**: Click the input field, select **Reference**, then choose `{!$Record.Id}` — this is the ID of the Opportunity that triggered the Flow
+- **Opportunity ID**: Click the input field, select **Reference**, then choose `{!$Record.Id}` (this is the ID of the Opportunity that triggered the Flow)
 - **Template ID**: Enter your SilkQuote template ID directly (e.g., `a0B...`) or use a resource variable if you are using dynamic template selection
 - **Quote Name**: Use a formula or fixed text. For example: `{!$Record.Name} - Proposal` to automatically name the quote after the Opportunity
 
@@ -96,7 +96,7 @@ This step is optional but recommended for teams adopting automation incrementall
 ## Step 4: Save and Activate the Flow
 
 1. Click **Save** in the Flow Builder toolbar
-2. Give the Flow a clear name: "Opportunity — Auto-Generate Proposal Quote"
+2. Give the Flow a clear name: "Opportunity: Auto-Generate Proposal Quote"
 3. Add a description for documentation purposes
 4. Click **Save**
 5. Click **Activate**
@@ -130,7 +130,7 @@ This pattern centralizes quote generation logic in the Flow rather than in each 
 
 ## Connecting to the Broader Automation Workflow
 
-This Flow handles generation. To automate the full quoting process — including sharing, acceptance tracking, and follow-up — see the [quote automation workflows](/salesforce-quote-automation-workflows/) and [automated quote generation](/salesforce-automated-quote-generation/) guides.
+This Flow handles generation. To automate the full quoting process, including sharing, acceptance tracking, and follow-up, see the [quote automation workflows](/salesforce-quote-automation-workflows/) and [automated quote generation](/salesforce-automated-quote-generation/) guides.
 
 For a comprehensive overview of quoting automation tools and patterns in Salesforce, see [automating your Salesforce quoting process](/automating-your-salesforce-quoting-process-tools-and-workflows/).
 

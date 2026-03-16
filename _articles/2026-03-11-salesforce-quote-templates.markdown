@@ -11,7 +11,7 @@ tags: [articles]
 permalink: /salesforce-quote-templates/
 faq:
   - question: "Can I build Salesforce quote templates without a developer?"
-    answer: "Yes. SilkQuote's template designer is entirely point-and-click. Admins build templates by dragging sections, mapping fields, uploading logos, and setting display rules — no Apex, no Visualforce, and no custom code required at any point."
+    answer: "Yes. SilkQuote's template designer is entirely point-and-click. Admins build templates by dragging sections, mapping fields, uploading logos, and setting display rules. No Apex, no Visualforce, and no custom code required at any point."
   - question: "How many templates can I create in SilkQuote?"
     answer: "There is no limit on the number of templates. Teams commonly maintain separate templates for different products, regions, deal types, or business units. Smart template selection rules filter the available templates based on Opportunity field values so reps always see the relevant options."
   - question: "Can templates automatically apply different terms based on deal type?"

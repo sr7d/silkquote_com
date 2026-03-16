@@ -14,7 +14,7 @@ featured: false
 
 Paper size controls the physical dimensions of the generated PDF and affects margins, content layout, and pagination. SilkQuote supports three standard sizes: Letter, Legal, and A4. The right choice depends on where your prospects are located and whether they are likely to print the document.
 
-Paper size is selected each time a quote is generated — it is not locked to the template. This means a single template can produce quotes in different paper sizes for different markets.
+Paper size is selected each time a quote is generated and is not locked to the template. This means a single template can produce quotes in different paper sizes for different markets.
 
 ## Paper Size Options
 
@@ -22,7 +22,7 @@ Paper size is selected each time a quote is generated — it is not locked to th
 The standard for North American business documents. Most US-based printers default to Letter. Use this format if your primary market is the United States or Canada.
 
 **Legal (8.5" × 14")**
-A taller format used for legal documents in North America. Useful when quotes have many line items and you want to reduce pagination — the extra length means more content fits on fewer pages. Less commonly used for sales quotes but appropriate when required by contract or compliance procedures.
+A taller format used for legal documents in North America. Useful when quotes have many line items and you want to reduce pagination; the extra length means more content fits on fewer pages. Less commonly used for sales quotes but appropriate when required by contract or compliance procedures.
 
 **A4 (210mm × 297mm)**
 The international standard used in most of Europe, Asia, Australia, and Latin America. Use A4 for prospects outside North America to ensure the document prints correctly on their standard paper.

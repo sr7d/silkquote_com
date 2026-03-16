@@ -14,7 +14,7 @@ featured: false
 ---
 ## Overview
 
-Sections and field mappings define the content of a SilkQuote PDF quote. Each template is divided into named sections — such as Company, Customer, Quote Details, Line Items, Totals, and Description — and each section contains a set of mapped Salesforce fields that populate the corresponding area of the PDF.
+Sections and field mappings define the content of a SilkQuote PDF quote. Each template is divided into named sections (such as Company, Customer, Quote Details, Line Items, Totals, and Description), and each section contains a set of mapped Salesforce fields that populate the corresponding area of the PDF.
 
 Configuring sections and fields is the core of template design. Everything the prospect sees in the quote comes from this configuration.
 

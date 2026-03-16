@@ -13,7 +13,7 @@ featured: false
 ---
 ## Overview
 
-Each SilkQuote template can display a company logo at the top of the generated PDF quote. The logo is set per template using a Salesforce Static Resource — a hosted file stored inside your Salesforce org that SilkQuote references when rendering the PDF.
+Each SilkQuote template can display a company logo at the top of the generated PDF quote. The logo is set per template using a Salesforce Static Resource, a hosted file stored inside your Salesforce org that SilkQuote references when rendering the PDF.
 
 Different templates can use different logos, which is useful when a single Salesforce org supports multiple brands, subsidiaries, or white-label products.
 
@@ -28,7 +28,7 @@ Before setting the logo in SilkQuote, upload your logo file as a Salesforce Stat
 5. Click **Choose File** and upload your logo image (PNG, JPG, or SVG recommended).
 6. Click **Save**.
 
-Note the Name you gave the resource — you will need it in the next step.
+Note the Name you gave the resource, as you will need it in the next step.
 
 ## Setting the Logo in the Template
 
@@ -45,7 +45,7 @@ To update a logo (for example, after a rebrand):
 
 1. Upload the new logo image as a new Static Resource in Salesforce Setup, or replace the existing one by editing the Static Resource record and uploading a new file.
 2. If you uploaded a new resource with a different name, update the Logo Resource ID in the template accordingly and save.
-3. If you replaced the existing resource file (keeping the same name), the change takes effect automatically — no template update needed.
+3. If you replaced the existing resource file (keeping the same name), the change takes effect automatically with no template update needed.
 
 ## Logo Display Tips
 

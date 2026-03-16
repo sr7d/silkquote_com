@@ -12,13 +12,13 @@ seo_title: "Pest Control Quotation: Free Template + Setup"
 
 ## Professional Pest Control Quotations Built for Field Service Teams
 
-Stop writing quotes in Word. Use the template below to generate a complete pest control quotation — scope, pricing, recurring schedule, and terms — and see how Salesforce teams automate this with SilkQuote.
+Stop writing quotes in Word. Use the template below to generate a complete pest control quotation covering scope, pricing, recurring schedule, and terms, and see how Salesforce teams automate this with SilkQuote.
 
 ## How It Works
 
-1. **Copy the template below** — use the sections that match your service model (one-time, recurring, or commercial)
-2. **Customize for each job** — replace placeholder values with the customer's details and your standard pricing
-3. **Or automate it in Salesforce** — [install SilkQuote](/install), add your services to a price book, and generate branded PDFs from Opportunities with one click
+1. **Copy the template below**: use the sections that match your service model (one-time, recurring, or commercial)
+2. **Customize for each job**: replace placeholder values with the customer's details and your standard pricing
+3. **Or automate it in Salesforce**: [install SilkQuote](/install), add your services to a price book, and generate branded PDFs from Opportunities with one click
 
 ## Pest Control Quotation Template
 
@@ -222,10 +222,10 @@ See [Salesforce PDF quote generation](/salesforce-pdf-quote-generation/) and [Sa
 
 Before automating in Salesforce, confirm you have:
 
-- **Salesforce edition** — Professional, Enterprise, or Unlimited
-- **System Administrator profile** — required for package installation
+- **Salesforce edition**: Professional, Enterprise, or Unlimited
+- **System Administrator profile**: required for package installation
 
-[Install SilkQuote — free, installs in minutes →](/install)
+[Install SilkQuote, free, installs in minutes →](/install)
 
 <style>
 .code-accordion {
@@ -326,7 +326,7 @@ Customer name and service address, pest type and scope of treatment, treatment m
 
 ##### How do pest control companies create quotes faster?
 
-The fastest approach is a quoting tool that pulls customer and job data directly from the CRM. SilkQuote generates a formatted PDF from Salesforce Opportunity data with a single click — no manual template population.
+The fastest approach is a quoting tool that pulls customer and job data directly from the CRM. SilkQuote generates a formatted PDF from Salesforce Opportunity data with a single click, with no manual template population.
 
 ##### What is the difference between a pest control estimate and a quotation?
 
@@ -334,5 +334,5 @@ An estimate is a preliminary cost range before full inspection. A quotation is a
 
 ##### How do you handle recurring service agreements in pest control quotes?
 
-Include a recurring schedule section defining visit frequency, included treatments, annual contract value, and cancellation terms. Attach this to every residential quote by default — let the customer opt out rather than opt in.
+Include a recurring schedule section defining visit frequency, included treatments, annual contract value, and cancellation terms. Attach this to every residential quote by default. Let the customer opt out rather than opt in.
 </div>

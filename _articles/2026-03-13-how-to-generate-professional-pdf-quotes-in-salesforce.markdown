@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How to Generate Professional PDF Quotes in Salesforce | SilkQuote"
-description: "Step-by-step guide to generating professional PDF quotes in Salesforce using SilkQuote — build branded templates, configure line items, and deliver polished quotes in one click."
+description: "Step-by-step guide to generating professional PDF quotes in Salesforce using SilkQuote. Build branded templates, configure line items, and deliver polished quotes in one click."
 date: 2026-03-13 09:00:00 +0000
 last_modified_at: 2026-03-13 00:00:00 +0000
 author: admin
@@ -27,7 +27,7 @@ SilkQuote solves this. It is a free native Salesforce app that generates branded
 
 ## What Makes a Professional Salesforce Quote
 
-Before configuring anything, it is worth being clear about what a professional quote actually is. The difference between a generic PDF and a professional quote is not just aesthetics — it is buyer confidence.
+Before configuring anything, it is worth being clear about what a professional quote actually is. The difference between a generic PDF and a professional quote is not just aesthetics. It is buyer confidence.
 
 A professional quote:
 - Opens with your company brand (logo, colors, identity)
@@ -38,7 +38,7 @@ A professional quote:
 - Has an expiration date so the prospect understands urgency
 - Is easy to accept or decline without emailing back and forth
 
-SilkQuote templates handle all of this through configuration — no code, no external design tools.
+SilkQuote templates handle all of this through configuration: no code, no external design tools.
 
 ## Step 1: Install SilkQuote from the AppExchange
 
@@ -73,7 +73,7 @@ You now have a blank template ready for content configuration.
 
 ## Step 4: Add and Configure Sections
 
-Sections are the building blocks of your quote. Each section maps to a distinct part of the document — the cover, the products table, the pricing summary, the terms.
+Sections are the building blocks of your quote. Each section maps to a distinct part of the document: the cover, the products table, the pricing summary, the terms.
 
 **To add a section:**
 1. Click **Add Section** in the template editor
@@ -115,7 +115,7 @@ Reps can now see and click the Quick Action directly from any Opportunity record
 2. Click the **Generate Quote Document** Quick Action button
 3. In the dialog:
    - Select your template from the dropdown
-   - Enter a quote name (e.g., "Acme Corp — Proposal Q1 2026")
+   - Enter a quote name (e.g., "Acme Corp - Proposal Q1 2026")
    - Optionally enable the Draft Watermark
    - Optionally select a Terms and Conditions document
 4. Click **Save PDF**

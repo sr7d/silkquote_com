@@ -71,12 +71,25 @@ document.addEventListener("DOMContentLoaded", function() {
   // =====================
   // Simple Jekyll Search
   // =====================
+  var searchRecent = document.querySelector(".search-recent");
+  var searchInput = document.getElementById("js-search-input");
+  if (searchInput && searchRecent) {
+    searchInput.addEventListener("input", function() {
+      searchRecent.style.display = this.value.trim() ? "none" : "";
+    });
+  }
+
   SimpleJekyllSearch({
-    searchInput: document.getElementById("js-search-input"),
+    searchInput: searchInput,
     resultsContainer: document.getElementById("js-results-container"),
     json: "/search.json",
-    searchResultTemplate: '<a class="search-results__item col col-6 col-m-12" href="{url}"><div class="search-results__image"><img src="{image}" alt="{title}"></div> <div class="search-results__title">{title}</div></a>',
-    noResultsText: '<h3 class="col no-results">No results found</h3>'
+    searchResultTemplate: '<a class="search-results__item col col-6 col-m-12" href="{url}">{image}<div class="search-results__title">{title}</div></a>',
+    noResultsText: '<h3 class="col no-results">No results found</h3>',
+    templateMiddleware: function(prop, value) {
+      if (prop === "image") {
+        return value ? '<div class="search-results__image"><img src="' + value + '" alt=""></div>' : "";
+      }
+    }
   });
 
 

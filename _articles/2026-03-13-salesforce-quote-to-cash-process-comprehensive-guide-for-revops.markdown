@@ -15,13 +15,13 @@ faq:
   - question: "Does Salesforce have built-in quote-to-cash functionality?"
     answer: "Salesforce provides components at each stage: Opportunities and Quotes for the quoting phase, Contracts and Orders for the post-sale phase, and Revenue Cloud for revenue recognition. Full QTC automation typically requires CPQ or Revenue Cloud plus configuration by a RevOps team."
   - question: "Where does SilkQuote fit in the quote-to-cash process?"
-    answer: "SilkQuote handles the quoting phase — generating professional PDFs from Opportunities, sharing them with prospects, and capturing acceptance. This covers the quote creation, delivery, and acceptance stages of QTC without CPQ complexity."
+    answer: "SilkQuote handles the quoting phase: generating professional PDFs from Opportunities, sharing them with prospects, and capturing acceptance. This covers the quote creation, delivery, and acceptance stages of QTC without CPQ complexity."
   - question: "What is the biggest bottleneck in most Salesforce QTC implementations?"
-    answer: "The quote creation and delivery stage. Most teams have reasonable order management and billing systems, but the manual quoting process — creating documents outside Salesforce, formatting them, and tracking prospects — breaks the automation chain at the first step."
+    answer: "The quote creation and delivery stage. Most teams have reasonable order management and billing systems, but the manual quoting process breaks the automation chain at the first step: creating documents outside Salesforce, formatting them, and tracking prospects all happen outside the CRM."
   - question: "Can SilkQuote integrate with downstream QTC systems?"
     answer: "SilkQuote triggers a Salesforce Flow event on quote acceptance that RevOps teams can use to initiate downstream processes: contract creation, order generation, ERP handoff, or billing system notifications. This connects the quoting phase to the rest of the QTC pipeline."
 ---
-Quote-to-cash (QTC) is the revenue engine of every Salesforce implementation. It spans the full arc from initial quoting through contract execution, order management, invoicing, and revenue recognition. For RevOps teams, the QTC process is the critical path for revenue predictability — every friction point delays cash, every gap creates risk.
+Quote-to-cash (QTC) is the revenue engine of every Salesforce implementation. It spans the full arc from initial quoting through contract execution, order management, invoicing, and revenue recognition. For RevOps teams, the QTC process is the critical path for revenue predictability: every friction point delays cash, every gap creates risk.
 
 This guide covers the complete Salesforce quote-to-cash process: the stages involved, the Salesforce tools that address each stage, the common failure points, and how to optimize the process for speed and accuracy.
 
@@ -29,7 +29,7 @@ This guide covers the complete Salesforce quote-to-cash process: the stages invo
 
 ### Stage 1: Configure, Price, Quote (CPQ)
 
-The CPQ stage begins when a sales opportunity reaches the point where a formal quote is needed. The goal is to produce a document that accurately represents the deal — products, pricing, terms, and conditions — and get it to the prospect quickly.
+The CPQ stage begins when a sales opportunity reaches the point where a formal quote is needed. The goal is to produce a document that accurately represents the deal, covering products, pricing, terms, and conditions, and get it to the prospect quickly.
 
 Key activities at this stage:
 - Product selection and configuration (validating that the product mix makes sense)
@@ -96,7 +96,7 @@ Key activities:
 
 The quoting stage is where most QTC pipelines break down. Reps create quotes outside Salesforce, introduce data errors, and send files with no tracking. By the time a prospect accepts (or not), there is no reliable record of what was offered.
 
-**Fix:** Implement a native Salesforce quoting tool — SilkQuote for straightforward pricing, CPQ for complex pricing — that generates PDFs from Salesforce data, tracks prospect engagement, and captures acceptance inside the CRM.
+**Fix:** Implement a native Salesforce quoting tool that generates PDFs from Salesforce data, tracks prospect engagement, and captures acceptance inside the CRM. Use SilkQuote for straightforward pricing or CPQ for complex pricing.
 
 ### Handoff Gaps Between Stages
 
@@ -112,11 +112,11 @@ RevOps cannot forecast revenue accurately if quoting activity is not tracked in 
 
 ## Designing a QTC Process That Scales
 
-For RevOps teams designing or rebuilding a Salesforce QTC process, start with the quoting stage — it is the highest-friction, highest-visibility part of the pipeline.
+For RevOps teams designing or rebuilding a Salesforce QTC process, start with the quoting stage, which is the highest-friction, highest-visibility part of the pipeline.
 
 The [quote automation workflows](/salesforce-quote-automation-workflows/) guide covers how to automate the quoting and proposal stages using Salesforce Flow. The [automated quote generation](/salesforce-automated-quote-generation/) page covers specific Flow patterns for stage-based, criteria-based, and approval-integrated quote generation.
 
-For the quoting tool decision — whether to use standard Quotes, CPQ, or SilkQuote — the [Salesforce CPQ vs standard quotes](/salesforce-cpq-vs-standard-quotes-key-differences/) comparison covers the criteria in detail.
+For the quoting tool decision (whether to use standard Quotes, CPQ, or SilkQuote), the [Salesforce CPQ vs standard quotes](/salesforce-cpq-vs-standard-quotes-key-differences/) comparison covers the criteria in detail.
 
 ## Quick QTC Audit Checklist for RevOps
 

@@ -11,7 +11,7 @@ tags: [articles]
 permalink: /salesforce-quote-template-builder/
 faq:
   - question: "Do I need a Salesforce developer to use the template builder?"
-    answer: "No. SilkQuote's template builder is designed for Salesforce admins, not developers. Every step — adding sections, mapping fields, configuring conditional logic, and uploading branding — is done through a point-and-click interface in the SilkQuote Configuration Manager. No Apex, no Visualforce, and no code of any kind is required."
+    answer: "No. SilkQuote's template builder is designed for Salesforce admins, not developers. Every step (adding sections, mapping fields, configuring conditional logic, and uploading branding) is done through a point-and-click interface in the SilkQuote Configuration Manager. No Apex, no Visualforce, and no code of any kind is required."
   - question: "Can the template builder pull data from custom Salesforce objects?"
     answer: "Yes. SilkQuote supports field mapping from Opportunity, Account, Contact, Opportunity Products, and related custom objects that are accessible from the Opportunity record. Standard and custom fields from these objects can be mapped into any template section."
   - question: "How do I update a template without breaking existing quotes?"

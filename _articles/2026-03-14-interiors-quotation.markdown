@@ -12,13 +12,13 @@ seo_title: "Interiors Quotation: Free Template"
 
 ## Professional Interiors Quotations for Design Studios and Fit-Out Teams
 
-Stop assembling quotes in spreadsheets. Use the template below to produce a complete interiors quotation — itemized by room, with payment milestones, change order terms, and workmanship warranty — and see how Salesforce teams automate this with SilkQuote.
+Stop assembling quotes in spreadsheets. Use the template below to produce a complete interiors quotation, itemized by room, with payment milestones, change order terms, and workmanship warranty, and see how Salesforce teams automate this with SilkQuote.
 
 ## How It Works
 
-1. **Copy the template below** — use the room sections that match your project scope and remove those that do not apply
-2. **Fill in your project details** — replace placeholder values with actual specifications and pricing
-3. **Or automate it in Salesforce** — [install SilkQuote](/install), add your materials and services to a price book, and generate branded PDFs from Opportunities in seconds
+1. **Copy the template below**: use the room sections that match your project scope and remove those that do not apply
+2. **Fill in your project details**: replace placeholder values with actual specifications and pricing
+3. **Or automate it in Salesforce**: [install SilkQuote](/install), add your materials and services to a price book, and generate branded PDFs from Opportunities in seconds
 
 ## Interiors Quotation Template
 
@@ -334,7 +334,7 @@ Stop assembling quotes in spreadsheets. Use the template below to produce a comp
 
 ## What Each Section Does
 
-**Lead with scope, not price.** Clients reading a quote for the first time look at the scope section to confirm you understood the brief. Specificity — naming each room, trade, and exclusion — signals you paid attention. A vague scope is the single most common source of post-project disputes.
+**Lead with scope, not price.** Clients reading a quote for the first time look at the scope section to confirm you understood the brief. Specificity, including naming each room, trade, and exclusion, signals you paid attention. A vague scope is the single most common source of post-project disputes.
 
 **Itemize by room, not by trade.** Clients think "I'm spending $X on the kitchen," not "I'm spending $X on carpentry." Room-based line items make the quote navigable.
 
@@ -344,7 +344,7 @@ Stop assembling quotes in spreadsheets. Use the template below to produce a comp
 
 ## Automating Interiors Quotations in Salesforce
 
-With SilkQuote, materials categories, labor types, and design fees live in a central Salesforce price book. When a new project comes in, add the relevant products to the Opportunity and click Generate Quote — a branded, consistently formatted PDF is ready in seconds.
+With SilkQuote, materials categories, labor types, and design fees live in a central Salesforce price book. When a new project comes in, add the relevant products to the Opportunity and click Generate Quote. A branded, consistently formatted PDF is ready in seconds.
 
 See [Salesforce quote templates](/salesforce-quote-templates/) and [Salesforce PDF quote generation](/salesforce-pdf-quote-generation/) for the full setup walkthrough.
 
@@ -352,10 +352,10 @@ See [Salesforce quote templates](/salesforce-quote-templates/) and [Salesforce P
 
 Before automating in Salesforce, confirm you have:
 
-- **Salesforce edition** — Professional, Enterprise, or Unlimited
-- **System Administrator profile** — required for package installation
+- **Salesforce edition**: Professional, Enterprise, or Unlimited
+- **System Administrator profile**: required for package installation
 
-[Install SilkQuote — free, installs in minutes →](/install)
+[Install SilkQuote, free, installs in minutes →](/install)
 
 <style>
 .code-accordion {
@@ -460,7 +460,7 @@ The three standard models are a flat project fee, an hourly rate, or a percentag
 
 ##### What is the difference between an estimate and an interiors quotation?
 
-An estimate is a cost range before specifications are confirmed. A quotation is a formal, itemized price for a defined scope — the client expects the final invoice to match it unless changes are agreed and documented.
+An estimate is a cost range before specifications are confirmed. A quotation is a formal, itemized price for a defined scope. The client expects the final invoice to match it unless changes are agreed and documented.
 
 ##### How do you handle change orders in an interiors project?
 

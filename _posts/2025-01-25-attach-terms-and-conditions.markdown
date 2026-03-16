@@ -13,7 +13,7 @@ featured: false
 ---
 ## Overview
 
-SilkQuote can append a Terms and Conditions page to any generated quote PDF. Terms are configured by an admin as named rules with optional conditions — the system can automatically include different terms based on the Opportunity data, or present the rep with a selection of applicable options at generation time.
+SilkQuote can append a Terms and Conditions page to any generated quote PDF. Terms are configured by an admin as named rules with optional conditions. The system can automatically include different terms based on the Opportunity data, or present the rep with a selection of applicable options at generation time.
 
 Terms appear as a separate page at the end of the quote PDF, after the line items and totals. This keeps the main quote clean and readable while ensuring the legal or contractual language is always included in the same document.
 
@@ -44,7 +44,7 @@ The selected terms appear as a dedicated page at the end of the PDF.
 
 ## What Reps Can and Cannot Do
 
-Reps can select or deselect optional terms at generation time. They cannot edit the terms content — that is managed by the admin. Required terms are always included; reps cannot remove them.
+Reps can select or deselect optional terms at generation time. They cannot edit the terms content; that is managed by the admin. Required terms are always included; reps cannot remove them.
 
 This design ensures legal and compliance teams can enforce the terms that must always appear on certain quote types while giving reps flexibility to include optional addenda when relevant.
 

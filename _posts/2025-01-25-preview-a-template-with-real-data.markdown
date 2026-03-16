@@ -44,7 +44,7 @@ Use a systematic checklist when reviewing:
 - **Line item grouping**: If Group By is configured, are products organized into the correct labeled groups with accurate subtotals?
 - **Logo**: Does the logo appear at the correct size and position? If no logo appears, verify the Logo Resource ID in the template settings.
 - **Accent color**: Are the header bands and highlights showing the correct brand color?
-- **Conditional fields**: If any fields have conditional display rules, use an Opportunity that meets those conditions to verify they show correctly — and one that does not, to verify they hide correctly.
+- **Conditional fields**: If any fields have conditional display rules, use an Opportunity that meets those conditions to verify they show correctly, and one that does not, to verify they hide correctly.
 - **Section order**: Are sections in the expected order (company header, products, totals, terms)?
 
 ## Tips

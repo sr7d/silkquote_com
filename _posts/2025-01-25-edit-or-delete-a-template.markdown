@@ -15,7 +15,7 @@ featured: false
 
 As your quoting process evolves, templates need to be updated to reflect new branding, revised field mappings, changed conditions, or updated paper size preferences. You may also need to remove templates that are no longer in use to keep the selection list clean for reps.
 
-Both editing and deleting are managed in the SilkQuote Configuration Manager. Only users with the appropriate SilkQuote admin permissions can modify or remove templates — reps cannot change templates at generation time.
+Both editing and deleting are managed in the SilkQuote Configuration Manager. Only users with the appropriate SilkQuote admin permissions can modify or remove templates; reps cannot change templates at generation time.
 
 ## Editing a Template
 

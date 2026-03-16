@@ -13,7 +13,7 @@ featured: false
 ---
 ## Overview
 
-A Draft watermark adds a large diagonal "DRAFT" stamp across every page of a generated quote PDF. It signals to anyone who sees the document that the quote has not yet been approved or sent to the prospect — preventing reps from accidentally forwarding an in-progress version.
+A Draft watermark adds a large diagonal "DRAFT" stamp across every page of a generated quote PDF. It signals to anyone who sees the document that the quote has not yet been approved or sent to the prospect, preventing reps from accidentally forwarding an in-progress version.
 
 The watermark is applied at generation time rather than built into the template. This means the same template can produce clean final quotes or draft-marked review copies depending on whether the option is checked when generating.
 
@@ -36,7 +36,7 @@ A clearly watermarked PDF significantly reduces the chance of a draft escaping t
 4. Check the **Apply Draft Watermark** checkbox.
 5. Click **Save PDF** to attach the PDF to the Opportunity, or **View Quote** to preview only without saving.
 
-The PDF will display a diagonal "DRAFT" watermark across every page. The watermark is baked into the rendered PDF — it cannot be removed from the file after generation.
+The PDF will display a diagonal "DRAFT" watermark across every page. The watermark is baked into the rendered PDF and cannot be removed from the file after generation.
 
 ## Generating the Final Version
 

@@ -13,7 +13,7 @@ featured: false
 ---
 ## Overview
 
-Terms Rules define the Terms and Conditions content that can be appended to generated quote PDFs. As an admin, you create one rule per terms variant — standard terms, enterprise terms, region-specific addenda, or product-specific conditions. At quote generation time, reps select from the applicable rules, and required rules are included automatically.
+Terms Rules define the Terms and Conditions content that can be appended to generated quote PDFs. As an admin, you create one rule per terms variant: standard terms, enterprise terms, region-specific addenda, or product-specific conditions. At quote generation time, reps select from the applicable rules, and required rules are included automatically.
 
 Terms rules give legal and compliance teams control over what language appears on quotes without requiring rep judgment about which terms to include.
 
@@ -24,7 +24,7 @@ Each Terms Rule has the following fields:
 - **Name**: The label displayed to reps in the generation dialog (e.g., "Standard Terms", "Enterprise SLA", "EU Data Terms").
 - **Terms Text Body**: The full terms content. Supports rich text including formatting, numbered lists, and paragraph structure.
 - **Condition Field / Operator / Value**: An optional Opportunity field filter. When set, this rule only appears in the generation dialog when the Opportunity matches the condition (e.g., `Region__c = Europe`). Leave blank to show the rule for all Opportunities.
-- **Required**: When checked, this rule is automatically included and marked "(Required)" — reps cannot deselect it.
+- **Required**: When checked, this rule is automatically included and marked "(Required)"; reps cannot deselect it.
 - **Precedence**: Controls display order when multiple rules appear. Lower numbers appear first.
 
 ## Steps

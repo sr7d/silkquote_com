@@ -13,7 +13,7 @@ featured: false
 ---
 ## Overview
 
-Templates are the core configuration unit in SilkQuote. Each template defines the layout, branding, field mapping, and selection rules for a specific type of quote. You can have as many templates as needed — one per product line, deal size, region, or any other criteria relevant to your sales process.
+Templates are the core configuration unit in SilkQuote. Each template defines the layout, branding, field mapping, and selection rules for a specific type of quote. You can have as many templates as needed: one per product line, deal size, region, or any other criteria relevant to your sales process.
 
 Templates are created and managed in the SilkQuote Configuration Manager. No code is required; the entire setup is point-and-click.
 

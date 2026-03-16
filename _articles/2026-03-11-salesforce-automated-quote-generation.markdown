@@ -11,11 +11,11 @@ tags: [articles]
 permalink: /salesforce-automated-quote-generation/
 faq:
   - question: "Can SilkQuote generate quotes automatically without a rep clicking a button?"
-    answer: "Yes. SilkQuote includes a Flow invocable action that allows Salesforce Flows to trigger quote generation automatically. The action can be called from record-triggered Flows, scheduled Flows, and screen Flows — without any rep interaction."
+    answer: "Yes. SilkQuote includes a Flow invocable action that allows Salesforce Flows to trigger quote generation automatically. The action can be called from record-triggered Flows, scheduled Flows, and screen Flows, without any rep interaction."
   - question: "What triggers can I use to automate quote generation in Salesforce Flow?"
     answer: "Any trigger that can start a Salesforce Flow can trigger SilkQuote quote generation. Common triggers include Opportunity stage changes, field value changes, record creation, and scheduled time-based criteria. The Flow determines when generation happens; SilkQuote handles the generation itself."
   - question: "Does automated quote generation work on record-triggered Flows?"
-    answer: "Yes. SilkQuote's invocable action works in record-triggered Flows, which run automatically when Salesforce records are created or updated. For example, a Flow can trigger when the Opportunity Stage field changes to 'Proposal Sent,' call SilkQuote's action to generate the appropriate PDF, and attach it to the Opportunity — all automatically."
+    answer: "Yes. SilkQuote's invocable action works in record-triggered Flows, which run automatically when Salesforce records are created or updated. For example, a Flow can trigger when the Opportunity Stage field changes to 'Proposal Sent,' call SilkQuote's action to generate the appropriate PDF, and attach it to the Opportunity, all automatically."
   - question: "Can I automate quote delivery to the prospect after generation?"
     answer: "Yes. A Salesforce Flow can chain together multiple actions: call SilkQuote's invocable action to generate the PDF, then use Salesforce's Send Email action to email the prospect the quote link. This creates a fully automated quote-and-deliver workflow triggered by a single stage change."
 ---
@@ -45,16 +45,16 @@ For the broader context on quoting automation, see the existing guide on [automa
 SilkQuote's invocable action is a named callable action that Salesforce Flow can invoke as a step in any Flow type. When called, the action accepts input parameters that specify which Opportunity to generate the quote for and which template to use. It then executes the same quote generation logic that runs when a rep clicks the Quick Action.
 
 **Input parameters the action accepts:**
-- Opportunity ID (required) — the record to generate the quote from
-- Template ID (required) — which SilkQuote template to use
-- Quote Name (optional) — a string label for the generated PDF; defaults to a timestamp-based name if not provided
-- Include Draft Watermark (optional) — boolean; if true, the PDF includes a diagonal draft watermark
-- Terms ID (optional) — the ID of a specific Terms document to attach
+- Opportunity ID (required): the record to generate the quote from
+- Template ID (required): which SilkQuote template to use
+- Quote Name (optional): a string label for the generated PDF; defaults to a timestamp-based name if not provided
+- Include Draft Watermark (optional): boolean; if true, the PDF includes a diagonal draft watermark
+- Terms ID (optional): the ID of a specific Terms document to attach
 
 **Output parameters the action returns:**
-- Content Document ID — the Salesforce ID of the generated PDF file
-- Success flag — boolean indicating whether the generation succeeded
-- Error message — string with error details if the generation failed
+- Content Document ID: the Salesforce ID of the generated PDF file
+- Success flag: boolean indicating whether the generation succeeded
+- Error message: string with error details if the generation failed
 
 The output parameters allow downstream Flow elements to use the generated file. A Flow can use the Content Document ID to create a ContentDocumentLink, send the file via email, or log the generation event as an activity.
 

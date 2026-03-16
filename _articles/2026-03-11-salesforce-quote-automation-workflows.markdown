@@ -47,18 +47,18 @@ Every quote automation workflow that uses SilkQuote starts with the SilkQuote in
 In Salesforce Flow Builder, the invocable action appears as an Action element when you search for "SilkQuote." Adding it to a Flow canvas and configuring its inputs is the same process as configuring any other standard Salesforce action.
 
 **Required inputs:**
-- `Opportunity Id` — the 18-character Salesforce ID of the Opportunity to generate from
-- `Template Id` — the ID of the SilkQuote template to use (found in the Configuration Manager)
+- `Opportunity Id`: the 18-character Salesforce ID of the Opportunity to generate from
+- `Template Id`: the ID of the SilkQuote template to use (found in the Configuration Manager)
 
 **Optional inputs:**
-- `Quote Name` — string label for the generated PDF
-- `Draft Watermark` — boolean; enables the draft stamp on the document
-- `Terms Id` — specifies which Terms and Conditions document to attach
+- `Quote Name`: string label for the generated PDF
+- `Draft Watermark`: boolean; enables the draft stamp on the document
+- `Terms Id`: specifies which Terms and Conditions document to attach
 
 **Outputs:**
-- `Content Document Id` — the Salesforce ID of the generated PDF
-- `Is Success` — boolean indicating the generation succeeded or failed
-- `Error Message` — string with error details if generation failed
+- `Content Document Id`: the Salesforce ID of the generated PDF
+- `Is Success`: boolean indicating the generation succeeded or failed
+- `Error Message`: string with error details if generation failed
 
 The output values allow downstream Flow elements to act on the result. A Conditional element can check `Is Success` and branch to an error notification path if the generation fails. The `Content Document Id` can be passed to a Send Email action or used to create a custom record.
 
@@ -75,7 +75,7 @@ The most commonly implemented quote automation workflow generates a PDF automati
    - Input: `Opportunity Id = {!$Record.Id}`
    - Input: `Template Id = [your template's 18-char ID]`
    - Input: `Quote Name = Proposal – {!$Record.Name}`
-5. **Optional follow-up action:** Create a Task on the Opportunity assigned to the Opportunity Owner with subject "Quote generated — ready to review"
+5. **Optional follow-up action:** Create a Task on the Opportunity assigned to the Opportunity Owner with subject "Quote generated: ready to review"
 
 **Result:** When any rep moves an Opportunity to the Proposal Sent stage, a PDF generates automatically and attaches to the Opportunity. The rep sees the generation notification and the new document in the Files section without having clicked Generate.
 
@@ -114,7 +114,7 @@ SilkQuote detects these changes and flags the affected quotes. A companion Flow 
 1. **Flow type:** Record-Triggered Flow on Opportunity
 2. **Trigger:** When a record is updated
 3. **Entry condition:** A SilkQuote stale quote field is set to true (SilkQuote updates this field when it detects stale quotes)
-4. **Action option A:** Create a Task on the Opportunity assigned to the Opportunity Owner with subject "Quote is stale — regenerate before next contact"
+4. **Action option A:** Create a Task on the Opportunity assigned to the Opportunity Owner with subject "Quote is stale: regenerate before next contact"
 5. **Action option B:** Send an in-app Salesforce notification to the Opportunity Owner
 6. **Action option C:** Call the SilkQuote invocable action to automatically regenerate the quote with current data
 
@@ -134,7 +134,7 @@ SilkQuote logs prospect acceptance as an activity on the Opportunity and updates
 2. **Decision element:** Evaluate whether a Salesforce Contract record should be created automatically (based on Opportunity type or record type)
 3. **Action (if contract):** Create a Contract record linked to the Opportunity Account
 4. **Action (always):** Update Opportunity Stage to "Closed Won" or a custom post-acceptance stage
-5. **Action (always):** Create a Task assigned to the Opportunity Owner with subject "Quote accepted — initiate onboarding"
+5. **Action (always):** Create a Task assigned to the Opportunity Owner with subject "Quote accepted: initiate onboarding"
 6. **Action (always):** Send an email notification to the account executive and the sales manager confirming the acceptance
 
 This workflow compresses what is often a multi-hour manual sequence into an instant automated response. The rep sees the acceptance notification and finds the downstream actions already in motion.

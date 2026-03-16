@@ -15,7 +15,7 @@ featured: false
 
 The Quote Preview feature generates a temporary PDF from an Opportunity without attaching it to the record as a saved file. It opens in a new browser tab, giving reps a way to verify the quote content and layout before committing. The preview document is not stored, does not appear in the Opportunity's Files, and leaves no record of having been generated.
 
-This is especially useful when adjusting Opportunity data — product quantities, pricing, or custom fields — and wanting to see how changes will render before saving a final version.
+This is especially useful when adjusting Opportunity data (product quantities, pricing, or custom fields) and wanting to see how changes will render before saving a final version.
 
 ## When to Use Preview
 
@@ -58,7 +58,7 @@ Use preview for verification and "Save PDF" when you are ready to create the off
 
 ## Tips
 
-- **Adjust and re-preview freely**: Because preview does not save anything, you can iterate — edit Opportunity Products, return to the Quick Action, and preview again until the output looks right.
+- **Adjust and re-preview freely**: Because preview does not save anything, you can iterate: edit Opportunity Products, return to the Quick Action, and preview again until the output looks right.
 - **Preview before every major change**: Whenever a template is updated or Opportunity data is significantly revised, preview before saving to avoid accumulating unwanted PDF versions in the Files section.
 
 ## Related

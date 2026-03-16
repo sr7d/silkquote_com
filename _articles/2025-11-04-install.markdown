@@ -1,7 +1,7 @@
 ---
 layout: install
 title: "How to Install and Configure SilkQuote for Salesforce"
-description: "Step-by-step guide to installing and configuring SilkQuote on Salesforce — set up Salesforce Sites, permissions, Lightning pages, and generate professional quote PDFs directly from Opportunity records."
+description: "Step-by-step guide to installing and configuring SilkQuote on Salesforce. Set up Salesforce Sites, permissions, Lightning pages, and generate professional quote PDFs directly from Opportunity records."
 date: 2025-08-27 10:00:00 +0300
 author: admin
 image: /images/install.png
@@ -166,7 +166,7 @@ Add the following actions:
 - **Email Quote Document**
 - **External Comment**
 
-## SilkQuote Setup Complete — You're Ready to Go
+## SilkQuote Setup Complete: You're Ready to Go
 
 At this point SilkQuote is fully operational on Salesforce:
 

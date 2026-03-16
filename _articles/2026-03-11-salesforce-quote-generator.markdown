@@ -17,7 +17,7 @@ faq:
   - question: "Can I generate quotes automatically without rep involvement?"
     answer: "Yes. SilkQuote includes a Flow invocable action that lets you trigger quote generation automatically from any Salesforce Flow. You can generate PDFs based on stage changes, field criteria, or any other Flow trigger without a rep clicking anything."
   - question: "How is SilkQuote different from Salesforce's built-in quote tool?"
-    answer: "Salesforce's native quote object generates basic quote PDFs with limited layout control. SilkQuote adds a drag-and-drop template designer, conditional sections, line item grouping, one-click generation from Opportunities, prospect acceptance tracking, and Flow automation — all natively inside Salesforce."
+    answer: "Salesforce's native quote object generates basic quote PDFs with limited layout control. SilkQuote adds a drag-and-drop template designer, conditional sections, line item grouping, one-click generation from Opportunities, prospect acceptance tracking, and Flow automation, all natively inside Salesforce."
   - question: "Can I have multiple quote templates for different business units?"
     answer: "Yes. SilkQuote supports unlimited templates. You can configure smart template selection rules so the right template automatically applies based on Opportunity field values such as record type, region, or product category."
 ---

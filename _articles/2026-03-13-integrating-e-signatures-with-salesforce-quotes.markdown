@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Integrating E-Signatures With Salesforce Quotes | SilkQuote"
-description: "How to integrate e-signatures with Salesforce quotes — options for capturing prospect acceptance, connecting to DocuSign or Conga Sign, and when a native acceptance flow is better than e-signature."
+description: "How to integrate e-signatures with Salesforce quotes. Options for capturing prospect acceptance, connecting to DocuSign or Conga Sign, and when a native acceptance flow is better than e-signature."
 date: 2026-03-13 09:00:00 +0000
 last_modified_at: 2026-03-13 00:00:00 +0000
 author: admin
@@ -13,7 +13,7 @@ faq:
   - question: "Does SilkQuote include e-signature functionality?"
     answer: "SilkQuote includes a native prospect acceptance flow: when a rep shares a quote link, the prospect can click to accept or decline directly in their browser. This captures formal acceptance without requiring a full e-signature service. For legally binding e-signatures on contracts, SilkQuote connects to Salesforce Flow to trigger downstream e-signature workflows via DocuSign or similar."
   - question: "What is the difference between e-signature and quote acceptance?"
-    answer: "Quote acceptance is a commercial acknowledgment — the prospect confirms they agree to proceed under the quoted terms. E-signature is a legal instrument that satisfies signature requirements on binding contracts. Many sales teams need quote acceptance, not a full e-signature, at the quoting stage."
+    answer: "Quote acceptance is a commercial acknowledgment: the prospect confirms they agree to proceed under the quoted terms. E-signature is a legal instrument that satisfies signature requirements on binding contracts. Many sales teams need quote acceptance, not a full e-signature, at the quoting stage."
   - question: "Can I trigger DocuSign from SilkQuote?"
     answer: "Yes, indirectly. When a prospect accepts a SilkQuote quote, the acceptance triggers a Salesforce Flow event. You can configure that Flow to call the DocuSign Salesforce integration and initiate a DocuSign envelope for the formal contract, passing the Opportunity data and quote PDF."
   - question: "Does prospect acceptance in SilkQuote create an audit trail?"
@@ -40,7 +40,7 @@ SilkQuote includes a native acceptance flow for quotes delivered via the hosted 
 When a rep shares a quote using SilkQuote's link sharing:
 
 1. The prospect receives a link in their email (or via any channel)
-2. They open the link in any browser — no Salesforce account required
+2. They open the link in any browser (no Salesforce account required)
 3. They can view the full PDF quote
 4. At the bottom of the viewer, they see **Accept** and **Decline** buttons
 5. Clicking **Accept** logs an activity on the Opportunity: "Quote Accepted" with a timestamp
@@ -101,7 +101,7 @@ To add a signature block:
 3. Configure the signer fields (name, title, company, date)
 4. Save the template
 
-The signature block prints at the bottom of the quote PDF. Note that a printed signature block on a PDF is a placeholder for manual signature — it does not capture an e-signature. For electronic capture, use the native acceptance flow or integrate with DocuSign/Conga Sign as described above.
+The signature block prints at the bottom of the quote PDF. Note that a printed signature block on a PDF is a placeholder for manual signature; it does not capture an e-signature. For electronic capture, use the native acceptance flow or integrate with DocuSign/Conga Sign as described above.
 
 ## Best Practice: Match the Acceptance Method to the Deal Type
 

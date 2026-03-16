@@ -17,7 +17,7 @@ faq:
   - question: "What paper sizes does SilkQuote support?"
     answer: "SilkQuote supports Letter (8.5x11 inches) and A4 (210x297mm) paper sizes. The size is set at template creation time and can be changed by the rep in the quote generation dialog if multiple sizes are configured."
   - question: "Can reps preview the PDF before attaching it to the record?"
-    answer: "Yes. SilkQuote includes a preview mode that renders the PDF using live Opportunity data without saving it to the record. Reps can verify the output — field values, layout, totals, and terms — before committing the document. The preview matches the final PDF exactly."
+    answer: "Yes. SilkQuote includes a preview mode that renders the PDF using live Opportunity data without saving it to the record. Reps can verify the output (field values, layout, totals, and terms) before committing the document. The preview matches the final PDF exactly."
 ---
 
 Salesforce stores everything you need for a professional quote: account details, contact information, line items, pricing, and custom deal data. What it does not do natively is turn that data into a polished, branded PDF without significant effort. The built-in Quote PDF templates are limited in layout control, and custom Flow-based approaches require ongoing maintenance.

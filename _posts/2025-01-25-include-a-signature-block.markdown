@@ -13,7 +13,7 @@ featured: false
 ---
 ## Overview
 
-A Signature Block adds a formatted signature section to the end of the generated quote PDF. It includes printed lines for the signer's name, title, company, and date — creating a document that is ready for handwritten or e-signature capture.
+A Signature Block adds a formatted signature section to the end of the generated quote PDF. It includes printed lines for the signer's name, title, company, and date, creating a document that is ready for handwritten or e-signature capture.
 
 The signature block is included at generation time as an optional per-quote choice. Reps can decide whether to include it on a quote-by-quote basis without any template changes.
 

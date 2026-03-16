@@ -12,7 +12,7 @@ faq:
   - question: "What is an MOU quote?"
     answer: "An MOU quote is a formal pricing document attached to or referenced by a Memorandum of Understanding. It documents the agreed or proposed pricing, scope, and commercial terms at the pre-contract stage of a deal, before a binding agreement is executed."
   - question: "Is a quotation attached to an MOU legally binding?"
-    answer: "This depends on the language in the MOU and the quotation itself. Most MOUs are non-binding in nature — they document intent to proceed rather than final obligations. A quotation referenced in an MOU is typically indicative unless both parties explicitly agree in writing that the pricing terms are binding. Always have legal counsel review the MOU and associated quotation for binding intent."
+    answer: "This depends on the language in the MOU and the quotation itself. Most MOUs are non-binding in nature: they document intent to proceed rather than final obligations. A quotation referenced in an MOU is typically indicative unless both parties explicitly agree in writing that the pricing terms are binding. Always have legal counsel review the MOU and associated quotation for binding intent."
   - question: "What should an MOU quote include?"
     answer: "An MOU quote should include: the parties involved, the scope of services or products being quoted, pricing structure (unit pricing, total value, billing schedule), validity period, assumptions and exclusions, and a note on the relationship between the quote and the MOU (indicative vs. binding)."
   - question: "How do enterprise sales teams manage MOU quotes in Salesforce?"
@@ -21,7 +21,7 @@ faq:
     answer: "Yes. SilkQuote generates branded PDF quotations from Salesforce Opportunity data. For MOU-stage deals, you can create an Opportunity with the proposed scope and pricing as line items, add MOU-specific terms sections in the quote template, and generate a formal PDF in seconds. The document attaches to the Opportunity and can be shared via a hosted link."
 ---
 
-In enterprise B2B sales, deals often move through a pre-contract stage before a binding agreement is executed. A Memorandum of Understanding (MOU) formalizes the intent to proceed, documents key terms, and gives both parties a shared reference point while final contracts are being negotiated. Attached to or referenced by the MOU is a quotation — a formal document that captures the pricing and scope that the parties have agreed in principle.
+In enterprise B2B sales, deals often move through a pre-contract stage before a binding agreement is executed. A Memorandum of Understanding (MOU) formalizes the intent to proceed, documents key terms, and gives both parties a shared reference point while final contracts are being negotiated. Attached to or referenced by the MOU is a quotation: a formal document that captures the pricing and scope that the parties have agreed in principle.
 
 This page covers what an MOU quote is, how it differs from a standard sales quotation, what it should include, and how enterprise sales teams can generate MOU quotations from Salesforce efficiently.
 
@@ -34,13 +34,13 @@ A Memorandum of Understanding is a non-binding agreement between two or more par
 - Government and institutional procurement where formal contracting processes are lengthy
 - Multi-phase projects where early phases need to begin before final contract terms are agreed
 
-The MOU itself typically does not specify detailed pricing — it describes the relationship and broad scope. The accompanying quotation fills in the commercial detail: what is being provided, at what price, under what payment terms, and on what timeline.
+The MOU itself typically does not specify detailed pricing. It describes the relationship and broad scope. The accompanying quotation fills in the commercial detail: what is being provided, at what price, under what payment terms, and on what timeline.
 
 An MOU quote gives both parties a clear record of the commercial terms that informed the decision to proceed. It serves the deal process, the finance team, and (if disputes arise) the legal review.
 
 ## How an MOU Quote Differs From a Standard Sales Quote
 
-A standard sales quotation is produced late in the deal cycle to confirm pricing and request customer acceptance. It is the final commercial document before purchase. An MOU quote is produced earlier — at the intent-to-proceed stage — and typically has different characteristics:
+A standard sales quotation is produced late in the deal cycle to confirm pricing and request customer acceptance. It is the final commercial document before purchase. An MOU quote is produced earlier, at the intent-to-proceed stage, and typically has different characteristics:
 
 | Dimension | Standard Sales Quote | MOU Quote |
 |---|---|---|
@@ -86,7 +86,7 @@ The practical implication is that an MOU quote needs to be clear about its own s
 
 ## Managing MOU-Stage Deals in Salesforce
 
-Enterprise sales teams managing MOU-stage deals in Salesforce typically track the Opportunity from the point at which intent to proceed is established — well before formal contract execution. This gives the CRM a complete view of the deal timeline and ensures that the quote documents are attached to the record where they can be accessed by sales, legal, and finance.
+Enterprise sales teams managing MOU-stage deals in Salesforce typically track the Opportunity from the point at which intent to proceed is established, well before formal contract execution. This gives the CRM a complete view of the deal timeline and ensures that the quote documents are attached to the record where they can be accessed by sales, legal, and finance.
 
 The practical setup for MOU quoting in Salesforce:
 
@@ -97,7 +97,7 @@ The practical setup for MOU quoting in Salesforce:
 5. Share the quote with the counterparty for review alongside the MOU document
 6. Attach the signed or acknowledged version to the Opportunity for record
 
-SilkQuote handles the document generation step. Templates for MOU quotes can include custom sections — indicative pricing disclaimers, assumption blocks, revision history tables — that are not part of a standard sales quote template. The [Salesforce quote templates](/salesforce-quote-templates/) page covers how to configure conditional sections and custom content blocks in the template builder.
+SilkQuote handles the document generation step. Templates for MOU quotes can include custom sections such as indicative pricing disclaimers, assumption blocks, and revision history tables that are not part of a standard sales quote template. The [Salesforce quote templates](/salesforce-quote-templates/) page covers how to configure conditional sections and custom content blocks in the template builder.
 
 ## Version Control for MOU Quotations
 
@@ -108,9 +108,9 @@ Best practices for MOU quote version control:
 - Assign a version number to each quote iteration (v1.0, v1.1, v2.0)
 - Document what changed between versions in the revision history section
 - Attach all versions to the Salesforce Opportunity so the negotiation history is preserved
-- Clearly mark superseded versions as "Draft — Superseded" to prevent the wrong document being referenced in the MOU
+- Clearly mark superseded versions as "Draft (Superseded)" to prevent the wrong document being referenced in the MOU
 
-SilkQuote attaches each generated PDF to the Opportunity as a separate Content Document and flags PDFs as stale when the underlying Opportunity data has changed — providing a clear signal when a regeneration is needed.
+SilkQuote attaches each generated PDF to the Opportunity as a separate Content Document and flags PDFs as stale when the underlying Opportunity data has changed, providing a clear signal when a regeneration is needed.
 
 ## From MOU to Formal Contract
 
@@ -119,12 +119,12 @@ The transition from MOU to executed contract typically involves converting the i
 - Remove the indicative pricing disclaimer
 - Confirm all assumptions have been validated
 - Update any pricing that changed during negotiation
-- Produce a final version with a clear "Final — Binding" designation
+- Produce a final version with a clear "Final (Binding)" designation
 
 For enterprise deals tracked in Salesforce, this transition is also the point at which the Quote-to-Cash process moves from pre-contract into the contract and order stage. The [Salesforce Quote-to-Cash process](/salesforce-quote-to-cash-process-comprehensive-guide-for-revops/) guide covers the full downstream process from the quote through revenue recognition.
 
 ## Generate MOU Quotes From Salesforce
 
-SilkQuote is a free, native Salesforce quoting tool that generates branded PDF quotations from Opportunity data. For MOU-stage deals, you can configure templates with indicative pricing notices, assumption blocks, and version history sections — then generate polished documents with a single click.
+SilkQuote is a free, native Salesforce quoting tool that generates branded PDF quotations from Opportunity data. For MOU-stage deals, you can configure templates with indicative pricing notices, assumption blocks, and version history sections, then generate polished documents with a single click.
 
 [Install SilkQuote from the AppExchange](https://appexchange.salesforce.com/appxListingDetail?listingId=a0N4V00000GnFNYUA3) and start generating professional MOU quotations from Salesforce.

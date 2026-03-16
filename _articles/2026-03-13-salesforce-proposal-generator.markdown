@@ -18,7 +18,7 @@ faq:
   - question: "What is the difference between a proposal generator and Salesforce CPQ?"
     answer: "CPQ (Configure, Price, Quote) is a full quoting platform that handles complex product configuration, pricing rules, discounting approvals, and output generation. A proposal generator is focused specifically on producing a formatted document from existing CRM data. For teams without complex pricing logic, a proposal generator is faster to implement and significantly cheaper."
   - question: "Can I include Terms and Conditions in my Salesforce proposal?"
-    answer: "Yes, with SilkQuote you can configure Terms and Conditions rules that automatically append relevant T&Cs to the generated PDF based on Opportunity field values — such as deal type, region, or product line."
+    answer: "Yes, with SilkQuote you can configure Terms and Conditions rules that automatically append relevant T&Cs to the generated PDF based on Opportunity field values, such as deal type, region, or product line."
   - question: "How do I add a signature line to a Salesforce proposal?"
     answer: "SilkQuote includes a signature block option in the generation dialog. When enabled, it appends a formatted signature section at the end of the PDF with lines for name, title, and date."
 ---
@@ -32,7 +32,7 @@ This guide covers what a Salesforce proposal generator is, the main tools availa
 At its core, a proposal generator reads data from Salesforce records and outputs a formatted document. A good Salesforce proposal generator should:
 
 - Pull data from Opportunity, Account, Contact, and Opportunity Product records without manual entry
-- Apply your brand identity — logo, colors, typography
+- Apply your brand identity: logo, colors, typography
 - Support configurable sections: company info, product line items, pricing totals, description blocks, terms
 - Save the generated document back to Salesforce, attached to the Opportunity
 - Allow reps to generate proposals without leaving Salesforce or switching tools
@@ -57,7 +57,7 @@ Best for: Internal estimates or simple situations where appearance is not a prio
 
 Salesforce CPQ (Configure, Price, Quote) includes a robust proposal/quote output engine alongside its pricing and product configuration capabilities. CPQ templates support complex conditional logic, product bundle display, approval-gated pricing, and multi-currency.
 
-The tradeoff is cost and complexity. CPQ is typically licensed at around $75 per user per month and requires significant implementation effort — often 4–12 weeks with a consulting partner. It is the right choice when you genuinely need guided selling, complex pricing rules, or product configuration at scale.
+The tradeoff is cost and complexity. CPQ is typically licensed at around $75 per user per month and requires significant implementation effort, often 4–12 weeks with a consulting partner. It is the right choice when you genuinely need guided selling, complex pricing rules, or product configuration at scale.
 
 Best for: Enterprise teams with complex product catalogs and tiered pricing.
 
@@ -116,15 +116,15 @@ Best for: SMB and mid-market sales teams that need professional proposals fast, 
 
 Getting SilkQuote running takes less than an hour:
 
-1. **Install** from the Salesforce AppExchange — see [How to Install SilkQuote](/install/)
-2. **Assign permissions** to the reps and admins who need access — see [Grant Access with the Permission Set](/permission-set/)
-3. **Configure your template** in the SilkQuote Configuration Manager — see [Create a New Template](/create-a-new-template/)
-4. **Add the Quick Action** to the Opportunity page layout — see [Add the Generate Quote Quick Action to Opportunity](/generate-quote-quick-action/)
-5. **Generate your first proposal** from any Opportunity with products — see [Generate a Quote PDF from an Opportunity](/generate-quote-pdf/)
+1. **Install** from the Salesforce AppExchange. See [How to Install SilkQuote](/install/)
+2. **Assign permissions** to the reps and admins who need access. See [Grant Access with the Permission Set](/permission-set/)
+3. **Configure your template** in the SilkQuote Configuration Manager. See [Create a New Template](/create-a-new-template/)
+4. **Add the Quick Action** to the Opportunity page layout. See [Add the Generate Quote Quick Action to Opportunity](/generate-quote-quick-action/)
+5. **Generate your first proposal** from any Opportunity with products. See [Generate a Quote PDF from an Opportunity](/generate-quote-pdf/)
 
 ## Related
 
 - [How to Create a Quote PDF in Salesforce](/how-to-create-quote-pdf-in-salesforce/)
 - [Salesforce Quote Template: How to Build and Customize Yours](/salesforce-quote-template/)
-- [SilkQuote vs. Salesforce CPQ — When to Use Each](/silkquote-vs-salesforce-cpq-when-to-use-each/)
+- [SilkQuote vs. Salesforce CPQ: When to Use Each](/silkquote-vs-salesforce-cpq-when-to-use-each/)
 - [SilkQuote vs. Conga Composer vs. S-Docs](/silkquote-vs-conga-composer-vs-s-docs/)

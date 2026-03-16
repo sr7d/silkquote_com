@@ -14,7 +14,7 @@ featured: true
 ---
 ## Overview
 
-SilkQuote generates a PDF quote directly from an Opportunity record with a single Quick Action click. The resulting PDF is formatted from your configured template, populated with live Salesforce data, and attached to the Opportunity as a Content Document — all without leaving Salesforce.
+SilkQuote generates a PDF quote directly from an Opportunity record with a single Quick Action click. The resulting PDF is formatted from your configured template, populated with live Salesforce data, and attached to the Opportunity as a Content Document, all without leaving Salesforce.
 
 This is the primary workflow reps use every day. No external tools, no copy-pasting, and no manual formatting.
 
@@ -57,7 +57,7 @@ After saving, you can:
 
 ## Version Management
 
-Every time you click Save PDF, a new Content Document is created on the Opportunity. Multiple versions accumulate in the Files section over the course of a deal. This is by design — it preserves the history of what was sent and when.
+Every time you click Save PDF, a new Content Document is created on the Opportunity. Multiple versions accumulate in the Files section over the course of a deal. This is by design: it preserves the history of what was sent and when.
 
 To avoid confusion, use consistent and descriptive Quote Names (e.g., include a date or version number). Remove obsolete versions by deleting them from the Files section if needed.
 
