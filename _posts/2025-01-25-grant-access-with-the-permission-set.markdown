@@ -10,6 +10,7 @@ author: admin
 image: /images/permissionSet.png
 image_caption: "Access control"
 tags: [configurator, permissions]
+robots: noindex
 featured: false
 ---
 ## Overview

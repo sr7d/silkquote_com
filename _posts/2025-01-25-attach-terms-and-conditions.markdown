@@ -9,6 +9,7 @@ image: /images/applyTerms.png
 image_caption: "Terms & Conditions"
 tags: [generator, terms]
 permalink: /attach-terms-and-conditions/
+robots: noindex
 featured: false
 ---
 ## Overview

@@ -10,6 +10,7 @@ author: admin
 image: /images/genFromOpp.png
 image_caption: "One-click quote PDF generation"
 tags: [generator, pdf-generation]
+robots: noindex
 featured: true
 ---
 ## Overview

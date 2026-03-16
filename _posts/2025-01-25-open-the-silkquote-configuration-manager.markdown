@@ -10,6 +10,7 @@ author: admin
 image: /images/openConfigurator.png
 image_caption: "Configuration Manager"
 tags: [configurator, configuration-manager]
+robots: noindex
 featured: false
 ---
 ## Overview

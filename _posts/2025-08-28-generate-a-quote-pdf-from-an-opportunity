@@ -7,6 +7,7 @@ author: admin
 image: /images/saveToSf.png
 image_caption: "One-click quote PDF generation"
 tags: [silkquote, salesforce, pdf-generation, quotes]
+robots: noindex
 featured: true
 ---
 ## Overview
