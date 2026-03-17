@@ -68,7 +68,7 @@ home__items:
 # Hero Settings
 hero:
   hero__title: Get acceptance 2x faster with interactive Salesforce quotes
-  hero__description: Sales teams can generate, host, and collaborate on quotes that prospects accept directly in <strong>Salesforce</strong>.
+  hero__description: Sales teams can generate, host, and collaborate on quotes that prospects accept directly in Salesforce. <strong>No CPQ Required.</strong>
   painpoint: STOP sending quotes that undermine trust and professionalism!
 #-------------------------------
 # Blog Settings
