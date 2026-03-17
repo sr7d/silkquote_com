@@ -63,6 +63,10 @@ home__items:
     title: 'CPQ Meaning'
   - url: '/automated-quotes/'
     title: 'Automated Quotes'
+  - url: '/salesforce-cpq-end-of-sale/'
+    title: 'Salesforce CPQ End of Sale'
+  - url: '/construction-quote-template/'
+    title: 'Construction Quote Template'
 
 #-------------------------------
 # Hero Settings

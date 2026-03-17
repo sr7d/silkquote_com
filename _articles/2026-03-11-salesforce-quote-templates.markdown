@@ -20,6 +20,27 @@ faq:
     answer: "Yes. Each template supports an uploaded logo with configurable size and placement. You can set accent colors, control header layout, and customize labels so internal Salesforce field names display as customer-friendly text in the finished PDF."
 ---
 
+## Out-of-the-Box Salesforce Quote Templates vs. SilkQuote
+
+Salesforce includes a native Quotes object that allows teams to create quote records and generate basic PDF outputs. For teams evaluating what to use for quote templates, the practical differences matter.
+
+| Feature | Salesforce Native | SilkQuote |
+|---|---|---|
+| Template designer | No visual designer — output requires Visualforce page development | Drag-and-drop designer, no code |
+| Branding control | Limited — logo and basic styling require developer configuration | Full: logo, labels, column layout, custom text sections |
+| Conditional sections | Not supported natively | Supported: show/hide sections based on Opportunity field values |
+| Field mapping | Standard Opportunity and Quote fields | Opportunity, Account, Contact, Opportunity Products, Quote |
+| Line item grouping | Not supported | Supported: group products by category with subtotals |
+| Hosted quote acceptance | Not available | Built in: hosted link, prospect accepts in browser, logged to Salesforce |
+| PDF output quality | Basic | Formatted, branded PDF |
+| Cost | Included with Salesforce | Free |
+
+For most teams, the practical limitation of native Salesforce quotes is the template layer: getting a professional-looking output requires Visualforce development or a paid third-party app. SilkQuote solves this with a visual designer that any admin can use without code.
+
+If you are evaluating this because Salesforce CPQ is entering End of Sale and you are looking for a replacement for its quoting layer specifically, the [Salesforce CPQ End of Sale guide](/salesforce-cpq-end-of-sale/) covers your options in detail.
+
+---
+
 A quote template is the foundation of every professional quote your team sends. It determines the layout, the branding, the sections, and the data that appears in the finished PDF. When templates are well-designed, every quote looks consistent and professional regardless of which rep generated it. When templates are poorly designed or teams lack a proper template system entirely, quotes become inconsistent, manual, and error-prone.
 
 SilkQuote gives Salesforce teams a visual template designer that requires no code. Admins build quote templates in the SilkQuote Configuration Manager by dragging and dropping sections, mapping fields directly from Salesforce objects, uploading logos, setting conditional rules, and previewing the output with live Opportunity data. The result is a reusable template that reps activate with a single click.
@@ -126,6 +147,8 @@ Most organizations with more than one product line or sales segment benefit from
 **Version control for templates:** When a template needs to be updated, admins can edit the template directly. New branding, updated terms, additional fields: all changes are made in place. Existing generated PDFs are not affected because each PDF is saved as a static file at the time of generation. Historical quotes retain the layout they were generated with.
 
 For a focused walkthrough of the template builder interface and its drag-and-drop functionality, see the [Salesforce quote template builder](/salesforce-quote-template-builder/) page. For guidance on connecting templates to automated generation workflows, see the [quote automation workflows](/salesforce-quote-automation-workflows/) page. Teams considering SilkQuote as a replacement for CPQ-managed templates should review the [Salesforce CPQ alternative](/salesforce-cpq-alternative/) analysis.
+
+**Industry-specific template examples:** For templates configured for specific verticals, see the [construction quote template](/construction-quote-template/) and the [commercial cleaning quote template](/commercial-cleaning-quote-template/) walkthroughs. Each covers industry-specific line items, field mapping, and conditional logic patterns.
 
 
 ## Build Your First Quote Template in Salesforce Today
