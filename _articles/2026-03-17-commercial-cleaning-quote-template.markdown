@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Commercial Cleaning Quote Template: Free for Salesforce"
-seo_title: "Commercial Cleaning Quote Template: Free for Salesforce"
+seo_title: "Cleaning Quote Template: Free for Salesforce"
 description: "Free commercial cleaning quote template for Salesforce. Include service types, frequency, square footage, and contract terms. Generate PDF quotes in one click."
 date: 2026-03-17 09:30:00 +0000
 last_modified_at: 2026-03-17 00:00:00 +0000

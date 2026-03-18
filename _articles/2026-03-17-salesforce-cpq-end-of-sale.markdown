@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Salesforce CPQ End of Sale: A Free Alternative for Teams That Just Need Quoting"
-seo_title: "Salesforce CPQ End of Sale: Free Alternative for Quoting"
+seo_title: "Salesforce CPQ End of Sale: Free Alternative"
 description: "Salesforce CPQ entered End of Sale in 2025. If you only used it for quoting, you don't need another CPQ. SilkQuote is free, Salesforce-native, and installs in hours."
 date: 2026-03-17 09:15:00 +0000
 last_modified_at: 2026-03-17 00:00:00 +0000

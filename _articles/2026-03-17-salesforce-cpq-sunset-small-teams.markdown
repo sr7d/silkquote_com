@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Salesforce CPQ Is Sunsetting: What Small Teams Should Actually Do"
-seo_title: "Salesforce CPQ Sunset: What Small Teams Should Do in 2026"
+seo_title: "CPQ Sunset: What Small Teams Should Do 2026"
 description: "Salesforce CPQ is sunsetting but most small teams never needed full CPQ. Here's how to replace just the quoting part, for free."
 date: 2026-03-17 10:00:00 +0000
 last_modified_at: 2026-03-17 00:00:00 +0000

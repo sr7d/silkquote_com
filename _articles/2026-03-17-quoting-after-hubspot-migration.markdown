@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "How to Set Up Quoting in Salesforce After Migrating from HubSpot"
-seo_title: "Quoting in Salesforce After HubSpot Migration: Free Setup Guide"
+seo_title: "Quoting After HubSpot Migration: Free Guide"
 description: "Just migrated from HubSpot to Salesforce? Set up professional quoting in under an hour with SilkQuote. Free, no CPQ needed."
 date: 2026-03-17 11:00:00 +0000
 last_modified_at: 2026-03-17 00:00:00 +0000
