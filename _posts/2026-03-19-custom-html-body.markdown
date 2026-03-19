@@ -15,6 +15,16 @@ image_caption: "Custom HTML body with merge fields"
 
 The Custom HTML Body field on a Template record accepts standard HTML that is rendered into a PDF. Before rendering, the system replaces all `{% raw %}{{token}}{% endraw %}` placeholders with live Salesforce data from the related Opportunity, Account, Contact, Owner, and line items.
 
+## Adding a Logo
+
+To display your company logo, reference a Salesforce Static Resource by name:
+
+```html
+<img src="/resource/YourStaticResourceName"/>
+```
+
+Replace `YourStaticResourceName` with the API name of your Static Resource. The image is fetched at PDF generation time, so the Static Resource must be publicly accessible (Cache Control set to **Public**).
+
 ## Merge Field Syntax
 
 Wrap any token in double curly braces: {% raw %}`{{tokenName}}`{% endraw %}

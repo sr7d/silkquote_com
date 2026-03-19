@@ -4,8 +4,8 @@ title: SilkQuote - Interactive Salesforce Quoting & PDF Quotes
 description: Generate quotes from approved templates, host them online, collaborate with prospects, and capture acceptance directly from Salesforce.
 logo: /images/logo.png
 install_url: /install
-production_install_url: https://login.salesforce.com/packaging/installPackage.apexp?p0=04tVt000001f3XdIAI
-sandbox_install_url: https://test.salesforce.com/packaging/installPackage.apexp?p0=04tVt000001f3XdIAI
+production_install_url: https://login.salesforce.com/packaging/installPackage.apexp?p0=04tVt000001fUSzIAM
+sandbox_install_url: https://test.salesforce.com/packaging/installPackage.apexp?p0=04tVt000001fUSzIAM
 appexchange_url: https://appexchange.salesforce.com/appxListingDetail?listingId=b15e931b-f12f-43cd-9f92-813e7d87591e
 linkedin_url: https://www.linkedin.com/company/silkquote
 youtube_url: https://www.youtube.com/@silkquote
