@@ -48,7 +48,7 @@
   <style>{% include critical.css %}</style>
 
   <!-- Full stylesheet (non-blocking) -->
-  <link rel="preload" href="{{ '/assets/main.css' | relative_url }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
-  <noscript><link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}"></noscript>
+  <link rel="preload" href="{{ '/assets/main.css' | relative_url }}" as="style" onload="this.onload=null;this.rel='stylesheet';var l=document.getElementById('page-loader');if(l){l.style.opacity='0';setTimeout(function(){l.remove()},260)}">
+  <noscript><link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}"><style>#page-loader{display:none}</style></noscript>
 </head>
 
