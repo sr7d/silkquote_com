@@ -15,7 +15,14 @@
             {% else %}
               <span class="button button--primary coming-soon" data-tooltip="Coming Soon">Install App</span>
             {% endif %}
-            <a href="/SampleQuote.pdf" download class="button button--secondary">Download Sample</a>
+            <a href="{{ site.data.reviews.appexchange_url }}" class="hero__appexchange-badge" target="_blank" rel="noopener">
+              <img src="/images/appExchange.png" alt="Available on Salesforce AppExchange">
+              <div class="hero__appexchange-stars" aria-label="5 out of 5 stars">
+                {% for i in (1..5) %}
+                <svg width="14" height="14" viewBox="0 0 20 20" fill="#f5b742" aria-hidden="true"><path d="M10 1.5l2.39 4.84 5.34.78-3.86 3.76.91 5.32L10 13.77l-4.78 2.51.91-5.32L2.27 7.12l5.34-.78L10 1.5z"/></svg>
+                {% endfor %}
+              </div>
+            </a>
           </div>
         </div>
       </div>

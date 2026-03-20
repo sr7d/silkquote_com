@@ -88,12 +88,38 @@
   }
 }
 
+.hero__appexchange-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  opacity: 0.85;
+  transition: opacity 0.2s;
+  text-decoration: none;
+
+  &:hover { opacity: 1; }
+
+  img {
+    height: 36px;
+    width: auto;
+    display: block;
+  }
+}
+
+.hero__appexchange-stars {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
 .hero__cta {
   display: flex;
   justify-content: center;
+  align-items: center;
   gap: 16px;
   flex-wrap: wrap;
-  margin-bottom: 20px;
+  margin-bottom: 16px;
 
   .hero__cta-btn {
     padding: 14px 32px;
