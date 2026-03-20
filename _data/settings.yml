@@ -1,7 +1,7 @@
 #-------------------------------
 # Site Settings
 title: SilkQuote - Interactive Salesforce Quoting & PDF Quotes
-description: Generate quotes from approved templates, host them online, collaborate with prospects, and capture acceptance directly from Salesforce.
+description: Free Salesforce quoting tool. Generate branded PDF quotes from Opportunities in one click. Prospects review and accept from a hosted link. No paid software required.
 logo: /images/logo.png
 install_url: /install
 production_install_url: https://login.salesforce.com/packaging/installPackage.apexp?p0=04tVt000001fUSzIAM
@@ -63,8 +63,8 @@ home__items:
 #-------------------------------
 # Hero Settings
 hero:
-  hero__title: Get acceptance 2x faster with interactive Salesforce quotes
-  hero__description: Sales teams can templatize, generate, and deliver interactive quotes that prospects accept directly in Salesforce.<br>No CPQ Required.
+  hero__title: Stop Sending <br>Unprofessional Quotes
+  hero__description: SilkQuote turns your Salesforce Opportunity data into branded, professional PDF quotes in one click. Prospects review, comment, and accept from a hosted link. 
   painpoint: STOP sending quotes that undermine trust and professionalism!
 #-------------------------------
 # Blog Settings
@@ -83,7 +83,7 @@ tag:
 # Author Settings
 author:
   author__name: Skylar Rhodes
-  author__bio: After almost a decade in Quote-to-Cash, I decided to build a tool to marry the needs of Admins, Reps, and Prospects.<br> I wanted something that is both standalone and compatible with other CPQ tools. It needed to serve both small businesses and enterprises in both technology and business process. In the beginning, SilkQuote was just a hyperfunctional PDF quote generator. But I quickly realized that generating the document doesn't complete the entire quoting journey.<br> After a year of development and testing, SilkQuote became a full quoting system.<br> The result is an intuitive quoting system that any admin can manage, reps actually use, and that provides the customer experience your prospects deserve.
+  author__bio: After almost a decade in Quote-to-Cash, I decided to build a tool to marry the needs of Admins, Reps, and Prospects.<br> I wanted something that is both standalone and compatible with other tools. It needed to serve both small businesses and enterprises in both technology and business process. In the beginning, SilkQuote was just a hyperfunctional PDF quote generator. But I quickly realized that generating the document doesn't complete the entire quoting journey.<br> After a year of development and testing, SilkQuote became a full quoting system.<br> The result is an intuitive quoting system that any admin can manage, reps actually use, and that provides the customer experience your prospects deserve.
   author__avatar: /images/avatar2.jpeg
   author__signature: Skylar Rhodes, Creator of SilkQuote
 
