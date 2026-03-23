@@ -63,8 +63,8 @@ home__items:
 #-------------------------------
 # Hero Settings
 hero:
-  hero__title: Stop Sending <br>Unprofessional Quotes
-  hero__description: SilkQuote turns your Salesforce Opportunity data into branded, professional PDF quotes in one click. Prospects review, comment, and accept from a hosted link. 
+  hero__title: Stop Sending Static<br>Unprofessional Quotes
+  hero__description: SilkQuote turns your Salesforce Opportunity data into branded, professional <strong>interactive</strong> quotes in one click. Prospects review, comment, and accept from a hosted link. 
   painpoint: STOP sending quotes that undermine trust and professionalism!
 #-------------------------------
 # Blog Settings
