@@ -205,14 +205,23 @@ document.addEventListener("DOMContentLoaded", function() {
   const demoIframe = document.getElementById('demo-video-iframe');
   const closeBtn = document.getElementById('video-close');
 
+  function openLightbox(e) {
+    e.preventDefault();
+    demoIframe.src = DEMO_VIDEO_SRC;
+    lightbox.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
   document.addEventListener('click', function(e) {
     if (e.target.closest('.demo-trigger')) {
-      e.preventDefault();
-      demoIframe.src = DEMO_VIDEO_SRC;
-      lightbox.classList.add('active');
-      document.body.style.overflow = 'hidden';
+      openLightbox(e);
     }
   });
+
+  var menuDemoBtn = document.getElementById('menu-demo-button');
+  if (menuDemoBtn) {
+    menuDemoBtn.addEventListener('click', openLightbox);
+  }
 
   function closeLightbox() {
     demoIframe.src = '';
