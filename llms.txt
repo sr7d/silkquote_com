@@ -5,17 +5,18 @@ sitemap: false
 ---
 # SilkQuote
 
-> Templatize, generate, and share dynamic quotes customers can review and accept. Free, native Salesforce quoting.
+> Professional quote templates, tracking insights, and a collaborative deal room — so reps move fast, leaders stay informed, and nothing slips through the cracks. Free, native Salesforce quoting.
 
-SilkQuote is a native Salesforce application that speeds up negotiations, reduces approval times, and makes quoting easier. Admins build reusable templates with conditional fields and custom terms. Reps generate professional PDFs in one click. Prospects review, comment on, and accept quotes via a hosted link. All inside Salesforce, at zero cost.
+SilkQuote is a native Salesforce application that combines professional quote templates, tracking insights, and a collaborative deal room. Admins build controlled, branded templates with conditional fields and terms. Reps generate professional quotes in one click without leaving Salesforce. Prospects review, ask questions, and sign in a hosted deal room — while leaders track every interaction. All inside Salesforce, at zero cost.
 
 **Key facts:**
 - Free: unlimited users, quotes, and templates
 - Works with Salesforce Professional Edition and above
 - No-code template configurator for admins
-- One-click PDF generation for sales reps
+- One-click PDF generation from any Opportunity
 - Native Salesforce integration (Lightning Experience)
-- Compatible with DocuSign, Adobe Sign, and other e-signature tools
+- Hosted deal room with e-signature, Q&A, shared resources, and next steps
+- Quote view tracking, open tracking, and acceptance logging
 - Invocable from Salesforce Flows for automation
 
 ## Documentation

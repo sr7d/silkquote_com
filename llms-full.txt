@@ -5,11 +5,11 @@ sitemap: false
 ---
 # SilkQuote — Complete Product Reference
 
-> Templatize, generate, and share dynamic quotes customers can review and accept. Free, native Salesforce quoting.
+> Professional quote templates, tracking insights, and a collaborative deal room — so reps move fast, leaders stay informed, and nothing slips through the cracks. Free, native Salesforce quoting.
 
 ## Overview
 
-SilkQuote is a native Salesforce application that speeds up negotiations, reduces approval times, and makes quoting easier. Admins build reusable templates with conditional fields and custom terms. Reps generate professional PDFs in one click. Prospects review, comment on, and accept quotes via a hosted link. All inside Salesforce, at zero cost.
+SilkQuote is a native Salesforce application that combines professional quote templates, tracking insights, and a collaborative deal room. Admins build controlled, branded templates with conditional fields and terms. Reps generate professional quotes in one click without leaving Salesforce. Prospects review, ask questions, and sign in a hosted deal room — while leaders track every interaction. All inside Salesforce, at zero cost.
 
 SilkQuote is installed from the Salesforce AppExchange and runs entirely within Salesforce. No external systems, no data exports, no per-user licensing fees.
 
@@ -17,11 +17,11 @@ SilkQuote is installed from the Salesforce AppExchange and runs entirely within 
 
 SilkQuote follows a three-step process:
 
-1. **Templatize** — Admins build reusable, branded templates with conditional fields, custom layouts, and terms and conditions. All without code.
+1. **Build Templates** — Admins create controlled, branded templates with conditional fields, custom layouts, and terms. Every rep quotes consistently, every time. No code required.
 
-2. **Generate** — Reps generate a dynamic, professional quote PDF in one click or via automation. Product, pricing, and customer details are pulled automatically from Salesforce.
+2. **Send in Seconds** — Reps generate a professional quote from any Opportunity in one click. Product, pricing, and customer details are pulled automatically from Salesforce.
 
-3. **Share and Accept** — Share a hosted quote link customers can review, comment on, and accept. Track when prospects view the quote and keep negotiations moving.
+3. **Close in the Deal Room** — Prospects review, ask questions, request changes, and sign in a hosted deal room. Reps can attach supporting resources and define post-signature next steps. Leaders track every view, comment, and interaction.
 
 ## Features
 
@@ -47,9 +47,16 @@ SilkQuote follows a three-step process:
 - Terms rules for conditional inclusion
 - Standardized legal language management
 
+### Deal Room
+- Hosted deal room per quote — no account required for prospects
+- Prospects review, comment, and request changes without email back-and-forth
+- Native e-signature — no third-party tool or account required
+- Shared resources: attach case studies, one-pagers, and supporting docs
+- Post-signature next steps presented to the customer
+- Full interaction tracking: email opens, page views, comments, signatures, and acceptance
+
 ### Automation & Integration
 - Invocable from Salesforce Flows
-- Compatible with DocuSign, Adobe Sign, and other e-signature tools
 - Email sharing and secure link distribution
 - Signature block inclusion
 
@@ -94,6 +101,10 @@ SilkQuote generates standard PDF files that integrate with any e-signature workf
 
 SilkQuote is a good fit if you:
 - Use Salesforce and send quotes to prospects
+- Want reps quoting inside Salesforce instead of spreadsheets or Word docs
+- Need consistent, on-brand quotes without relying on each rep's formatting skills
+- Want leaders and ops teams to see quote activity without chasing reps for updates
+- Want prospect acceptance, e-signature, and deal room collaboration without bolt-on tools
 - Want quote acceptance to update Salesforce records or trigger automation
 - Want professional quote PDFs without CPQ complexity
 
@@ -104,11 +115,13 @@ SilkQuote is NOT a fit if you:
 
 ## Comparison Summary
 
-**vs. Out-of-the-Box Salesforce Quotes:** SilkQuote provides professional branded PDFs, Flow automation, and customizable templates. Standard Salesforce quotes offer basic formatting that is hard to brand and no automation.
+**vs. Out-of-the-Box Salesforce Quotes:** SilkQuote provides branded PDFs, a collaborative deal room, e-signature, tracking insights, and Flow automation. Standard Salesforce quotes offer basic formatting with no deal room, no tracking, and no automation.
 
-**vs. Traditional CPQ (Salesforce CPQ, etc.):** SilkQuote is free, installs in days, works with Professional Edition, and any admin can manage it. Traditional CPQ costs significantly more, takes months to implement, typically requires Enterprise+, and needs specialist consultants.
+**vs. Spreadsheets and Word Docs:** Reps quoting outside Salesforce creates shadow quoting, inconsistent terms, zero visibility for leaders, and no audit trail. SilkQuote keeps quoting inside Salesforce with controlled templates and full activity logging.
 
-**vs. Conga Composer / S-Docs:** SilkQuote is purpose-built for quote generation with a visual configurator, while Conga and S-Docs are general-purpose document generation tools that require more setup for quoting use cases.
+**vs. Traditional CPQ (Salesforce CPQ, etc.):** SilkQuote is free, installs in minutes, works with Professional Edition, and any admin can manage it. Traditional CPQ costs significantly more, takes months to implement, typically requires Enterprise+, and needs specialist consultants.
+
+**vs. Conga Composer / S-Docs:** SilkQuote is purpose-built for quoting with a visual configurator, a native deal room, and prospect-facing collaboration. Conga and S-Docs are general-purpose document generation tools that require more setup for quoting use cases and do not include a deal room.
 
 ## Frequently Asked Questions
 
@@ -124,8 +137,14 @@ When you need custom templates, advanced automation, integration services, and o
 **What Salesforce editions are supported?**
 Professional, Enterprise, Unlimited, Developer, and Performance editions.
 
-**Does it work with e-signature tools?**
-Yes. SilkQuote works with DocuSign, Adobe Sign, and other common e-signature products.
+**Does SilkQuote have a deal room?**
+Yes. Every quote gets a hosted deal room where prospects can review the quote, ask questions, request changes, and sign — without needing an account. Reps can attach supporting resources and set post-signature next steps. Leaders can see every interaction.
+
+**Does it have native e-signature?**
+Yes. Prospects can sign directly in the deal room with no third-party tool or account required.
+
+**Does it work with external e-signature tools?**
+Yes. SilkQuote-generated PDFs also work with DocuSign, Adobe Sign, and other common e-signature products.
 
 ## Documentation
 
