@@ -5,6 +5,7 @@ description: "A free pest control quotation template with sample line items, ter
 date: 2026-03-14 09:00:00 +0000
 last_modified_at: 2026-03-14 00:00:00 +0000
 author: admin
+label: Free
 tags: [templates]
 permalink: /quotation-for-pest-control/
 seo_title: "Pest Control Quotation: Free Template + Setup"

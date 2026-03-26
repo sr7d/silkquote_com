@@ -31,9 +31,9 @@ layout: default
       <div class="install-hero__right">
 
         <div class="install-form-card">
-          <h1 class="install-form-card__heading">How to Install SilkQuote for Salesforce</h1>
-          <p id="install-lead-desc">Please enter your email below so we may keep you up to date as new features and bug fixes release.</p>
-          <p id="install-lead-desc-appexchange" style="display:none">Thanks for checking us out on the AppExchange! <br>Please feel free to reach out to <a href="/support/">support</a> if you need any assistance getting started.<br> Also, be sure to view the install video or instructions below.</p>
+          <h1 class="install-form-card__heading">Install SilkQuote for Salesforce</h1>
+          <p id="install-lead-desc">Please enter your details below so we may keep you up to date as new features and bug fixes release.</p>
+          <p id="install-lead-desc-appexchange" style="display:none">Thanks for checking us out on the AppExchange! <br>Please feel free to reach out to <a href="/support/">support</a> if you need any assistance getting started.</p>
           <iframe name="sf-submit-target" style="display:none" aria-hidden="true"></iframe>
           <form id="install-lead-form" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00Da500001Nhn69" method="POST" class="install-lead-form" target="sf-submit-target">
             <input type="hidden" name="oid" value="00Da500001Nhn69">
@@ -42,7 +42,9 @@ layout: default
             <div class="install-lead-form__field">
               <!-- <label for="email">Business Email</label> -->
               <input id="email" name="email" type="email" maxlength="80" placeholder="your-email@company.com" required autocomplete="email">
-              <span class="install-lead-form__error" id="email-error"></span>
+            </div>
+            <div class="install-lead-form__field">
+              <input id="Partner_Name__c" name="Partner_Name__c" type="text" maxlength="255" placeholder="Referred by a partner? Enter their name (optional)" autocomplete="off">
             </div>
             <div class="install-env-picker">
               <label class="install-env-picker__option">
@@ -68,15 +70,11 @@ layout: default
 
           <script>
           (function() {
-            var PERSONAL_DOMAINS = ['gmail.com','yahoo.com','hotmail.com','outlook.com','live.com','icloud.com','me.com','aol.com','msn.com','protonmail.com','proton.me','mail.com','ymail.com','googlemail.com','yahoo.co.uk','hotmail.co.uk','hotmail.fr','yahoo.fr','wanadoo.fr','comcast.net','sbcglobal.net','verizon.net','att.net','cox.net','earthlink.net','optonline.net'];
-
             var prodUrl = '{{ site.data.settings.production_install_url }}';
             var sandboxUrl = '{{ site.data.settings.sandbox_install_url }}';
 
             var form = document.getElementById('install-lead-form');
             var emailInput = document.getElementById('email');
-            var emailError = document.getElementById('email-error');
-            var successMsg = document.getElementById('install-success');
             var iframe = document.querySelector('[name="sf-submit-target"]');
 
             var isAppExchange = new URLSearchParams(window.location.search).has('appexchange');
@@ -90,37 +88,13 @@ layout: default
             form.addEventListener('submit', function(e) {
               e.preventDefault();
 
-              if (isAppExchange) {
-                var env = document.querySelector('input[name="install_env"]:checked').value;
-                var installUrl = env === 'sandbox' ? sandboxUrl : prodUrl;
-                if (installUrl) { window.open(installUrl, '_blank'); }
-                return;
-              }
-
-              var domain = emailInput.value.split('@')[1];
-              if (domain && PERSONAL_DOMAINS.indexOf(domain.toLowerCase()) !== -1) {
-                emailError.textContent = 'Please use your business email address.';
-                emailInput.focus();
-                return;
-              }
-              emailError.textContent = '';
-
               var env = document.querySelector('input[name="install_env"]:checked').value;
               var installUrl = env === 'sandbox' ? sandboxUrl : prodUrl;
-              if (installUrl) {
-                window.open(installUrl, '_blank');
+              if (installUrl) { window.open(installUrl, '_blank'); }
+
+              if (!isAppExchange) {
+                form.submit();
               }
-
-              form.submit();
-              iframe.addEventListener('load', function onLoad() {
-                iframe.removeEventListener('load', onLoad);
-                emailInput.value = '';
-                successMsg.style.display = 'block';
-              });
-            });
-
-            emailInput.addEventListener('input', function() {
-              emailError.textContent = '';
             });
           })();
           </script>
@@ -274,7 +248,7 @@ layout: default
   .install-lead-form__field {
     display: flex;
     flex-direction: column;
-    gap: 0.3rem;
+    
   }
 
   .install-lead-form__field label {
@@ -295,6 +269,7 @@ layout: default
     outline: none;
     transition: border-color 0.15s;
     width: 100%;
+    max-width: 450px;
     box-sizing: border-box;
   }
 
@@ -304,12 +279,6 @@ layout: default
 
   .install-lead-form__field input:focus {
     border-color: var(--primary-color);
-  }
-
-  .install-lead-form__error {
-    font-size: 0.8rem;
-    color: #f87171;
-    min-height: 1em;
   }
 
   .install-env-picker {
@@ -355,10 +324,9 @@ layout: default
     width: auto;
   }
 
-  .install-lead-form__success {
-    font-size: 0.9rem;
-    margin: 0;
-    color: #4ade80;
+  #install-lead-desc,
+  #install-lead-desc-appexchange {
+    margin-bottom: 0.5rem;
   }
 
   #install-lead-desc-appexchange a {

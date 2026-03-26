@@ -6,6 +6,7 @@ description: "Free construction quote template for Salesforce. Include labor, ma
 date: 2026-03-17 09:00:00 +0000
 last_modified_at: 2026-03-17 00:00:00 +0000
 author: admin
+label: Free
 tags: [templates]
 permalink: /construction-quote-template/
 faq:

@@ -19,6 +19,9 @@
           <div class="article col col-3 col-d-6 col-m-12">
 
             <div class="article__inner">
+              {% if post.label %}
+              <span class="article__label">{{ post.label }}</span>
+              {% endif %}
               {% unless post.tags contains "templates" %}
               <div class="article__head">
                 {% if post.video_embed %}

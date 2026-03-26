@@ -6,6 +6,7 @@ description: "Free commercial cleaning quote template for Salesforce. Include se
 date: 2026-03-17 09:30:00 +0000
 last_modified_at: 2026-03-17 00:00:00 +0000
 author: admin
+label: Free
 tags: [templates]
 permalink: /commercial-cleaning-quote-template/
 faq:

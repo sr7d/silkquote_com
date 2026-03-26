@@ -1,0 +1,93 @@
+---
+layout: default
+title: Partner Program - SilkQuote
+description: Add a free, instantly deployable Salesforce quoting system to every engagement and charge for the setup. Built for Salesforce consultants and boutique SIs.
+permalink: /partners/
+faq:
+  - question: Is SilkQuote really free for my clients?
+    answer: Yes, completely free. Every feature, unlimited users, no trial period. Your services fee is separate and entirely yours.
+  - question: What Salesforce editions are supported?
+    answer: Professional, Enterprise, Unlimited, Developer, and Performance editions. No CPQ license required.
+  - question: Is it compatible with Salesforce CPQ?
+    answer: Yes. SilkQuote is the document and delivery layer. It works alongside CPQ for clients who have it, and replaces it for clients who don't need a pricing engine.
+  - question: Do I need to be a registered reseller or pay a partner fee?
+    answer: No. No partner fee, no certification, no formal enrollment. Just book a call if you want a walkthrough before recommending it to a client.
+---
+
+<section class="partners-hero">
+  <div class="container">
+    <span class="partners-hero__label">For Salesforce Consultants &amp; SI's</span>
+    <h1 class="partners-hero__title">Add a free quoting system to every Salesforce engagement and charge for the setup.</h1>
+    <p class="partners-hero__description">SilkQuote is a free, AppExchange-listed Salesforce quoting app. Your clients get a production-ready quote workflow. You get a repeatable services package.</p>
+    <div class="partners-hero__cta">
+      <button class="button button--primary"
+        data-cal-link="silkquote/partner-inquiry""
+        data-cal-namespace="partner-inquiry"
+        data-cal-config='{"layout":"week_view","useSlotsViewOnSmallScreen":"true"}'>
+        Book a Partner Call
+      </button>
+    </div>
+  </div>
+</section>
+
+<section class="partners-body">
+  <div class="container">
+    <div class="partners-body__inner">
+
+      <div class="partners-body__section">
+        <h2 class="partners-body__heading">How you make money</h2>
+        <p class="partners-body__text">The app is free for your clients. The setup, customization, and ongoing support are yours to scope and bill. Here's what that typically looks like:</p>
+        <ul class="partners-services-list">
+          <li>
+            <strong>Template design &amp; build</strong>
+            <span>Custom-branded PDF layouts, conditional sections, product tables. $1,500–$5,000</span>
+          </li>
+          <li>
+            <strong>Automation &amp; flow setup</strong>
+            <span>Auto-generate quotes from Opportunity stages, trigger approvals, route to deal room. $2,500–$8,000</span>
+          </li>
+          <li>
+            <strong>CPQ migration assist</strong>
+            <span>Help clients off Salesforce CPQ (end-of-sale) or Conga onto a lighter quoting layer. $5,000+</span>
+          </li>
+          <li>
+            <strong>Ongoing retainer</strong>
+            <span>Template updates, new product lines, admin support. $500–$2,000/mo</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="partners-body__section">
+        <h2 class="partners-body__heading">What delivery looks like</h2>
+        <p class="partners-body__text">The Quickstart package is a defined scope you can drop into any proposal. Install, configure, and launch SilkQuote for your client's Salesforce org. They leave with live quoting, a branded template, and reps who know how to use it.</p>
+        <p class="partners-body__text"><strong>Suggested scope:</strong> App install, up to 2 branded PDF templates, Opportunity field mapping, deal room setup, quote generation flow or button, rep training, and admin handoff documentation.</p>
+        <p class="partners-body__text"><strong>Timeline:</strong> ~2 weeks &nbsp;&nbsp; <strong>Suggested price:</strong> $2,500–$4,000 &nbsp;&nbsp; <strong>Effort:</strong> 10–20 hrs</p>
+      </div>
+
+      <div class="partners-body__section">
+        <h2 class="partners-body__heading">Common questions</h2>
+        {% include faq.html %}
+      </div>
+
+      <div class="partners-body__section">
+        <h2 class="partners-body__heading">Get started</h2>
+        <p class="partners-body__text">Book a 30-minute call. Walk through the app, ask questions, and figure out if there's a fit for your current pipeline.</p>
+        <button class="button button--primary"
+          data-cal-link="silkquote/partner-inquiry"
+          data-cal-namespace="partner-inquiry"
+          data-cal-config='{"layout":"week_view","useSlotsViewOnSmallScreen":"true"}'>
+          Book a Partner Call
+        </button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script type="text/javascript">
+  window.addEventListener('load', function() {
+    (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+    Cal("init", "partner-inquiry", {origin:"https://app.cal.com"});
+    Cal.ns["partner-inquiry"]("ui", {"cssVarsPerTheme":{"light":{"cal-brand":"#2c2c2c"},"dark":{"cal-brand":"#8b89f4"}},"hideEventTypeDetails":false,"layout":"column_view"});
+  });
+</script>

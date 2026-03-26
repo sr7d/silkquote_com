@@ -1,9 +1,42 @@
 {% if page.faq %}
-<div class="faq-section">
-  <p class="faq-label">Frequently Asked Questions</p>
+<div class="faq-accordion">
   {% for item in page.faq %}
-  <h5>{{ item.question }}</h5>
-  <p>{{ item.answer }}</p>
+  <div class="faq-item{% if forloop.first %} active{% endif %}">
+    <button type="button" class="faq-question" aria-expanded="{% if forloop.first %}true{% else %}false{% endif %}">
+      {{ item.question }}
+      <svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </button>
+    <div class="faq-answer">
+      <p>{{ item.answer }}</p>
+    </div>
+  </div>
   {% endfor %}
 </div>
+
+<script>
+(function() {
+  var accordions = document.querySelectorAll('.faq-accordion');
+  accordions.forEach(function(accordion) {
+    accordion.querySelectorAll('.faq-question').forEach(function(btn) {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        var item = btn.parentElement;
+        var wasActive = item.classList.contains('active');
+        accordion.querySelectorAll('.faq-item').forEach(function(el) {
+          el.classList.remove('active');
+          el.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+        });
+        if (!wasActive) {
+          item.classList.add('active');
+          btn.setAttribute('aria-expanded', 'true');
+        } else {
+          var first = accordion.querySelector('.faq-item');
+          first.classList.add('active');
+          first.querySelector('.faq-question').setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+  });
+})();
+</script>
 {% endif %}

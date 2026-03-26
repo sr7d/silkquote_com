@@ -1,3 +1,23 @@
+/* Article Label Badge */
+.article__inner {
+  position: relative;
+}
+
+.article__label {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 1;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--primary-color);
+  background-color: rgba(57, 53, 227, 0.1);
+  padding: 3px 8px;
+  border-radius: 20px;
+}
+
 /* Section Tags */
 .section-tags {
   margin-top: 26px;

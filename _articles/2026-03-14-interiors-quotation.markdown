@@ -5,6 +5,7 @@ description: "A free interiors quotation template for interior designers and fit
 date: 2026-03-14 09:00:00 +0000
 last_modified_at: 2026-03-14 00:00:00 +0000
 author: admin
+label: Free
 tags: [templates]
 permalink: /interiors-quotation/
 seo_title: "Interiors Quotation: Free Template"
