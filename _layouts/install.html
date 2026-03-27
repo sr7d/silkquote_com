@@ -103,7 +103,8 @@ layout: default
                     'UTM_Medium__c':             localStorage.getItem('sq_utm_medium') || '',
                     'UTM_Campaign__c':           localStorage.getItem('sq_utm_campaign') || '',
                     'Install_Video_Watched__c':  localStorage.getItem('sq_video_watched') === '1' ? 'true' : 'false',
-                    'Demo_Video_Watched__c':     localStorage.getItem('sq_demo_video_watched') === '1' ? 'true' : 'false'
+                    'Demo_Video_Watched__c':     localStorage.getItem('sq_demo_video_watched') === '1' ? 'true' : 'false',
+                    'last_name':                 document.getElementById('email').value
                   };
                   Object.keys(fields).forEach(function(name) {
                     if (fields[name] === '' || fields[name] === 'false') return;
