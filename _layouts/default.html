@@ -30,6 +30,38 @@ layout: compress
 
   <script src="{{ site.baseurl }}/js/scripts.js" defer></script>
   <script src="{{ site.baseurl }}/js/common.js" defer></script>
+
+  <script>
+    (function() {
+      try {
+        var NAV_KEY = 'sq_nav_path';
+        var MAX_PAGES = 15;
+        var raw = sessionStorage.getItem(NAV_KEY);
+        var pages = raw ? JSON.parse(raw) : [];
+        if (!Array.isArray(pages)) { pages = []; }
+        if (pages[pages.length - 1] !== window.location.pathname) { pages.push(window.location.pathname); }
+        if (pages.length > MAX_PAGES) { pages = pages.slice(pages.length - MAX_PAGES); }
+        sessionStorage.setItem(NAV_KEY, JSON.stringify(pages));
+        if (!localStorage.getItem('sq_first_visit')) {
+          localStorage.setItem('sq_first_visit', new Date().toISOString());
+          var ref = document.referrer;
+          var src = 'direct';
+          if (ref) { try { src = new URL(ref).hostname; } catch(e2) { src = ref; } }
+          localStorage.setItem('sq_traffic_source', src);
+          var params = new URLSearchParams(window.location.search);
+          if (params.get('utm_source')) { localStorage.setItem('sq_utm_source', params.get('utm_source')); }
+          if (params.get('utm_medium')) { localStorage.setItem('sq_utm_medium', params.get('utm_medium')); }
+          if (params.get('utm_campaign')) { localStorage.setItem('sq_utm_campaign', params.get('utm_campaign')); }
+        }
+        if (!sessionStorage.getItem('sq_session_counted')) {
+          sessionStorage.setItem('sq_session_counted', '1');
+          var count = parseInt(localStorage.getItem('sq_session_count') || '0', 10);
+          localStorage.setItem('sq_session_count', count + 1);
+        }
+      } catch(e) {}
+    })();
+  </script>
+
   <script>
     var base_url = "",
       pagination_next_url = base_url + '/page2',

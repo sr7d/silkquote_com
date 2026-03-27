@@ -47,6 +47,7 @@
           </div>
           <script>
             document.querySelector('.vimeo-facade').addEventListener('click', function(e) {
+              try { localStorage.setItem('sq_demo_video_watched', '1'); } catch(ve) {}
               e.stopPropagation();
               var iframe = document.createElement('iframe');
               iframe.src = 'https://player.vimeo.com/video/' + this.dataset.vimeoId + '/?autoplay=1&muted=0&loop=0&controls=1';

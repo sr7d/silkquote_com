@@ -93,6 +93,27 @@ layout: default
               if (installUrl) { window.open(installUrl, '_blank'); }
 
               if (!isAppExchange) {
+                try {
+                  var fields = {
+                    'Navigation_Path__c':        (function() { var r = sessionStorage.getItem('sq_nav_path'); var p = r ? JSON.parse(r) : []; return Array.isArray(p) ? p.join(' > ') : ''; })(),
+                    'Traffic_Source__c':         localStorage.getItem('sq_traffic_source') || '',
+                    'Session_Count__c':          localStorage.getItem('sq_session_count') || '',
+                    'First_Visit_to_Install__c': (function() { var fv = localStorage.getItem('sq_first_visit'); if (!fv) return ''; return Math.round((Date.now() - new Date(fv).getTime()) / 86400000); })(),
+                    'UTM_Source__c':             localStorage.getItem('sq_utm_source') || '',
+                    'UTM_Medium__c':             localStorage.getItem('sq_utm_medium') || '',
+                    'UTM_Campaign__c':           localStorage.getItem('sq_utm_campaign') || '',
+                    'Install_Video_Watched__c':  localStorage.getItem('sq_video_watched') === '1' ? 'true' : 'false',
+                    'Demo_Video_Watched__c':     localStorage.getItem('sq_demo_video_watched') === '1' ? 'true' : 'false'
+                  };
+                  Object.keys(fields).forEach(function(name) {
+                    if (fields[name] === '' || fields[name] === 'false') return;
+                    var inp = document.createElement('input');
+                    inp.type = 'hidden';
+                    inp.name = name;
+                    inp.value = fields[name];
+                    form.appendChild(inp);
+                  });
+                } catch(e) {}
                 form.submit();
               }
             });
@@ -421,6 +442,7 @@ layout: default
 
 <script>
   document.querySelector('.install-video-wrap .vimeo-facade').addEventListener('click', function(e) {
+    try { localStorage.setItem('sq_video_watched', '1'); } catch(ve) {}
     e.stopPropagation();
     var iframe = document.createElement('iframe');
     iframe.src = 'https://player.vimeo.com/video/' + this.dataset.vimeoId + '/?autoplay=1&muted=0&loop=0&controls=1';

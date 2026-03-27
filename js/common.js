@@ -207,6 +207,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   function openLightbox(e) {
     e.preventDefault();
+    try { localStorage.setItem('sq_demo_video_watched', '1'); } catch(ve) {}
     demoIframe.src = DEMO_VIDEO_SRC;
     lightbox.classList.add('active');
     document.body.style.overflow = 'hidden';
