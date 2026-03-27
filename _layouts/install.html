@@ -104,7 +104,7 @@ layout: default
                     'UTM_Campaign__c':           localStorage.getItem('sq_utm_campaign') || '',
                     'Install_Video_Watched__c':  localStorage.getItem('sq_video_watched') === '1' ? 'true' : 'false',
                     'Demo_Video_Watched__c':     localStorage.getItem('sq_demo_video_watched') === '1' ? 'true' : 'false',
-                    'last_name':                 document.getElementById('email').value
+                    'last_name':                 (function(){ var e = document.getElementById('email').value; return e.indexOf('@') !== -1 ? e.split('@')[0] : e; })()
                   };
                   Object.keys(fields).forEach(function(name) {
                     if (fields[name] === '' || fields[name] === 'false') return;
