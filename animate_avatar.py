@@ -51,10 +51,10 @@ def make_avatar_slide():
 
 # Build static slides
 raw_slides = [
+    make_avatar_slide(),
     make_emoji_slide("📄"),
     make_emoji_slide("✉️"),
     make_emoji_slide("✍️"),
-    make_avatar_slide(),
 ]
 
 # Easing
