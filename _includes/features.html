@@ -3,7 +3,7 @@
     <div class="comparison-timeline__header">
       <div class="comparison-timeline__col-label comparison-timeline__col-label--problem">The Old Way</div>
       <div class="comparison-timeline__spine-spacer"></div>
-      <div class="comparison-timeline__col-label comparison-timeline__col-label--solution">SilkQuote</div>
+      <div class="comparison-timeline__col-label comparison-timeline__col-label--solution">SilkQuote Way</div>
     </div>
 
     <div class="comparison-timeline__rows">
@@ -11,7 +11,7 @@
       <div class="comparison-timeline__row">
         <div class="comparison-timeline__cell comparison-timeline__cell--problem">
           <div class="comparison-timeline__card">
-            <h4 class="comparison-timeline__card-title">1. Build Templates</h4>
+            <h4 class="comparison-timeline__card-title">Build Templates</h4>
             <p class="comparison-timeline__card-desc">Design Word docs with merge tags outside Salesforce, then manually upload and maintain them.</p>
           </div>
         </div>
@@ -20,7 +20,7 @@
         </div>
         <div class="comparison-timeline__cell comparison-timeline__cell--solution">
           <div class="comparison-timeline__card">
-            <h4 class="comparison-timeline__card-title">1. Build Templates</h4>
+            <h4 class="comparison-timeline__card-title">Build Templates</h4>
             <p class="comparison-timeline__card-desc">Build branded templates natively in Salesforce. Every rep stays on-brand every time.</p>
           </div>
         </div>
@@ -29,7 +29,7 @@
       <div class="comparison-timeline__row">
         <div class="comparison-timeline__cell comparison-timeline__cell--problem">
           <div class="comparison-timeline__card">
-            <h4 class="comparison-timeline__card-title">2. Generate a Quote</h4>
+            <h4 class="comparison-timeline__card-title">Generate a Quote</h4>
             <p class="comparison-timeline__card-desc">Reps manually search for and pick a template, then generate a quote and hope they chose right.</p>
           </div>
         </div>
@@ -38,7 +38,7 @@
         </div>
         <div class="comparison-timeline__cell comparison-timeline__cell--solution">
           <div class="comparison-timeline__card">
-            <h4 class="comparison-timeline__card-title">2. Generate in One Click</h4>
+            <h4 class="comparison-timeline__card-title">Generate in One Click</h4>
             <p class="comparison-timeline__card-desc">SilkQuote auto-filters templates based on the deal. Reps can't pick wrong. Quote sent in seconds.</p>
           </div>
         </div>
@@ -47,7 +47,7 @@
       <div class="comparison-timeline__row">
         <div class="comparison-timeline__cell comparison-timeline__cell--problem">
           <div class="comparison-timeline__card">
-            <h4 class="comparison-timeline__card-title">3. Send a Draft</h4>
+            <h4 class="comparison-timeline__card-title">Send a Draft</h4>
             <p class="comparison-timeline__card-desc">Rep emails a PDF and waits, with no visibility into whether the customer even opened it.</p>
           </div>
         </div>
@@ -56,7 +56,7 @@
         </div>
         <div class="comparison-timeline__cell comparison-timeline__cell--solution">
           <div class="comparison-timeline__card">
-            <h4 class="comparison-timeline__card-title">3. Deliver to the Deal Room</h4>
+            <h4 class="comparison-timeline__card-title">Deliver to the Deal Room</h4>
             <p class="comparison-timeline__card-desc">SilkQuote sends a branded email with a live Deal Room link. Know the moment the buyer opens it.</p>
           </div>
         </div>
@@ -65,7 +65,7 @@
       <div class="comparison-timeline__row">
         <div class="comparison-timeline__cell comparison-timeline__cell--problem">
           <div class="comparison-timeline__card">
-            <h4 class="comparison-timeline__card-title">4. Revise Over Email</h4>
+            <h4 class="comparison-timeline__card-title">Revise Over Email</h4>
             <p class="comparison-timeline__card-desc">Customer requests changes over email. Rep revises the doc, re-attaches, and sends again.</p>
           </div>
         </div>
@@ -74,7 +74,7 @@
         </div>
         <div class="comparison-timeline__cell comparison-timeline__cell--solution">
           <div class="comparison-timeline__card">
-            <h4 class="comparison-timeline__card-title">4. Collaborate and Sign</h4>
+            <h4 class="comparison-timeline__card-title">Collaborate and Sign</h4>
             <p class="comparison-timeline__card-desc">Buyer requests changes in the Deal Room. Rep updates and regenerates in one click. Buyer signs without leaving.</p>
           </div>
         </div>
@@ -83,7 +83,7 @@
       <div class="comparison-timeline__row">
         <div class="comparison-timeline__cell comparison-timeline__cell--problem">
           <div class="comparison-timeline__card">
-            <h4 class="comparison-timeline__card-title">5. Send for Signature</h4>
+            <h4 class="comparison-timeline__card-title">Send for Signature</h4>
             <p class="comparison-timeline__card-desc">Rep sends a separate e-signature request through a third-party tool, adding another handoff.</p>
           </div>
         </div>
@@ -97,7 +97,7 @@
       <div class="comparison-timeline__row">
         <div class="comparison-timeline__cell comparison-timeline__cell--problem">
           <div class="comparison-timeline__card">
-            <h4 class="comparison-timeline__card-title">6. Close and Update</h4>
+            <h4 class="comparison-timeline__card-title">Close and Update</h4>
             <p class="comparison-timeline__card-desc">Customer signs and someone manually updates Salesforce. Momentum stalls at the finish line.</p>
           </div>
         </div>
@@ -106,7 +106,7 @@
         </div>
         <div class="comparison-timeline__cell comparison-timeline__cell--solution">
           <div class="comparison-timeline__card">
-            <h4 class="comparison-timeline__card-title">5. Automatic Updates</h4>
+            <h4 class="comparison-timeline__card-title">Automatic Updates</h4>
             <p class="comparison-timeline__card-desc">SilkQuote tracks engagement and automatically updates the Opportunity. Nothing slips.</p>
           </div>
         </div>
@@ -171,13 +171,12 @@
   .comparison-timeline__col-label--problem {
     color: var(--text-alt-color);
     background: var(--background-light);
-    justify-self: center;
+    justify-self: end;
   }
 
   .comparison-timeline__col-label--solution {
     color: #3935E3;
-    background: rgba(57, 53, 227, 0.08);
-    justify-self: center;
+    justify-self: start;
   }
 
 
@@ -186,6 +185,11 @@
     display: flex;
     flex-direction: column;
     gap: 0;
+    counter-reset: timeline-step;
+  }
+
+  .comparison-timeline__row {
+    counter-increment: timeline-step;
   }
 
   /* Continuous vertical line running through all dots */
@@ -226,7 +230,7 @@
     background: var(--background-white);
     border-radius: var(--border-radius);
     padding: 18px 22px;
-    max-width: 340px;
+    max-width: 480px;
     width: 100%;
     box-shadow: var(--shadow-sm);
     transition: var(--transition-fast);
@@ -248,7 +252,7 @@
     padding: 10px 16px;
     border-radius: var(--border-radius);
     border: 1px dashed var(--border-color);
-    max-width: 340px;
+    max-width: 480px;
     width: 100%;
   }
 
@@ -297,7 +301,7 @@
     content: '';
     position: absolute;
     left: 50%;
-    top: calc(50% + 10px);
+    top: calc(50% + 16px);
     bottom: -9999px;
     width: 4px;
     transform: translateX(-50%);
@@ -306,13 +310,24 @@
   }
 
   .comparison-timeline__dot {
-    width: 14px;
-    height: 14px;
+    width: 28px;
+    height: 28px;
     border-radius: 50%;
     background: var(--primary-color);
     border: 2px solid var(--background-white);
     box-shadow: 0 0 0 2px var(--border-medium);
     flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1;
+  }
+
+  .comparison-timeline__dot::after {
+    content: counter(timeline-step);
   }
 
   @media (max-width: 768px) {
