@@ -1,7 +1,7 @@
 /* Social Proof Section */
 .social-proof {
-  background-color: transparent;
-  padding: 80px 0;
+  background-color: #eeeaff;
+  padding: 40px 0;
 }
 
 .social-proof__badges {
@@ -9,6 +9,7 @@
   justify-content: center;
   gap: 40px;
   flex-wrap: wrap;
+  margin-bottom: 40px;
 }
 
 .social-proof__badge {

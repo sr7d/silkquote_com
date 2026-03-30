@@ -1,0 +1,169 @@
+<section class="integration-hub">
+  <div class="container">
+    <div class="section__info">
+      <div class="section__head">
+        <h3 class="section__title">Integration</h3>
+        <p class="section__description">Drops right into your existing tool set.</p>
+      </div>
+    </div>
+
+    <div class="integration-hub__diagram">
+
+      <!-- Left tools -->
+      <div class="integration-hub__col integration-hub__col--left">
+        <div class="integration-hub__tool">Salesforce Opportunities</div>
+        <div class="integration-hub__tool">Salesforce Flows</div>
+        <div class="integration-hub__tool">Salesforce CPQ</div>
+      </div>
+
+      <!-- Connector lines left -->
+      <div class="integration-hub__lines integration-hub__lines--left">
+        <div class="integration-hub__line"></div>
+        <div class="integration-hub__line"></div>
+        <div class="integration-hub__line"></div>
+      </div>
+
+      <!-- Center hub -->
+      <div class="integration-hub__center">
+        <div class="integration-hub__hub">
+          <img src="/images/SQ_Logo.png" alt="SilkQuote" class="integration-hub__logo">
+        </div>
+      </div>
+
+      <!-- Connector lines right -->
+      <div class="integration-hub__lines integration-hub__lines--right">
+        <div class="integration-hub__line"></div>
+        <div class="integration-hub__line"></div>
+        <div class="integration-hub__line"></div>
+      </div>
+
+      <!-- Right tools -->
+      <div class="integration-hub__col integration-hub__col--right">
+        <div class="integration-hub__tool">Email &amp; Notifications</div>
+        <div class="integration-hub__tool">E-Signature</div>
+        <div class="integration-hub__tool">AppExchange</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<style>
+  .integration-hub {
+    padding: 80px 0;
+  }
+
+  .integration-hub .section__head {
+    text-align: center;
+  }
+
+  .integration-hub .section__title {
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-alt-color);
+  }
+
+  .integration-hub .section__description {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--heading-font-color);
+    margin: 4px auto 0;
+  }
+
+  .integration-hub__diagram {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 56px;
+    gap: 0;
+  }
+
+  .integration-hub__col {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .integration-hub__tool {
+    background: var(--background-white, #fff);
+    border: 1px solid var(--border-color, #e1e5e9);
+    border-radius: 12px;
+    padding: 14px 22px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: var(--text-primary, #2c2c2c);
+    white-space: nowrap;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-fast);
+  }
+
+  .integration-hub__tool:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-1px);
+  }
+
+  .integration-hub__lines {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 4px;
+    position: relative;
+  }
+
+  .integration-hub__line {
+    height: 1px;
+    width: 60px;
+    background: var(--border-color, #e1e5e9);
+    align-self: center;
+    /* vertically align each line with the tool card center */
+    margin: 20px 0; /* matches half card height */
+  }
+
+  .integration-hub__center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 8px;
+  }
+
+  .integration-hub__hub {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: var(--background-white, #fff);
+    border: 1px solid var(--border-color, #e1e5e9);
+    box-shadow: var(--shadow-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .integration-hub__logo {
+    width: 56px;
+    height: auto;
+  }
+
+  @media (max-width: 768px) {
+    .integration-hub__diagram {
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .integration-hub__col {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .integration-hub__lines {
+      display: none;
+    }
+
+    .integration-hub__center {
+      order: -1;
+    }
+  }
+</style>

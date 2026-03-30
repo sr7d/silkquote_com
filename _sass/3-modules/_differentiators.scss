@@ -199,14 +199,14 @@
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    border: 1px solid var(--border-light);
+    border: 1px solid #3935E3;
     background: var(--background-white);
-    color: var(--heading-font-color);
+    color: #3935E3;
     cursor: pointer;
 
     &:hover {
-      border-color: var(--primary-color);
-      color: var(--primary-color);
+      background: #3935E3;
+      color: var(--white);
     }
 
     &[disabled] {
@@ -214,8 +214,8 @@
       cursor: default;
 
       &:hover {
-        border-color: var(--border-light);
-        color: var(--heading-font-color);
+        background: var(--background-white);
+        color: #3935E3;
       }
     }
   }

@@ -1,19 +1,19 @@
 /* Hero - SilkQuote Design System */
 .hero {
-  padding: 200px 0 80px;
+  padding: 200px 0 0;
   color: var(--white);
-  background: linear-gradient(to bottom, #eeeaff 0%, #fafafa 100%);
+  background: linear-gradient(to bottom, #fafafa 0%, #eeeaff 100%);
 
   @media (max-width: $desktop) {
-    padding: 180px 0 60px;
+    padding: 180px 0 0;
   }
 
   @media (max-width: $tablet) {
-    padding: 160px 0 60px;
+    padding: 160px 0 0;
   }
 
   @media (max-width: $mobile) {
-    padding: 140px 0 40px;
+    padding: 140px 0 0;
   }
 }
 
@@ -43,7 +43,7 @@
 
 .hero__title {
   margin-bottom: 0;
-  font-size: 64px;
+  font-size: 48px;
   font-weight: 800;
   line-height: 1.1;
   color: var(--text-color);
@@ -67,7 +67,7 @@
 
 .hero__description {
   margin-bottom: 0;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 1.5;
   color: var(--text-color);
   opacity: 0.8;
@@ -86,6 +86,12 @@
     font-size: 18px;
     line-height: 1.4;
   }
+}
+
+.hero__appexchange-above {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
 .hero__appexchange-badge {
@@ -119,7 +125,7 @@
   align-items: center;
   gap: 16px;
   flex-wrap: wrap;
-  margin-bottom: 16px;
+  margin-bottom: 40px;
 
   .hero__cta-btn {
     padding: 14px 32px;
@@ -134,5 +140,15 @@
       width: 100%;
       max-width: 260px;
     }
+  }
+}
+
+.demo-video-section {
+  padding: 0;
+  margin-bottom: 60px;
+
+  @media (max-width: 768px) {
+    padding: 0;
+    margin-bottom: 0;
   }
 }

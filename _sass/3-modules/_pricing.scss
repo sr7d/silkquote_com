@@ -31,7 +31,7 @@
 
 .pricing__free-badge {
   display: inline-block;
-  background-color: transparent;
+  background-color: #eeeaff;
   color: #3935E3;
   font-size: 13px;
   font-weight: 700;
@@ -135,11 +135,16 @@
 }
 
 .pricing__services-label {
+  display: inline-block;
+  align-self: flex-start;
+  background-color: #eeeaff;
+  color: #3935E3;
   font-size: 13px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1.5px;
-  color: var(--primary-color);
+  letter-spacing: 1px;
+  padding: 6px 16px;
+  border-radius: 20px;
   margin-bottom: 12px;
 }
 

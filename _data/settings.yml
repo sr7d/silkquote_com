@@ -67,8 +67,8 @@ home__items:
 #-------------------------------
 # Hero Settings
 hero:
-  hero__title: You Sent the Quote. <br>Now What?
-  hero__description: SilkQuote combines professional quote templates, delivery, tracking, and a collaborative deal room — so reps move fast, stay informed, and nothing slips through the cracks.
+  hero__title: Frictionless Quote Generation & Deal Room for Salesforce
+  hero__description: Give sales teams and customers a quoting experience they will love, with customizable templates, tracking, and a collaborative deal room.
   painpoint: STOP sending quotes that undermine trust and professionalism!
 #-------------------------------
 # Blog Settings

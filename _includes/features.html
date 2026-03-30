@@ -1,36 +1,403 @@
-<section class="features" id="steps">
+<section class="comparison-timeline" id="steps">
   <div class="container">
-    <div class="section__info">
-      <div class="section__head">
-        <h3 class="section__title">Move Fast. Stay Informed. Nothing Slips.</h3>
-        <p class="section__description">From controlled templates to a collaborative deal room, SilkQuote keeps every quote on-brand, on-time, and fully visible.</p>
-      </div>
+    <div class="comparison-timeline__header">
+      <div class="comparison-timeline__col-label comparison-timeline__col-label--problem">The Old Way</div>
+      <div class="comparison-timeline__spine-spacer"></div>
+      <div class="comparison-timeline__col-label comparison-timeline__col-label--solution">SilkQuote</div>
     </div>
 
-    <div class="features__grid">
-      <div class="features__step">
-        <div class="features__step-icon">
-          <picture><source srcset="/images/configurator-xs.webp 500w, /images/configurator-sm.webp 800w" type="image/webp"><img src="/images/configurator.png" sizes="(max-width: 640px) calc(100vw - 40px), 270px" alt="Build Templates" loading="lazy" width="800" height="453" /></picture>
+    <div class="comparison-timeline__rows">
+
+      <div class="comparison-timeline__row">
+        <div class="comparison-timeline__cell comparison-timeline__cell--problem">
+          <div class="comparison-timeline__card">
+            <h4 class="comparison-timeline__card-title">1. Build Templates</h4>
+            <p class="comparison-timeline__card-desc">Design Word docs with merge tags outside Salesforce, then manually upload and maintain them.</p>
+          </div>
         </div>
-        <h4 class="features__step-title">1. Build Templates</h4>
-        <p class="features__step-description">Create controlled, branded templates that keep every rep consistent.</p>
+        <div class="comparison-timeline__spine">
+          <div class="comparison-timeline__dot"></div>
+        </div>
+        <div class="comparison-timeline__cell comparison-timeline__cell--solution">
+          <div class="comparison-timeline__card">
+            <h4 class="comparison-timeline__card-title">1. Build Templates</h4>
+            <p class="comparison-timeline__card-desc">Build branded templates natively in Salesforce. Every rep stays on-brand every time.</p>
+          </div>
+        </div>
       </div>
 
-      <div class="features__step">
-        <div class="features__step-icon">
-          <picture><source srcset="/images/generator-xs.webp 500w, /images/generator-sm.webp 800w" type="image/webp"><img src="/images/generator.png" sizes="(max-width: 640px) calc(100vw - 40px), 270px" alt="Generate Quotes" loading="lazy" width="800" height="452" /></picture>
+      <div class="comparison-timeline__row">
+        <div class="comparison-timeline__cell comparison-timeline__cell--problem">
+          <div class="comparison-timeline__card">
+            <h4 class="comparison-timeline__card-title">2. Generate a Quote</h4>
+            <p class="comparison-timeline__card-desc">Reps manually search for and pick a template, then generate a quote and hope they chose right.</p>
+          </div>
         </div>
-        <h4 class="features__step-title">2. Send in Seconds</h4>
-        <p class="features__step-description">Reps generate a professional quote from any Opportunity in one click.</p>
+        <div class="comparison-timeline__spine">
+          <div class="comparison-timeline__dot"></div>
+        </div>
+        <div class="comparison-timeline__cell comparison-timeline__cell--solution">
+          <div class="comparison-timeline__card">
+            <h4 class="comparison-timeline__card-title">2. Generate in One Click</h4>
+            <p class="comparison-timeline__card-desc">SilkQuote auto-filters templates based on the deal. Reps can't pick wrong. Quote sent in seconds.</p>
+          </div>
+        </div>
       </div>
 
-      <div class="features__step">
-        <div class="features__step-icon">
-          <picture><source srcset="/images/docshare-xs.webp 500w, /images/docshare-sm.webp 800w" type="image/webp"><img src="/images/docshare.png" sizes="(max-width: 640px) calc(100vw - 40px), 270px" alt="Share & Close" loading="lazy" width="800" height="456" /></picture>
+      <div class="comparison-timeline__row">
+        <div class="comparison-timeline__cell comparison-timeline__cell--problem">
+          <div class="comparison-timeline__card">
+            <h4 class="comparison-timeline__card-title">3. Send a Draft</h4>
+            <p class="comparison-timeline__card-desc">Rep emails a PDF and waits, with no visibility into whether the customer even opened it.</p>
+          </div>
         </div>
-        <h4 class="features__step-title">3. Close in the Deal Room</h4>
-        <p class="features__step-description">Customers review, ask questions, and sign in a hosted deal room.</p>
+        <div class="comparison-timeline__spine">
+          <div class="comparison-timeline__dot"></div>
+        </div>
+        <div class="comparison-timeline__cell comparison-timeline__cell--solution">
+          <div class="comparison-timeline__card">
+            <h4 class="comparison-timeline__card-title">3. Deliver to the Deal Room</h4>
+            <p class="comparison-timeline__card-desc">SilkQuote sends a branded email with a live Deal Room link. Know the moment the buyer opens it.</p>
+          </div>
+        </div>
       </div>
+
+      <div class="comparison-timeline__row">
+        <div class="comparison-timeline__cell comparison-timeline__cell--problem">
+          <div class="comparison-timeline__card">
+            <h4 class="comparison-timeline__card-title">4. Revise Over Email</h4>
+            <p class="comparison-timeline__card-desc">Customer requests changes over email. Rep revises the doc, re-attaches, and sends again.</p>
+          </div>
+        </div>
+        <div class="comparison-timeline__spine">
+          <div class="comparison-timeline__dot"></div>
+        </div>
+        <div class="comparison-timeline__cell comparison-timeline__cell--solution">
+          <div class="comparison-timeline__card">
+            <h4 class="comparison-timeline__card-title">4. Collaborate and Sign</h4>
+            <p class="comparison-timeline__card-desc">Buyer requests changes in the Deal Room. Rep updates and regenerates in one click. Buyer signs without leaving.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="comparison-timeline__row">
+        <div class="comparison-timeline__cell comparison-timeline__cell--problem">
+          <div class="comparison-timeline__card">
+            <h4 class="comparison-timeline__card-title">5. Send for Signature</h4>
+            <p class="comparison-timeline__card-desc">Rep sends a separate e-signature request through a third-party tool, adding another handoff.</p>
+          </div>
+        </div>
+        <div class="comparison-timeline__spine">
+          <div class="comparison-timeline__dot"></div>
+        </div>
+        <div class="comparison-timeline__cell comparison-timeline__cell--solution">
+        </div>
+      </div>
+
+      <div class="comparison-timeline__row">
+        <div class="comparison-timeline__cell comparison-timeline__cell--problem">
+          <div class="comparison-timeline__card">
+            <h4 class="comparison-timeline__card-title">6. Close and Update</h4>
+            <p class="comparison-timeline__card-desc">Customer signs and someone manually updates Salesforce. Momentum stalls at the finish line.</p>
+          </div>
+        </div>
+        <div class="comparison-timeline__spine">
+          <div class="comparison-timeline__dot"></div>
+        </div>
+        <div class="comparison-timeline__cell comparison-timeline__cell--solution">
+          <div class="comparison-timeline__card">
+            <h4 class="comparison-timeline__card-title">5. Automatic Updates</h4>
+            <p class="comparison-timeline__card-desc">SilkQuote tracks engagement and automatically updates the Opportunity. Nothing slips.</p>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
+
+<style>
+  .comparison-timeline {
+    padding: 80px 0 40px;
+    overflow: hidden;
+  }
+
+  @media (max-width: 768px) {
+    .comparison-timeline { padding: 60px 0; }
+  }
+
+  @media (max-width: 576px) {
+    .comparison-timeline { padding: 40px 0; }
+  }
+
+  .comparison-timeline .section__head {
+    text-align: center;
+  }
+
+  .comparison-timeline .section__title {
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-alt-color);
+  }
+
+  .comparison-timeline .section__description {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--heading-font-color);
+    margin: 4px auto 0;
+  }
+
+  .comparison-timeline__header {
+    display: grid;
+    grid-template-columns: 1fr 48px 1fr;
+    gap: 0;
+    margin-bottom: 12px;
+    padding: 0 8px;
+  }
+
+  .comparison-timeline__col-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 6px 16px;
+    border-radius: var(--border-radius);
+    display: inline-block;
+    width: fit-content;
+  }
+
+  .comparison-timeline__col-label--problem {
+    color: var(--text-alt-color);
+    background: var(--background-light);
+    justify-self: center;
+  }
+
+  .comparison-timeline__col-label--solution {
+    color: #3935E3;
+    background: rgba(57, 53, 227, 0.08);
+    justify-self: center;
+  }
+
+
+  .comparison-timeline__rows {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  /* Continuous vertical line running through all dots */
+  .comparison-timeline__rows::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: -9999px;
+    bottom: 0;
+    width: 2px;
+    transform: translateX(-50%);
+    background: var(--border-color);
+  }
+
+  .comparison-timeline__row {
+    display: grid;
+    grid-template-columns: 1fr 48px 1fr;
+    align-items: center;
+    gap: 0;
+    padding: 20px 0;
+  }
+
+  .comparison-timeline__cell {
+    padding: 0 20px;
+  }
+
+  .comparison-timeline__cell--solution {
+    text-align: left;
+  }
+
+  .comparison-timeline__cell--problem {
+    text-align: right;
+  }
+
+  .comparison-timeline__card {
+    display: inline-block;
+    text-align: left;
+    background: var(--background-white);
+    border-radius: var(--border-radius);
+    padding: 18px 22px;
+    max-width: 340px;
+    width: 100%;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition-fast);
+  }
+
+  .comparison-timeline__cell--problem .comparison-timeline__card {
+    border-left: 3px solid var(--border-medium);
+  }
+
+  .comparison-timeline__cell--solution .comparison-timeline__card {
+    border-left: 3px solid #3935E3;
+    background: #eeeaff;
+  }
+
+  .comparison-timeline__skip {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border-radius: var(--border-radius);
+    border: 1px dashed var(--border-color);
+    max-width: 340px;
+    width: 100%;
+  }
+
+  .comparison-timeline__skip-label {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--text-alt-color);
+    font-style: italic;
+  }
+
+  .comparison-timeline__skip-label::before {
+    content: '✓ ';
+    color: #3935E3;
+    font-style: normal;
+    font-weight: 700;
+  }
+
+  .comparison-timeline__card:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .comparison-timeline__card-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--heading-font-color);
+    margin: 0 0 6px;
+  }
+
+  .comparison-timeline__card-desc {
+    font-size: 0.875rem;
+    color: var(--text-alt-color);
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .comparison-timeline__spine {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  .comparison-timeline__row:last-child .comparison-timeline__spine::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: calc(50% + 10px);
+    bottom: -9999px;
+    width: 4px;
+    transform: translateX(-50%);
+    background: #fafafa;
+    z-index: 2;
+  }
+
+  .comparison-timeline__dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--primary-color);
+    border: 2px solid var(--background-white);
+    box-shadow: 0 0 0 2px var(--border-medium);
+    flex-shrink: 0;
+  }
+
+  @media (max-width: 768px) {
+    .comparison-timeline__header {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+      padding: 0;
+      margin-bottom: 8px;
+    }
+
+    .comparison-timeline__spine-spacer {
+      display: none;
+    }
+
+    .comparison-timeline__rows::before {
+      display: none;
+    }
+
+    .comparison-timeline__row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "problem solution";
+      align-items: stretch;
+      gap: 8px;
+      padding: 8px 0;
+    }
+
+    .comparison-timeline__cell--problem {
+      grid-area: problem;
+      padding: 0;
+      text-align: left;
+      display: flex;
+    }
+
+    .comparison-timeline__cell--solution {
+      grid-area: solution;
+      padding: 0;
+      text-align: left;
+      display: flex;
+    }
+
+    .comparison-timeline__spine {
+      display: none;
+    }
+
+    .comparison-timeline__card {
+      max-width: 100%;
+      width: 100%;
+      padding: 12px 14px;
+      display: block;
+      box-sizing: border-box;
+      flex: 1;
+    }
+
+    .comparison-timeline__card-title {
+      font-size: 0.8rem;
+    }
+
+    .comparison-timeline__card-desc {
+      font-size: 0.75rem;
+    }
+
+    .comparison-timeline__cell--problem .comparison-timeline__card::before,
+    .comparison-timeline__cell--solution .comparison-timeline__card::before {
+      display: none;
+    }
+  }
+
+  /* Peeking screenshot */
+  .peek-screenshot {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+
+  .peek-screenshot__inner img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  .peek-screenshot__fade {
+    display: none;
+  }
+</style>

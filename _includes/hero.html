@@ -3,18 +3,7 @@
     <div class="row">
       <div class="col col-12">
         <div class="hero__content">
-          <div class="hero__inner">
-            <h1 class="hero__title">{{ site.data.settings.hero.hero__title }}</h1>
-          </div>        
-          <div class="hero__description__inner">
-            <p class="hero__description">{{ site.data.settings.hero.hero__description }}</p>
-          </div>
-          <div class="hero__cta">
-            {% if site.data.settings.install_url %}
-              <a href="{{ site.data.settings.install_url }}" class="button button--primary" target="_self" rel="noopener">Install App</a>
-            {% else %}
-              <span class="button button--primary coming-soon" data-tooltip="Coming Soon">Install App</span>
-            {% endif %}
+          <div class="hero__appexchange-above">
             <a href="{{ site.data.settings.appexchange_url }}" class="hero__appexchange-badge" target="_blank" rel="noopener">
               <img src="/images/appExchange.png" alt="Available on Salesforce AppExchange">
               <div class="hero__appexchange-stars" aria-label="5 out of 5 stars">
@@ -24,12 +13,53 @@
               </div>
             </a>
           </div>
+          <div class="hero__inner">
+            <h1 class="hero__title">{{ site.data.settings.hero.hero__title }}</h1>
+          </div>
+          <div class="hero__description__inner">
+            <p class="hero__description">{{ site.data.settings.hero.hero__description }}</p>
+          </div>
+          <div class="hero__cta">
+            {% if site.data.settings.install_url %}
+              <a href="{{ site.data.settings.install_url }}" class="button button--primary" target="_self" rel="noopener">Install Now</a>
+            {% else %}
+              <span class="button button--primary coming-soon" data-tooltip="Coming Soon">Install Now</span>
+            {% endif %}
+          </div>
+    <div class="social-proof__badges">
+      <div class="social-proof__badge">
+        <div class="social-proof__badge-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </div>
+        <span class="social-proof__badge-text">100% Native Salesforce</span>
+      </div>
+      <div class="social-proof__badge">
+        <div class="social-proof__badge-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <span class="social-proof__badge-text">No Code Required</span>
+      </div>
+      <div class="social-proof__badge">
+        <div class="social-proof__badge-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <span class="social-proof__badge-text">AppExchange Security Reviewed</span>
+      </div>
+    </div>          
         </div>
       </div>
     </div>
     <div class="row">
       <div class="col col-12">
-        <div class="hero__video">
+        <!-- <div class="hero__video">
           <div class="video-container" id="hero-video-container">
             <div class="vimeo-facade" data-vimeo-id="1114259071" style="position:absolute;top:0;left:0;width:100%;height:100%;cursor:pointer;">
               <picture>
@@ -59,7 +89,7 @@
               this.parentNode.replaceChild(iframe, this);
             });
           </script>
-        </div>
+        </div> -->
       </div>
     </div>
   <!-- {% if site.data.settings.hero.painpoint %}
@@ -68,12 +98,29 @@
     </div>
   {% endif %}   -->
   </div>
+
+  <div class="peek-screenshot">
+    <div class="peek-screenshot__inner">
+      <img src="/images/hero-image.png" alt="SilkQuote quote generator" loading="lazy" width="800" height="452">
+    </div>
+  </div>
+
 </section>
 
 <style>
   .hero__content {
     padding: 0;
     margin: 0;
+  }
+
+  .peek-screenshot__inner {
+    border-bottom: 2px solid var(--border-color);
+  }
+
+  @media (max-width: 768px) {
+    .peek-screenshot {
+      display: none;
+    }
   }
 
   .hero__painpoint-wrapper {
