@@ -53,8 +53,14 @@ This step allows customers and prospects to interact with quotes on your website
 
 ### Site Limits
 
-- **Developer Org:** 1 site allowed  
+- **Developer Org:** 1 site allowed
 - **Enterprise Edition and above:** Up to 25 sites
+
+## 2.4 Assign the Managed Package to the Site Guest User
+
+1. Go to the **SilkQuote Site Guest User** record.
+2. Scroll down to **Managed Packages**.
+3. Add **SilkQuote** as an assigned managed package.
 
 ## 3. Connect the SilkQuote App to Your Salesforce Site
 
