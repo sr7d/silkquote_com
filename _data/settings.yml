@@ -2,7 +2,7 @@
 # Site Settings
 title: SilkQuote - Collaborative Deal Room & PDF Quotes
 description: Free Salesforce quoting tool. Generate branded PDF quotes from Opportunities in one click. Prospects review and accept from a hosted link. No paid software required.
-logo: /images/logo.png
+logo: /images/logo.svg
 install_url: /install
 production_install_url: https://login.salesforce.com/packaging/installPackage.apexp?p0=04tVt000001fUSzIAM
 sandbox_install_url: https://test.salesforce.com/packaging/installPackage.apexp?p0=04tVt000001fUSzIAM
