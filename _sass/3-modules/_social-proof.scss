@@ -1,6 +1,6 @@
 /* Social Proof Section */
 .social-proof {
-  background-color: #eeeaff;
+  background-color: transparent;
   padding: 40px 0;
 }
 
@@ -9,14 +9,14 @@
   justify-content: center;
   gap: 40px;
   flex-wrap: wrap;
-  margin-bottom: 40px;
+  margin-bottom: 0px;
 }
 
 .social-proof__badge {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 24px;
+  margin-bottom: 0px;
 }
 
 .social-proof__badge-icon {
@@ -41,9 +41,28 @@
 .social-proof__carousel {
   position: relative;
   overflow: hidden;
-  -webkit-mask-image: linear-gradient(to right, transparent, black 80px, black calc(100% - 80px), transparent);
-  mask-image: linear-gradient(to right, transparent, black 80px, black calc(100% - 80px), transparent);
   margin-bottom: 24px;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 80px;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  &::before {
+    left: 0;
+    background: linear-gradient(to right, #fafafa, transparent);
+  }
+
+  &::after {
+    right: 0;
+    background: linear-gradient(to left, #fafafa, transparent);
+  }
 }
 
 .social-proof__carousel-track {
@@ -57,13 +76,39 @@
 }
 
 .social-proof__feature-inner {
-  background-color: var(--background-white);
+  background-color: #fafafa;
+  background-image:
+    radial-gradient(ellipse 110% 65% at 20% 35%, rgba(238, 234, 255, 0.95) 0%, transparent 65%),
+    radial-gradient(ellipse 60% 75% at 82% 12%, rgba(200, 195, 255, 0.8) 0%, transparent 60%),
+    radial-gradient(ellipse 75% 55% at 45% 88%, rgba(218, 215, 255, 0.85) 0%, transparent 65%),
+    radial-gradient(ellipse 50% 85% at 88% 65%, rgba(238, 234, 255, 0.55) 0%, transparent 55%);
+  background-size: 280% 280%;
+  background-position: 10% 20%;
+  animation: sq-feat-blob 12s ease-in-out infinite alternate;
   border: 1px solid rgba(0, 0, 0, 0.07);
   border-radius: var(--border-radius-large);
   padding: 24px 24px;
   height: 100%;
   box-sizing: border-box;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+// Stagger each card with a unique duration and delay (10 cards × 2 duplicated = 20 total)
+$durations: 11s, 14s, 9s, 16s, 12s, 10s, 15s, 13s, 8s, 17s;
+$delays: 0s, -3s, -7s, -1s, -9s, -5s, -2s, -11s, -6s, -4s;
+
+@for $i from 1 through 10 {
+  .social-proof__feature-card:nth-child(#{$i}) .social-proof__feature-inner {
+    animation-duration: nth($durations, $i);
+    animation-delay: nth($delays, $i);
+  }
+}
+
+@keyframes sq-feat-blob {
+  0%   { background-position: 10% 20%; }
+  33%  { background-position: 75% 10%; }
+  66%  { background-position: 30% 82%; }
+  100% { background-position: 88% 55%; }
 }
 
 .social-proof__feature-title {

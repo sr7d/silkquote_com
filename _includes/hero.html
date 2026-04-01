@@ -26,34 +26,55 @@
               <span class="button button--primary coming-soon" data-tooltip="Coming Soon">Install Now</span>
             {% endif %}
           </div>
-    <div class="social-proof__badges">
-      <div class="social-proof__badge">
-        <div class="social-proof__badge-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2"/>
-          </svg>
+    <div class="hero__trust-area">
+      <div class="social-proof__badges">
+        <div class="social-proof__badge">
+          <div class="social-proof__badge-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="currentColor" stroke-width="2"/>
+            </svg>
+          </div>
+          <span class="social-proof__badge-text">100% Native Salesforce</span>
         </div>
-        <span class="social-proof__badge-text">100% Native Salesforce</span>
-      </div>
-      <div class="social-proof__badge">
-        <div class="social-proof__badge-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
+        <div class="social-proof__badge">
+          <div class="social-proof__badge-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <span class="social-proof__badge-text">No Code Required</span>
         </div>
-        <span class="social-proof__badge-text">No Code Required</span>
-      </div>
-      <div class="social-proof__badge">
-        <div class="social-proof__badge-icon">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
+        <div class="social-proof__badge">
+          <div class="social-proof__badge-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 22C12 22 20 18 20 12V5L12 2L4 5V12C4 18 12 22 12 22Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M9 12L11 14L15 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <span class="social-proof__badge-text">AppExchange Security Reviewed</span>
         </div>
-        <span class="social-proof__badge-text">AppExchange Security Reviewed</span>
       </div>
-    </div>          
+
+      <div class="comparison-slider" id="heroComparison" style="--split: 50%">
+        <div class="comparison-slider__before">
+          <img src="/images/hero-image-before.png" alt="Before SilkQuote - Salesforce Opportunity record" loading="lazy" width="800" height="452">
+        </div>
+        <div class="comparison-slider__after">
+          <img src="/images/hero-image.png" alt="After SilkQuote - one-click quoting" loading="lazy" width="800" height="452">
+        </div>
+        <div class="comparison-slider__divider">
+          <div class="comparison-slider__handle">
+            <span class="comparison-slider__handle-label">Internal</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M9 18l-6-6 6-6M15 6l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span class="comparison-slider__handle-label">Customer</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
         </div>
       </div>
     </div>
@@ -99,11 +120,6 @@
   {% endif %}   -->
   </div>
 
-  <div class="peek-screenshot">
-    <div class="peek-screenshot__inner">
-      <img src="/images/hero-image.png" alt="SilkQuote quote generator" loading="lazy" width="800" height="452">
-    </div>
-  </div>
 
 </section>
 
@@ -113,15 +129,85 @@
     margin: 0;
   }
 
-  .peek-screenshot__inner {
+  @media (min-width: 769px) {
+    .hero__trust-area .social-proof__badges {
+      margin-bottom: 48px;
+    }
+  }
+
+  .comparison-slider {
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 900 / 500;
+    max-width: 900px;
+    margin: 0 auto;
+    cursor: col-resize;
+    user-select: none;
+    touch-action: pan-y;
     border-bottom: 2px solid var(--border-color);
   }
 
-  @media (max-width: 768px) {
-    .peek-screenshot {
-      display: none;
-    }
+  .comparison-slider__before,
+  .comparison-slider__after {
+    position: absolute;
+    inset: 0;
   }
+
+  .comparison-slider__before img,
+  .comparison-slider__after img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top left;
+    display: block;
+    pointer-events: none;
+    -webkit-user-drag: none;
+  }
+
+  .comparison-slider__after {
+    clip-path: inset(0 0 0 var(--split));
+  }
+
+  .comparison-slider__divider {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: var(--split);
+    transform: translateX(-50%);
+    width: 2px;
+    background: #fff;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: none;
+  }
+
+  .comparison-slider__handle {
+    height: 36px;
+    border-radius: 18px;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 0 12px;
+    color: #333;
+    flex-shrink: 0;
+    white-space: nowrap;
+  }
+
+  .comparison-slider__handle-label {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #999;
+  }
+
 
   .hero__painpoint-wrapper {
     text-align: center;
@@ -281,6 +367,30 @@
   }
 
   @media (max-width: 768px) {
+    .hero__trust-area {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr;
+    }
+
+    .hero__trust-area > * {
+      grid-area: 1 / 1;
+    }
+
+    .social-proof__badges {
+      display: none;
+    }
+
+    .comparison-slider {
+      opacity: 0.8;
+      align-self: center;
+      width: 90%;
+      margin: 0 auto;
+    }
+
+  }
+
+  @media (max-width: 768px) {
     .hero__video {
       margin-top: 0;
       margin-bottom: 1.5rem;
@@ -306,6 +416,9 @@
   }
 
   @media (max-width: 576px) {
+    .comparison-slider {
+      cursor: default;
+    }
     .hero__video {
       margin-top: 0.25rem;
       padding: 10px;
@@ -345,3 +458,37 @@
     }
   }
 </style>
+
+<script>
+(function() {
+  var el = document.getElementById('heroComparison');
+  if (!el) return;
+  var dragging = false;
+  var idle = true;
+  var idleStart = Date.now();
+
+  var idleInterval = setInterval(function() {
+    if (!idle) { clearInterval(idleInterval); return; }
+    var elapsed = (Date.now() - idleStart) / 1000;
+    var pct = 50 + 2 * Math.sin(elapsed * (2 * Math.PI / 5));
+    el.style.setProperty('--split', pct + '%');
+  }, 16);
+
+  function stopIdle() {
+    idle = false;
+  }
+
+  function setPos(clientX) {
+    var rect = el.getBoundingClientRect();
+    var pct = Math.min(Math.max((clientX - rect.left) / rect.width * 100, 2), 98);
+    el.style.setProperty('--split', pct + '%');
+  }
+
+  el.addEventListener('mousedown', function(e) { stopIdle(); dragging = true; setPos(e.clientX); e.preventDefault(); });
+  window.addEventListener('mousemove', function(e) { if (dragging) setPos(e.clientX); });
+  window.addEventListener('mouseup', function() { dragging = false; });
+  el.addEventListener('touchstart', function(e) { stopIdle(); dragging = true; setPos(e.touches[0].clientX); }, { passive: true });
+  window.addEventListener('touchmove', function(e) { if (dragging) setPos(e.touches[0].clientX); }, { passive: true });
+  window.addEventListener('touchend', function() { dragging = false; });
+})();
+</script>

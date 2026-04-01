@@ -191,8 +191,32 @@
   }
 
   .comparison-timeline__cell--solution .comparison-timeline__card {
-    border-left: 3px solid #3935E3;
-    background: #eeeaff;
+    background-color: #fafafa;
+    background-image:
+      radial-gradient(ellipse 110% 65% at 20% 35%, rgba(238, 234, 255, 0.95) 0%, transparent 65%),
+      radial-gradient(ellipse 60% 75% at 82% 12%, rgba(200, 195, 255, 0.8) 0%, transparent 60%),
+      radial-gradient(ellipse 75% 55% at 45% 88%, rgba(218, 215, 255, 0.85) 0%, transparent 65%),
+      radial-gradient(ellipse 50% 85% at 88% 65%, rgba(238, 234, 255, 0.55) 0%, transparent 55%);
+    background-size: 280% 280%;
+    background-position: 10% 20%;
+    animation: sq-feat-blob 12s ease-in-out infinite alternate;
+    border: 1px solid rgba(0, 0, 0, 0.07);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  }
+
+  .comparison-timeline__row:nth-child(1) .comparison-timeline__cell--solution .comparison-timeline__card {
+    animation-duration: 14s;
+    animation-delay: -3s;
+  }
+
+  .comparison-timeline__row:nth-child(2) .comparison-timeline__cell--solution .comparison-timeline__card {
+    animation-duration: 9s;
+    animation-delay: -7s;
+  }
+
+  .comparison-timeline__row:nth-child(3) .comparison-timeline__cell--solution .comparison-timeline__card {
+    animation-duration: 16s;
+    animation-delay: -1s;
   }
 
   .comparison-timeline__skip {
@@ -294,13 +318,13 @@
     }
 
     .comparison-timeline__rows::before {
-      display: none;
+      left: 50%;
     }
 
     .comparison-timeline__row {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-template-areas: "problem solution";
+      grid-template-columns: 1fr 36px 1fr;
+      grid-template-areas: "problem spine solution";
       align-items: stretch;
       gap: 8px;
       padding: 8px 0;
@@ -321,7 +345,12 @@
     }
 
     .comparison-timeline__spine {
-      display: none;
+      grid-area: spine;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 1;
     }
 
     .comparison-timeline__card {
@@ -339,6 +368,10 @@
 
     .comparison-timeline__card-desc {
       font-size: 0.75rem;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
     }
 
     .comparison-timeline__cell--problem .comparison-timeline__card::before,
@@ -365,4 +398,5 @@
   .peek-screenshot__fade {
     display: none;
   }
+
 </style>
