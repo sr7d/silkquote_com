@@ -46,6 +46,9 @@
   <!-- Hero LCP image preload (homepage) -->
   {% if page.url == "/" %}<link rel="preload" as="image" href="/images/hero-poster.webp" imagesrcset="/images/hero-poster-sm.webp 480w, /images/hero-poster-md.webp 800w, /images/hero-poster-1024.webp 1024w, /images/hero-poster.webp 1280w" imagesizes="(max-width: 640px) calc(100vw - 30px), (max-width: 1024px) 800px, 1280px" type="image/webp">{% endif %}
 
+  <!-- Analytics -->
+  <script defer data-domain="silkquote.com" src="https://datakool.com/tracker/script.js"></script>
+
   <!-- Critical above-fold CSS (inlined) -->
   <style>{% include critical.css %}</style>
 

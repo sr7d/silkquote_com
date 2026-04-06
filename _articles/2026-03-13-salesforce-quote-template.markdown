@@ -121,3 +121,4 @@ SilkQuote's template system is purpose-built for the kinds of customization real
 - [Configure Template Sections & Fields](/configure-template-fields/)
 - [Set or Change the Template Logo](/set-or-change-the-template-logo/)
 - [Preview a Template with Real Data](/preview-a-template-with-real-data/)
+- [Salesforce Quote Tool: Overview of How SilkQuote Works](/salesforce-quote-tool/)

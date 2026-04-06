@@ -7,7 +7,7 @@ last_modified_at: 2026-03-03 00:00:00 +0000
 author: admin
 image: /images/editDeleteTemplate.png
 image_caption: "Template maintenance"
-tags: [configurator, template-management]
+tags: [configure-templates, template-management]
 permalink: /edit-or-delete-a-template/
 featured: false
 ---

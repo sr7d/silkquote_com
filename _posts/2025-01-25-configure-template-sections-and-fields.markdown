@@ -9,7 +9,7 @@ last_modified_at: 2026-03-03 00:00:00 +0000
 author: admin
 image: /images/configureSection.png
 image_caption: "Section field mapping"
-tags: [configurator, section-fields]
+tags: [configure-templates, section-fields]
 featured: false
 ---
 ## Overview

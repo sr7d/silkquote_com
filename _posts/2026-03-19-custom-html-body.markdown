@@ -6,7 +6,7 @@ title: "Custom HTML Template"
 description: "Write HTML templates with merge fields, line item loops, conditional blocks, and custom CSS to generate fully custom PDF quotes from Salesforce data."
 date: 2026-03-19 09:00:00 +0000
 author: admin
-tags: [template-creation, configurator]
+tags: [template-creation, configure-templates]
 featured: false
 image: /images/customHTMLBody.png
 image_caption: "Custom HTML body with merge fields"

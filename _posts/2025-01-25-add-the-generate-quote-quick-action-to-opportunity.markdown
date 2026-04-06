@@ -9,7 +9,7 @@ last_modified_at: 2026-03-03 00:00:00 +0000
 author: admin
 image: /images/generateQuoteDocument.png
 image_caption: "Lightning actions"
-tags: [configurator, quick-action]
+tags: [configure-templates, quick-action]
 featured: false
 ---
 ## Overview

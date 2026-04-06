@@ -11,17 +11,16 @@
       <div class="comparison-timeline__row">
         <div class="comparison-timeline__cell comparison-timeline__cell--problem">
           <div class="comparison-timeline__card">
-            <h4 class="comparison-timeline__card-title">Generate a Quote</h4>
-            <p class="comparison-timeline__card-desc">Reps build quotes outside Salesforce in spreadsheets or Word docs. No controls, no standards. Every quote looks different and leadership has no visibility.</p>
+            <p class="comparison-timeline__card-desc">Reps scroll unfiltered pricebooks, copy codes into spreadsheets, and build bundles by hand. Wrong products end up on quotes.</p>
           </div>
         </div>
         <div class="comparison-timeline__spine">
           <div class="comparison-timeline__dot"></div>
+          <span class="comparison-timeline__dot-label">Configure</span>
         </div>
         <div class="comparison-timeline__cell comparison-timeline__cell--solution">
           <div class="comparison-timeline__card">
-            <h4 class="comparison-timeline__card-title">Generate in One Click</h4>
-            <p class="comparison-timeline__card-desc">Branded, approved templates live natively in Salesforce. SilkQuote auto-filters by deal type so reps can't go off-script. Accurate quotes in seconds.</p>
+            <p class="comparison-timeline__card-desc">Select a pricebook, filter products, and add individual products or bundles. Configuration rules enforce what goes on the quote.</p>
           </div>
         </div>
       </div>
@@ -29,17 +28,16 @@
       <div class="comparison-timeline__row">
         <div class="comparison-timeline__cell comparison-timeline__cell--problem">
           <div class="comparison-timeline__card">
-            <h4 class="comparison-timeline__card-title">Revise Over Email</h4>
-            <p class="comparison-timeline__card-desc">Rep emails a PDF and waits with no visibility. Customer requests changes, rep revises and resends, then chases a separate e-signature tool. Buyers disengage. Deals stall.</p>
+            <p class="comparison-timeline__card-desc">Pricing lives in spreadsheets or memory. Discounts are negotiated outside the system and margins erode.</p>
           </div>
         </div>
         <div class="comparison-timeline__spine">
           <div class="comparison-timeline__dot"></div>
+          <span class="comparison-timeline__dot-label">Price</span>
         </div>
         <div class="comparison-timeline__cell comparison-timeline__cell--solution">
           <div class="comparison-timeline__card">
-            <h4 class="comparison-timeline__card-title">Collaborate in the Deal Room</h4>
-            <p class="comparison-timeline__card-desc">SilkQuote delivers a branded Deal Room link. See the moment the buyer opens it. Changes are made in one click. Buyer signs without leaving. No back and forth.</p>
+            <p class="comparison-timeline__card-desc">List price from the pricebook, with custom pricing logic and rules applies, approval ready.</p>
           </div>
         </div>
       </div>
@@ -47,17 +45,16 @@
       <div class="comparison-timeline__row">
         <div class="comparison-timeline__cell comparison-timeline__cell--problem">
           <div class="comparison-timeline__card">
-            <h4 class="comparison-timeline__card-title">Close and Update</h4>
-            <p class="comparison-timeline__card-desc">Customer signs in a third-party tool, then someone manually updates Salesforce. Data lags, approvals slip through, and leadership can't get a straight answer on pipeline.</p>
+            <p class="comparison-timeline__card-desc">Quotes go out as PDFs with no tracking. Revisions pile up in inboxes and signatures require a separate tool.</p>
           </div>
         </div>
         <div class="comparison-timeline__spine">
           <div class="comparison-timeline__dot"></div>
+          <span class="comparison-timeline__dot-label">Quote</span>
         </div>
         <div class="comparison-timeline__cell comparison-timeline__cell--solution">
           <div class="comparison-timeline__card">
-            <h4 class="comparison-timeline__card-title">Close with Confidence</h4>
-            <p class="comparison-timeline__card-desc">Approvals, discounts, and terms are enforced before the quote ever leaves. When the buyer signs, Salesforce updates automatically. Full visibility, no manual cleanup.</p>
+            <p class="comparison-timeline__card-desc">Send and track a branded quote from a template. Collaborate and close in the deal room.</p>
           </div>
         </div>
       </div>
@@ -135,11 +132,6 @@
     display: flex;
     flex-direction: column;
     gap: 0;
-    counter-reset: timeline-step;
-  }
-
-  .comparison-timeline__row {
-    counter-increment: timeline-step;
   }
 
   /* Continuous vertical line running through all dots */
@@ -157,13 +149,15 @@
   .comparison-timeline__row {
     display: grid;
     grid-template-columns: 1fr 48px 1fr;
-    align-items: center;
+    align-items: stretch;
     gap: 0;
     padding: 20px 0;
   }
 
   .comparison-timeline__cell {
     padding: 0 20px;
+    display: flex;
+    align-items: stretch;
   }
 
   .comparison-timeline__cell--solution {
@@ -172,10 +166,12 @@
 
   .comparison-timeline__cell--problem {
     text-align: right;
+    justify-content: flex-end;
   }
 
   .comparison-timeline__card {
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
     text-align: left;
     background: var(--background-white);
     border-radius: var(--border-radius);
@@ -201,6 +197,7 @@
     background-position: 10% 20%;
     animation: sq-feat-blob 12s ease-in-out infinite alternate;
     border: 1px solid rgba(0, 0, 0, 0.07);
+    border-left: 3px solid #3935E3;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   }
 
@@ -265,6 +262,7 @@
 
   .comparison-timeline__spine {
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     position: relative;
@@ -300,9 +298,25 @@
     line-height: 1;
   }
 
-  .comparison-timeline__dot::after {
-    content: counter(timeline-step);
+  .comparison-timeline__row:nth-child(1) .comparison-timeline__dot::after { content: '1'; }
+  .comparison-timeline__row:nth-child(2) .comparison-timeline__dot::after { content: '2'; }
+  .comparison-timeline__row:nth-child(3) .comparison-timeline__dot::after { content: '3'; }
+
+  .comparison-timeline__dot-label {
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-alt-color);
+    white-space: nowrap;
+    margin-top: 10px;
+    padding: 0px 6px;
+    background: #fafafa;
+    border-radius: 4px;
+    position: relative;
+    z-index: 10;
   }
+
 
   @media (max-width: 768px) {
     .comparison-timeline__header {

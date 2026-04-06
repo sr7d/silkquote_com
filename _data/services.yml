@@ -1,11 +1,14 @@
+- name: Products configured, filtered, and bundled
+  description: Filters, bundles, and columns built for your catalog.
+
 - name: Deals that close without chasing approvers
   description: Multi-tier flows that route, remind, and resolve.
 
-- name: Quotes that generate themselves
-  description: Trigger quote generation from flow or code.
+- name: Custom pricing logic and configuration rules
+  description: Discount schedules, volume tiers, conditional rules.
 
-- name: Quotes that look like your brand, not a spreadsheet
+- name: Quotes that look like your brand
   description: Bespoke layouts, conditional sections, and more.
 
-- name: Sign from any device, the moment the quote lands
-  description: DocuSign, Adobe Sign, and more.
+- name: Sign in Salesforce
+  description: Replace DocuSign, Adobe Sign, and more.

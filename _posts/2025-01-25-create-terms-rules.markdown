@@ -7,7 +7,7 @@ last_modified_at: 2026-03-03 00:00:00 +0000
 author: admin
 image: /images/createTerms.png
 image_caption: "Terms rules and precedence"
-tags: [configurator, terms-rules]
+tags: [configure-templates, terms-rules]
 permalink: /create-terms-rules/
 featured: false
 ---

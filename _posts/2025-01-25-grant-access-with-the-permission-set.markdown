@@ -9,7 +9,7 @@ last_modified_at: 2026-03-03 00:00:00 +0000
 author: admin
 image: /images/permissionSet.png
 image_caption: "Access control"
-tags: [configurator, permissions]
+tags: [configure-templates, permissions]
 robots: noindex
 featured: false
 ---

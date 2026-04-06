@@ -67,14 +67,14 @@ home__items:
 #-------------------------------
 # Hero Settings
 hero:
-  hero__title: Frictionless Quote Generation & Deal Room for Salesforce
-  hero__description: Give sales teams and customers a quoting experience they will love, with customizable templates, tracking, and a collaborative deal room.
+  hero__title: Frictionless Quotes & Deal Room <br>for Salesforce
+  hero__description: Give sales teams and customers a quoting experience they will love &mdash; configure products & pricing, generate branded PDFs, and close in a collaborative deal room.
   painpoint: STOP sending quotes that undermine trust and professionalism!
 #-------------------------------
 # Blog Settings
 blog:
   blog__title: Documentation
-  blog__description: Learn to use SilkQuote in your quote generation process.
+  blog__description: Learn to use SilkQuote in your quote process.
 
 #-------------------------------
 # Featured Tag Settings
@@ -93,4 +93,4 @@ author:
 
 #-------------------------------
 # Google Analytics
-google-analytics: G-PEZ75XV87W
+google-analytics:

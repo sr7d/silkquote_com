@@ -7,7 +7,7 @@ last_modified_at: 2026-03-03 00:00:00 +0000
 author: admin
 image: /images/configuratorPreview.png
 image_caption: "Accurate template preview"
-tags: [configurator, template-preview]
+tags: [configure-templates, template-preview]
 permalink: /preview-a-template-with-real-data/
 featured: false
 ---

@@ -7,7 +7,7 @@ last_modified_at: 2026-03-03 00:00:00 +0000
 author: admin
 image: /images/newTemplate.png
 image_caption: "Template creation"
-tags: [configurator, template-creation]
+tags: [configure-templates, template-creation]
 permalink: /create-a-new-template/
 robots: noindex
 featured: false
