@@ -5,17 +5,18 @@ sitemap: false
 ---
 # SilkQuote
 
-> Professional quote templates, tracking insights, and a collaborative deal room — so reps move fast, leaders stay informed, and nothing slips through the cracks. Free, native Salesforce quoting.
+> A fully functional CPQ (Configure, Price, Quote) built natively on Salesforce — with a collaborative deal room, quote tracking, and e-signature. Free for unlimited users.
 
-SilkQuote is a native Salesforce application that combines professional quote templates, tracking insights, and a collaborative deal room. Admins build controlled, branded templates with conditional fields and terms. Reps generate professional quotes in one click without leaving Salesforce. Prospects review, ask questions, and sign in a hosted deal room — while leaders track every interaction. All inside Salesforce, at zero cost.
+SilkQuote is a native Salesforce CPQ application. It handles the full quoting process: admins configure products, pricing rules, and branded templates; reps build accurate quotes with guided product selection, conditional fields, and automated pricing — all without leaving Salesforce. Finished quotes are shared via a hosted collaborative deal room where prospects can review, ask questions, upload documents, and sign. Leaders track every interaction from open to close.
 
 **Key facts:**
+- Full CPQ: product catalog, pricing rules, guided selling, and quote generation
 - Free: unlimited users, quotes, and templates
 - Works with Salesforce Professional Edition and above
-- No-code template configurator for admins
-- One-click PDF generation from any Opportunity
+- No-code template and product configurator for admins
+- One-click quote generation from any Opportunity
 - Native Salesforce integration (Lightning Experience)
-- Hosted deal room with e-signature, Q&A, shared resources, and next steps
+- Collaborative deal room with e-signature, Q&A, shared resources, and next steps
 - Quote view tracking, open tracking, and acceptance logging
 - Invocable from Salesforce Flows for automation
 
