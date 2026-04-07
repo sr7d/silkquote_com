@@ -24,18 +24,6 @@ layout: default
           <p class="post__description">{{ page.description }}</p>
           {% endif %}
 
-          {% assign post_author = site.authors | where: "username", page.author | first %}
-          {% if post_author %}
-          <div class="post__author">
-            {% if post_author.image %}
-            <div class="post__author-avatar">
-              <img class="lazy" data-src="{{ post_author.image }}" alt="{{ post_author.name }}">
-            </div>
-            {% endif %}
-            <p>By {{ post_author.name }} &mdash; {{ post_author.title }}</p>
-          </div>
-          {% endif %}
-
         </div>
       </div>
 
@@ -94,7 +82,6 @@ layout: default
   </script>
 
   <!-- Article Structured Data -->
-  {% assign post_author = site.authors | where: "username", page.author | first %}
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -103,9 +90,9 @@ layout: default
     "description": "{% if page.description %}{{ page.description | strip_html | escape }}{% else %}{{ page.excerpt | strip_html | escape }}{% endif %}",
     "image": "{% if page.image %}{{ site.url }}{{ page.image }}{% endif %}",
     "author": {
-      "@type": "Person",
-      "name": "{% if post_author %}{{ post_author.name }}{% else %}{{ site.data.settings.author.author__name }}{% endif %}",
-      "url": "https://www.silkquote.com/about/"
+      "@type": "Organization",
+      "name": "SilkQuote",
+      "url": "https://www.silkquote.com"
     },
     "publisher": {
       "@type": "Organization",

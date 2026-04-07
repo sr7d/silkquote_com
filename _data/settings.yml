@@ -1,6 +1,6 @@
 #-------------------------------
 # Site Settings
-title: SilkQuote - Collaborative Deal Room & PDF Quotes
+title: SilkQuote - Frictionless Quotes & Deal Room for Salesforce
 description: Free Salesforce quoting tool. Generate branded PDF quotes from Opportunities in one click. Prospects review and accept from a hosted link. No paid software required.
 logo: /images/logo.svg
 install_url: /install
@@ -8,7 +8,7 @@ production_install_url: https://login.salesforce.com/packaging/installPackage.ap
 sandbox_install_url: https://test.salesforce.com/packaging/installPackage.apexp?p0=04tVt000001fUSzIAM
 appexchange_url: https://appexchange.salesforce.com/appxListingDetail?listingId=b15e931b-f12f-43cd-9f92-813e7d87591e
 linkedin_url: https://www.linkedin.com/company/silkquote
-youtube_url: https://www.youtube.com/@silkquote
+youtube_url: 
 
 #-------------------------------
 # Navigation Settings
@@ -84,12 +84,9 @@ tag:
   tag__name: templates
 
 #-------------------------------
-# Author Settings
+# About Settings
 author:
-  author__name: Skylar Rhodes
-  author__bio: After almost a decade in Quote-to-Cash, I decided to build a tool to marry the needs of Admins, Reps, and Prospects.<br> I wanted something that is both standalone and compatible with other tools. It needed to serve both small businesses and enterprises in both technology and business process. In the beginning, SilkQuote was just a hyperfunctional PDF quote generator. But I quickly realized that generating the document doesn't complete the entire quoting journey.<br> After a year of development and testing, SilkQuote became a full quoting system.<br> The result is an intuitive quoting system that any admin can manage, reps actually use, and that provides the customer experience your prospects deserve.
-  author__avatar: /images/avatar2.jpeg
-  author__signature: Skylar Rhodes, Creator of SilkQuote
+  author__bio: "After almost a decade in Quote-to-Cash, SilkQuote was built to serve the needs of Admins, Reps, and Prospects alike: something both standalone and compatible with other tools, designed for small businesses and enterprise teams across technology and business process.<br> In the beginning, SilkQuote was a hyperfunctional PDF quote generator. But generating the document doesn't complete the entire quoting journey.<br> After a year of development and testing, SilkQuote became a full quoting system: an intuitive platform that any admin can manage, reps actually use, and that delivers the customer experience your prospects deserve."
 
 #-------------------------------
 # Google Analytics

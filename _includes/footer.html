@@ -12,14 +12,6 @@
             {% if site.data.settings.author.author__bio %}
             <p class="widget-author__bio" style="color: white;">{{site.data.settings.author.author__bio}}</p>
             {% endif %}
-            {% if site.data.settings.author.author__signature %}
-            <div class="widget-author__signature-row">
-              <div class="widget-author__avatar">
-                <img class="lazy" data-src="{{site.data.settings.author.author__avatar}}" alt="{{site.data.settings.author.author__name}}">
-              </div>
-              <p class="widget-author__signature">{{site.data.settings.author.author__signature}}</p>
-            </div>
-            {% endif %}
           </div>
         </div>
 
@@ -71,8 +63,8 @@
     <div class="container">
       <div class="row">
         <div class="col col-12">
-          <!-- <div class="copyright">{{ site.time | date: '%Y' }} &copy; <a href="/">{{ site.data.settings.title }}</a></div> -->
-          <div class="copyright"><a href="https://cpqdevelopers.com">CPQDEV LLC</a></div>
+          <div class="copyright"> &copy; <a href="/">{{ site.data.settings.title }}</a></div>
+          <!-- <div class="copyright"><a href="https://silkquote.com">SilkQuote</div> -->
         </div>
       </div>
     </div>

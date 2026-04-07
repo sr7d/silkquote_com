@@ -1,10 +1,8 @@
 ---
 username: admin
-name: Skylar Rhodes
-title: Salesforce Revenue Systems Architect, SilkQuote Developer
-bio: Skylar Rhodes is a Salesforce Revenue Systems Architect, SilkQuote Creator and founder of CPQDEV LLC. He has architected and optimized quoting and revenue operations processes for major organizations across technology, professional services, and manufacturing.
-image: '/images/avatar2.jpeg'
-url: /about/
-linkedin: https://www.linkedin.com/in/skylarrhodes/
+name: SilkQuote
+title: Salesforce Quoting App
+bio: SilkQuote is a native Salesforce quoting app that lets teams generate branded PDF quotes, share them via secure deal room links, and track prospect engagement — all without leaving Salesforce.
+url: /
 robots: noindex
 ---
