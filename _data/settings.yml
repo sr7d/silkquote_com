@@ -68,7 +68,7 @@ home__items:
 # Hero Settings
 hero:
   hero__title: Frictionless Quotes & Deal Room <br>for Salesforce
-  hero__description: Give sales teams and customers a quoting experience they will love &mdash; configure products & pricing, generate branded PDFs, and close in a collaborative deal room.
+  hero__description: Give sales teams and customers a quoting experience they will love, with customizable templates, product bundles, pricing rules, tracking, and a collaborative deal room.
   painpoint: STOP sending quotes that undermine trust and professionalism!
 #-------------------------------
 # Blog Settings
