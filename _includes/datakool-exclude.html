@@ -1,0 +1,10 @@
+<script>
+var _exc = new URLSearchParams(window.location.search).get('exclude');
+if (_exc === '1') {
+  localStorage.setItem('datakool_exclude', '1');
+  console.log('[Analytics] This device is now excluded from tracking.');
+} else if (_exc === '0') {
+  localStorage.removeItem('datakool_exclude');
+  console.log('[Analytics] Tracking re-enabled on this device.');
+}
+</script>
