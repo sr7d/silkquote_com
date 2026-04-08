@@ -1,0 +1,12 @@
+{% if jekyll.environment == "production" %}
+<script>
+(function() {
+  if (localStorage.getItem('datakool_exclude') === '1') return;
+  var s = document.createElement('script');
+  s.defer = true;
+  s.setAttribute('data-domain', 'silkquote.com');
+  s.src = 'https://datakool.com/tracker/script.js';
+  document.head.appendChild(s);
+})();
+</script>
+{% endif %}
