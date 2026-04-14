@@ -4,8 +4,8 @@ title: SilkQuote - Frictionless Quotes & Deal Room for Salesforce
 description: Free Salesforce quoting tool. Generate branded PDF quotes from Opportunities in one click. Prospects review and accept from a hosted link. No paid software required.
 logo: /images/logo.svg
 install_url: /install
-production_install_url: https://login.salesforce.com/packaging/installPackage.apexp?p0=04tVt000001fUSzIAM
-sandbox_install_url: https://test.salesforce.com/packaging/installPackage.apexp?p0=04tVt000001fUSzIAM
+production_install_url: https://login.salesforce.com/packaging/installPackage.apexp?p0=04tVt000001kIRBIA2
+sandbox_install_url: https://test.salesforce.com/packaging/installPackage.apexp?p0=04tVt000001kIRBIA2
 appexchange_url: https://appexchange.salesforce.com/appxListingDetail?listingId=b15e931b-f12f-43cd-9f92-813e7d87591e
 linkedin_url: https://www.linkedin.com/company/silkquote
 youtube_url: 
