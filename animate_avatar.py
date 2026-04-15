@@ -2,7 +2,7 @@ from PIL import Image, ImageDraw, ImageFont
 from pilmoji import Pilmoji
 import math
 
-source = Image.open("images/SQ_Logo.png").convert("RGBA")
+source = Image.open("images/SQ_noborder.png").convert("RGBA")
 w, h = source.size
 bg_color  = (255, 255, 255)   # white background
 
@@ -52,6 +52,7 @@ def make_avatar_slide():
 # Build static slides
 raw_slides = [
     make_avatar_slide(),
+    make_emoji_slide("⚙️"),
     make_emoji_slide("📄"),
     make_emoji_slide("✉️"),
     make_emoji_slide("✍️"),
