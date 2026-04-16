@@ -58,10 +58,10 @@
 
       <div class="comparison-slider" id="heroComparison" style="--split: 50%">
         <div class="comparison-slider__before">
-          <img src="/images/hero-image-before.png" alt="Before SilkQuote - Salesforce Opportunity record" loading="lazy" width="800" height="452">
+          <img src="/images/internalView.webp" alt="Before SilkQuote - Salesforce Opportunity record" loading="lazy" width="2992" height="1606">
         </div>
         <div class="comparison-slider__after">
-          <img src="/images/hero-image.png" alt="After SilkQuote - one-click quoting" loading="lazy" width="800" height="452">
+          <img src="/images/externalView.webp" alt="After SilkQuote - one-click quoting" loading="lazy" width="2992" height="1690">
         </div>
         <div class="comparison-slider__divider">
           <div class="comparison-slider__handle">
@@ -470,7 +470,7 @@
   var idleInterval = setInterval(function() {
     if (!idle) { clearInterval(idleInterval); return; }
     var elapsed = (Date.now() - idleStart) / 1000;
-    var pct = 50 + 2 * Math.sin(elapsed * (2 * Math.PI / 5));
+    var pct = 50 + 10 * Math.sin(elapsed * (1 * Math.PI / 5));
     el.style.setProperty('--split', pct + '%');
   }, 16);
 
