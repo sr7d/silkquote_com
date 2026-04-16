@@ -2,7 +2,7 @@
   <div class="container">
     <div class="hero__video">
       <div class="video-container" id="hero-video-container">
-        <div class="vimeo-facade" data-vimeo-id="1114259071" style="position:absolute;top:0;left:0;width:100%;height:100%;cursor:pointer;">
+        <div class="vimeo-facade" data-vimeo-id="1183875503" style="position:absolute;top:0;left:0;width:100%;height:100%;cursor:pointer;">
           <picture>
             <source srcset="/images/hero-poster-sm.webp 480w, /images/hero-poster-md.webp 800w, /images/hero-poster-1024.webp 1024w, /images/hero-poster.webp 1280w" type="image/webp">
             <img src="/images/hero-poster.jpg" sizes="(max-width: 640px) calc(100vw - 30px), (max-width: 1024px) 800px, 1280px" alt="SilkQuote Demo Video" style="width:100%;height:100%;object-fit:cover;" loading="lazy" width="1280" height="720">
@@ -17,18 +17,73 @@
         </div>
       </div>
       <script>
-        document.querySelector('.vimeo-facade').addEventListener('click', function(e) {
-          try { localStorage.setItem('sq_demo_video_watched', '1'); } catch(ve) {}
-          e.stopPropagation();
-          var iframe = document.createElement('iframe');
-          iframe.src = 'https://player.vimeo.com/video/' + this.dataset.vimeoId + '/?autoplay=1&muted=0&loop=0&controls=1';
-          iframe.setAttribute('frameborder', '0');
-          iframe.setAttribute('allow', 'autoplay; fullscreen; picture-in-picture');
-          iframe.setAttribute('allowfullscreen', '');
-          iframe.setAttribute('title', 'SilkQuote Demo Video');
-          iframe.style.cssText = 'position:absolute;top:0;left:0;width:100%;height:100%;border-radius:inherit;';
-          this.parentNode.replaceChild(iframe, this);
-        });
+        (function() {
+          var facade = document.querySelector('.vimeo-facade');
+          if (!facade) return;
+          var videoId = facade.dataset.vimeoId;
+          var container = facade.parentNode;
+          var bgIframe = null;
+
+          function makeIframe(src, title) {
+            var iframe = document.createElement('iframe');
+            iframe.src = src;
+            iframe.setAttribute('frameborder', '0');
+            iframe.setAttribute('allow', 'autoplay; fullscreen; picture-in-picture');
+            iframe.setAttribute('allowfullscreen', '');
+            iframe.setAttribute('title', title);
+            iframe.style.cssText = 'position:absolute;top:0;left:0;width:100%;height:100%;border:0;border-radius:inherit;';
+            return iframe;
+          }
+
+          function loadBackgroundPreview() {
+            if (bgIframe) return;
+            bgIframe = makeIframe(
+              'https://player.vimeo.com/video/' + videoId + '?background=1&autoplay=1&muted=1&loop=1&controls=0&autopause=0',
+              'SilkQuote Demo Video preview'
+            );
+            bgIframe.style.pointerEvents = 'none';
+            bgIframe.setAttribute('aria-hidden', 'true');
+            container.insertBefore(bgIframe, facade);
+            facade.style.background = 'transparent';
+            var img = facade.querySelector('img');
+            if (img) img.style.opacity = '0';
+            var pic = facade.querySelector('picture');
+            if (pic) pic.style.opacity = '0';
+          }
+
+          function startWithSound() {
+            try { localStorage.setItem('sq_demo_video_watched', '1'); } catch(ve) {}
+            var playerIframe = makeIframe(
+              'https://player.vimeo.com/video/' + videoId + '?autoplay=1&muted=0&loop=0&controls=1',
+              'SilkQuote Demo Video'
+            );
+            if (bgIframe && bgIframe.parentNode) bgIframe.parentNode.removeChild(bgIframe);
+            container.replaceChild(playerIframe, facade);
+          }
+
+          facade.addEventListener('click', function(e) {
+            e.stopPropagation();
+            startWithSound();
+          });
+
+          if ('IntersectionObserver' in window) {
+            var io = new IntersectionObserver(function(entries) {
+              entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                  io.disconnect();
+                  if ('requestIdleCallback' in window) {
+                    requestIdleCallback(loadBackgroundPreview, { timeout: 1500 });
+                  } else {
+                    setTimeout(loadBackgroundPreview, 600);
+                  }
+                }
+              });
+            }, { rootMargin: '200px' });
+            io.observe(container);
+          } else {
+            window.addEventListener('load', function() { setTimeout(loadBackgroundPreview, 800); });
+          }
+        })();
       </script>
     </div>
   </div>

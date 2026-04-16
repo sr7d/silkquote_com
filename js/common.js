@@ -178,7 +178,7 @@ document.addEventListener("DOMContentLoaded", function() {
   /* =======================
   // Video Lightbox
   ======================= */
-  const DEMO_VIDEO_SRC = 'https://player.vimeo.com/video/1114259071?autoplay=1&controls=1&background=0&muted=0';
+  const DEMO_VIDEO_SRC = 'https://player.vimeo.com/video/1183875503?autoplay=1&controls=1&background=0&muted=0';
   const lightboxHTML = `
     <div class="video-lightbox" id="video-lightbox">
       <div class="video-lightbox-content">
