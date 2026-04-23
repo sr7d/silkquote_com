@@ -1,14 +1,14 @@
-- name: Products configured, filtered, and bundled
-  description: Filters, bundles, and columns built for your catalog.
+- name: Installing the SilkQuote app
+  description: Package deployed into your Salesforce org.
 
-- name: Deals that close without chasing approvers
-  description: Multi-tier flows that route, remind, and resolve.
+- name: Assigning permissions and licenses
+  description: Access configured for admins and reps.
 
-- name: Custom pricing logic and configuration rules
-  description: Discount schedules, volume tiers, conditional rules.
+- name: Configure your quoting process
+  description: Quoting buttons and automation on your Opportunity.
 
-- name: Quotes that look like your brand
-  description: Bespoke layouts, conditional sections, and more.
+- name: Setting up your hosted deal room
+  description: Customer review and acceptance tracking.
 
-- name: Sign in Salesforce
-  description: Replace DocuSign, Adobe Sign, and more.
+- name: Answering all your questions
+  description: Live walkthrough, no question off-limits.

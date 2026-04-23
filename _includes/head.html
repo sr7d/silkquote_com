@@ -16,6 +16,12 @@
   <meta name="robots" content="index, follow">
   <meta name="googlebot" content="index, follow">
   {% endif %}
+
+  {% if page.redirect_to %}
+  <meta http-equiv="refresh" content="0; url={{ page.redirect_to | relative_url }}">
+  <link rel="canonical" href="{{ page.redirect_to | absolute_url }}">
+  <script>window.location.replace({{ page.redirect_to | relative_url | jsonify }});</script>
+  {% endif %}
   <meta name="author" content="SilkQuote">
   <meta name="keywords" content="{% if page.tags %}{{ page.tags | join: ', ' }}{% else %}Salesforce, CPQ, Quote Generation, PDF, Business Automation{% endif %}">
   

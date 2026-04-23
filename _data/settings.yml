@@ -20,8 +20,6 @@ menu__settings:
       url: '/#pricing'
     - title: 'Support'
       url: '/support/'
-    - title: 'Partners'
-      url: '/partners/'
     - title: 'Demo'
       url: '#'
       demo: true
@@ -43,8 +41,6 @@ menu__items:
     title: 'Quotation Generator'
   - url: '/mou-quotes/'
     title: MOU Quotes
-  - url: '/partners/'
-    title: Partners
 
 home__items:
   - url: '/salesforce-quote-generator/'
