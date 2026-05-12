@@ -77,7 +77,7 @@ SilkQuote follows a three-step process:
 - No usage limits
 
 ### Expert Support Services (optional)
-{% for service in site.data.services %}- **{{ service.name }}** — {{ service.price }} {{ service.unit }}: {{ service.description }}
+{% for service in site.data.services %}- **{{ service.name }}**: {{ service.description }}
 {% endfor %}
 
 ## Supported Salesforce Editions
@@ -128,11 +128,14 @@ SilkQuote is NOT a fit if you:
 **Is SilkQuote really free?**
 Yes, 100%. Every feature, unlimited users, no expiration. SilkQuote is supported by expert services for teams who want hands-on setup and customization.
 
+**Why is SilkQuote free?**
+SilkQuote is free while the product grows adoption and gathers customer feedback; expert setup and customization services are available for teams that want hands-on help.
+
 **Can I set it up myself?**
-Absolutely. Most teams are sending quotes within an hour. Expert services are available for teams that want a polished, production-ready setup without the trial and error.
+Yes. Most teams can set up SilkQuote themselves and start sending quotes quickly. For teams that want a polished production rollout, SilkQuote offers expert help with setup, templates, automation, and integrations.
 
 **When do teams typically need expert help?**
-When you need custom templates, advanced automation, integration services, and ongoing consultative quote-to-cash support.
+Teams usually need expert help when they want a faster go-live, custom templates, advanced automation, integrations, or ongoing quote-to-cash support.
 
 **What Salesforce editions are supported?**
 Professional, Enterprise, Unlimited, Developer, and Performance editions.

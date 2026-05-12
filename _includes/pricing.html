@@ -3,7 +3,7 @@
     <div class="section__info">
       <div class="section__head">
         <h3 class="section__title">Pricing</h3>
-        <p class="section__description">Immediate ROI. Expert Support when you need it.</p>
+        <p class="section__description">Free App. Expert Support When You Need It.</p>
       </div>
     </div>
 
@@ -14,7 +14,7 @@
           <div class="pricing__price">
             <span class="pricing__amount">$0</span>
           </div>
-          <p class="pricing__billing">No credit card. No trial. No limits.</p>
+          <p class="pricing__billing">No credit card. No trial. No limits.<br>Start free. Add expert help only if you need it.</p>
 
           <ul class="pricing__features">
             <li>Unlimited Users</li>
@@ -28,9 +28,9 @@
 
           <div class="pricing__cta">
             {% if site.data.settings.install_url %}
-              <a href="{{ site.data.settings.install_url }}" class="button button--primary" target="_self" rel="noopener">Install Now</a>
+              <a href="{{ site.data.settings.install_url }}" class="button button--primary" target="_self" rel="noopener">Install Free</a>
             {% else %}
-              <span class="button button--primary coming-soon" data-tooltip="Coming Soon">Install Now</span>
+              <span class="button button--primary coming-soon" data-tooltip="Coming Soon">Install Free</span>
             {% endif %}
           </div>
         </div>
@@ -38,8 +38,8 @@
 
       <div class="pricing__services-card">
         <div class="pricing__services-label">Done for you</div>
-        <h4 class="pricing__services-title">Need help fast?</h4>
-        <p class="pricing__services-description">Book a 30-minute paid setup call with a SilkQuote expert.</p>
+        <h4 class="pricing__services-title">Expert Support</h4>
+        <p class="pricing__services-description">Need a faster rollout or custom setup? Expert support is available to help teams go live faster with a production-ready setup.</p>
 
         <ul class="pricing__services-list">
           {% for service in site.data.services %}
@@ -54,7 +54,7 @@
             data-cal-link="silkquote/support"
             data-cal-namespace="support"
             data-cal-config='{"layout":"week_view","useSlotsViewOnSmallScreen":"true"}'>
-            Book a Paid Call
+            Get Expert Help
           </button>
         </div>
       </div>
@@ -73,11 +73,20 @@
           </div>
           <div class="faq-item">
             <button type="button" class="faq-question" aria-expanded="false">
+              Why is SilkQuote free?
+              <svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <div class="faq-answer">
+              <p>SilkQuote is free while the product grows adoption and gathers customer feedback; expert setup and customization services are available for teams that want hands-on help.</p>
+            </div>
+          </div>
+          <div class="faq-item">
+            <button type="button" class="faq-question" aria-expanded="false">
               Can I set it up myself?
               <svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
             <div class="faq-answer">
-              <p>Absolutely. Most teams are sending quotes within an hour. Expert services are available for teams that want a polished, production-ready setup without the trial and error.</p>
+              <p>Yes. Most teams can set up SilkQuote themselves and start sending quotes quickly. For teams that want a polished production rollout, SilkQuote offers expert help with setup, templates, automation, and integrations.</p>
             </div>
           </div>
           <div class="faq-item">
@@ -86,7 +95,7 @@
               <svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
             <div class="faq-answer">
-              <p>When you need custom templates, advanced automation, integration services, and ongoing consultative quote-to-cash support. <a href="/contact/">Get in touch</a> for a free consultation.</p>
+              <p>Teams usually need expert help when they want a faster go-live, custom templates, advanced automation, integrations, or ongoing quote-to-cash support.</p>
             </div>
           </div>
           <div class="faq-item">
@@ -113,7 +122,7 @@
               <svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
             <div class="faq-answer">
-              <p>No. Most teams don't need a pricing engine or product configurator. They need clean, branded quotes that go out fast and get accepted. If you eventually require a CPQ solution, then SilkQuote is completely compatible with those tools.</p>
+              <p>No. SilkQuote includes simple pricing and configuration features for common quote workflows, but it is not a replacement for Salesforce CPQ or Revenue Cloud. Most companies need the simpler workflow: branded quote PDFs from Opportunities, basic configuration, deal room sharing, and e-signature without a full CPQ implementation.</p>
             </div>
           </div>
           <div class="faq-item">
@@ -122,7 +131,7 @@
               <svg class="faq-icon" width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
             </button>
             <div class="faq-answer">
-              <p>Word and Google Docs require you to manually copy customer details, product information, and pricing from Salesforce into a separate document every time you create a quote. SilkQuote pulls all of that data automatically from your Opportunity record and generates a branded PDF in one click. Your quotes are always accurate because they come directly from your CRM. And instead of emailing a file attachment, you send a hosted link where your customer can review, comment, and accept.</p>
+              <p>Word, Google Docs, and Excel-based quoting usually require maintaining documents outside Salesforce with custom tags, merge syntax, and pseudo-logic that can break or drift from CRM data. SilkQuote keeps the template, Opportunity data, quote PDF, deal room, and e-signature workflow inside Salesforce, so reps generate accurate branded quotes without maintaining external files.</p>
             </div>
           </div>
         </div>

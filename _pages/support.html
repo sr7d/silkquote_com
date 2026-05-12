@@ -1,27 +1,27 @@
 ---
 layout: default
 title: SilkQuote Support - Help & Expert Services
-description: Report an issue or book time with a SilkQuote expert
+description: Report an issue or get expert help with SilkQuote setup, templates, automation, and integrations
 permalink: /support/
 ---
 
 <div class="support-page container">
   <h1 class="page__title" id="support-title">SilkQuote Support</h1>
-  <p class="page__intro">Get help with your SilkQuote setup, troubleshoot quote generation issues, or book time with a SilkQuote expert for hands-on assistance. Choose the option below that fits your needs.</p>
+  <p class="page__intro">Get help with your SilkQuote setup, troubleshoot quote generation issues, or get expert support for a production-ready rollout.</p>
   <div class="support__grid">
 
-    <!-- Card 1 — Expert Support -->
+    <!-- Card 1 - Expert Support -->
     <div class="support__card">
       <div class="support__card-icon support__card-icon--calendar">
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
       </div>
-      <h4 class="pricing__services-title">Need help fast?</h4>
-      <p class="support__card-description">Book a 30-minute paid setup call with a SilkQuote expert.</p>
+      <h4 class="pricing__services-title">Expert Support</h4>
+      <p class="support__card-description">Need a faster rollout or custom setup? Expert support is available to help teams go live faster with a production-ready setup.</p>
 
       <ul class="pricing__services-list">
         {% for service in site.data.services %}
         <li>
-          <strong>{{ service.name }} <span class="pricing__services-price"><b>{{ service.prefix }}</b> {{ service.price }} <b>{{ service.unit }}</b></span></strong>
+          <strong>{{ service.name }}</strong>
           <span>{{ service.description }}</span>
         </li>
         {% endfor %}
@@ -31,12 +31,12 @@ permalink: /support/
           data-cal-link="silkquote/support"
           data-cal-namespace="support"
           data-cal-config='{"layout":"week_view","useSlotsViewOnSmallScreen":"true"}'>
-          Book a Paid Call
+          Get Expert Help
         </button>
       </div>
     </div>
 
-    <!-- Card — Report an Issue -->
+    <!-- Card - Report an Issue -->
     <div class="support__card">
       <div class="support__card-header">
         <div class="support__card-icon support__card-icon--issue">

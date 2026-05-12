@@ -5,15 +5,15 @@ sitemap: false
 ---
 # SilkQuote
 
-> A fully functional CPQ (Configure, Price, Quote) built natively on Salesforce — with a collaborative deal room, quote tracking, and e-signature. Free for unlimited users.
+> Frictionless quote PDFs, deal room, and e-sign for Salesforce. Generate branded PDFs from Opportunities, share them in a deal room, and close with e-signature. Free for unlimited users.
 
-SilkQuote is a native Salesforce CPQ application. It handles the full quoting process: admins configure products, pricing rules, and branded templates; reps build accurate quotes with guided product selection, conditional fields, and automated pricing — all without leaving Salesforce. Finished quotes are shared via a hosted collaborative deal room where prospects can review, ask questions, upload documents, and sign. Leaders track every interaction from open to close.
+SilkQuote is a native Salesforce quoting app for Opportunity-based quoting, branded PDF output, deal room sharing, e-signature, and fast setup. Admins configure branded templates and field mapping. Reps generate quote PDFs from Salesforce Opportunities, share a hosted deal room, and capture signature activity without external tools.
 
 **Key facts:**
-- Full CPQ: product catalog, pricing rules, guided selling, and quote generation
+- Opportunity-based quote PDF generation
 - Free: unlimited users, quotes, and templates
 - Works with Salesforce Professional Edition and above
-- No-code template and product configurator for admins
+- No-code template setup for admins
 - One-click quote generation from any Opportunity
 - Native Salesforce integration (Lightning Experience)
 - Collaborative deal room with e-signature, Q&A, shared resources, and next steps

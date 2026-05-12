@@ -1,14 +1,11 @@
-- name: Installing the SilkQuote app
-  description: Package deployed into your Salesforce org.
+- name: Quick Start Accelerator
+  description: flat-fee setup to get your team live fast
 
-- name: Assigning permissions and licenses
-  description: Access configured for admins and reps.
+- name: Production-Ready Setup
+  description: setup, permissions, and launch checks
 
-- name: Configure your quoting process
-  description: Quoting buttons and automation on your Opportunity.
+- name: Advanced Customization
+  description: custom templates, automation, and integrations
 
-- name: Setting up your hosted deal room
-  description: Customer review and acceptance tracking.
-
-- name: Answering all your questions
-  description: Live walkthrough, no question off-limits.
+- name: Ongoing Support
+  description: retained help for teams with evolving quote-to-cash needs
