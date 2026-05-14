@@ -63,8 +63,8 @@ home__items:
 #-------------------------------
 # Hero Settings
 hero:
-  hero__title: Frictionless Quote PDFs, Deal Room, and E-Sign for Salesforce
-  hero__description: Create branded quote PDFs from Salesforce Opportunities, share them in a deal room, and close with e-signature — all inside Salesforce.
+  hero__title: Turn Salesforce Opportunities into Accepted Quotes
+  hero__description: <strong>Frictionless Salesforce quoting for teams that do not need full CPQ.</strong> Build quotes with product bundles and lightweight pricing, generate branded PDFs, share a buyer-friendly deal room, and capture acceptance or e-signature — all inside Salesforce.
   painpoint: STOP sending quotes that undermine trust and professionalism!
 #-------------------------------
 # Blog Settings
