@@ -23,7 +23,7 @@
   <script>window.location.replace({{ page.redirect_to | relative_url | jsonify }});</script>
   {% endif %}
   <meta name="author" content="SilkQuote">
-  <meta name="keywords" content="{% if page.tags %}{{ page.tags | join: ', ' }}{% else %}Salesforce, CPQ, Quote Generation, PDF, Business Automation{% endif %}">
+  <meta name="keywords" content="{% if page.tags %}{{ page.tags | join: ', ' }}{% else %}Salesforce Quote Template Builder, PDF Email Delivery, Quote PDF Generation, Salesforce Quoting, Business Automation{% endif %}">
   
   <!-- Preload LCP image -->
   {% if page.image %}<link rel="preload" as="image" href="{{ page.image | replace: '.png', '.webp' | absolute_url }}" type="image/webp">{% endif %}
@@ -62,4 +62,3 @@
   <link rel="preload" href="{{ '/assets/main.css' | relative_url }}" as="style" onload="this.onload=null;this.rel='stylesheet';var l=document.getElementById('page-loader');if(l){l.style.opacity='0';setTimeout(function(){l.remove()},260)}">
   <noscript><link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}"><style>#page-loader{display:none}</style></noscript>
 </head>
-
