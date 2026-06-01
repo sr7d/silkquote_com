@@ -11,7 +11,7 @@ featured: true
 permalink: /install/
 ---
 
-Follow these steps to install SilkQuote and start quoting in minutes.
+Follow these 3 easy steps to install SilkQuote and start quoting in minutes.
 
 <!-- Follow these steps to install SilkQuote and complete the initial Salesforce configuration. This guide covers package installation, Salesforce Sites setup, template configuration, permission assignment, Lightning page setup, and generating your first quote PDF. -->
 
