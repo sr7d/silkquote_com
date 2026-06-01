@@ -4,8 +4,8 @@ title: SilkQuote - Quote Template Builder & PDF Proposals for Salesforce
 description: Free Salesforce quote template builder and PDF email delivery app. Build branded templates, generate quote PDFs from Opportunities, and send buyer-ready quotes by email.
 logo: /images/logo.svg
 install_url: /install
-production_install_url: https://login.salesforce.com/packaging/installPackage.apexp?p0=04tVt000001vUaHIAU
-sandbox_install_url: https://test.salesforce.com/packaging/installPackage.apexp?p0=04tVt000001vUaHIAU
+production_install_url: https://login.salesforce.com/packaging/installPackage.apexp?p0=04tVt0000020Y8bIAE
+sandbox_install_url: https://test.salesforce.com/packaging/installPackage.apexp?p0=04tVt0000020Y8bIAE
 appexchange_url: https://appexchange.salesforce.com/appxListingDetail?listingId=b15e931b-f12f-43cd-9f92-813e7d87591e
 linkedin_url: https://www.linkedin.com/company/silkquote
 youtube_url: 
