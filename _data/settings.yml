@@ -64,7 +64,7 @@ home__items:
 # Hero Settings
 hero:
   hero__title: Quote Builder & PDF Proposals <br>for Salesforce
-  hero__description: Experience <strong>frictionless Salesforce quoting</strong> with pricing logic, branded quote generation, and tracking & delivery in a single click.
+  hero__description: <strong>Frictionless Salesforce quoting</strong> with automated pricing logic, branded quote generation, and delivery tracking in a single click.
   painpoint: STOP rebuilding quotes in docs and chasing delivery threads!
 #-------------------------------
 # Blog Settings
