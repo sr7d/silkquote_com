@@ -1,7 +1,7 @@
 #-------------------------------
 # Site Settings
-title: SilkQuote - Quote Template Builder & PDF Proposals for Salesforce
-description: Free Salesforce quote template builder and PDF email delivery app. Build branded templates, generate quote PDFs from Opportunities, and send buyer-ready quotes by email.
+title: SilkQuote - Quote Builder & PDF Proposals for Salesforce
+description: Free Salesforce Quote Builder and PDF email delivery app. Build branded templates, generate quote PDFs from Opportunities, and send buyer-ready quotes by email.
 logo: /images/logo.svg
 install_url: /install
 production_install_url: https://login.salesforce.com/packaging/installPackage.apexp?p0=04tVt0000020Y8bIAE
@@ -48,7 +48,7 @@ home__items:
   - url: '/salesforce-quote-templates/'
     title: 'Salesforce Quote Templates'
   - url: '/salesforce-quote-template-builder/'
-    title: 'Salesforce Quote Template Builder'
+    title: 'Salesforce Quote Builder'
   - url: '/salesforce-quoting-tool/'
     title: 'Salesforce Quoting Tool'
   - url: '/salesforce-cpq-alternative/'
@@ -63,8 +63,8 @@ home__items:
 #-------------------------------
 # Hero Settings
 hero:
-  hero__title: Quote Template Builder & PDF Proposals for Salesforce
-  hero__description: Experience <strong>frictionless Salesforce quoting</strong> for sales teams, with branded quote PDFs tracked and delivered in a single click.
+  hero__title: Quote Builder & PDF Proposals <br>for Salesforce
+  hero__description: Experience <strong>frictionless Salesforce quoting</strong> with pricing logic, branded quote generation, and tracking & delivery in a single click.
   painpoint: STOP rebuilding quotes in docs and chasing delivery threads!
 #-------------------------------
 # Blog Settings
