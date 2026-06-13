@@ -19,7 +19,7 @@ If you cannot or do not wish to use Salesforce Sites, skip to [Step 4: Assign Si
 
 1. Open the installation link provided for SilkQuote.
 2. On the installation page select:
-   - **Install for Admins Only**
+   - **Install for All Users**
 3. Wait for the installation to complete.
 4. Click **Done**.
 
