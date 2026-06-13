@@ -11,11 +11,9 @@ featured: true
 permalink: /install/
 ---
 
-Follow these 3 easy steps to install SilkQuote and start quoting in minutes.
+Follow these steps to install SilkQuote and complete the initial Salesforce configuration. This guide covers package installation, Salesforce Sites setup, template configuration, permission assignment, Lightning page setup, and generating your first quote PDF.
 
-<!-- Follow these steps to install SilkQuote and complete the initial Salesforce configuration. This guide covers package installation, Salesforce Sites setup, template configuration, permission assignment, Lightning page setup, and generating your first quote PDF. -->
-
-<!-- If you cannot or do not wish to use Salesforce Sites, skip to [Step 4: Assign SilkQuote Permissions to Users](#4-assign-silkquote-permissions-to-users). Salesforce Sites are necessary only if you want customers to view, accept, or decline quotes through a hosted web page.  -->
+If you cannot or do not wish to use Salesforce Sites, skip to [Step 4: Assign SilkQuote Permissions to Users](#4-assign-silkquote-permissions-to-users). Salesforce Sites are necessary only if you want customers to view, accept, or decline quotes through a hosted web page.
 
 ## 1. Install the SilkQuote Salesforce Package
 
@@ -25,30 +23,7 @@ Follow these 3 easy steps to install SilkQuote and start quoting in minutes.
 3. Wait for the installation to complete.
 4. Click **Done**.
 
-## 2. Navigate to the SilkQuote App in the Salesforce menu
-
-The first time you use the app, a guided wailkthrough will help you generate your first quote in seconds.
-
-## 3. Assign SilkQuote Permissions & Licenses to Users
-
-Click **Assign Permissions** within the SilkQuote configuration.
-
-#### Assign Admin Permissions
-- Configure templates
-- Change system settings
-- Generate and send quotes
-
-#### Assign SilkQuote User Permissions
-- Generate quotes
-- Send quotes
-
-#### Assign Licesnes to all users
-1. Setup
-2. Installed Packages
-3. SilkQuote --> Manage Licenses
-4. Add Users
-
-<!-- ## 2. Configure Salesforce Sites for External Quote Access
+## 2. Configure Salesforce Sites for External Quote Access
 
 This step allows customers and prospects to interact with quotes on your website (review, accept, decline, and communicate).
 
@@ -195,13 +170,13 @@ Add the following actions:
 
 - **Generate Quote Document**
 - **Email Quote Document**
-- **External Comment** -->
+- **External Comment**
 
 ## SilkQuote Setup Complete: You're Ready to Go
 
-At this point SilkQuote is fully operational on Salesforce. You may customize your Salesforce lightning page to use any of the SilkQuote components you like.
+At this point SilkQuote is fully operational on Salesforce:
 
-<!-- - Package installed
+- Package installed
 - Salesforce Site configured
 - Quote template connected to the site
 - Permissions assigned
@@ -210,4 +185,4 @@ At this point SilkQuote is fully operational on Salesforce. You may customize yo
 - Quote generation tested
 - Email sending ready
 
-Sales reps can now generate, review, and send interactive quotes directly from Opportunity records. -->
+Sales reps can now generate, review, and send interactive quotes directly from Opportunity records.
