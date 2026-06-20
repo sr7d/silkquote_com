@@ -46,33 +46,33 @@ permalink: /support/
         <p class="support__card-description">Something not working as expected? Submit a case and our team will follow up.</p>
       </div>
 
-      <form class="form" action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00DHs000009kGXs" method="POST">
-        <input type="hidden" name="orgid" value="00DHs000009kGXs">
-        <input type="hidden" name="retURL" value="{{ site.url }}/support/">
+      <form class="form" action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00Da500001Nhn69" method="POST" accept-charset="UTF-8">
+        <input type="hidden" name="orgid" value="00Da500001Nhn69">
+        <input type="hidden" name="retURL" value="http://silkquote.com/support">
 
         <div class="form__group">
-          <label class="form__label screen-reader-text" for="support-name">Contact Name</label>
-          <input class="form__input" id="support-name" type="text" name="name" placeholder="Contact Name" required aria-label="Contact Name">
+          <label class="form__label screen-reader-text" for="name">Contact Name</label>
+          <input class="form__input" id="name" maxlength="80" name="name" size="20" type="text" placeholder="Contact Name" required aria-label="Contact Name">
         </div>
 
         <div class="form__group">
-          <label class="form__label screen-reader-text" for="support-email">Email</label>
-          <input class="form__input" id="support-email" type="email" name="email" placeholder="Email" required aria-label="Email">
+          <label class="form__label screen-reader-text" for="email">Email</label>
+          <input class="form__input" id="email" maxlength="80" name="email" size="20" type="text" placeholder="Email" required aria-label="Email">
         </div>
 
         <div class="form__group">
-          <label class="form__label screen-reader-text" for="support-phone">Phone</label>
-          <input class="form__input" id="support-phone" type="tel" name="phone" placeholder="Phone (optional)" aria-label="Phone">
+          <label class="form__label screen-reader-text" for="phone">Phone</label>
+          <input class="form__input" id="phone" maxlength="40" name="phone" size="20" type="text" placeholder="Phone (optional)" aria-label="Phone">
         </div>
 
         <div class="form__group">
-          <label class="form__label screen-reader-text" for="support-subject">Subject</label>
-          <input class="form__input" id="support-subject" type="text" name="subject" placeholder="Subject" required aria-label="Subject">
+          <label class="form__label screen-reader-text" for="subject">Subject</label>
+          <input class="form__input" id="subject" maxlength="80" name="subject" size="20" type="text" placeholder="Subject" required aria-label="Subject">
         </div>
 
         <div class="form__group">
-          <label class="form__label screen-reader-text" for="support-description">Description</label>
-          <textarea class="form__input" id="support-description" name="description" rows="5" placeholder="Describe the issue..." required aria-label="Description"></textarea>
+          <label class="form__label screen-reader-text" for="description">Description</label>
+          <textarea class="form__input" id="description" name="description" rows="5" placeholder="Describe the issue..." required aria-label="Description"></textarea>
         </div>
 
         <div class="form__group">
