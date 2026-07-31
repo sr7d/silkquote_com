@@ -8,7 +8,7 @@ layout: default
   <div class="container">
     <div class="install-hero">
 
-      <!-- Left: video + prerequisites -->
+      <!-- Left: video -->
       <div class="install-hero__left">
         <div class="install-video-wrap">
           <div class="vimeo-facade" data-vimeo-id="1142553474" style="position:absolute;top:0;left:0;width:100%;height:100%;cursor:pointer;">
@@ -27,54 +27,30 @@ layout: default
         </div>
       </div>
 
-      <!-- Right: form + prerequisites -->
+      <!-- Right: guide intro + access callout -->
       <div class="install-hero__right">
 
         <div class="install-form-card">
-          <h1 class="install-form-card__heading">Install SilkQuote for Salesforce</h1>
-          <p id="install-lead-desc">Choose your environment and click Install Free to add SilkQuote to your Salesforce org.</p>
-          <p id="install-lead-desc-appexchange" style="display:none">Thanks for checking us out on the AppExchange! <br>Please feel free to reach out to <a href="/support/">support</a> if you need any assistance getting started.</p>
-          <div class="install-lead-form">
-            <div class="install-env-picker">
-              <label class="install-env-picker__option">
-                <input type="radio" name="install_env" value="production" checked>
-                <span>Production</span>
-              </label>
-              <label class="install-env-picker__option">
-                <input type="radio" name="install_env" value="sandbox">
-                <span>Sandbox</span>
-              </label>
-            </div>
-            <div class="install-lead-form__footer">
-              <button type="button" id="install-now-btn" class="button button--primary install-lead-form__submit">Install Free</button>
-              {% if site.data.settings.appexchange_url %}
-              <a href="{{ site.data.settings.appexchange_url }}" class="install-appexchange-badge" target="_blank" rel="noopener">
-                <img src="/images/appExchange.png" alt="Available on Salesforce AppExchange">
-              </a>
-              {% else %}
-              <img src="/images/appExchange.png" alt="Available on Salesforce AppExchange" class="install-appexchange-badge">
-              {% endif %}
+          <h1 class="install-form-card__heading">Install and Configure SilkQuote for Salesforce</h1>
+          <p class="install-form-card__lead">This guide covers everything your Salesforce admin does once your install link arrives: package installation, Sites setup, template configuration, permissions, Lightning pages, and your first quote PDF.</p>
+
+          <div class="install-callout install-callout--info">
+            <svg class="install-callout__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/>
+            </svg>
+            <div class="install-callout__body">
+              <p class="install-callout__title">Don't have your install link yet?</p>
+              <p class="install-callout__text">SilkQuote is free and we onboard every team personally. <a href="{{ site.data.settings.get_started_url }}">Get started free &rarr;</a></p>
             </div>
           </div>
 
-          <script>
-          (function() {
-            var prodUrl = '{{ site.data.settings.production_install_url }}';
-            var sandboxUrl = '{{ site.data.settings.sandbox_install_url }}';
-
-            var isAppExchange = new URLSearchParams(window.location.search).has('appexchange');
-            if (isAppExchange) {
-              document.getElementById('install-lead-desc').style.display = 'none';
-              document.getElementById('install-lead-desc-appexchange').style.display = '';
-            }
-
-            document.getElementById('install-now-btn').addEventListener('click', function() {
-              var env = document.querySelector('input[name="install_env"]:checked').value;
-              var installUrl = env === 'sandbox' ? sandboxUrl : prodUrl;
-              if (installUrl) { window.open(installUrl, '_blank'); }
-            });
-          })();
-          </script>
+          {% if site.data.settings.appexchange_url %}
+          <a href="{{ site.data.settings.appexchange_url }}" class="install-appexchange-badge" target="_blank" rel="noopener">
+            <img src="/images/appExchange.png" alt="Available on Salesforce AppExchange">
+          </a>
+          {% else %}
+          <img src="/images/appExchange.png" alt="Available on Salesforce AppExchange" class="install-appexchange-badge">
+          {% endif %}
         </div>
 
       </div>
@@ -216,82 +192,10 @@ layout: default
     margin-bottom: 1.25rem;
   }
 
-  .install-lead-form {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-  }
-
-  .install-lead-form__field {
-    display: flex;
-    flex-direction: column;
-    
-  }
-
-  .install-lead-form__field label {
-    font-size: 0.78rem;
-    font-weight: 600;
+  .install-form-card__lead {
+    margin-bottom: 1.25rem;
+    line-height: 1.6;
     color: var(--text-secondary);
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-  }
-
-  .install-lead-form__field input {
-    background: #fff;
-    border: 1px solid var(--border-light);
-    border-radius: 6px;
-    padding: 0.55rem 0.75rem;
-    font-size: 0.9rem;
-    color: #111;
-    outline: none;
-    transition: border-color 0.15s;
-    width: 100%;
-    max-width: 450px;
-    box-sizing: border-box;
-  }
-
-  .install-lead-form__field input::placeholder {
-    color: #aaa;
-  }
-
-  .install-lead-form__field input:focus {
-    border-color: var(--primary-color);
-  }
-
-  .install-env-picker {
-    display: flex;
-    gap: 1.25rem;
-    flex-wrap: nowrap;
-    margin-bottom: 0.25rem;
-  }
-
-  .install-env-picker__option {
-    display: flex;
-    align-items: center;
-    gap: 0.4rem;
-    cursor: pointer;
-    font-size: 0.9rem;
-    white-space: nowrap;
-  }
-
-  .install-env-picker__option input[type="radio"] {
-    accent-color: var(--primary-color);
-    width: 16px;
-    height: 16px;
-    cursor: pointer;
-  }
-
-  .install-lead-form__footer {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    flex-wrap: wrap;
-    margin-top: 0.5rem;
-  }
-
-  .install-lead-form__submit {
-    flex-shrink: 0;
-    font-size: 0.8em;
   }
 
   .install-appexchange-badge img,
@@ -299,21 +203,6 @@ layout: default
     display: block;
     height: 51px;
     width: auto;
-  }
-
-  #install-lead-desc,
-  #install-lead-desc-appexchange {
-    margin-bottom: 0.5rem;
-  }
-
-  #install-lead-desc-appexchange a {
-    font-weight: 600;
-    border-bottom: 1px solid var(--border-alt-color);
-  }
-
-  #install-lead-desc-appexchange a:hover {
-    color: var(--link-color);
-    border-bottom-color: var(--link-color-hover);
   }
 
   /* Post-install instructions */

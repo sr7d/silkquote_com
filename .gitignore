@@ -24,3 +24,5 @@ Thumbs.db
 
 # Logs
 *.log
+# Design docs quote package install URLs that must not be published
+docs/superpowers/

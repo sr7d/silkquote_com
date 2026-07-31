@@ -358,7 +358,7 @@ Before automating in Salesforce, confirm you have:
 - **Salesforce edition**: Professional, Enterprise, or Unlimited
 - **System Administrator profile**: required for package installation
 
-[Install SilkQuote, free, installs in minutes](/install)
+[Get started with SilkQuote, free](/get-started/)
 
 <style>
 .code-accordion {

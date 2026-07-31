@@ -421,7 +421,7 @@ For the full template configuration guide including field mapping and conditiona
 - **Salesforce edition**: Professional, Enterprise, or Unlimited
 - **System Administrator profile**: required for package installation
 
-[Install SilkQuote, free, installs in minutes →](/install)
+[Get started with SilkQuote, free →](/get-started/)
 
 <style>
 .code-accordion {

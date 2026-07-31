@@ -67,7 +67,7 @@ The efficiency gain from a dedicated quote tool is immediate and measurable.
 
 The setup process has three steps:
 
-1. **Install from the AppExchange.** See [Install SilkQuote](/install/) for the full walkthrough. Installation takes a few minutes and requires admin access.
+1. **Request free access.** SilkQuote is free and every team is onboarded personally — [request your install link](/get-started/), then follow the [setup guide](/install). Configuration takes a few minutes and requires admin access.
 
 2. **Build a template in the Configuration Manager.** Open the SilkQuote Configuration Manager from the App Launcher and create your first template. Map fields from Opportunity, Account, Contact, and Opportunity Products to the sections you want to appear in the PDF. See [Configure Template Sections & Fields](/configure-template-fields/) for detailed field mapping documentation.
 
@@ -101,7 +101,7 @@ The native Quotes object creates an additional record that must stay in sync wit
 
 ## Next Steps
 
-- [Install SilkQuote from the AppExchange](/install/)
+- [Get started with SilkQuote, free](/get-started/)
 - [Build Your First Quote Template](/salesforce-quote-template/)
 - [Configure Template Sections & Fields](/configure-template-fields/)
 - [See the Quote Generator in Action](/salesforce-quote-generator/)

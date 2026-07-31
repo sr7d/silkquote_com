@@ -6,6 +6,13 @@ url: "https://www.silkquote.com" # the base hostname & protocol for your site, e
 
 #-------------------------------
 # Build Settings
+
+# Development artifacts. These must never be copied into _site — the specs and
+# plans under docs/ quote package install URLs that are not for publication.
+exclude:
+  - docs/
+  - script/
+
 markdown: kramdown
 permalink: /:title
 plugins:

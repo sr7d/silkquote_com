@@ -1,0 +1,77 @@
+---
+layout: page
+title: Get Started with SilkQuote
+description: SilkQuote is free. Tell us about your Salesforce org and we'll send your install link and get you set up, at no cost.
+permalink: /get-started/
+image:
+image_caption:
+---
+
+<div class="form-box" id="get-started-form-box">
+  <form class="form" action="{{ site.data.settings.get_started_form_action }}" method="POST">
+    <input type="hidden" name="_subject" value="AppExchange onboarding request">
+    <input type="hidden" name="_next" value="{{ site.url }}/get-started/?submitted=1">
+    <input type="hidden" name="source" id="get-started-source" value="direct">
+
+    <div class="form__group">
+      <label class="form__label screen-reader-text" for="gs-name">Your Name</label>
+      <input class="form__input" id="gs-name" type="text" name="name" placeholder="Name" required>
+    </div>
+    <div class="form__group">
+      <label class="form__label screen-reader-text" for="gs-email">Work Email</label>
+      <input class="form__input" id="gs-email" type="email" name="_replyto" placeholder="Work email" required>
+    </div>
+    <div class="form__group">
+      <label class="form__label screen-reader-text" for="gs-company">Company</label>
+      <input class="form__input" id="gs-company" type="text" name="company" placeholder="Company" required>
+    </div>
+    <div class="form__group">
+      <label class="form__label screen-reader-text" for="gs-edition">Salesforce Edition</label>
+      <select class="form__input" id="gs-edition" name="salesforce_edition" required>
+        <option value="">Salesforce edition</option>
+        <option>Professional</option>
+        <option>Enterprise</option>
+        <option>Unlimited</option>
+        <option>Performance</option>
+        <option>Developer</option>
+        <option>Not sure</option>
+      </select>
+    </div>
+    <div class="form__group">
+      <label class="form__label screen-reader-text" for="gs-notes">Anything we should know</label>
+      <textarea class="form__input" id="gs-notes" name="notes" rows="4" placeholder="Anything we should know? (optional)"></textarea>
+    </div>
+    <div class="form__group">
+      <button class="button button--primary" type="submit" style="margin-bottom: 1.5rem;">Start Free Onboarding</button>
+    </div>
+  </form>
+</div>
+
+<div class="form-box" id="get-started-confirm" hidden>
+  <p><strong>Request received.</strong> We'll email your install link and setup steps shortly, usually within one business day.</p>
+</div>
+
+<div class="page-intro" style="font-size: 0.9rem;">
+  <p>Prefer email? Write to <a href="mailto:{{ site.data.settings.get_started_email }}?subject=SilkQuote%20onboarding%20request">{{ site.data.settings.get_started_email }}</a>.</p>
+  <p>SilkQuote is free, with unlimited users, unlimited quote PDFs, and unlimited templates. Core template building, PDF generation, and email delivery work on Salesforce Professional edition and above. The Collaborative Deal Room requires Enterprise or above.</p>
+</div>
+
+<style>[hidden] { display: none !important; }</style>
+
+<script>
+(function() {
+  var params = new URLSearchParams(window.location.search);
+
+  var srcField = document.getElementById('get-started-source');
+  if (srcField) {
+    var src = params.get('src');
+    if (src) { srcField.value = src; }
+    else if (document.referrer) { srcField.value = document.referrer; }
+  }
+
+  if (params.has('submitted')) {
+    document.getElementById('get-started-form-box').hidden = true;
+    document.getElementById('get-started-confirm').hidden = false;
+  }
+})();
+</script>

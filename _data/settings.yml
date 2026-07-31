@@ -4,9 +4,13 @@ title: SilkQuote - Quote Builder & PDF Proposals for Salesforce
 description: Free Salesforce Quote Builder and PDF email delivery app. Build branded templates, generate quote PDFs from Opportunities, and send buyer-ready quotes by email.
 logo: /images/logo.svg
 install_url: /install
-production_install_url: https://login.salesforce.com/packaging/installPackage.apexp?p0=04tVt0000020Y8bIAE
-sandbox_install_url: https://test.salesforce.com/packaging/installPackage.apexp?p0=04tVt0000020Y8bIAE
 appexchange_url: https://appexchange.salesforce.com/appxListingDetail?listingId=b15e931b-f12f-43cd-9f92-813e7d87591e
+# Package install links are never published. They are sent by hand during onboarding.
+get_started_url: /get-started/
+get_started_email: appexchange@silkquote.com
+# Same Formspree form as /contact/. Onboarding requests are distinguished in the
+# inbox by the _subject field and the hidden `source` field.
+get_started_form_action: https://formspree.io/f/xpzgylpq
 linkedin_url: https://www.linkedin.com/company/silkquote
 youtube_url: 
 
@@ -14,7 +18,9 @@ youtube_url:
 # Navigation Settings
 menu__settings:
   menu__items:
-    - title: 'Install Free'
+    - title: 'Get Started Free'
+      url: '/get-started/'
+    - title: 'Install'
       url: '/install'
     - title: 'Pricing'
       url: '/#pricing'
@@ -28,11 +34,13 @@ menu__settings:
 # Footer Settings
 
 # Footer Navigation
-menu__items: 
+menu__items:
+  - url: '/get-started/'
+    title: 'Get Started Free'
   - url: '/install'
-    title: 'Install Free'
+    title: 'Install'
   - url: '/support/'
-    title: 'Support'    
+    title: 'Support'
   - url: '/contact/'
     title: 'Contact'
   - url: '/features/'

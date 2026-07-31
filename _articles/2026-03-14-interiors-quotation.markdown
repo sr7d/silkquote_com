@@ -19,7 +19,7 @@ Stop assembling quotes in spreadsheets. Use the template below to produce a comp
 
 1. **Copy the template below**: use the room sections that match your project scope and remove those that do not apply
 2. **Fill in your project details**: replace placeholder values with actual specifications and pricing
-3. **Or automate it in Salesforce**: [install SilkQuote](/install), add your materials and services to a price book, and generate branded PDFs from Opportunities in seconds
+3. **Or automate it in Salesforce**: [get started with SilkQuote](/get-started/), add your materials and services to a price book, and generate branded PDFs from Opportunities in seconds
 
 ## Interiors Quotation Template
 
@@ -356,7 +356,7 @@ Before automating in Salesforce, confirm you have:
 - **Salesforce edition**: Professional, Enterprise, or Unlimited
 - **System Administrator profile**: required for package installation
 
-[Install SilkQuote, free, installs in minutes →](/install)
+[Get started with SilkQuote, free →](/get-started/)
 
 <style>
 .code-accordion {

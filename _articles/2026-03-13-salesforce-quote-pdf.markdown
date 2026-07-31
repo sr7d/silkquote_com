@@ -134,7 +134,7 @@ Best practices:
 
 ## Next Steps
 
-- [Install SilkQuote from the AppExchange](/install/)
+- [Get started with SilkQuote, free](/get-started/)
 - [How to Create a Quote PDF in Salesforce](/how-to-create-quote-pdf-in-salesforce/)
 - [Salesforce Quote Template: How to Build and Customize Yours](/salesforce-quote-template/)
 - [Apply a Draft Watermark](/apply-a-draft-watermark/)

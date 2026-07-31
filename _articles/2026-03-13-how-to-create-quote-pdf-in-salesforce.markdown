@@ -74,7 +74,7 @@ The entire process takes under 30 seconds. No external tools, no copy-pasting, n
 
 ### Step 1: Install SilkQuote
 
-Install SilkQuote from the Salesforce AppExchange. See [How to Install SilkQuote](/install/) for the full walkthrough.
+[Request free access to SilkQuote](/get-started/). We send your install link and onboarding steps, and the [setup guide](/install) covers the full walkthrough.
 
 ### Step 2: Assign the Permission Set
 
@@ -124,6 +124,6 @@ Open an Opportunity that has at least one Opportunity Product added. Click **Gen
 
 Ready to start generating professional quote PDFs from Salesforce?
 
-- [Install SilkQuote from the AppExchange](/install/)
+- [Get started with SilkQuote, free](/get-started/)
 - [Configure Template Sections & Fields](/configure-template-fields/)
 - [Generate a Quote PDF from an Opportunity](/generate-quote-pdf/)

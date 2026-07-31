@@ -116,7 +116,7 @@ SilkQuote's template system is purpose-built for the kinds of customization real
 
 ## Next Steps
 
-- [Install SilkQuote from the AppExchange](/install/)
+- [Get started with SilkQuote, free](/get-started/)
 - [Create a New Template](/create-a-new-template/)
 - [Configure Template Sections & Fields](/configure-template-fields/)
 - [Set or Change the Template Logo](/set-or-change-the-template-logo/)

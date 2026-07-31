@@ -109,7 +109,7 @@ Because quotation data comes directly from Salesforce at generation time, there 
 
 ## Next Steps
 
-- [Install SilkQuote from the AppExchange](/install/)
+- [Get started with SilkQuote, free](/get-started/)
 - [Build Your First Quotation Template](/salesforce-quote-template/)
 - [Configure Template Sections & Fields](/configure-template-fields/)
 - [See the Quote Generator in Action](/salesforce-quote-generator/)

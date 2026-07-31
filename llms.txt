@@ -35,6 +35,7 @@ SilkQuote is a native Salesforce quoting app for Opportunity-based quoting, bran
 ## Links
 
 - [Homepage](https://www.silkquote.com): Product overview, features, pricing, and demo video
+- [Get Started](https://www.silkquote.com/get-started/): Request free access; every team is onboarded personally at no cost
 - [Contact](https://www.silkquote.com/contact/): Get in touch for demos, support, or expert services
 - [Full LLM Reference](https://www.silkquote.com/llms-full.txt): Comprehensive product details for LLMs
 

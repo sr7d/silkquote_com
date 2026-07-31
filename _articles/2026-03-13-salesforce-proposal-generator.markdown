@@ -116,7 +116,7 @@ Best for: SMB and mid-market sales teams that need professional proposals fast, 
 
 Getting SilkQuote running takes less than an hour:
 
-1. **Install** from the Salesforce AppExchange. See [How to Install SilkQuote](/install/)
+1. **Request free access** at [Get Started](/get-started/). We send your install link and onboard you personally, then the [setup guide](/install) walks through configuration.
 2. **Assign permissions** to the reps and admins who need access. See [Grant Access with the Permission Set](/permission-set/)
 3. **Configure your template** in the SilkQuote Configuration Manager. See [Create a New Template](/create-a-new-template/)
 4. **Add the Quick Action** to the Opportunity page layout. See [Add the Generate Quote Quick Action to Opportunity](/generate-quote-quick-action/)

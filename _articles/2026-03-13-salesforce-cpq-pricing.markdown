@@ -118,7 +118,7 @@ What SilkQuote includes:
 - Draft watermark and signature block
 - PDF saved automatically to the Opportunity record
 
-[Install SilkQuote from the AppExchange](/install/) | [SilkQuote vs. Salesforce CPQ](/silkquote-vs-salesforce-cpq-when-to-use-each/)
+[Get started with SilkQuote, free](/get-started/) | [SilkQuote vs. Salesforce CPQ](/silkquote-vs-salesforce-cpq-when-to-use-each/)
 
 ### Conga Composer / S-Docs: Best for Document Flexibility
 

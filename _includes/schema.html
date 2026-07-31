@@ -183,3 +183,26 @@
 }
 </script>
 {% endif %}
+
+{% if page.url == "/get-started/" %}
+<!-- ContactPage Schema — get started page -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Get Started with SilkQuote",
+  "description": "Request free access to SilkQuote. Every team is onboarded personally at no cost.",
+  "url": "https://www.silkquote.com/get-started/",
+  "mainEntity": {
+    "@type": "Organization",
+    "name": "SilkQuote",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "appexchange@silkquote.com",
+      "url": "https://www.silkquote.com/get-started/",
+      "contactType": "sales"
+    }
+  }
+}
+</script>
+{% endif %}
