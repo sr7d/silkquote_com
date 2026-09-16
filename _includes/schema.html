@@ -54,7 +54,7 @@
     "@type": "Offer",
     "price": "0",
     "priceCurrency": "USD",
-    "description": "Free - unlimited users, unlimited quote PDFs, unlimited templates, full feature access"
+    "description": "Free {{ site.data.settings.trial_days }}-day trial - unlimited users, unlimited quote PDFs, unlimited templates, full feature access. Extensions available on request."
   },
   "featureList": [
     "No-code Salesforce quote template builder",
@@ -81,15 +81,15 @@
       "name": "Is SilkQuote really free?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Yes, 100%. Every template builder and PDF email delivery feature is included, with unlimited users and no expiration. Expert services are optional."
+        "text": "Free for {{ site.data.settings.trial_days }} days, with no credit card and no feature restrictions: every template builder and PDF email delivery feature, unlimited users. The trial expires at {{ site.data.settings.trial_days }} days, and extensions are available. Expert services are optional."
       }
     },
     {
       "@type": "Question",
-      "name": "Why is SilkQuote free?",
+      "name": "What happens when the {{ site.data.settings.trial_days }} days are up?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "SilkQuote is free to make Salesforce quote template building and PDF delivery accessible to every team; optional paid services fund hands-on setup support."
+        "text": "The package license expires, so quote generation and delivery stop until it is renewed. Extending is straightforward: get in touch and tell us how quoting has been going, and we will sort out an extension that fits your rollout."
       }
     },
     {
@@ -191,7 +191,7 @@
   "@context": "https://schema.org",
   "@type": "ContactPage",
   "name": "Get Started with SilkQuote",
-  "description": "Request free access to SilkQuote. Every team is onboarded personally at no cost.",
+  "description": "Start a free {{ site.data.settings.trial_days }}-day SilkQuote trial. Every team is onboarded personally, and trial extensions are available on request.",
   "url": "https://www.silkquote.com/get-started/",
   "mainEntity": {
     "@type": "Organization",

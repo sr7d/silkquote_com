@@ -17,7 +17,7 @@ If you cannot or do not wish to use Salesforce Sites, skip to [Step 4: Assign Si
 
 ## 1. Install the SilkQuote Salesforce Package
 
-1. Open the installation link provided for SilkQuote.
+1. Choose **Production** or **Sandbox** above and start your 60-day trial to open the Salesforce installation page.
 2. On the installation page select:
    - **Install for All Users**
 3. Wait for the installation to complete.

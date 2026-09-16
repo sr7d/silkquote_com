@@ -198,4 +198,4 @@ For most SMBs on Salesforce, the decision comes down to:
 
 For a direct comparison with CPQ on specific decision criteria, see [SilkQuote vs Salesforce CPQ: when to use each](/silkquote-vs-salesforce-cpq-when-to-use-each/). For more on what SilkQuote offers as a CPQ alternative, see the [Salesforce CPQ alternative](/salesforce-cpq-alternative/) overview.
 
-[Install SilkQuote free from the AppExchange](https://appexchange.salesforce.com/appxListingDetail?listingId=a0N4V00000GnFNYUA3). No trial period, no credit card, no per-user charge.
+[Install SilkQuote free from the AppExchange](https://appexchange.salesforce.com/appxListingDetail?listingId=a0N4V00000GnFNYUA3). Free for 60 days, no credit card, no per-user charge, and extensions are available if your rollout needs longer.

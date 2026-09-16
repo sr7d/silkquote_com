@@ -32,26 +32,61 @@ layout: default
 
         <div class="install-form-card">
           <h1 class="install-form-card__heading">Install and Configure SilkQuote for Salesforce</h1>
-          <p class="install-form-card__lead">This guide covers everything your Salesforce admin does once your install link arrives: package installation, Sites setup, template configuration, permissions, Lightning pages, and your first quote PDF.</p>
+          <p id="install-lead-desc" class="install-form-card__lead">Choose your environment and install SilkQuote into your Salesforce org. The guide below covers everything your admin does next: package installation, Sites setup, template configuration, permissions, Lightning pages, and your first quote PDF.</p>
+          <p id="install-lead-desc-appexchange" class="install-form-card__lead" style="display:none">Thanks for checking us out on the AppExchange! Choose your environment below to install, and reach out to <a href="/support/">support</a> any time you need a hand getting started.</p>
+
+          <div class="install-lead-form">
+            <div class="install-env-picker">
+              <label class="install-env-picker__option">
+                <input type="radio" name="install_env" value="production" checked>
+                <span>Production</span>
+              </label>
+              <label class="install-env-picker__option">
+                <input type="radio" name="install_env" value="sandbox">
+                <span>Sandbox</span>
+              </label>
+            </div>
+            <div class="install-lead-form__footer">
+              <button type="button" id="install-now-btn" class="button button--primary install-lead-form__submit">Start {{ site.data.settings.trial_days }}-Day Trial</button>
+              {% if site.data.settings.appexchange_url %}
+              <a href="{{ site.data.settings.appexchange_url }}" class="install-appexchange-badge" target="_blank" rel="noopener">
+                <img src="/images/appExchange.png" alt="Available on Salesforce AppExchange">
+              </a>
+              {% else %}
+              <img src="/images/appExchange.png" alt="Available on Salesforce AppExchange" class="install-appexchange-badge">
+              {% endif %}
+            </div>
+          </div>
 
           <div class="install-callout install-callout--info">
             <svg class="install-callout__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/>
             </svg>
             <div class="install-callout__body">
-              <p class="install-callout__title">Don't have your install link yet?</p>
-              <p class="install-callout__text">SilkQuote is free and we onboard every team personally. <a href="{{ site.data.settings.get_started_url }}">Get started free &rarr;</a></p>
+              <p class="install-callout__title">{{ site.data.settings.trial_days }}-day trial, extendable</p>
+              <p class="install-callout__text">Installing gives your org every SilkQuote feature for {{ site.data.settings.trial_days }} days &mdash; unlimited users, templates, and quote PDFs, no credit card. The license expires at the end of it, and extending is just a conversation: tell us how quoting is going and we'll keep you running. <a href="{{ site.data.settings.get_started_url }}">Talk to us &rarr;</a></p>
             </div>
           </div>
-
-          {% if site.data.settings.appexchange_url %}
-          <a href="{{ site.data.settings.appexchange_url }}" class="install-appexchange-badge" target="_blank" rel="noopener">
-            <img src="/images/appExchange.png" alt="Available on Salesforce AppExchange">
-          </a>
-          {% else %}
-          <img src="/images/appExchange.png" alt="Available on Salesforce AppExchange" class="install-appexchange-badge">
-          {% endif %}
         </div>
+
+        <script>
+        (function() {
+          var prodUrl = '{{ site.data.settings.production_install_url }}';
+          var sandboxUrl = '{{ site.data.settings.sandbox_install_url }}';
+
+          var isAppExchange = new URLSearchParams(window.location.search).has('appexchange');
+          if (isAppExchange) {
+            document.getElementById('install-lead-desc').style.display = 'none';
+            document.getElementById('install-lead-desc-appexchange').style.display = '';
+          }
+
+          document.getElementById('install-now-btn').addEventListener('click', function() {
+            var env = document.querySelector('input[name="install_env"]:checked').value;
+            var installUrl = env === 'sandbox' ? sandboxUrl : prodUrl;
+            if (installUrl) { window.open(installUrl, '_blank'); }
+          });
+        })();
+        </script>
 
       </div>
     </div>
@@ -196,6 +231,58 @@ layout: default
     margin-bottom: 1.25rem;
     line-height: 1.6;
     color: var(--text-secondary);
+  }
+
+  .install-lead-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .install-env-picker {
+    display: flex;
+    gap: 1.25rem;
+    flex-wrap: nowrap;
+    margin-bottom: 0.25rem;
+  }
+
+  .install-env-picker__option {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    cursor: pointer;
+    font-size: 0.9rem;
+    white-space: nowrap;
+  }
+
+  .install-env-picker__option input[type="radio"] {
+    accent-color: var(--primary-color);
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+  }
+
+  .install-lead-form__footer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 0.5rem;
+  }
+
+  .install-lead-form__submit {
+    flex-shrink: 0;
+    font-size: 0.8em;
+  }
+
+  #install-lead-desc-appexchange a {
+    font-weight: 600;
+    border-bottom: 1px solid var(--border-alt-color);
+  }
+
+  #install-lead-desc-appexchange a:hover {
+    color: var(--link-color);
+    border-bottom-color: var(--link-color-hover);
   }
 
   .install-appexchange-badge img,

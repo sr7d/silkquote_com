@@ -5,7 +5,11 @@ description: Free Salesforce Quote Builder and PDF email delivery app. Build bra
 logo: /images/logo.svg
 install_url: /install
 appexchange_url: https://appexchange.salesforce.com/appxListingDetail?listingId=b15e931b-f12f-43cd-9f92-813e7d87591e
-# Package install links are never published. They are sent by hand during onboarding.
+# Package install links are published on /install. The package license is time-limited,
+# so every public claim about pricing must stay consistent with trial_days below.
+production_install_url: https://login.salesforce.com/packaging/installPackage.apexp?p0=04tVt0000020Y8bIAE
+sandbox_install_url: https://test.salesforce.com/packaging/installPackage.apexp?p0=04tVt0000020Y8bIAE
+trial_days: 60
 get_started_url: /get-started/
 get_started_email: appexchange@silkquote.com
 # Same Formspree form as /contact/. Onboarding requests are distinguished in the

@@ -69,6 +69,6 @@ For the complete overview of what you can configure in a SilkQuote template, inc
 
 ## Install SilkQuote Free After Your HubSpot Migration
 
-SilkQuote is free on the AppExchange. Every feature is available at no cost: no per-user fees, no trial limitations, no CPQ required. For teams that have just finished migrating from HubSpot to Salesforce and need to close the quoting gap quickly, this is the fastest path from migration complete to sending professional quotes.
+SilkQuote is free to trial on the AppExchange for 60 days, with extensions available. Every feature is available at no cost during the trial: no per-user fees, no feature gates, no CPQ required. For teams that have just finished migrating from HubSpot to Salesforce and need to close the quoting gap quickly, this is the fastest path from migration complete to sending professional quotes.
 
 [Install SilkQuote from the AppExchange](https://appexchange.salesforce.com/appxListingDetail?listingId=b15e931b-f12f-43cd-9f92-813e7d87591e) and have your team quoting in Salesforce in under an hour.

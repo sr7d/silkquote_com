@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
-# Verifies the AppExchange onboarding funnel against the built site.
+# Verifies the AppExchange install funnel against the built site.
+# Install links are published, so the checks guard the trial disclosure that
+# must travel with them: a link without the expiry stated is the failure mode.
 # Run after: bundle exec jekyll build
 set -uo pipefail
 cd "$(dirname "$0")/.."
@@ -33,13 +35,11 @@ if [ ! -d _site ]; then
 fi
 
 echo
-# Matched by URL shape, not by package ID. This file is committed to a public
-# repo, so it must not contain the ID it is guarding against.
-echo "== package install links must not be published =="
-check_absent "no installPackage links" "installPackage.apexp" _site/
-check_absent "login.salesforce.com/packaging absent" "login.salesforce.com/packaging" _site/
-check_absent "test.salesforce.com/packaging absent" "test.salesforce.com/packaging" _site/
-check_absent "no 04t package IDs of any kind" "p0=04t" _site/
+# Matched by URL shape, not by package ID, so this file stays free of the ID.
+echo "== package install links are published on /install/ =="
+check_present "production install link" "login.salesforce.com/packaging" _site/install/index.html
+check_present "sandbox install link" "test.salesforce.com/packaging" _site/install/index.html
+check_absent  "install links stay on /install/" "installPackage.apexp" _site/index.html
 
 echo
 echo "== /get-started/ exists and can capture a lead =="
@@ -52,11 +52,21 @@ check_present "source tracking field" 'name="source"' _site/get-started/index.ht
 check_absent  "formspree endpoint filled in" "REPLACE_ME" _site/get-started/index.html
 
 echo
-echo "== /install/ is instructions-only =="
+echo "== /install/ offers a self-serve install =="
 check_file    "/install/ built" _site/install/index.html
-check_absent  "no env picker" 'name="install_env"' _site/install/index.html
-check_absent  "no install button" 'id="install-now-btn"' _site/install/index.html
+check_present "env picker" 'name="install_env"' _site/install/index.html
+check_present "install button" 'id="install-now-btn"' _site/install/index.html
 check_present "links to /get-started/" "/get-started/" _site/install/index.html
+
+echo
+echo "== the trial expiry is disclosed wherever we offer the install =="
+check_present "trial length on /install/" "60-day trial" _site/install/index.html
+check_present "expiry stated on /install/" "license expires" _site/install/index.html
+check_present "extension offered on /install/" "extending is just a conversation" _site/install/index.html
+check_present "trial length on /get-started/" "free for 60 days" _site/get-started/index.html
+check_present "trial length in pricing" "Free for 60 days" _site/index.html
+check_absent  "no free-forever claim in pricing" "No trial" _site/index.html
+check_absent  "no no-expiration claim in pricing" "no expiration" _site/index.html
 
 echo
 echo "== CTAs point at /get-started/ =="

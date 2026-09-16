@@ -11,7 +11,7 @@ tags: [articles]
 permalink: /salesforce-quote-generator/
 faq:
   - question: "Is SilkQuote's Salesforce quote generator free?"
-    answer: "Yes. SilkQuote is completely free on the Salesforce AppExchange. Every feature is included with no user limits, no quote limits, and no expiration. Optional expert services are available for teams that want hands-on setup and customization."
+    answer: "SilkQuote is free to trial for 60 days on the Salesforce AppExchange. Every feature is included with no user limits and no quote limits. The trial expires after 60 days and extensions are available on request. Optional expert services are available for teams that want hands-on setup and customization."
   - question: "Does SilkQuote work with Salesforce Professional Edition?"
     answer: "Yes. SilkQuote supports Salesforce Professional, Enterprise, Unlimited, Developer, and Performance editions."
   - question: "Can I generate quotes automatically without rep involvement?"

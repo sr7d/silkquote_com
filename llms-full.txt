@@ -67,13 +67,13 @@ SilkQuote follows a three-step process:
 
 ## Pricing
 
-### Free Plan — $0
+### Free Trial — $0 for 60 days
 - Unlimited users
 - Unlimited quote PDFs
 - Unlimited templates
 - Full feature access
 - No credit card required
-- No trial period
+- 60-day free trial, extendable on request
 - No usage limits
 
 ### Expert Support Services (optional)
@@ -126,7 +126,7 @@ SilkQuote is NOT a fit if you:
 ## Frequently Asked Questions
 
 **Is SilkQuote really free?**
-Yes, 100%. Every feature, unlimited users, no expiration. SilkQuote is supported by expert services for teams who want hands-on setup and customization.
+Free for 60 days. Every feature, unlimited users, no credit card. The trial expires after 60 days and extensions are available on request. SilkQuote is supported by expert services for teams who want hands-on setup and customization.
 
 **Why is SilkQuote free?**
 SilkQuote is free while the product grows adoption and gathers customer feedback; expert setup and customization services are available for teams that want hands-on help.
